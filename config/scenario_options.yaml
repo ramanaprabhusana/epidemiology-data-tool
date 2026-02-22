@@ -1,0 +1,35 @@
+# Scenario options for Data Builder (growth rate, stage split, etc.).
+# Pipeline and UI use these to build scenario registry and apply selected scenario.
+# Add or edit options per scenario_type; option_id must be unique within type.
+
+scenario_types:
+  growth_rate:
+    - option_id: seer_trend
+      label: "SEER 5-y trend"
+      rationale: "Based on SEER trend"
+      sources: "SEER"
+      value_numeric: 0.02
+    - option_id: literature_low
+      label: "Literature low"
+      rationale: "Conservative growth"
+      sources: "Literature"
+      value_numeric: 0.01
+    - option_id: flat
+      label: "Flat"
+      rationale: "No growth assumption"
+      sources: "Assumption"
+      value_numeric: 0.0
+  stage_split:
+    - option_id: source_a
+      label: "Source A distribution"
+      rationale: "From registry A"
+      sources: "Registry A"
+    - option_id: source_b
+      label: "Source B distribution"
+      rationale: "From registry B"
+      sources: "Registry B"
+
+# Default selection when running pipeline (option_id per scenario_type)
+default_selection:
+  growth_rate: seer_trend
+  stage_split: source_a

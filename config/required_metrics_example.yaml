@@ -1,0 +1,27 @@
+# Example/demo indication for pipeline and UI testing.
+
+indication: "Example"
+
+metrics:
+  - id: incidence
+    label: "Incidence"
+    required: true
+    splits: []
+  - id: prevalence
+    label: "Prevalence"
+    required: true
+    splits: []
+  - id: diagnosed_prevalence
+    label: "Diagnosed prevalence"
+    required: false
+    splits: []
+  - id: stage_distribution
+    label: "Stage distribution"
+    required: true
+    splits: ["by_stage"]
+
+year_range:
+  min: 2015
+  max: 2023
+
+geography: "US"

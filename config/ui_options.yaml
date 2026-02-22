@@ -1,0 +1,33 @@
+# Options for the UI: indications and countries.
+# Indications are discovered from config/required_metrics_*.yaml; this list controls order and display.
+# Add or remove countries as needed for the pipeline.
+
+indications:
+  - id: cll
+    label: "CLL (Chronic Lymphocytic Leukemia)"
+    config_suffix: "cll"
+  - id: dlbcl
+    label: "Diffuse Large B‑Cell Lymphoma (DLBCL)"
+    config_suffix: "dlbcl"
+  - id: gastric
+    label: "Gastric Cancer (GC)"
+    config_suffix: "gc"
+  - id: ovarian
+    label: "Ovarian Cancer"
+    config_suffix: "ovarian"
+  - id: prostate
+    label: "Prostate Cancer"
+    config_suffix: "prostate"
+
+# Countries/geographies the pipeline supports (evidence can be filtered or tagged by country).
+countries:
+  - id: US
+    label: "United States"
+  - id: UK
+    label: "United Kingdom"
+  - id: DE
+    label: "Germany"
+  - id: FR
+    label: "France"
+  - id: EU5
+    label: "EU5"

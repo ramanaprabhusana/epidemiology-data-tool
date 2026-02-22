@@ -1,0 +1,36 @@
+# Required epidemiology metrics for Lung Cancer (aligns with InsightACE Epidemiology Beta view)
+# Copy and adjust for other oncology indications.
+
+indication: "Lung Cancer"
+
+metrics:
+  - id: incidence
+    label: "Incidence"
+    required: true
+    splits: []
+  - id: prevalence
+    label: "Prevalence"
+    required: true
+    splits: []
+  - id: stage_i
+    label: "Stage I"
+    required: true
+    splits: ["by_stage"]
+  - id: stage_ii
+    label: "Stage II"
+    required: true
+    splits: ["by_stage"]
+  - id: stage_iii
+    label: "Stage III"
+    required: true
+    splits: ["by_stage"]
+  - id: diagnosed_prevalence
+    label: "Diagnosed prevalence"
+    required: false
+    splits: []
+
+year_range:
+  min: 2015
+  max: 2029
+
+geography: "US"

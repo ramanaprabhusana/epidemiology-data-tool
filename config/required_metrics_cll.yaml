@@ -1,0 +1,32 @@
+# Required epidemiology metrics for CLL (Chronic Lymphocytic Leukemia)
+# Aligns with InsightACE Epidemiology Beta and project scope.
+
+indication: "CLL"
+
+metrics:
+  - id: incidence
+    label: "Incidence"
+    required: true
+    splits: []
+  - id: prevalence
+    label: "Prevalence"
+    required: true
+    splits: []
+  - id: diagnosed_prevalence
+    label: "Diagnosed prevalence"
+    required: false
+    splits: []
+  - id: first_line
+    label: "First line (1L)"
+    required: false
+    splits: ["by_line"]
+  - id: relapsed_refractory
+    label: "Relapsed/refractory"
+    required: false
+    splits: ["by_line"]
+
+year_range:
+  min: 2015
+  max: 2029
+
+geography: "US"

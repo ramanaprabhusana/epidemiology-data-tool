@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epidemiology Data Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <h1 class="hero-title">Epidemiology Data Tool</h1>
+      <p class="hero-tagline">NCCN-aligned KPIs from every public source we can find: registries, guidelines, journals, research papers, and data dashboards. One exhaustive evidence table plus reference links.</p>
+      <div class="hero-badge">KPIs: Incidence · Prevalence · Diagnosed prevalence · Line of therapy</div>
+    </header>
+
+    <main class="main">
+      <section class="card section-choose">
+        <h2 class="card-title"><span class="card-num">1</span> Choose indication & geography</h2>
+        <form id="form" class="form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="indication">Indication</label>
+              <select id="indication" name="indication" required>
+                {% for opt in indications %}
+                <option value="{{ opt.label }}">{{ opt.label }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="country">Country / Geography</label>
+              <select id="country" name="country" required>
+                {% for opt in countries %}
+                <option value="{{ opt.id }}">{{ opt.label }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="form-options">
+            <label class="checkbox">
+              <input type="checkbox" name="export_dashboard" id="export_dashboard" checked>
+              <span>Include dashboard export (Tableau / Power BI)</span>
+            </label>
+          </div>
+          <div class="form-field">
+            <label for="evidence_file">Your own evidence (optional): CSV, Excel, or Word</label>
+            <input type="file" id="evidence_file" name="evidence_file" accept=".csv,.xlsx,.xls,.docx">
+            <span id="upload_status" class="upload-status"></span>
+          </div>
+        </form>
+      </section>
+
+      <section class="card section-run">
+        <h2 class="card-title"><span class="card-num">2</span> Get the data</h2>
+        <p class="card-desc">We search all configured public sources (GLOBOCAN, SEER, NCCN, WHO, journals, ClinicalTrials, PubMed, and many more) and build one evidence table. Values are filled where we can extract them; otherwise “See link” with the source URL. KPIs follow required_metrics (NCCN-aligned).</p>
+        <button type="button" id="run_btn" class="btn-primary">Get data</button>
+        <div id="status_bar" class="status-bar hidden">
+          <div class="status-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div id="status_progress_fill" class="status-progress-fill" style="width: 0%"></div>
+          </div>
+          <div class="status-stats">
+            <span id="status_percent" class="status-percent">In progress…</span>
+            <span id="status_elapsed" class="status-elapsed">Elapsed: 0:00</span>
+          </div>
+          <p id="status_text" class="status-text">Searching all sources…</p>
+          <p class="status-hint">Multi-level extraction in progress: following search results, articles, references, and company sites until datapoints are found. The run continues until values are found—no time limit.</p>
+        </div>
+      </section>
+
+      <section id="result_section" class="result-section hidden">
+        <h2 class="card-title"><span class="card-num">3</span> Your outputs</h2>
+        <div id="result_message" class="result-message"></div>
+        <div id="kpi_block" class="kpi-block hidden">
+          <h3 class="kpi-title">KPIs we collect for (NCCN-aligned)</h3>
+          <div id="kpi_tags" class="kpi-tags"></div>
+        </div>
+        <div id="sources_explored_block" class="sources-block hidden">
+          <h3 class="sources-title">Sources in this run</h3>
+          <p id="sources_count" class="sources-count"></p>
+          <div id="source_tags" class="source-tags"></div>
+        </div>
+        <div class="downloads-card">
+          <h3 class="downloads-title">Download</h3>
+          <p class="out-folder">All files are in the <strong>output</strong> folder. Evidence CSV has one row per source; value column has numbers when we extracted them, or “See link” with source_url.</p>
+          <div class="download-actions">
+            <label class="download-checkbox-label"><input type="checkbox" id="select_all_files" /> Select all</label>
+            <button type="button" id="download_selected_btn" class="btn btn-secondary">Download selected (ZIP)</button>
+            <button type="button" id="download_all_btn" class="btn btn-primary">Download all (ZIP)</button>
+          </div>
+          <div id="downloads" class="downloads"></div>
+        </div>
+        <div class="next-steps-card">
+          <h3 class="next-title">What to do next</h3>
+          <ul class="next-steps">
+            <li><strong>Open in Excel</strong> — Evidence and reference_links CSVs.</li>
+            <li><strong>Power BI / Tableau</strong> — Connect to <code>output/dashboard</code>.</li>
+            <li><strong>InsightACE</strong> — Use tool-ready or InsightACE CSV.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Full instructions: <strong>HOW_TO_USE_THIS_TOOL.md</strong> in the project folder.</p>
+    </footer>
+  </div>
+
+  <script>
+    const runBtn = document.getElementById('run_btn');
+    const statusBar = document.getElementById('status_bar');
+    const statusText = document.getElementById('status_text');
+    const resultSection = document.getElementById('result_section');
+    const resultMessage = document.getElementById('result_message');
+    const downloadsDiv = document.getElementById('downloads');
+    const kpiBlock = document.getElementById('kpi_block');
+    const kpiTags = document.getElementById('kpi_tags');
+    const sourcesExploredBlock = document.getElementById('sources_explored_block');
+    const sourcesCount = document.getElementById('sources_count');
+    const sourceTags = document.getElementById('source_tags');
+    const evidenceFile = document.getElementById('evidence_file');
+    const uploadStatus = document.getElementById('upload_status');
+
+    const statusPhases = [
+      'Loading evidence & KPIs…',
+      'Searching registries (GLOBOCAN, SEER, WHO)…',
+      'Searching guidelines (NCCN, NICE, ASCO, ESMO)…',
+      'Deep-diving into source links…',
+      'Following Google Scholar & search results…',
+      'Extracting from journal articles…',
+      'Following references & citations…',
+      'Scanning company websites for data…',
+      'Querying ClinicalTrials & PubMed…',
+      'Building comprehensive evidence table…',
+      'Writing reference links…',
+      'Finishing up…'
+    ];
+    let statusPhaseIndex = 0;
+    let statusInterval = null;
+    let progressInterval = null;
+    let statusStartTime = null;
+
+    function formatElapsed(ms) {
+      const sec = Math.floor(ms / 1000);
+      const m = Math.floor(sec / 60);
+      const s = sec % 60;
+      return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function updateStatusElapsed() {
+      const percentEl = document.getElementById('status_percent');
+      const elapsedEl = document.getElementById('status_elapsed');
+      if (!percentEl || !elapsedEl || !statusStartTime) return;
+      const elapsed = Date.now() - statusStartTime;
+      percentEl.textContent = 'In progress…';
+      elapsedEl.textContent = 'Elapsed: ' + formatElapsed(elapsed);
+    }
+
+    function setProgressComplete() {
+      const fillEl = document.getElementById('status_progress_fill');
+      const percentEl = document.getElementById('status_percent');
+      const elapsedEl = document.getElementById('status_elapsed');
+      const barEl = document.querySelector('.status-progress[role="progressbar"]');
+      if (fillEl) {
+        fillEl.classList.remove('status-progress-indeterminate');
+        fillEl.style.width = '100%';
+      }
+      if (percentEl) percentEl.textContent = '100% completed';
+      if (elapsedEl) elapsedEl.textContent = 'Complete';
+      if (barEl) barEl.setAttribute('aria-valuenow', 100);
+    }
+
+    function startStatus() {
+      statusPhaseIndex = 0;
+      statusStartTime = Date.now();
+      const fillEl = document.getElementById('status_progress_fill');
+      if (fillEl) {
+        fillEl.style.width = '';
+        fillEl.classList.add('status-progress-indeterminate');
+      }
+      statusText.textContent = statusPhases[0];
+      updateStatusElapsed();
+      statusInterval = setInterval(function() {
+        statusPhaseIndex = (statusPhaseIndex + 1) % statusPhases.length;
+        statusText.textContent = statusPhases[statusPhaseIndex];
+      }, 2000);
+      progressInterval = setInterval(updateStatusElapsed, 1000);
+    }
+    function stopStatus() {
+      if (statusInterval) { clearInterval(statusInterval); statusInterval = null; }
+      if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
+      setProgressComplete();
+    }
+
+    let uploadedFilename = null;
+    evidenceFile.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) { uploadStatus.textContent = ''; uploadedFilename = null; return; }
+      uploadStatus.textContent = 'Uploading…';
+      const fd = new FormData();
+      fd.append('file', file);
+      try {
+        const r = await fetch('/upload', { method: 'POST', body: fd });
+        const j = await r.json();
+        if (j.ok) { uploadedFilename = j.filename; uploadStatus.textContent = 'Uploaded: ' + file.name; }
+        else { uploadStatus.textContent = j.error || 'Upload failed'; uploadedFilename = null; }
+      } catch (err) {
+        uploadStatus.textContent = 'Upload failed';
+        uploadedFilename = null;
+      }
+    });
+
+    runBtn.addEventListener('click', async () => {
+      runBtn.disabled = true;
+      statusBar.classList.remove('hidden');
+      resultSection.classList.add('hidden');
+      startStatus();
+
+      const payload = {
+        indication: document.getElementById('indication').value,
+        country: document.getElementById('country').value,
+        export_dashboard: document.getElementById('export_dashboard').checked,
+        use_pubmed: true,
+      };
+      if (uploadedFilename) payload.evidence_filename = uploadedFilename;
+
+      try {
+        const r = await fetch('/run', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        const text = await r.text();
+        let data = {};
+        try { data = JSON.parse(text); } catch (_) {
+          resultMessage.innerHTML = '<p class="error">Invalid response from server.</p>';
+          stopStatus(); statusBar.classList.add('hidden'); runBtn.disabled = false;
+          resultSection.classList.remove('hidden'); resultSection.classList.add('reveal');
+          return;
+        }
+
+        stopStatus();
+        statusBar.classList.add('hidden');
+        runBtn.disabled = false;
+        resultSection.classList.remove('hidden');
+        resultSection.classList.add('reveal');
+
+        const kpis = data.kpi_labels || [];
+        if (kpis.length > 0) {
+          kpiTags.innerHTML = kpis.map(function(k) { return '<span class="kpi-tag">' + escapeHtml(k) + '</span>'; }).join('');
+          kpiBlock.classList.remove('hidden');
+        } else {
+          kpiBlock.classList.add('hidden');
+        }
+
+        const sources = data.sources_explored || [];
+        if (sources.length > 0) {
+          sourcesCount.textContent = sources.length + ' source' + (sources.length === 1 ? '' : 's');
+          sourceTags.innerHTML = sources.map(function(s) { return '<span class="source-tag">' + escapeHtml(s) + '</span>'; }).join('');
+          sourcesExploredBlock.classList.remove('hidden');
+        } else {
+          sourcesExploredBlock.classList.add('hidden');
+        }
+
+        if (data.success) {
+          resultMessage.innerHTML = '<p class="success">Your data is ready.</p><p class="result-summary"><strong>' + (data.record_count || 0) + '</strong> evidence row(s) from <strong>' + sources.length + '</strong> sources. Open the evidence CSV for the full list; value column has numbers where we could extract them, or “See link” with source_url.</p>';
+          const outputFiles = data.output_files || [];
+          window._lastOutputFiles = outputFiles;
+          let html = '<ul class="download-list">';
+          outputFiles.forEach(f => {
+            const isExcel = f.toLowerCase().endsWith('.xlsx');
+            const cls = 'download-item' + (isExcel ? ' file-excel' : '');
+            html += '<li class="' + cls + '"><label class="file-checkbox-label"><input type="checkbox" class="file-download-cb" value="' + escapeHtml(f) + '" /> ' + escapeHtml(f) + '</label> <a href="/download/' + encodeURIComponent(f) + '" download class="download-link">(open)</a></li>';
+          });
+          html += '</ul>';
+          downloadsDiv.innerHTML = html;
+          const selectAll = document.getElementById('select_all_files');
+          if (selectAll) selectAll.checked = false;
+        } else {
+          resultMessage.innerHTML = '<p class="error">Something went wrong.</p><p>' + escapeHtml(data.message || '') + '</p>';
+          downloadsDiv.innerHTML = '';
+        }
+      } catch (err) {
+        stopStatus();
+        statusBar.classList.add('hidden');
+        runBtn.disabled = false;
+        resultSection.classList.remove('hidden');
+        resultSection.classList.add('reveal');
+        resultMessage.innerHTML = '<p class="error">Request failed. ' + escapeHtml(err.message || '') + '</p>';
+        downloadsDiv.innerHTML = '';
+      }
+    });
+
+    function escapeHtml(s) {
+      if (!s) return '';
+      var div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function downloadZipBlob(blob, filename) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename || 'epidemiology_outputs.zip';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+    }
+
+    var selectAllEl = document.getElementById('select_all_files');
+    if (selectAllEl) {
+      selectAllEl.addEventListener('change', function() {
+        var list = document.querySelectorAll('.file-download-cb');
+        list.forEach(function(cb) { cb.checked = this.checked; }.bind(this));
+      });
+    }
+
+    var downloadSelectedBtn = document.getElementById('download_selected_btn');
+    if (downloadSelectedBtn) {
+      downloadSelectedBtn.addEventListener('click', function() {
+      var checked = Array.from(document.querySelectorAll('.file-download-cb:checked')).map(function(cb) { return cb.value; });
+      if (checked.length === 0) {
+        alert('Please select at least one file.');
+        return;
+      }
+      fetch('/download_zip', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filenames: checked })
+      }).then(function(r) {
+        if (!r.ok) throw new Error('Download failed');
+        return r.blob();
+      }).then(function(blob) {
+        downloadZipBlob(blob);
+      }).catch(function(e) {
+        alert('Download failed: ' + (e.message || 'unknown error'));
+      });
+    });
+    }
+
+    var downloadAllBtn = document.getElementById('download_all_btn');
+    if (downloadAllBtn) {
+      downloadAllBtn.addEventListener('click', function() {
+        var filenames = window._lastOutputFiles;
+        if (!filenames || filenames.length === 0) {
+          alert('No output files available. Run the pipeline first.');
+          return;
+        }
+        fetch('/download_zip', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ filenames: filenames })
+        }).then(function(r) {
+          if (!r.ok) throw new Error('Download failed');
+          return r.blob();
+        }).then(function(blob) {
+          downloadZipBlob(blob);
+        }).catch(function(e) {
+          alert('Download failed: ' + (e.message || 'unknown error'));
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Template: required epidemiology metrics per indication
+# Copy and fill per indication; used for gap detection and KPI table.
+
+indication: "EXAMPLE_INDICATION"  # e.g., CLL, NSCLC
+
+metrics:
+  - id: incidence
+    label: "Incidence"
+    required: true
+    splits: []  # or e.g. ["by_stage", "by_age"]
+  - id: prevalence
+    label: "Prevalence"
+    required: true
+    splits: []
+  - id: diagnosed_prevalence
+    label: "Diagnosed prevalence"
+    required: false
+    splits: []
+  - id: stage_distribution
+    label: "Stage distribution"
+    required: true
+    splits: ["by_stage"]
+
+# Optional: year range expected by tool
+year_range:
+  min: 2015
+  max: 2023
+
+# Geography
+geography: "US"

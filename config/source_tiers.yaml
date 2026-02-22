@@ -1,0 +1,54 @@
+# Source tiers for Evidence Finder (Gold → Silver → Bronze)
+# Adjust per indication or use globally.
+
+tiers:
+  gold:
+    description: "Standardized, authoritative US epidemiology"
+    sources:
+      - name: SEER
+        type: registry
+        url_base: "https://seer.cancer.gov"
+        notes: "Primary US cancer surveillance"
+      - name: CDC/NCHS
+        type: surveillance
+        url_base: "https://www.cdc.gov/nchs"
+      - name: Census
+        type: census
+        url_base: "https://www.census.gov"
+      - name: NIH surveillance
+        type: surveillance
+        url_base: "https://www.cancer.gov"
+
+  silver:
+    description: "Peer-reviewed, widely cited"
+    sources:
+      - name: PubMed/PMC
+        type: literature
+        url_base: "https://pubmed.ncbi.nlm.nih.gov"
+      - name: Registry reports
+        type: report
+        notes: "Key journal papers, registry reports"
+
+  bronze:
+    description: "Grey literature, reports, trials, discovery links"
+    sources:
+      - name: Explore all
+        type: dynamic
+        notes: "Runs every source in config/sources_to_explore.yaml for this indication and country (links + APIs). Add or remove sources there to change what is explored."
+      - name: Commercial reports
+        type: report
+        notes: "Future paid sources"
+
+# Context fields to capture per evidence item (align with scope doc)
+evidence_context_fields:
+  - metric
+  - definition
+  - population
+  - year_or_range
+  - geography
+  - split_logic
+  - value
+  - source_citation
+  - source_url
+  - notes
+  - confidence

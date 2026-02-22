@@ -1,0 +1,212 @@
+"""
+Dynamic source explorer: load sources from config/sources_to_explore.yaml and explore every
+configured source for the chosen indication and country. Link-type sources produce one stub
+evidence row per source; api-type sources call the registered connector (e.g. clinicaltrials, pubmed).
+Add or remove sources in the YAML to change what the tool explores (no code change).
+"""
+
+from pathlib import Path
+from urllib.parse import quote_plus
+from typing import Any, Dict, List
+import time
+
+import yaml
+
+from ..schema import EvidenceRecord
+
+# Registry of API connector factories: connector_id -> (lambda **kwargs -> callable(indication, config, **kwargs))
+def _get_registry():
+    from .clinicaltrials import clinicaltrials_connector_factory
+    from .pubmed import pubmed_connector_factory
+    from .who_gho import who_gho_connector_factory
+    return {
+        "clinicaltrials": lambda **kw: clinicaltrials_connector_factory(),
+        "pubmed": lambda **kw: pubmed_connector_factory(
+            create_stub_evidence=kw.get("add_pubmed_stubs", True),
+        ),
+        "who_gho": lambda **kw: who_gho_connector_factory(),
+    }
+
+
+def _apply_placeholders(url: str, indication: str, country: str) -> str:
+    indication = (indication or "").strip()
+    country = (country or "").strip()
+    return url.replace("{indication}", indication).replace("{country}", country).replace(
+        "{indication_encoded}", quote_plus(indication)
+    ).replace("{country_encoded}", quote_plus(country))
+
+
+def _country_matches_filter(country: str, country_filter: List[str]) -> bool:
+    if not country_filter:
+        return True
+    c = (country or "").strip().lower()
+    return any((f or "").strip().lower() == c for f in country_filter)
+
+
+def load_sources_to_explore(config_dir: Path) -> List[Dict[str, Any]]:
+    """Load and return the list of sources from config/sources_to_explore.yaml."""
+    path = config_dir / "sources_to_explore.yaml"
+    if not path.exists():
+        return []
+    try:
+        with open(path, "r") as f:
+            data = yaml.safe_load(f)
+        return data.get("sources") or []
+    except Exception:
+        return []
+
+
+def explore_all_sources(
+    indication: str,
+    config: Dict[str, Any],
+    country: str = None,
+    config_dir: Path = None,
+    use_pubmed: bool = False,
+    add_pubmed_stubs: bool = True,
+    **kwargs,
+) -> List[EvidenceRecord]:
+    """
+    Explore every source listed in config/sources_to_explore.yaml for this indication and country.
+    - type=link: build URL from template, apply country_filter, create one stub EvidenceRecord.
+    - type=api: if enabled (and enabled_when satisfied), call the registered connector and extend records.
+    """
+    country = country or kwargs.get("country") or ""
+    indication_clean = (indication or "").strip() or "cancer"
+    if config_dir is None:
+        config_dir = Path(__file__).resolve().parents[2] / "config"
+    config_dir = Path(config_dir)
+    try:
+        from .link_value_extractor import set_config_dir_for_proxy
+        set_config_dir_for_proxy(config_dir)
+    except Exception:
+        pass
+    sources = load_sources_to_explore(config_dir)
+    # Process link sources by extract_priority (1 first, then 2, then rest) so high-value sources get deep-dive before time cap
+    def _source_order(s: dict) -> tuple:
+        if s.get("type") != "link":
+            return (1, 0)  # API sources after link sources
+        return (0, int(s.get("extract_priority") or 99))
+    sources = sorted(sources, key=_source_order)
+    all_records: List[EvidenceRecord] = []
+    registry = _get_registry()
+    link_records_added = 0  # for deep-dive limit
+
+    # Cap total run time (e.g. 30 min) so we never run indefinitely
+    max_run_seconds = kwargs.get("max_run_seconds")
+    run_deadline = None  # float timestamp or None
+    if max_run_seconds is not None and max_run_seconds > 0:
+        run_deadline = time.time() + max_run_seconds
+
+    for src in sources:
+        if not isinstance(src, dict):
+            continue
+        src_id = src.get("id") or src.get("name") or "unknown"
+        tier = (src.get("tier") or "bronze").lower()
+        name = src.get("name") or src_id
+
+        # Optional: skip this source if enabled_when is not satisfied
+        enabled_when = src.get("enabled_when")
+        if enabled_when:
+            if enabled_when == "use_pubmed" and not use_pubmed:
+                continue
+            if enabled_when in kwargs and not kwargs.get(enabled_when):
+                continue
+
+        # Link-type sources: add one evidence row per source; then deep-dive into the URL to extract values when possible.
+        if src.get("type") == "link":
+            country_filter = src.get("country_filter")
+            if isinstance(country_filter, str):
+                country_filter = [country_filter]
+            if not _country_matches_filter(country, country_filter or []):
+                continue
+            url_raw = src.get("url") or ""
+            url = _apply_placeholders(url_raw, indication_clean, country)
+            stub_value = "See link for incidence, prevalence, and KPIs"
+            rec = EvidenceRecord(
+                indication=indication or "cancer",
+                metric=src.get("metric") or "link",
+                value=stub_value,
+                source_citation=name,
+                source_tier=tier,
+                definition=src.get("definition"),
+                population=None,
+                year_or_range=None,
+                geography=country or None,
+                split_logic=None,
+                source_url=url,
+                notes=src.get("notes"),
+                confidence=src.get("confidence", "medium"),
+            )
+            all_records.append(rec)
+            link_records_added += 1
+            # Deep-dive: bounded extraction per source (single run, ~55 URLs max per attempt, 2 attempts)
+            # Skip deep-dive if we're past the run-time cap (e.g. 30 min)
+            deep_dive_links = kwargs.get("deep_dive_links", True)
+            max_deep_dive = int(kwargs.get("max_deep_dive_links", 100))
+            if run_deadline is not None and time.time() >= run_deadline:
+                rec.notes = (rec.notes or "") + " [Skipped: time limit]"
+            elif deep_dive_links and url and link_records_added <= max_deep_dive:
+                try:
+                    from .link_value_extractor import deep_dive_link_record
+                    extracted = deep_dive_link_record(
+                        url, delay=True, indication=indication_clean, country=country, deadline=run_deadline
+                    )
+                    if extracted and len(str(extracted).strip()) > 0:
+                        rec.value = extracted
+                        rec.notes = (rec.notes or "") + " [Value extracted via deep-dive]"
+                    else:
+                        rec.notes = (rec.notes or "") + " [Extraction attempted; no datapoints found]"
+                except Exception:
+                    rec.notes = (rec.notes or "") + " [Extraction attempted; error]"
+            continue
+        if src.get("type") == "api":
+            connector_id = src.get("connector_id")
+            if not connector_id or connector_id not in registry:
+                continue
+            try:
+                factory = registry[connector_id]
+                connector = factory(**kwargs, add_pubmed_stubs=add_pubmed_stubs, use_pubmed=use_pubmed)
+                recs = connector(indication, config, country=country, **kwargs)
+                all_records.extend(recs)
+            except Exception:
+                pass
+    return all_records
+
+
+def explore_all_connector_factory():
+    """Returns a callable(indication, config, **kwargs) that explores all configured sources (API-only for evidence; links go to reference_links)."""
+    def _connector(indication: str, config: Dict[str, Any], **kwargs) -> List[EvidenceRecord]:
+        return explore_all_sources(indication, config, **kwargs)
+    return _connector
+
+
+def build_reference_links(
+    config_dir: Path,
+    indication: str,
+    country: str,
+) -> List[Dict[str, str]]:
+    """
+    Build list of {source_name, url, metric} for all link-type sources in sources_to_explore.yaml.
+    Used to write reference_links CSV (no extracted value; user can open these to find data).
+    """
+    sources = load_sources_to_explore(config_dir)
+    indication_clean = (indication or "").strip() or "cancer"
+    out: List[Dict[str, str]] = []
+    for src in sources:
+        if not isinstance(src, dict) or src.get("type") != "link":
+            continue
+        country_filter = src.get("country_filter")
+        if isinstance(country_filter, str):
+            country_filter = [country_filter]
+        if not _country_matches_filter(country, country_filter or []):
+            continue
+        name = src.get("name") or src.get("id") or "?"
+        url_raw = src.get("url") or ""
+        url = _apply_placeholders(url_raw, indication_clean, country)
+        out.append({
+            "source_name": name,
+            "metric": src.get("metric") or "link",
+            "url": url,
+            "definition": (src.get("definition") or "")[:200],
+        })
+    return out

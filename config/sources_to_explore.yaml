@@ -1,0 +1,783 @@
+# Exhaustive secondary-research source list: registries, journals, guidelines, dashboards, commercial.
+# The tool explores ALL sources below for your indication and country. Add/remove entries as needed.
+#
+# type: link = stub with source_url (placeholders: {indication}, {country}, {indication_encoded}, {country_encoded})
+# type: api  = live search (connector_id: clinicaltrials, pubmed). enabled_when: use_pubmed for PubMed only.
+# extract_priority: 1 = run deep-dive first (before time cap), 2 = next, default 99. Lower = earlier.
+
+sources:
+  # --- Global cancer & epidemiology (IARC, WHO) ---
+  - id: globocan
+    name: IARC GLOBOCAN
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://gco.iarc.who.int/today/en/dataviz"
+    metric: incidence_links
+    value: "Search GLOBOCAN for incidence/mortality by country"
+    definition: "Global Cancer Observatory – incidence, mortality, prevalence by cancer site and country"
+    notes: "Select cancer type and country for estimates."
+
+  - id: ci5
+    name: IARC CI5
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://ci5.iarc.who.int/ci5-xii/tables"
+    metric: registry_links
+    value: "CI5 registry tables by cancer site and region"
+    definition: "Cancer Incidence in Five Continents – registry-level data"
+    notes: "Browse by cancer site (ICD-10) and registry/country."
+
+  - id: who_gho
+    name: WHO GHO
+    tier: silver
+    type: link
+    extract_priority: 1
+    url: "https://www.who.int/data/gho/data/indicators"
+    metric: who_gho
+    value: "WHO Global Health Observatory indicators"
+    definition: "WHO health data by indicator and country"
+    notes: "Search indicators; filter by country."
+
+  - id: who_data_hub
+    name: WHO Data Hub
+    tier: silver
+    type: link
+    extract_priority: 1
+    url: "https://data.who.int"
+    metric: who_data_hub
+    value: "WHO World Health Data Hub"
+    definition: "Unified WHO data portal"
+    notes: "Browse or search datasets by topic and geography."
+
+  - id: who_iris
+    name: WHO IRIS
+    tier: silver
+    type: link
+    extract_priority: 1
+    url: "https://iris.who.int"
+    metric: who_iris
+    value: "WHO institutional repository (reports, guidelines)"
+    definition: "WHO publications and technical documents"
+    notes: "Search by disease or topic."
+
+  # --- Guidelines & clinical (NCCN, NICE, ASCO, ESMO) ---
+  - id: nccn
+    name: NCCN
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://www.nccn.org/guidelines/guidelines-detail?search={indication_encoded}"
+    metric: nccn_guidelines
+    value: "NCCN Clinical Practice Guidelines"
+    definition: "National Comprehensive Cancer Network – evidence-based guidelines"
+    notes: "Search for indication-specific guidelines and epidemiology references."
+
+  - id: nccn_home
+    name: NCCN Guidelines
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://www.nccn.org/guidelines/category_1"
+    metric: nccn_category1
+    value: "NCCN Category 1 guidelines list"
+    definition: "NCCN guideline categories and updates"
+    notes: "Browse by cancer type."
+
+  - id: nice
+    name: NICE
+    tier: silver
+    type: link
+    url: "https://www.nice.org.uk/search?q={indication_encoded}"
+    metric: nice_guidelines
+    value: "NICE guidelines and evidence"
+    definition: "UK National Institute for Health and Care Excellence"
+    notes: "Search for condition; filter by guideline or evidence."
+    country_filter: ["UK", "United Kingdom"]
+
+  - id: asco
+    name: ASCO
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://ascopubs.org/action/doSearch?AllField={indication_encoded}+epidemiology"
+    metric: asco_literature
+    value: "ASCO journals and meeting abstracts"
+    definition: "American Society of Clinical Oncology – journals, abstracts, guidelines"
+    notes: "Search JCO, JCO PO, meeting abstracts."
+
+  - id: esmo
+    name: ESMO
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.esmo.org/search?q={indication_encoded}"
+    metric: esmo_resources
+    value: "ESMO guidelines and resources"
+    definition: "European Society for Medical Oncology"
+    notes: "Guidelines, position papers, oncology by topic."
+
+  # --- Literature & scholarly (Google Scholar, PubMed, PMC, Cochrane) ---
+  - id: google_scholar
+    name: Google Scholar
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://scholar.google.com/scholar?q={indication_encoded}+epidemiology+{country_encoded}"
+    metric: scholar_literature
+    value: "Google Scholar – epidemiology and incidence"
+    definition: "Scholarly articles across publishers"
+    notes: "Broad secondary research; refine query as needed."
+
+  - id: pubmed_central
+    name: PubMed Central (PMC)
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.ncbi.nlm.nih.gov/pmc/?term={indication_encoded}+epidemiology"
+    metric: pmc_literature
+    value: "PMC full-text articles"
+    definition: "NIH free full-text archive"
+    notes: "Search PMC for epidemiology and incidence."
+
+  - id: cochrane
+    name: Cochrane Library
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.cochranelibrary.com/search?q={indication_encoded}"
+    metric: cochrane_reviews
+    value: "Cochrane systematic reviews"
+    definition: "Cochrane reviews and trials"
+    notes: "High-quality systematic reviews."
+
+  # --- Major journals ---
+  - id: lancet
+    name: The Lancet
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.thelancet.com/action/doSearch?AllField={indication_encoded}+epidemiology"
+    metric: lancet
+    value: "Lancet and Lancet Oncology"
+    definition: "Peer-reviewed medical journals"
+    notes: "Search across Lancet portfolio."
+
+  - id: nejm
+    name: NEJM
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.nejm.org/action/doSearch?AllField={indication_encoded}+epidemiology"
+    metric: nejm
+    value: "New England Journal of Medicine"
+    definition: "NEJM articles and reviews"
+    notes: "Search for epidemiology and cancer."
+
+  - id: jama
+    name: JAMA Network
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://jamanetwork.com/searchresults?q={indication_encoded}+epidemiology"
+    metric: jama
+    value: "JAMA and JAMA Oncology"
+    definition: "JAMA Network journals"
+    notes: "Search across JAMA Network."
+
+  # --- Trials & regulatory ---
+  - id: clinicaltrials_link
+    name: ClinicalTrials.gov
+    tier: bronze
+    type: link
+    extract_priority: 2
+    url: "https://clinicaltrials.gov/search?cond={indication_encoded}&locn={country_encoded}"
+    metric: clinical_trials_links
+    value: "Search ClinicalTrials.gov for trials"
+    definition: "Registry of clinical studies"
+    notes: "Filter by condition and country."
+
+  - id: fda
+    name: FDA
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.fda.gov/search?s={indication_encoded}"
+    metric: fda
+    value: "FDA drug and disease information"
+    definition: "US FDA approvals, labels, guidance"
+    notes: "Search for indication and epidemiology references."
+    country_filter: ["US", "USA", "United States"]
+
+  # --- US surveillance & dashboards ---
+  - id: seer
+    name: NCI SEER
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://seer.cancer.gov/statistics-network/explorer"
+    metric: seer_explorer
+    value: "SEER*Explorer – US incidence/trends"
+    definition: "Surveillance, Epidemiology, and End Results"
+    notes: "Filter by cancer site and demographics."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: nci_statistics
+    name: NCI Statistics
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://www.cancer.gov/about-cancer/understanding/statistics"
+    metric: nci_statistics
+    value: "NCI cancer statistics"
+    definition: "NCI statistics and data tools"
+    notes: "Links to SEER, CIS, and other NCI data."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: nci_pdq
+    name: NCI PDQ
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://www.cancer.gov/publications/pdq/cancer-information-summaries"
+    metric: nci_pdq
+    value: "NCI PDQ cancer information summaries"
+    definition: "PDQ evidence-based summaries"
+    notes: "Browse or search by cancer type."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: cdc_nchs
+    name: CDC NCHS
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://www.cdc.gov/nchs"
+    metric: cdc_nchs
+    value: "CDC National Center for Health Statistics"
+    definition: "US vital and health statistics"
+    notes: "Data tools and publications."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: cdc_wonder
+    name: CDC WONDER
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://wonder.cdc.gov"
+    metric: cdc_wonder
+    value: "CDC WONDER databases"
+    definition: "CDC online databases (mortality, morbidity)"
+    notes: "Query by cause of death, demographics."
+    country_filter: ["US", "USA", "United States"]
+
+  # --- EU / UK ---
+  - id: eurostat
+    name: Eurostat
+    tier: silver
+    type: link
+    url: "https://ec.europa.eu/eurostat"
+    metric: eurostat
+    value: "Eurostat health and cause-of-death data"
+    definition: "EU official statistics"
+    notes: "Search for cancer or cause of death by country."
+    country_filter: ["UK", "DE", "FR", "EU5", "EU", "Germany", "France", "United Kingdom"]
+
+  - id: cancer_research_uk
+    name: Cancer Research UK
+    tier: gold
+    type: link
+    url: "https://www.cancerresearchuk.org/about-cancer/cancer-statistics"
+    metric: cruk_statistics
+    value: "Cancer Research UK statistics"
+    definition: "UK cancer statistics and evidence"
+    notes: "Browse by cancer type; UK data."
+    country_filter: ["UK", "United Kingdom"]
+
+  # --- Commercial / data dashboards (landing or search pages) ---
+  - id: clarivate_drg
+    name: Clarivate DRG
+    tier: bronze
+    type: link
+    url: "https://clarivate.com/products/life-sciences/drug-and-device-research"
+    metric: drg_clarivate
+    value: "Clarivate DRG – drug and device research"
+    definition: "DRG epidemiology and market data (commercial)"
+    notes: "Subscription; epidemiology and forecast data."
+
+  - id: evaluate_pharma
+    name: Evaluate Pharma
+    tier: bronze
+    type: link
+    url: "https://www.evaluate.com/thought-leadership/pharma"
+    metric: evaluate_pharma
+    value: "Evaluate Pharma – market and pipeline"
+    definition: "Evaluate (formerly Evaluate Pharma) – commercial intelligence"
+    notes: "Subscription; sales forecasts and epidemiology."
+
+  - id: emis_intelligence
+    name: EMIS Intelligence
+    tier: bronze
+    type: link
+    url: "https://www.emis.com/healthcare"
+    metric: emis
+    value: "EMIS healthcare intelligence"
+    definition: "EMIS – global healthcare data"
+    notes: "Commercial; epidemiology and treatment data."
+
+  # --- More journals & publishers ---
+  - id: nature
+    name: Nature Portfolio
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.nature.com/search?q={indication_encoded}+epidemiology"
+    metric: nature
+    value: "Nature, Nature Medicine, Nature Reviews"
+    definition: "Nature portfolio journals"
+    notes: "Search across Nature journals."
+
+  - id: bmj
+    name: BMJ
+    tier: silver
+    type: link
+    url: "https://www.bmj.com/search/{indication_encoded}%20epidemiology"
+    metric: bmj
+    value: "BMJ and BMJ Oncology"
+    definition: "BMJ journal portfolio"
+    notes: "Search for epidemiology and cancer."
+
+  - id: sciencedirect
+    name: ScienceDirect
+    tier: silver
+    type: link
+    url: "https://www.sciencedirect.com/search?qs={indication_encoded}+epidemiology"
+    metric: sciencedirect
+    value: "ScienceDirect (Elsevier)"
+    definition: "Elsevier full-text database"
+    notes: "Search by indication and epidemiology."
+
+  - id: wiley
+    name: Wiley Online Library
+    tier: silver
+    type: link
+    url: "https://onlinelibrary.wiley.com/action/doSearch?AllField={indication_encoded}+epidemiology"
+    metric: wiley
+    value: "Wiley journals"
+    definition: "Wiley medical and life sciences"
+    notes: "Search across Wiley journals."
+
+  - id: springer
+    name: Springer Link
+    tier: silver
+    type: link
+    url: "https://link.springer.com/search?query={indication_encoded}+epidemiology"
+    metric: springer
+    value: "Springer Link"
+    definition: "Springer Nature journals and books"
+    notes: "Search for cancer epidemiology."
+
+  - id: jnci
+    name: JNCI
+    tier: gold
+    type: link
+    url: "https://academic.oup.com/jnci/search?q={indication_encoded}+epidemiology"
+    metric: jnci
+    value: "Journal of the National Cancer Institute"
+    definition: "JNCI – NCI official journal"
+    notes: "Search JNCI for incidence and epidemiology."
+
+  - id: annals_oncology
+    name: Annals of Oncology
+    tier: silver
+    type: link
+    url: "https://www.annalsofoncology.org/action/doSearch?AllField={indication_encoded}+epidemiology"
+    metric: annals_oncology
+    value: "Annals of Oncology (ESMO)"
+    definition: "ESMO official journal"
+    notes: "Search for cancer epidemiology."
+
+  - id: ejc
+    name: European Journal of Cancer
+    tier: silver
+    type: link
+    url: "https://www.ejcancer.com/action/doSearch?AllField={indication_encoded}+epidemiology"
+    metric: ejc
+    value: "European Journal of Cancer"
+    definition: "EJC – multidisciplinary cancer journal"
+    notes: "Search for epidemiology and burden."
+
+  - id: cancer_discovery
+    name: Cancer Discovery
+    tier: silver
+    type: link
+    url: "https://aacrjournals.org/cancerdiscovery/search?q={indication_encoded}"
+    metric: cancer_discovery
+    value: "Cancer Discovery (AACR)"
+    definition: "AACR Cancer Discovery"
+    notes: "Search for cancer research and epidemiology."
+
+  - id: aacr
+    name: AACR
+    tier: silver
+    type: link
+    url: "https://www.aacr.org/search/?q={indication_encoded}"
+    metric: aacr
+    value: "American Association for Cancer Research"
+    definition: "AACR – meetings, journals, resources"
+    notes: "Search for cancer research and data."
+
+  - id: astro
+    name: ASTRO
+    tier: silver
+    type: link
+    url: "https://www.astro.org/search?q={indication_encoded}"
+    metric: astro
+    value: "American Society for Radiation Oncology"
+    definition: "ASTRO guidelines and evidence"
+    notes: "Search for radiation oncology and epidemiology."
+
+  - id: medscape_oncology
+    name: Medscape Oncology
+    tier: bronze
+    type: link
+    url: "https://www.medscape.com/search?q={indication_encoded}+epidemiology"
+    metric: medscape
+    value: "Medscape Oncology"
+    definition: "Medscape disease and drug reference"
+    notes: "Search for disease overview and statistics."
+
+  - id: cancer_net
+    name: Cancer.net
+    tier: silver
+    type: link
+    url: "https://www.cancer.net/cancer-types/search?search={indication_encoded}"
+    metric: cancer_net
+    value: "Cancer.net (ASCO patient)"
+    definition: "ASCO patient information – incidence and statistics"
+    notes: "Browse by cancer type for statistics."
+
+  # --- Global burden & cross-country data ---
+  - id: ihme_gbd
+    name: IHME Global Burden of Disease
+    tier: gold
+    type: link
+    extract_priority: 1
+    url: "https://www.healthdata.org/search?search_term={indication_encoded}"
+    metric: ihme_gbd
+    value: "IHME GBD – global burden data"
+    definition: "Institute for Health Metrics – GBD Compare, Viz Hub"
+    notes: "Disease burden by country and year."
+
+  - id: oecd_health
+    name: OECD Health Statistics
+    tier: silver
+    type: link
+    extract_priority: 2
+    url: "https://www.oecd.org/health/health-data.htm"
+    metric: oecd_health
+    value: "OECD health data"
+    definition: "OECD Health Statistics – cross-country"
+    notes: "Browse health indicators by country."
+
+  - id: who_ictrp
+    name: WHO ICTRP
+    tier: silver
+    type: link
+    url: "https://trialsearch.who.int"
+    metric: who_ictrp
+    value: "WHO International Clinical Trials Registry"
+    definition: "WHO trial search portal"
+    notes: "Search trials globally."
+
+  - id: eu_ctr
+    name: EU Clinical Trials Register
+    tier: silver
+    type: link
+    url: "https://www.clinicaltrialsregister.eu/ctr-search/search?query={indication_encoded}"
+    metric: eu_ctr
+    value: "EU Clinical Trials Register"
+    definition: "EU trial registry"
+    notes: "Search by condition."
+
+  - id: opentrials
+    name: OpenTrials
+    tier: bronze
+    type: link
+    url: "https://opentrials.net/search?q={indication_encoded}"
+    metric: opentrials
+    value: "OpenTrials"
+    definition: "OpenTrials – open trial data"
+    notes: "Search for trial data."
+
+  # --- Regulatory (non-US) ---
+  - id: ema
+    name: EMA
+    tier: silver
+    type: link
+    url: "https://www.ema.europa.eu/en/search/search?search={indication_encoded}"
+    metric: ema
+    value: "European Medicines Agency"
+    definition: "EMA – approvals, EPARs, guidance"
+    notes: "Search for indication and epidemiology references."
+    country_filter: ["UK", "DE", "FR", "EU5", "EU", "Germany", "France", "United Kingdom"]
+
+  - id: health_canada
+    name: Health Canada
+    tier: silver
+    type: link
+    url: "https://www.canada.ca/en/health-canada/services/drugs-health-products.html"
+    metric: health_canada
+    value: "Health Canada"
+    definition: "Canadian regulatory and health data"
+    notes: "Drug and health product information."
+    country_filter: ["Canada", "CA"]
+
+  - id: tga
+    name: TGA (Australia)
+    tier: bronze
+    type: link
+    url: "https://www.tga.gov.au/search?query={indication_encoded}"
+    metric: tga
+    value: "TGA – Therapeutic Goods Administration"
+    definition: "Australian regulatory"
+    notes: "Search for indication."
+
+  # --- US additional ---
+  - id: nih_reporter
+    name: NIH RePORTER
+    tier: silver
+    type: link
+    url: "https://reporter.nih.gov/search?term={indication_encoded}"
+    metric: nih_reporter
+    value: "NIH RePORTER – funded research"
+    definition: "NIH funded projects and publications"
+    notes: "Search for epidemiology and cancer research."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: cancer_gov_search
+    name: Cancer.gov Search
+    tier: gold
+    type: link
+    url: "https://www.cancer.gov/search/results?swKeyword={indication_encoded}"
+    metric: cancer_gov_search
+    value: "NCI Cancer.gov search"
+    definition: "Full NCI site search"
+    notes: "Search all NCI content."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: cdc_cancer
+    name: CDC Cancer
+    tier: gold
+    type: link
+    url: "https://www.cdc.gov/cancer"
+    metric: cdc_cancer
+    value: "CDC Cancer prevention and data"
+    definition: "CDC cancer statistics and programs"
+    notes: "US cancer data and surveillance."
+    country_filter: ["US", "USA", "United States"]
+
+  - id: naaccr
+    name: NAACCR
+    tier: gold
+    type: link
+    url: "https://www.naaccr.org"
+    metric: naaccr
+    value: "North American Association of Central Cancer Registries"
+    definition: "NAACCR – registry standards and data"
+    notes: "US and Canada registry data."
+    country_filter: ["US", "USA", "United States", "Canada", "CA"]
+
+  - id: state_cancer_profiles
+    name: State Cancer Profiles
+    tier: gold
+    type: link
+    url: "https://statecancerprofiles.cancer.gov"
+    metric: state_profiles
+    value: "US State Cancer Profiles"
+    definition: "NCI/CDC state-level cancer statistics"
+    notes: "State and county level data."
+    country_filter: ["US", "USA", "United States"]
+
+  # --- EU cancer registries & organisations ---
+  - id: ecis
+    name: ECIS
+    tier: gold
+    type: link
+    url: "https://ecis.jrc.ec.europa.eu"
+    metric: ecis
+    value: "European Cancer Information System"
+    definition: "EC JRC – EU cancer incidence and mortality"
+    notes: "EU country and regional estimates."
+    country_filter: ["UK", "DE", "FR", "EU5", "EU", "Germany", "France", "United Kingdom"]
+
+  - id: encr
+    name: ENCR
+    tier: silver
+    type: link
+    url: "https://encr.eu"
+    metric: encr
+    value: "European Network of Cancer Registries"
+    definition: "ENCR – European cancer registries"
+    notes: "Registry network and publications."
+    country_filter: ["UK", "DE", "FR", "EU5", "EU", "Germany", "France", "United Kingdom"]
+
+  - id: ecco
+    name: ECCO
+    tier: silver
+    type: link
+    url: "https://www.ecco-org.eu"
+    metric: ecco
+    value: "European CanCer Organisation"
+    definition: "ECCO – European cancer organisation"
+    notes: "Policy and data resources."
+
+  - id: rarecare
+    name: RARECARE
+    tier: silver
+    type: link
+    url: "https://www.rarecare.eu"
+    metric: rarecare
+    value: "RARECARE – rare cancers Europe"
+    definition: "Rare cancer incidence in Europe"
+    notes: "Rare cancer epidemiology."
+    country_filter: ["UK", "DE", "FR", "EU5", "EU", "Germany", "France", "United Kingdom"]
+
+  # --- Guidelines & evidence (additional) ---
+  - id: sign
+    name: SIGN
+    tier: silver
+    type: link
+    url: "https://www.sign.ac.uk/search.html?q={indication_encoded}"
+    metric: sign
+    value: "Scottish Intercollegiate Guidelines Network"
+    definition: "SIGN – Scottish guidelines"
+    notes: "Search for cancer guidelines."
+    country_filter: ["UK", "United Kingdom"]
+
+  - id: trip_database
+    name: Trip Database
+    tier: silver
+    type: link
+    url: "https://www.tripdatabase.com/search?q={indication_encoded}+epidemiology"
+    metric: trip
+    value: "Trip Database – evidence search"
+    definition: "Trip – clinical evidence search"
+    notes: "Find guidelines and systematic reviews."
+
+  - id: ncbi_bookshelf
+    name: NCBI Bookshelf
+    tier: silver
+    type: link
+    url: "https://www.ncbi.nlm.nih.gov/books/?term={indication_encoded}"
+    metric: ncbi_books
+    value: "NCBI Bookshelf"
+    definition: "NIH books and reports"
+    notes: "Free books and reports on cancer."
+
+  - id: nci_dictionary
+    name: NCI Dictionary
+    tier: bronze
+    type: link
+    url: "https://www.cancer.gov/publications/dictionaries/cancer-terms/expand/{indication_encoded}"
+    metric: nci_dict
+    value: "NCI Dictionary of Cancer Terms"
+    definition: "NCI term definitions and links"
+    notes: "Definitions and related resources."
+    country_filter: ["US", "USA", "United States"]
+
+  # --- Societies & foundations ---
+  - id: uicc
+    name: UICC
+    tier: silver
+    type: link
+    url: "https://www.uicc.org/news/search?keyword={indication_encoded}"
+    metric: uicc
+    value: "Union for International Cancer Control"
+    definition: "UICC – global cancer control"
+    notes: "Global data and publications."
+
+  - id: wcrf
+    name: WCRF
+    tier: silver
+    type: link
+    url: "https://www.wcrf.org/search/?q={indication_encoded}"
+    metric: wcrf
+    value: "World Cancer Research Fund"
+    definition: "WCRF – diet, nutrition, cancer"
+    notes: "Search for cancer and epidemiology."
+
+  - id: nord
+    name: NORD
+    tier: silver
+    type: link
+    url: "https://rarediseases.org/search?search_term={indication_encoded}"
+    metric: nord
+    value: "NORD – rare disease reports"
+    definition: "National Organization for Rare Disorders"
+    notes: "Rare disease epidemiology (US focus)."
+
+  # --- Commercial & market (additional) ---
+  - id: iqvia
+    name: IQVIA
+    tier: bronze
+    type: link
+    url: "https://www.iqvia.com/solutions/commercialization/launch-and-brand-strategy"
+    metric: iqvia
+    value: "IQVIA – healthcare data and analytics"
+    definition: "IQVIA – commercial and epidemiology data"
+    notes: "Subscription; global healthcare data."
+
+  - id: kantar_health
+    name: Kantar Health
+    tier: bronze
+    type: link
+    url: "https://www.kantar.com/expertise/health"
+    metric: kantar
+    value: "Kantar Health"
+    definition: "Kantar Health – market and epidemiology"
+    notes: "Commercial; epidemiology and forecasting."
+
+  - id: drugbank
+    name: DrugBank
+    tier: bronze
+    type: link
+    url: "https://go.drugbank.com/unearth/q?query={indication_encoded}&searcher=drugs"
+    metric: drugbank
+    value: "DrugBank"
+    definition: "Drug and drug target database"
+    notes: "Search for indication and related drugs."
+
+  - id: dailymed
+    name: DailyMed
+    tier: bronze
+    type: link
+    url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?label={indication_encoded}"
+    metric: dailymed
+    value: "DailyMed (NIH)"
+    definition: "Drug labels and indications"
+    notes: "Search by indication."
+    country_filter: ["US", "USA", "United States"]
+
+  # --- API-backed (extracted values only) ---
+  - id: who_gho_api
+    name: WHO GHO
+    tier: gold
+    type: api
+    connector_id: who_gho
+    metric: who_gho_values
+
+  - id: clinicaltrials_api
+    name: ClinicalTrials.gov
+    tier: bronze
+    type: api
+    connector_id: clinicaltrials
+    metric: clinical_trials_count
+
+  - id: pubmed_api
+    name: PubMed/PMC
+    tier: silver
+    type: api
+    connector_id: pubmed
+    metric: literature_search
+    enabled_when: use_pubmed

@@ -1,0 +1,24 @@
+# Web scraping / proxy settings for link extraction.
+# Use a proxy to reduce blocks or rate limits. Free proxies are often slow or short-lived.
+#
+# Option 1 - Single proxy (most reliable):
+#   use_proxy: true
+#   proxy_url: "http://proxy.example.com:8080"
+#
+# Option 2 - Rotate through free proxies (paste URLs from free-proxy-list.net, spys.one, or similar):
+#   use_proxy: true
+#   proxy_list:
+#     - "http://192.168.1.1:8080"
+#     - "http://10.0.0.1:3128"
+#   If a request fails with proxy, it is retried once without proxy.
+#
+# Option 3 - Environment variables (no config change):
+#   export HTTP_PROXY=http://proxy:8080
+#   export HTTPS_PROXY=http://proxy:8080
+#   Then set use_proxy: true below so env is used.
+
+use_proxy: false
+# Use Selenium (headless Chrome) as fallback when requests fails (e.g. JS-rendered pages, blocks).
+use_selenium_fallback: true
+# proxy_url: "http://your-proxy:8080"
+# proxy_list: []   # Add free proxy URLs here; they will be rotated
