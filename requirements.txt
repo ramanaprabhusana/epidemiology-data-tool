@@ -10,6 +10,7 @@ selenium>=4.15.0
 # UI (choose one or both)
 streamlit>=1.28.0
 flask>=3.0.0
+gunicorn>=21.0.0
 
 # Tests
 pytest>=7.0.0
