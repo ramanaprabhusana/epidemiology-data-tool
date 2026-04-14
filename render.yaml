@@ -1,0 +1,9 @@
+# Render Blueprint: Flask app (app_web.py) deployment
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: epidemiology-data-tool
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:$PORT -w 1 app_web:app
