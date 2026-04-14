@@ -58,6 +58,10 @@ def main():
 
     if "last_run" not in st.session_state:
         st.session_state.last_run = None
+    if "last_result" not in st.session_state:
+        st.session_state.last_result = None
+    if "last_export_dashboard" not in st.session_state:
+        st.session_state.last_export_dashboard = True
 
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
@@ -163,89 +167,97 @@ def main():
                 "success": result.get("success", False),
             }
             st.session_state.last_result = result
+            st.session_state.last_export_dashboard = export_dashboard
 
-        if result["success"]:
-            st.success("Your data is ready.")
-            n = result.get("record_count", 0)
-            st.info(
-                f"**{n}** evidence row(s) processed. "
-                "Use **Download all outputs (ZIP)** below to save everything. "
-                "When you run this app on your own machine, files are also written under the **`output`** folder."
-            )
+    # Render from session_state so download-button reruns do not hide this block
+    result = st.session_state.get("last_result")
+    if result and result.get("success"):
+        lr = st.session_state.last_run or {}
+        ind_label = lr.get("indication") or ""
+        country_code = lr.get("country") or ""
+        ind_safe = str(ind_label).replace(" ", "_")
+        c_safe = str(country_code).replace(" ", "_")
+        suffix = f"{ind_safe}_{c_safe}"
+        had_dashboard = st.session_state.get("last_export_dashboard", True)
 
-            # --- 3. Your outputs ---
-            st.subheader("3. Your outputs")
-            ind_safe = indication_for_pipeline.replace(" ", "_")
-            c_safe = country_id.replace(" ", "_")
-            suffix = f"{ind_safe}_{c_safe}"
-            zip_bytes = _build_outputs_zip_bytes(ROOT / "output")
-            zip_name = f"epidemiology_outputs_{suffix}.zip"
-            st.download_button(
-                label="Download all outputs (ZIP)",
-                data=zip_bytes,
-                file_name=zip_name,
-                mime="application/zip",
-                type="primary",
-                use_container_width=True,
-                key="dl_zip_all",
-                help="Contains CSVs (and dashboard folder files) from this run.",
-            )
-            st.caption(
-                "In **Chrome**, if **Ask where to save each file before downloading** is on "
-                "(Settings → Downloads), you can pick the folder when the ZIP saves."
-            )
-            st.markdown("Included file names (also inside the ZIP):")
-            st.markdown(f"- **Evidence** (sources & values) → `evidence_{suffix}.csv`")
-            st.markdown(f"- **Tool-ready table** → `tool_ready_{suffix}.csv`")
-            st.markdown(f"- **KPI** (coverage & gaps) → `kpi_table_{suffix}.csv`")
-            st.markdown(f"- **InsightACE export** → `insightace_epi_{suffix}.csv`")
-            if export_dashboard:
-                st.markdown("- **Dashboard pack** (Tableau / Power BI) → folder `dashboard/`")
+        st.success("Your data is ready.")
+        n = result.get("record_count", 0)
+        st.info(
+            f"**{n}** evidence row(s) processed. "
+            "Use **Download all outputs (ZIP)** below to save everything. "
+            "When you run this app on your own machine, files are also written under the **`output`** folder."
+        )
 
-            # Validation report (if any)
-            if result.get("validation_report"):
-                with st.expander("Validation notes"):
-                    for e in result["validation_report"]:
-                        level = e.get("level", "info")
-                        msg = e.get("message", "")
-                        if level == "error":
-                            st.error(msg)
-                        else:
-                            st.warning(msg)
+        # --- 3. Your outputs ---
+        st.subheader("3. Your outputs")
+        zip_bytes = _build_outputs_zip_bytes(ROOT / "output")
+        zip_name = f"epidemiology_outputs_{suffix}.zip"
+        st.download_button(
+            label="Download all outputs (ZIP)",
+            data=zip_bytes,
+            file_name=zip_name,
+            mime="application/zip",
+            type="primary",
+            use_container_width=True,
+            key="dl_zip_all",
+            help="Contains CSVs (and dashboard folder files) from this run.",
+        )
+        st.caption(
+            "In **Chrome**, if **Ask where to save each file before downloading** is on "
+            "(Settings → Downloads), you can pick the folder when the ZIP saves."
+        )
+        st.markdown("Included file names (also inside the ZIP):")
+        st.markdown(f"- **Evidence** (sources & values) → `evidence_{suffix}.csv`")
+        st.markdown(f"- **Tool-ready table** → `tool_ready_{suffix}.csv`")
+        st.markdown(f"- **KPI** (coverage & gaps) → `kpi_table_{suffix}.csv`")
+        st.markdown(f"- **InsightACE export** → `insightace_epi_{suffix}.csv`")
+        if had_dashboard:
+            st.markdown("- **Dashboard pack** (Tableau / Power BI) → folder `dashboard/`")
 
-            # Preview and download
-            if result.get("evidence_df") is not None and not result["evidence_df"].empty:
-                with st.expander("Preview: Evidence"):
-                    st.dataframe(result["evidence_df"], use_container_width=True, hide_index=True)
-                csv_ev = result["evidence_df"].to_csv(index=False).encode("utf-8")
-                st.download_button("Download evidence (CSV)", data=csv_ev, file_name=f"evidence_{suffix}.csv", mime="text/csv", key="dl_evidence")
-            if result.get("kpi_df") is not None and not result["kpi_df"].empty:
-                with st.expander("Preview: KPI (coverage & gaps)"):
-                    st.dataframe(result["kpi_df"], use_container_width=True, hide_index=True)
-                csv_kpi = result["kpi_df"].to_csv(index=False).encode("utf-8")
-                st.download_button("Download KPI (CSV)", data=csv_kpi, file_name=f"kpi_table_{suffix}.csv", mime="text/csv", key="dl_kpi")
-            if result.get("tool_ready_df") is not None and not result["tool_ready_df"].empty:
-                csv_tr = result["tool_ready_df"].to_csv(index=False).encode("utf-8")
-                st.download_button("Download tool-ready table (CSV)", data=csv_tr, file_name=f"tool_ready_{suffix}.csv", mime="text/csv", key="dl_tool_ready")
+        # Validation report (if any)
+        if result.get("validation_report"):
+            with st.expander("Validation notes"):
+                for e in result["validation_report"]:
+                    level = e.get("level", "info")
+                    msg = e.get("message", "")
+                    if level == "error":
+                        st.error(msg)
+                    else:
+                        st.warning(msg)
 
-            # --- 4. What to do next ---
-            st.subheader("4. What to do next")
-            st.markdown("""
-            Use the output files for your work:
-            - **Unzip** — Extract the ZIP, then open CSVs from the folder you chose (or from Downloads).
-            - **Open in Excel** — Open any CSV to review or share.
-            - **Use in Power BI or Tableau** — Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
-            - **Feed another system** — Use the tool-ready or InsightACE CSV as input for your models or platform.
-            - **Share** — Send the ZIP or individual CSVs to a colleague.
-            - **Check quality** — Use the KPI table to see coverage and gaps; add evidence and run again if needed.
-            """)
-        else:
-            st.error("Something went wrong.")
-            st.write(result["message"])
-            if result.get("validation_report"):
-                with st.expander("Details"):
-                    for e in result["validation_report"]:
-                        st.warning(e.get("message", ""))
+        # Preview and download (DataFrames restored from session_state on each rerun)
+        if result.get("evidence_df") is not None and not result["evidence_df"].empty:
+            with st.expander("Preview: Evidence"):
+                st.dataframe(result["evidence_df"], use_container_width=True, hide_index=True)
+            csv_ev = result["evidence_df"].to_csv(index=False).encode("utf-8")
+            st.download_button("Download evidence (CSV)", data=csv_ev, file_name=f"evidence_{suffix}.csv", mime="text/csv", key="dl_evidence")
+        if result.get("kpi_df") is not None and not result["kpi_df"].empty:
+            with st.expander("Preview: KPI (coverage & gaps)"):
+                st.dataframe(result["kpi_df"], use_container_width=True, hide_index=True)
+            csv_kpi = result["kpi_df"].to_csv(index=False).encode("utf-8")
+            st.download_button("Download KPI (CSV)", data=csv_kpi, file_name=f"kpi_table_{suffix}.csv", mime="text/csv", key="dl_kpi")
+        if result.get("tool_ready_df") is not None and not result["tool_ready_df"].empty:
+            csv_tr = result["tool_ready_df"].to_csv(index=False).encode("utf-8")
+            st.download_button("Download tool-ready table (CSV)", data=csv_tr, file_name=f"tool_ready_{suffix}.csv", mime="text/csv", key="dl_tool_ready")
+
+        # --- 4. What to do next ---
+        st.subheader("4. What to do next")
+        st.markdown("""
+        Use the output files for your work:
+        - **Unzip** — Extract the ZIP, then open CSVs from the folder you chose (or from Downloads).
+        - **Open in Excel** — Open any CSV to review or share.
+        - **Use in Power BI or Tableau** — Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
+        - **Feed another system** — Use the tool-ready or InsightACE CSV as input for your models or platform.
+        - **Share** — Send the ZIP or individual CSVs to a colleague.
+        - **Check quality** — Use the KPI table to see coverage and gaps; add evidence and run again if needed.
+        """)
+    elif result and not result.get("success"):
+        st.error("Something went wrong.")
+        st.write(result.get("message", ""))
+        if result.get("validation_report"):
+            with st.expander("Details"):
+                for e in result["validation_report"]:
+                    st.warning(e.get("message", ""))
 
     st.divider()
     st.caption("This tool collects evidence from configured sources, builds tool-ready tables and KPI, and optionally exports a dashboard pack. For full instructions, see **HOW_TO_USE_THIS_TOOL.md**.")
