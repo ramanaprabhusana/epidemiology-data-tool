@@ -22,12 +22,7 @@ RECENCY_CURRENT_YEAR_BONUS = 5
 RECENCY_WITHIN_5_BONUS = 3
 
 
-def _is_stub_value(value: Any) -> bool:
-    """True if value indicates no extracted datapoint (e.g. 'See link for...')."""
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return True
-    s = str(value).strip().lower()
-    return "see link" in s or s == "" or s == "nan"
+from ..utils import is_stub_value as _is_stub_value
 
 
 def _tier_score(source_tier: Any) -> int:

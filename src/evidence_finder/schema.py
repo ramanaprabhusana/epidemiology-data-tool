@@ -23,10 +23,12 @@ class EvidenceRecord:
     notes: Optional[str] = None
     confidence: Optional[str] = None  # low | medium | high
     evidence_id: Optional[str] = None  # optional stable id
+    category: Optional[str] = None  # metric cluster/category
 
     def to_row(self) -> dict:
         """For CSV/Excel export."""
         return {
+            "category": self.category or "",
             "indication": self.indication,
             "metric": self.metric,
             "value": self.value,

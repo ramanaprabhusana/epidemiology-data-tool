@@ -8,8 +8,32 @@ metrics:
     label: "Incidence"
     required: true
     splits: []
+  - id: incidence_rate
+    label: "Incidence Rate (per 100k)"
+    required: true
+    splits: []
   - id: prevalence
     label: "Prevalence"
+    required: true
+    splits: []
+  - id: mortality
+    label: "Mortality"
+    required: true
+    splits: []
+  - id: mortality_rate
+    label: "Mortality Rate (per 100k)"
+    required: true
+    splits: []
+  - id: five_year_survival
+    label: "5-Year Survival Rate (%)"
+    required: true
+    splits: []
+  - id: median_age_at_diagnosis
+    label: "Median Age at Diagnosis"
+    required: true
+    splits: []
+  - id: male_female_ratio
+    label: "Male:Female Ratio"
     required: true
     splits: []
   - id: diagnosed_prevalence

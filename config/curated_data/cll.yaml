@@ -1,0 +1,5823 @@
+indication: CLL
+full_name: Chronic Lymphocytic Leukemia
+aliases:
+- CLL
+- chronic lymphocytic leukemia
+- chronic lymphocytic leukaemia
+- CLL/SLL
+metrics:
+  incidence_2024:
+    value: 20160
+    unit: new cases per year
+    year: 2024
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2024
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2023:
+    value: 18740
+    unit: new cases per year
+    year: 2023
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2023
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2022:
+    value: 20160
+    unit: new cases per year
+    year: 2022
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2022
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2021:
+    value: 21250
+    unit: new cases per year
+    year: 2021
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2021
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2020:
+    value: 21040
+    unit: new cases per year
+    year: 2020
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2020
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2019:
+    value: 20720
+    unit: new cases per year
+    year: 2019
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2019
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2018:
+    value: 20940
+    unit: new cases per year
+    year: 2018
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2018
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2017:
+    value: 20110
+    unit: new cases per year
+    year: 2017
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2017
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2016:
+    value: 18960
+    unit: new cases per year
+    year: 2016
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2016
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2015:
+    value: 14620
+    unit: new cases per year
+    year: 2015
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2015
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_male_2024:
+    value: 12500
+    unit: new cases per year
+    year: 2024
+    geography: US
+    population: Males
+    definition: Estimated new CLL cases — males
+    source_citation: ACS Cancer Facts & Figures 2024
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_female_2024:
+    value: 7660
+    unit: new cases per year
+    year: 2024
+    geography: US
+    population: Females
+    definition: Estimated new CLL cases — females
+    source_citation: ACS Cancer Facts & Figures 2024
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_rate:
+    value: 4.9
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: All ages, both sexes
+    definition: Age-adjusted incidence rate per 100,000
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_male:
+    value: 6.8
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Males
+    definition: Age-adjusted incidence rate — males
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_female:
+    value: 3.5
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Females
+    definition: Age-adjusted incidence rate — females
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_white:
+    value: 5.8
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: White (non-Hispanic)
+    definition: Age-adjusted incidence rate — White
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_black:
+    value: 3.8
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Black
+    definition: Age-adjusted incidence rate — Black
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_hispanic:
+    value: 2.7
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Hispanic
+    definition: Age-adjusted incidence rate — Hispanic
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_asian_pi:
+    value: 1.6
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Asian/Pacific Islander
+    definition: Age-adjusted incidence rate — Asian/PI
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_aian:
+    value: 2.1
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: American Indian/Alaska Native
+    definition: Age-adjusted incidence rate — AI/AN
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  incidence_rate_trend_annual:
+    value: 1.1
+    unit: percent change per year
+    year: 2012-2021
+    geography: US
+    population: All ages, both sexes
+    definition: Average annual percent change (AAPC) in incidence rate
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  prevalence_2021:
+    value: 210823
+    unit: estimated people living with CLL
+    year: 2021
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated number of people living with CLL in the US
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Prevalence
+  prevalence_2018:
+    value: 200000
+    unit: estimated people living with CLL
+    year: 2018
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated number of people living with CLL in the US
+    source_citation: SEER / NCI Prevalence Estimates
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Prevalence
+  prevalence_2015:
+    value: 175000
+    unit: estimated people living with CLL
+    year: 2015
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated number of people living with CLL in the US
+    source_citation: SEER / NCI Prevalence Estimates
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Prevalence
+  diagnosed_prevalence:
+    value: 191000
+    unit: patients
+    year: 2021
+    geography: US
+    population: Diagnosed CLL cases alive
+    definition: Estimated diagnosed CLL prevalence in the US
+    source_citation: SEER Limited-Duration Prevalence
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Prevalence
+  prevalence_male:
+    value: 130000
+    unit: estimated males living with CLL
+    year: 2021
+    geography: US
+    population: Males
+    definition: Estimated male CLL prevalence
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_female:
+    value: 80823
+    unit: estimated females living with CLL
+    year: 2021
+    geography: US
+    population: Females
+    definition: Estimated female CLL prevalence
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  mortality_2024:
+    value: 4410
+    unit: deaths per year
+    year: 2024
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2024
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2023:
+    value: 4490
+    unit: deaths per year
+    year: 2023
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2023
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2022:
+    value: 4410
+    unit: deaths per year
+    year: 2022
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2022
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2021:
+    value: 4320
+    unit: deaths per year
+    year: 2021
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2021
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2020:
+    value: 4060
+    unit: deaths per year
+    year: 2020
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2020
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2019:
+    value: 4150
+    unit: deaths per year
+    year: 2019
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2019
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2018:
+    value: 4510
+    unit: deaths per year
+    year: 2018
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2018
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2017:
+    value: 4660
+    unit: deaths per year
+    year: 2017
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2017
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2016:
+    value: 4660
+    unit: deaths per year
+    year: 2016
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2016
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2015:
+    value: 4650
+    unit: deaths per year
+    year: 2015
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in the United States
+    source_citation: ACS Cancer Facts & Figures 2015
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_rate:
+    value: 1.1
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: All ages, both sexes
+    definition: Age-adjusted mortality rate per 100,000
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality Rates
+  mortality_rate_male:
+    value: 1.6
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Males
+    definition: Age-adjusted mortality rate — males
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality Rates
+  mortality_rate_female:
+    value: 0.7
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Females
+    definition: Age-adjusted mortality rate — females
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality Rates
+  mortality_rate_white:
+    value: 1.2
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: White (non-Hispanic)
+    definition: Age-adjusted mortality rate — White
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality Rates
+  mortality_rate_black:
+    value: 1.0
+    unit: per 100,000 per year (age-adjusted)
+    year: 2024
+    geography: US
+    population: Black
+    definition: Age-adjusted mortality rate — Black
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality Rates
+  mortality_rate_trend_annual:
+    value: -2.0
+    unit: percent change per year
+    year: 2012-2021
+    geography: US
+    population: All ages, both sexes
+    definition: Average annual percent change (AAPC) in mortality rate
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Mortality Rates
+  five_year_survival:
+    value: 88.0
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: All stages
+    definition: 5-year relative survival rate
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_localized:
+    value: 90.1
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Localized stage
+    definition: 5-year relative survival — localized
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_regional:
+    value: 90.8
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Regional stage
+    definition: 5-year relative survival — regional
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_distant:
+    value: 86.1
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Distant stage
+    definition: 5-year relative survival — distant
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  ten_year_survival:
+    value: 72.0
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: All stages
+    definition: 10-year relative survival rate
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_male:
+    value: 87.2
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Males
+    definition: 5-year relative survival — males
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_female:
+    value: 89.3
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Females
+    definition: 5-year relative survival — females
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_under_50:
+    value: 93.5
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Age < 50
+    definition: 5-year relative survival — under 50
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_50_64:
+    value: 92.1
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Age 50-64
+    definition: 5-year relative survival — age 50-64
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_65_74:
+    value: 88.9
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Age 65-74
+    definition: 5-year relative survival — age 65-74
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_75_plus:
+    value: 81.6
+    unit: percent
+    year: 2014-2020
+    geography: US
+    population: Age 75+
+    definition: 5-year relative survival — age 75+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_2005_2011:
+    value: 82.4
+    unit: percent
+    year: 2005-2011
+    geography: US
+    population: All stages
+    definition: 5-year relative survival (historical)
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_1995_2001:
+    value: 74.3
+    unit: percent
+    year: 1995-2001
+    geography: US
+    population: All stages
+    definition: 5-year relative survival (historical)
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Survival
+  median_age_at_diagnosis:
+    value: 71
+    unit: years
+    year: 2024
+    geography: US
+    population: All cases
+    definition: Median age at CLL diagnosis
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  male_female_ratio:
+    value: 1.7
+    unit: ratio (male:female)
+    year: 2024
+    geography: US
+    population: All ages
+    definition: Male to female incidence ratio
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_under_45:
+    value: 5.2
+    unit: percent
+    year: 2024
+    geography: US
+    population: Under 45
+    definition: Percentage of CLL diagnosed under age 45
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_45_54:
+    value: 9.1
+    unit: percent
+    year: 2024
+    geography: US
+    population: Age 45-54
+    definition: Percentage of CLL diagnosed at age 45-54
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_55_64:
+    value: 18.2
+    unit: percent
+    year: 2024
+    geography: US
+    population: Age 55-64
+    definition: Percentage of CLL diagnosed at age 55-64
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_65_74:
+    value: 31.6
+    unit: percent
+    year: 2024
+    geography: US
+    population: Age 65-74
+    definition: Percentage of CLL diagnosed at age 65-74
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_75_84:
+    value: 24.8
+    unit: percent
+    year: 2024
+    geography: US
+    population: Age 75-84
+    definition: Percentage of CLL diagnosed at age 75-84
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_85_plus:
+    value: 11.1
+    unit: percent
+    year: 2024
+    geography: US
+    population: Age 85+
+    definition: Percentage of CLL diagnosed at age 85+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_age_65_plus:
+    value: 67.5
+    unit: percent
+    year: 2024
+    geography: US
+    population: Age 65+
+    definition: Percentage of CLL diagnosed at age 65+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_diagnosed_under_55:
+    value: 14.3
+    unit: percent
+    year: 2024
+    geography: US
+    population: Under 55
+    definition: Percentage of CLL diagnosed under age 55
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_ighv_unmutated:
+    value: 40.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients tested
+    definition: Percentage of CLL with unmutated IGHV (poor prognosis)
+    source_citation: Published literature / NCCN Guidelines
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_ighv_mutated:
+    value: 60.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients tested
+    definition: Percentage of CLL with mutated IGHV (better prognosis)
+    source_citation: Published literature / NCCN Guidelines
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_del_17p:
+    value: 7.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with del(17p) at diagnosis (high-risk)
+    source_citation: Published literature / Döhner et al.
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_del_17p_relapsed:
+    value: 30.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Relapsed/refractory CLL
+    definition: Percentage with del(17p) at relapse
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_tp53_mutation:
+    value: 10.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with TP53 mutation at diagnosis
+    source_citation: Published literature / NCCN Guidelines
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_del_11q:
+    value: 18.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with del(11q) at diagnosis
+    source_citation: Published literature / Döhner et al.
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_trisomy_12:
+    value: 16.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with trisomy 12 at diagnosis
+    source_citation: Published literature / Döhner et al.
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_del_13q:
+    value: 55.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with del(13q) at diagnosis (favorable)
+    source_citation: Published literature / Döhner et al.
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_normal_cytogenetics:
+    value: 18.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with normal cytogenetics (FISH)
+    source_citation: Published literature / Döhner et al.
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  pct_rai_stage_0:
+    value: 55.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai Stage 0 (low risk) at diagnosis
+    source_citation: SEER / Published literature
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_rai_stage_I_II:
+    value: 30.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai Stage I-II (intermediate risk) at diagnosis
+    source_citation: SEER / Published literature
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_rai_stage_III_IV:
+    value: 15.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai Stage III-IV (high risk) at diagnosis
+    source_citation: SEER / Published literature
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_binet_stage_a:
+    value: 60.0
+    unit: percent
+    year: 2023
+    geography: Europe
+    population: Newly diagnosed CLL
+    definition: Binet Stage A (low risk) at diagnosis
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_binet_stage_b:
+    value: 25.0
+    unit: percent
+    year: 2023
+    geography: Europe
+    population: Newly diagnosed CLL
+    definition: Binet Stage B (intermediate risk) at diagnosis
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_binet_stage_c:
+    value: 15.0
+    unit: percent
+    year: 2023
+    geography: Europe
+    population: Newly diagnosed CLL
+    definition: Binet Stage C (high risk) at diagnosis
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_watch_and_wait:
+    value: 40.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage on watch-and-wait at diagnosis
+    source_citation: NCCN Guidelines / Clinical practice estimates
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_requiring_first_line:
+    value: 60.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Percentage requiring first-line treatment
+    source_citation: NCCN Guidelines / Clinical practice estimates
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  first_line:
+    value: 12096
+    unit: patients per year
+    year: 2024
+    geography: US
+    population: CLL requiring 1L treatment
+    definition: Estimated patients initiating first-line therapy
+    source_citation: 'Derived: ACS 2024 incidence × 60% treatment rate'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  first_line_patients:
+    value: 12096
+    unit: patients per year
+    year: 2024
+    geography: US
+    population: CLL requiring 1L treatment
+    definition: Estimated patients initiating first-line therapy
+    source_citation: 'Derived: ACS 2024 incidence × 60% treatment rate'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_relapsed_refractory:
+    value: 30.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Previously treated CLL
+    definition: Percentage of treated patients who relapse
+    source_citation: Published clinical trial data
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  relapsed_refractory:
+    value: 3629
+    unit: patients per year
+    year: 2024
+    geography: US
+    population: R/R CLL
+    definition: Estimated R/R CLL patients
+    source_citation: 'Derived: 1L patients × 30% R/R rate'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  relapsed_refractory_patients:
+    value: 3629
+    unit: patients per year
+    year: 2024
+    geography: US
+    population: R/R CLL
+    definition: Estimated R/R CLL patients
+    source_citation: 'Derived: 1L patients × 30% R/R rate'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_btki_first_line:
+    value: 65.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: 1L CLL patients
+    definition: Percentage of 1L patients receiving BTK inhibitor
+    source_citation: Market research / Published treatment patterns
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_venetoclax_first_line:
+    value: 25.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: 1L CLL patients
+    definition: Percentage of 1L patients receiving venetoclax-based regimen
+    source_citation: Market research / Published treatment patterns
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_chemoimmunotherapy_first_line:
+    value: 10.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: 1L CLL patients
+    definition: Percentage of 1L patients receiving chemoimmunotherapy (FCR/BR)
+    source_citation: Market research / Published treatment patterns
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  median_time_to_first_treatment:
+    value: 24.0
+    unit: months
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Median time from diagnosis to first treatment
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  incidence_global:
+    value: 105000
+    unit: new cases per year
+    year: 2022
+    geography: Global
+    population: All ages, both sexes
+    definition: Estimated global new CLL/SLL cases
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_global:
+    value: 35000
+    unit: deaths per year
+    year: 2022
+    geography: Global
+    population: All ages, both sexes
+    definition: Estimated global CLL/SLL deaths
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_europe:
+    value: 36000
+    unit: new cases per year
+    year: 2022
+    geography: Europe
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Europe
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_europe:
+    value: 3.4
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Europe
+    population: All ages, both sexes
+    definition: Age-standardized incidence rate in Europe
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_uk:
+    value: 3900
+    unit: new cases per year
+    year: 2022
+    geography: UK
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in UK
+    source_citation: Cancer Research UK / GLOBOCAN
+    source_url: https://www.cancerresearchuk.org/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_germany:
+    value: 5500
+    unit: new cases per year
+    year: 2022
+    geography: Germany
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Germany
+    source_citation: GLOBOCAN 2022 / Robert Koch Institute
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_france:
+    value: 4400
+    unit: new cases per year
+    year: 2022
+    geography: France
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in France
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_italy:
+    value: 3100
+    unit: new cases per year
+    year: 2022
+    geography: Italy
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Italy
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_spain:
+    value: 2700
+    unit: new cases per year
+    year: 2022
+    geography: Spain
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Spain
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_japan:
+    value: 1200
+    unit: new cases per year
+    year: 2022
+    geography: Japan
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Japan
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_china:
+    value: 8500
+    unit: new cases per year
+    year: 2022
+    geography: China
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in China
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_australia:
+    value: 1600
+    unit: new cases per year
+    year: 2022
+    geography: Australia
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Australia
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_canada:
+    value: 2800
+    unit: new cases per year
+    year: 2022
+    geography: Canada
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Canada
+    source_citation: GLOBOCAN 2022 / Canadian Cancer Society
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_japan:
+    value: 0.6
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Japan
+    population: All ages, both sexes
+    definition: Age-standardized incidence rate in Japan (CLL is rare in East Asia)
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_australia:
+    value: 4.5
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Australia
+    population: All ages, both sexes
+    definition: Age-standardized incidence rate in Australia
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  annual_cost_per_patient:
+    value: 115000
+    unit: USD per year
+    year: 2023
+    geography: US
+    population: CLL patients on active treatment
+    definition: Estimated annual healthcare cost per CLL patient on treatment
+    source_citation: Published health economics literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_watch_wait:
+    value: 8500
+    unit: USD per year
+    year: 2023
+    geography: US
+    population: CLL patients on watch-and-wait
+    definition: Estimated annual healthcare cost for W&W patients
+    source_citation: Published health economics literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  us_cll_market_size:
+    value: 8.2
+    unit: billion USD
+    year: 2024
+    geography: US
+    population: CLL drug market
+    definition: Estimated US CLL pharmaceutical market size
+    source_citation: Market research / Industry reports
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: bronze
+    confidence: low
+    category: Healthcare Burden
+  global_cll_market_size:
+    value: 14.5
+    unit: billion USD
+    year: 2024
+    geography: Global
+    population: CLL drug market
+    definition: Estimated global CLL pharmaceutical market size
+    source_citation: Market research / Industry reports
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: bronze
+    confidence: low
+    category: Healthcare Burden
+  pct_patients_hospitalized_annually:
+    value: 22.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Percentage hospitalized at least once per year
+    source_citation: Claims data / Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  mean_hospitalizations_per_year:
+    value: 1.8
+    unit: admissions per year
+    year: 2023
+    geography: US
+    population: CLL patients hospitalized
+    definition: Mean annual hospital admissions among hospitalized CLL patients
+    source_citation: Claims data / Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  pct_with_autoimmune_complication:
+    value: 10.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Percentage with autoimmune complications (AIHA, ITP)
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Comorbidities
+  pct_richter_transformation:
+    value: 5.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Percentage with Richter transformation to DLBCL
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Comorbidities
+  pct_secondary_malignancy:
+    value: 15.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Percentage developing a secondary malignancy
+    source_citation: SEER / Published literature
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Comorbidities
+  pct_cirs_score_gt_6:
+    value: 45.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients age 65+
+    definition: Percentage with CIRS comorbidity score > 6 (unfit)
+    source_citation: Published clinical trial data
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Comorbidities
+  pct_infection_related_death:
+    value: 25.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL deaths
+    definition: Percentage of CLL deaths attributed to infection
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Comorbidities
+  incidence_forecast_2025:
+    value: 20500
+    unit: new cases (projected)
+    year: 2025
+    geography: US
+    population: All ages, both sexes
+    definition: Projected new CLL cases based on AAPC trend
+    source_citation: Projection based on SEER AAPC +1.1%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  incidence_forecast_2026:
+    value: 20725
+    unit: new cases (projected)
+    year: 2026
+    geography: US
+    population: All ages, both sexes
+    definition: Projected new CLL cases based on AAPC trend
+    source_citation: Projection based on SEER AAPC +1.1%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  incidence_forecast_2027:
+    value: 20953
+    unit: new cases (projected)
+    year: 2027
+    geography: US
+    population: All ages, both sexes
+    definition: Projected new CLL cases based on AAPC trend
+    source_citation: Projection based on SEER AAPC +1.1%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  incidence_forecast_2028:
+    value: 21184
+    unit: new cases (projected)
+    year: 2028
+    geography: US
+    population: All ages, both sexes
+    definition: Projected new CLL cases based on AAPC trend
+    source_citation: Projection based on SEER AAPC +1.1%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  incidence_forecast_2029:
+    value: 21417
+    unit: new cases (projected)
+    year: 2029
+    geography: US
+    population: All ages, both sexes
+    definition: Projected new CLL cases based on AAPC trend
+    source_citation: Projection based on SEER AAPC +1.1%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  incidence_forecast_2030:
+    value: 21653
+    unit: new cases (projected)
+    year: 2030
+    geography: US
+    population: All ages, both sexes
+    definition: Projected new CLL cases based on AAPC trend
+    source_citation: Projection based on SEER AAPC +1.1%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  prevalence_forecast_2025:
+    value: 220000
+    unit: estimated people living with CLL (projected)
+    year: 2025
+    geography: US
+    population: All ages, both sexes
+    definition: Projected CLL prevalence based on incidence/survival trends
+    source_citation: Projection based on SEER data
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  prevalence_forecast_2027:
+    value: 240000
+    unit: estimated people living with CLL (projected)
+    year: 2027
+    geography: US
+    population: All ages, both sexes
+    definition: Projected CLL prevalence based on incidence/survival trends
+    source_citation: Projection based on SEER data
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  prevalence_forecast_2030:
+    value: 270000
+    unit: estimated people living with CLL (projected)
+    year: 2030
+    geography: US
+    population: All ages, both sexes
+    definition: Projected CLL prevalence based on incidence/survival trends
+    source_citation: Projection based on SEER data
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  mortality_forecast_2025:
+    value: 4320
+    unit: deaths (projected)
+    year: 2025
+    geography: US
+    population: All ages, both sexes
+    definition: Projected CLL deaths based on AAPC mortality trend -2%/year
+    source_citation: Projection based on SEER AAPC -2%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  mortality_forecast_2027:
+    value: 4150
+    unit: deaths (projected)
+    year: 2027
+    geography: US
+    population: All ages, both sexes
+    definition: Projected CLL deaths based on AAPC mortality trend -2%/year
+    source_citation: Projection based on SEER AAPC -2%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  mortality_forecast_2030:
+    value: 3910
+    unit: deaths (projected)
+    year: 2030
+    geography: US
+    population: All ages, both sexes
+    definition: Projected CLL deaths based on AAPC mortality trend -2%/year
+    source_citation: Projection based on SEER AAPC -2%/year
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  first_line_forecast_2025:
+    value: 12300
+    unit: patients (projected)
+    year: 2025
+    geography: US
+    population: CLL requiring 1L treatment
+    definition: Projected 1L patients (60% of projected incidence)
+    source_citation: Derived projection
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  first_line_forecast_2030:
+    value: 12992
+    unit: patients (projected)
+    year: 2030
+    geography: US
+    population: CLL requiring 1L treatment
+    definition: Projected 1L patients (60% of projected incidence)
+    source_citation: Derived projection
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Forecast
+  global_cll_market_forecast_2030:
+    value: 24.0
+    unit: billion USD (projected)
+    year: 2030
+    geography: Global
+    population: CLL drug market
+    definition: Projected global CLL market size
+    source_citation: Market research / Industry reports
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: bronze
+    confidence: low
+    category: Forecast
+  pfs_ibrutinib_1l_median:
+    value: 61.0
+    unit: months
+    year: 2023
+    geography: US
+    population: 1L CLL (RESONATE-2 trial)
+    definition: Median PFS with ibrutinib first-line in elderly CLL
+    source_citation: RESONATE-2 trial (Burger et al., NEJM)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  pfs_acalabrutinib_1l:
+    value: 58.0
+    unit: months (not reached at data cutoff)
+    year: 2023
+    geography: US
+    population: 1L CLL (ELEVATE-TN trial)
+    definition: Median PFS with acalabrutinib+obinutuzumab first-line
+    source_citation: ELEVATE-TN trial (Sharman et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  pfs_venetoclax_obinutuzumab_1l:
+    value: 76.2
+    unit: percent at 3 years
+    year: 2023
+    geography: US
+    population: 1L CLL (CLL14 trial)
+    definition: 3-year PFS rate with venetoclax+obinutuzumab
+    source_citation: CLL14 trial (Fischer et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  orr_ibrutinib_rr:
+    value: 91.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: R/R CLL
+    definition: Overall response rate with ibrutinib in R/R CLL
+    source_citation: RESONATE trial (Byrd et al., NEJM)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  orr_venetoclax_rr:
+    value: 79.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: R/R CLL (del17p)
+    definition: ORR with venetoclax in R/R CLL with del(17p)
+    source_citation: M13-982 trial
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  cr_rate_fcr:
+    value: 44.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: 1L CLL, fit patients (CLL8 trial)
+    definition: Complete remission rate with FCR chemoimmunotherapy
+    source_citation: CLL8 trial (Hallek et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  median_os_untreated_rai_0:
+    value: 150.0
+    unit: months
+    year: 2023
+    geography: US
+    population: Rai Stage 0 CLL (untreated)
+    definition: Median overall survival for low-risk untreated CLL
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  median_os_untreated_rai_III_IV:
+    value: 36.0
+    unit: months
+    year: 2023
+    geography: US
+    population: Rai Stage III-IV CLL (untreated, historical)
+    definition: Median overall survival for high-risk untreated CLL (pre-novel agents)
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  pfs_zanubrutinib_1l:
+    value: 60.0
+    unit: months (not reached at data cutoff)
+    year: 2024
+    geography: US
+    population: 1L CLL (SEQUOIA trial)
+    definition: Median PFS with zanubrutinib first-line
+    source_citation: SEQUOIA trial (Tam et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  orr_zanubrutinib_rr:
+    value: 80.4
+    unit: percent
+    year: 2024
+    geography: US
+    population: R/R CLL (ALPINE trial)
+    definition: ORR with zanubrutinib in R/R CLL
+    source_citation: ALPINE trial (Brown et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  pfs_br_1l_median:
+    value: 42.0
+    unit: months
+    year: 2023
+    geography: US
+    population: 1L CLL, unfit patients
+    definition: Median PFS with bendamustine+rituximab first-line
+    source_citation: CLL10 / MABLE trials
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  muGBR_umrd_rate_venetoclax_obi:
+    value: 57.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: 1L CLL (CLL14)
+    definition: Undetectable MRD rate with venetoclax+obinutuzumab at end of treatment
+    source_citation: CLL14 trial (Fischer et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: high
+    category: Treatment Outcomes
+  mortality_uk:
+    value: 1200
+    unit: deaths per year
+    year: 2022
+    geography: UK
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in UK
+    source_citation: Cancer Research UK / GLOBOCAN
+    source_url: https://www.cancerresearchuk.org/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_germany:
+    value: 1800
+    unit: deaths per year
+    year: 2022
+    geography: Germany
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in Germany
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_europe:
+    value: 12000
+    unit: deaths per year
+    year: 2022
+    geography: Europe
+    population: All ages, both sexes
+    definition: Estimated CLL deaths in Europe
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_uk:
+    value: 4.8
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: UK
+    population: All ages, both sexes
+    definition: Age-standardized incidence rate in UK
+    source_citation: Cancer Research UK / GLOBOCAN
+    source_url: https://www.cancerresearchuk.org/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_germany:
+    value: 4.6
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Germany
+    population: All ages, both sexes
+    definition: Age-standardized incidence rate in Germany
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  five_year_survival_europe:
+    value: 80.0
+    unit: percent
+    year: 2010-2014
+    geography: Europe
+    population: All stages
+    definition: 5-year relative survival in Europe (EUROCARE-5)
+    source_citation: EUROCARE-5 study
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_europe:
+    value: 150000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Europe
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Europe
+    source_citation: GLOBOCAN 2022 / ECIS
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_global:
+    value: 500000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Global
+    population: All ages, both sexes
+    definition: Estimated global CLL prevalence
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_global:
+    value: 1.3
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Global
+    population: All ages, both sexes
+    definition: Global age-standardized incidence rate
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_india:
+    value: 6500
+    unit: new cases per year
+    year: 2022
+    geography: India
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in India
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_brazil:
+    value: 3200
+    unit: new cases per year
+    year: 2022
+    geography: Brazil
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Brazil
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_south_korea:
+    value: 900
+    unit: new cases per year
+    year: 2022
+    geography: South Korea
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in South Korea
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_mexico:
+    value: 1800
+    unit: new cases per year
+    year: 2022
+    geography: Mexico
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Mexico
+    source_citation: GLOBOCAN 2022
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_rate_age_under_20:
+    value: 0.0
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Under 20
+    definition: CLL incidence rate — under 20 (extremely rare)
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_20_34:
+    value: 0.2
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 20-34
+    definition: CLL incidence rate — age 20-34
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_35_44:
+    value: 1.2
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 35-44
+    definition: CLL incidence rate — age 35-44
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_45_54:
+    value: 4.1
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 45-54
+    definition: CLL incidence rate — age 45-54
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_55_64:
+    value: 10.3
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 55-64
+    definition: CLL incidence rate — age 55-64
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_65_74:
+    value: 18.7
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 65-74
+    definition: CLL incidence rate — age 65-74
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_75_84:
+    value: 22.5
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 75-84
+    definition: CLL incidence rate — age 75-84
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_age_85_plus:
+    value: 19.8
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 85+
+    definition: CLL incidence rate — age 85+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_age_under_50:
+    value: 0.1
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Under 50
+    definition: CLL mortality rate — under 50
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_age_50_64:
+    value: 1.1
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 50-64
+    definition: CLL mortality rate — age 50-64
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_age_65_74:
+    value: 3.8
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 65-74
+    definition: CLL mortality rate — age 65-74
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_age_75_84:
+    value: 8.2
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 75-84
+    definition: CLL mortality rate — age 75-84
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_age_85_plus:
+    value: 13.1
+    unit: per 100,000 per year
+    year: 2024
+    geography: US
+    population: Age 85+
+    definition: CLL mortality rate — age 85+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  pct_asymptomatic_at_diagnosis:
+    value: 70.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage of CLL patients asymptomatic at diagnosis
+    source_citation: Published literature / NCCN
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_incidental_diagnosis:
+    value: 50.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage diagnosed incidentally on routine blood work
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_monoclonal_b_lymphocytosis:
+    value: 3.5
+    unit: percent
+    year: 2023
+    geography: US
+    population: General population age 40+
+    definition: Prevalence of MBL (precursor to CLL) in adults over 40
+    source_citation: Published literature (Rawstron et al.)
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  mbl_progression_rate_to_cll:
+    value: 1.1
+    unit: percent per year
+    year: 2023
+    geography: US
+    population: High-count MBL patients
+    definition: Annual progression rate from high-count MBL to CLL requiring treatment
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_sll_of_total:
+    value: 10.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL/SLL patients
+    definition: Percentage presenting as SLL (small lymphocytic lymphoma) vs CLL
+    source_citation: Published literature / WHO classification
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_double_hit_del17p_tp53:
+    value: 5.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with both del(17p) and TP53 mutation
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_complex_karyotype:
+    value: 16.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with complex karyotype (>=3 abnormalities)
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  median_lymphocyte_count_at_dx:
+    value: 30.0
+    unit: x10^9/L
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Median absolute lymphocyte count at CLL diagnosis
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_beta2_microglobulin_elevated:
+    value: 45.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Percentage with elevated beta-2 microglobulin (>3.5 mg/L)
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_zap70_positive:
+    value: 35.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients tested
+    definition: Percentage ZAP-70 positive (poor prognosis marker)
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  pct_cd38_positive:
+    value: 30.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients tested
+    definition: Percentage CD38 positive (>30%, poor prognosis marker)
+    source_citation: Published literature
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Patient Subgroups
+  incidence_eu5_total:
+    value: 19700
+    unit: new cases per year
+    year: 2022
+    geography: EU5
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in EU5 (DE+FR+IT+ES+UK)
+    source_citation: GLOBOCAN 2022 (sum of country estimates)
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_eu5:
+    value: 95000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: EU5
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in EU5
+    source_citation: GLOBOCAN 2022 / ECIS
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  first_line_eu5:
+    value: 11820
+    unit: patients per year
+    year: 2022
+    geography: EU5
+    population: CLL requiring 1L treatment
+    definition: Estimated 1L patients in EU5 (60% of incidence)
+    source_citation: Derived from GLOBOCAN + treatment rate
+    source_url: https://gco.iarc.fr/
+    tier: silver
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_2024_projected:
+    value: 225000
+    unit: estimated people living with CLL (projected)
+    year: 2024
+    geography: US
+    population: All ages, both sexes
+    definition: Projected 2024 CLL prevalence
+    source_citation: Derived from SEER prevalence trend
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Prevalence
+  pct_male_incidence:
+    value: 62.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: Males
+    definition: Percentage of CLL cases that are male
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_female_incidence:
+    value: 38.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: Females
+    definition: Percentage of CLL cases that are female
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  lifetime_risk_male:
+    value: 1.06
+    unit: percent
+    year: 2024
+    geography: US
+    population: Males
+    definition: Lifetime risk of developing CLL — males
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  lifetime_risk_female:
+    value: 0.56
+    unit: percent
+    year: 2024
+    geography: US
+    population: Females
+    definition: Lifetime risk of developing CLL — females
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  lifetime_risk_overall:
+    value: 0.78
+    unit: percent
+    year: 2024
+    geography: US
+    population: All
+    definition: Lifetime risk of developing CLL — overall
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence Rates
+  pct_cll_of_all_leukemia:
+    value: 25.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: All leukemia patients
+    definition: CLL as a percentage of all leukemia diagnoses
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  pct_cll_of_nhl:
+    value: 7.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: All NHL patients
+    definition: CLL/SLL as a percentage of all non-Hodgkin lymphoma
+    source_citation: SEER / Published literature
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+  years_of_life_lost_per_case:
+    value: 8.5
+    unit: years
+    year: 2023
+    geography: US
+    population: CLL deaths
+    definition: Average years of life lost per CLL death
+    source_citation: SEER / Published burden of disease estimates
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  disability_adjusted_life_years:
+    value: 125000
+    unit: DALYs per year
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: Estimated DALYs attributable to CLL in the US
+    source_citation: GBD 2022 / IHME
+    source_url: https://ghdx.healthdata.org/
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  median_duration_first_line_tx:
+    value: 12.0
+    unit: months
+    year: 2024
+    geography: US
+    population: 1L CLL on continuous BTKi
+    definition: Median duration of first-line continuous BTK inhibitor therapy
+    source_citation: Published real-world evidence
+    source_url: https://pubmed.ncbi.nlm.nih.gov/
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  venetoclax_fixed_duration_months:
+    value: 12.0
+    unit: months
+    year: 2024
+    geography: US
+    population: 1L CLL on VenO
+    definition: Fixed duration of venetoclax+obinutuzumab regimen
+    source_citation: CLL14 trial / NCCN Guidelines
+    source_url: https://www.nccn.org/professionals/physician_gls/pdf/cll.pdf
+    tier: gold
+    confidence: high
+    category: Treatment Patterns
+  incidence_2000:
+    value: 8800
+    unit: new cases per year
+    year: 2000
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2000
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2001:
+    value: 8900
+    unit: new cases per year
+    year: 2001
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2001
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2002:
+    value: 9100
+    unit: new cases per year
+    year: 2002
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2002
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2003:
+    value: 9200
+    unit: new cases per year
+    year: 2003
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2003
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2004:
+    value: 9500
+    unit: new cases per year
+    year: 2004
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2004
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2005:
+    value: 9800
+    unit: new cases per year
+    year: 2005
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2005
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2006:
+    value: 10020
+    unit: new cases per year
+    year: 2006
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2006
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2007:
+    value: 10370
+    unit: new cases per year
+    year: 2007
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2007
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2008:
+    value: 15110
+    unit: new cases per year
+    year: 2008
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2008
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2009:
+    value: 15490
+    unit: new cases per year
+    year: 2009
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2009
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2010:
+    value: 14990
+    unit: new cases per year
+    year: 2010
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2010
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2011:
+    value: 15680
+    unit: new cases per year
+    year: 2011
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2011
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2012:
+    value: 16060
+    unit: new cases per year
+    year: 2012
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2012
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2013:
+    value: 15680
+    unit: new cases per year
+    year: 2013
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2013
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  incidence_2014:
+    value: 15720
+    unit: new cases per year
+    year: 2014
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in the United States
+    source_citation: ACS Cancer Facts & Figures 2014
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+  mortality_2000:
+    value: 4680
+    unit: deaths per year
+    year: 2000
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2000
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2001:
+    value: 4670
+    unit: deaths per year
+    year: 2001
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2001
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2002:
+    value: 4820
+    unit: deaths per year
+    year: 2002
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2002
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2003:
+    value: 4580
+    unit: deaths per year
+    year: 2003
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2003
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2004:
+    value: 4500
+    unit: deaths per year
+    year: 2004
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2004
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2005:
+    value: 4470
+    unit: deaths per year
+    year: 2005
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2005
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2006:
+    value: 4490
+    unit: deaths per year
+    year: 2006
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2006
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2007:
+    value: 4430
+    unit: deaths per year
+    year: 2007
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2007
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2008:
+    value: 4440
+    unit: deaths per year
+    year: 2008
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2008
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2009:
+    value: 4390
+    unit: deaths per year
+    year: 2009
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2009
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2010:
+    value: 4410
+    unit: deaths per year
+    year: 2010
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2010
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2011:
+    value: 4360
+    unit: deaths per year
+    year: 2011
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2011
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2012:
+    value: 4580
+    unit: deaths per year
+    year: 2012
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2012
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2013:
+    value: 4580
+    unit: deaths per year
+    year: 2013
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2013
+    tier: gold
+    confidence: high
+    category: Mortality
+  mortality_2014:
+    value: 4630
+    unit: deaths per year
+    year: 2014
+    geography: US
+    population: All ages, both sexes
+    definition: CLL deaths in the United States
+    source_citation: CDC WONDER / SEER*Explorer 2014
+    tier: gold
+    confidence: high
+    category: Mortality
+  prevalence_2005:
+    value: 95000
+    unit: estimated people living with CLL
+    year: 2005
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2005
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2006:
+    value: 100000
+    unit: estimated people living with CLL
+    year: 2006
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2006
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2007:
+    value: 110000
+    unit: estimated people living with CLL
+    year: 2007
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2007
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2008:
+    value: 120000
+    unit: estimated people living with CLL
+    year: 2008
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2008
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2009:
+    value: 130000
+    unit: estimated people living with CLL
+    year: 2009
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2009
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2010:
+    value: 140000
+    unit: estimated people living with CLL
+    year: 2010
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2010
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2011:
+    value: 150000
+    unit: estimated people living with CLL
+    year: 2011
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2011
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2012:
+    value: 160000
+    unit: estimated people living with CLL
+    year: 2012
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2012
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2013:
+    value: 170000
+    unit: estimated people living with CLL
+    year: 2013
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2013
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  prevalence_2014:
+    value: 175000
+    unit: estimated people living with CLL
+    year: 2014
+    geography: US
+    population: All ages, both sexes
+    definition: Estimated limited-duration prevalence of CLL
+    source_citation: SEER Limited-Duration Prevalence 2014
+    tier: gold
+    confidence: medium
+    category: Prevalence
+  incidence_rate_china:
+    value: 1.0
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: China
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in China
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_brazil:
+    value: 1.8
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Brazil
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Brazil
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_india:
+    value: 0.4
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: India
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in India
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_south_korea:
+    value: 1.2
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: South Korea
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in South Korea
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_mexico:
+    value: 1.5
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Mexico
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Mexico
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_poland:
+    value: 3.8
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Poland
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Poland
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_netherlands:
+    value: 4.2
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Netherlands
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Netherlands
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_sweden:
+    value: 4.0
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Sweden
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Sweden
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_norway:
+    value: 3.9
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Norway
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Norway
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_denmark:
+    value: 4.3
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Denmark
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Denmark
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_spain:
+    value: 3.2
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Spain
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Spain
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_italy:
+    value: 3.5
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Italy
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Italy
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_switzerland:
+    value: 4.1
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Switzerland
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Switzerland
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_belgium:
+    value: 3.7
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Belgium
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Belgium
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_austria:
+    value: 3.6
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Austria
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Austria
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_israel:
+    value: 5.2
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Israel
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Israel
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_new_zealand:
+    value: 4.4
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: New Zealand
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in New Zealand
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_ireland:
+    value: 4.7
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Ireland
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Ireland
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_finland:
+    value: 3.3
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Finland
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Finland
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  incidence_rate_czech_republic:
+    value: 3.9
+    unit: per 100,000 per year (age-standardized)
+    year: 2022
+    geography: Czech Republic
+    population: All ages, both sexes
+    definition: Age-standardized CLL incidence rate in Czech Republic
+    source_citation: GLOBOCAN 2022 / IARC
+    source_url: https://gco.iarc.fr/
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  mortality_china:
+    value: 8500
+    unit: deaths per year
+    year: 2022
+    geography: China
+    population: All ages, both sexes
+    definition: CLL deaths in China
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_brazil:
+    value: 3200
+    unit: deaths per year
+    year: 2022
+    geography: Brazil
+    population: All ages, both sexes
+    definition: CLL deaths in Brazil
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_india:
+    value: 5800
+    unit: deaths per year
+    year: 2022
+    geography: India
+    population: All ages, both sexes
+    definition: CLL deaths in India
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_south_korea:
+    value: 450
+    unit: deaths per year
+    year: 2022
+    geography: South Korea
+    population: All ages, both sexes
+    definition: CLL deaths in South Korea
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_mexico:
+    value: 1100
+    unit: deaths per year
+    year: 2022
+    geography: Mexico
+    population: All ages, both sexes
+    definition: CLL deaths in Mexico
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_poland:
+    value: 850
+    unit: deaths per year
+    year: 2022
+    geography: Poland
+    population: All ages, both sexes
+    definition: CLL deaths in Poland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_netherlands:
+    value: 420
+    unit: deaths per year
+    year: 2022
+    geography: Netherlands
+    population: All ages, both sexes
+    definition: CLL deaths in Netherlands
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_sweden:
+    value: 280
+    unit: deaths per year
+    year: 2022
+    geography: Sweden
+    population: All ages, both sexes
+    definition: CLL deaths in Sweden
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_norway:
+    value: 150
+    unit: deaths per year
+    year: 2022
+    geography: Norway
+    population: All ages, both sexes
+    definition: CLL deaths in Norway
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_denmark:
+    value: 180
+    unit: deaths per year
+    year: 2022
+    geography: Denmark
+    population: All ages, both sexes
+    definition: CLL deaths in Denmark
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_spain:
+    value: 1500
+    unit: deaths per year
+    year: 2022
+    geography: Spain
+    population: All ages, both sexes
+    definition: CLL deaths in Spain
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_italy:
+    value: 2100
+    unit: deaths per year
+    year: 2022
+    geography: Italy
+    population: All ages, both sexes
+    definition: CLL deaths in Italy
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_switzerland:
+    value: 250
+    unit: deaths per year
+    year: 2022
+    geography: Switzerland
+    population: All ages, both sexes
+    definition: CLL deaths in Switzerland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_belgium:
+    value: 350
+    unit: deaths per year
+    year: 2022
+    geography: Belgium
+    population: All ages, both sexes
+    definition: CLL deaths in Belgium
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_austria:
+    value: 300
+    unit: deaths per year
+    year: 2022
+    geography: Austria
+    population: All ages, both sexes
+    definition: CLL deaths in Austria
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_israel:
+    value: 200
+    unit: deaths per year
+    year: 2022
+    geography: Israel
+    population: All ages, both sexes
+    definition: CLL deaths in Israel
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_new_zealand:
+    value: 120
+    unit: deaths per year
+    year: 2022
+    geography: New Zealand
+    population: All ages, both sexes
+    definition: CLL deaths in New Zealand
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_ireland:
+    value: 130
+    unit: deaths per year
+    year: 2022
+    geography: Ireland
+    population: All ages, both sexes
+    definition: CLL deaths in Ireland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_finland:
+    value: 150
+    unit: deaths per year
+    year: 2022
+    geography: Finland
+    population: All ages, both sexes
+    definition: CLL deaths in Finland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  mortality_czech_republic:
+    value: 380
+    unit: deaths per year
+    year: 2022
+    geography: Czech Republic
+    population: All ages, both sexes
+    definition: CLL deaths in Czech Republic
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_china:
+    value: 25000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: China
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in China
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_brazil:
+    value: 12000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Brazil
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Brazil
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_india:
+    value: 15000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: India
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in India
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_south_korea:
+    value: 3500
+    unit: estimated people living with CLL
+    year: 2022
+    geography: South Korea
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in South Korea
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_mexico:
+    value: 4200
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Mexico
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Mexico
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_poland:
+    value: 6800
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Poland
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Poland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_netherlands:
+    value: 8500
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Netherlands
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Netherlands
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_sweden:
+    value: 5200
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Sweden
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Sweden
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_norway:
+    value: 2800
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Norway
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Norway
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_denmark:
+    value: 3200
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Denmark
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Denmark
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_spain:
+    value: 18000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Spain
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Spain
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  prevalence_italy:
+    value: 22000
+    unit: estimated people living with CLL
+    year: 2022
+    geography: Italy
+    population: All ages, both sexes
+    definition: Estimated CLL prevalence in Italy
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  pfs_pirtobrutinib_rr:
+    value: 19.6
+    unit: months
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Median PFS with pirtobrutinib in R/R CLL
+    source_citation: BRUIN trial (Mato et al., Lancet)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  orr_pirtobrutinib_rr:
+    value: 82.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: ORR with pirtobrutinib in R/R CLL
+    source_citation: BRUIN trial (Mato et al., Lancet)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  dor_pirtobrutinib_rr:
+    value: 17.8
+    unit: months
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Median DOR with pirtobrutinib in R/R CLL
+    source_citation: BRUIN trial (Mato et al., Lancet)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  pfs_orelabrutinib_rr:
+    value: 22.1
+    unit: months
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Median PFS with orelabrutinib in R/R CLL
+    source_citation: Phase 2 China trial (Xu et al.)
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  orr_orelabrutinib_rr:
+    value: 91.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: ORR with orelabrutinib in R/R CLL
+    source_citation: Phase 2 China trial (Xu et al.)
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  os_5yr_ibrutinib_1l:
+    value: 83.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: 5-year OS with ibrutinib 1L
+    source_citation: RESONATE-2 5-year update (Burger et al.)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  dor_ibrutinib_rr:
+    value: 48.0
+    unit: months
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: Median DOR with ibrutinib in R/R CLL
+    source_citation: RESONATE long-term follow-up
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  mrd_neg_ibrutinib_1l:
+    value: 7.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: MRD-negative rate with ibrutinib monotherapy 1L
+    source_citation: Published clinical data
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  os_5yr_venetoclax_obinutuzumab_1l:
+    value: 88.2
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: 5-year OS with venetoclax+obinutuzumab 1L
+    source_citation: CLL14 5-year update (Al-Sawaf et al.)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  mrd_neg_venetoclax_obinutuzumab_1l:
+    value: 76.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: MRD-negative rate (PB) with VenG 1L
+    source_citation: CLL14 trial (Fischer et al.)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  dor_venetoclax_rituximab_rr:
+    value: 48.0
+    unit: months
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Median DOR with VenR in R/R CLL
+    source_citation: MURANO long-term follow-up
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  os_4yr_acalabrutinib_1l:
+    value: 93.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: 4-year OS with acalabrutinib 1L
+    source_citation: ELEVATE-TN 4-year update
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  mrd_neg_acalabrutinib_obinutuzumab_1l:
+    value: 38.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: MRD-negative rate with AcalaG 1L
+    source_citation: ELEVATE-TN (Sharman et al.)
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  os_2yr_zanubrutinib_rr:
+    value: 88.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: 2-year OS with zanubrutinib in R/R CLL
+    source_citation: ALPINE trial update
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  dor_zanubrutinib_rr:
+    value: 34.2
+    unit: months
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Median DOR with zanubrutinib R/R
+    source_citation: ALPINE trial (Brown et al.)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  os_10yr_fcr_1l:
+    value: 55.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: 10-year OS with FCR in fit CLL 1L
+    source_citation: CLL8 long-term follow-up (Hallek et al.)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  cr_rate_fcr_1l:
+    value: 44.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: Complete remission rate with FCR 1L
+    source_citation: CLL8 trial (Hallek et al.)
+    tier: silver
+    confidence: high
+    category: Treatment Outcomes
+  orr_liso_cel_rr:
+    value: 45.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: ORR with liso-cel in R/R CLL/SLL
+    source_citation: TRANSCEND CLL 004 (Siddiqi et al.)
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  cr_rate_liso_cel_rr:
+    value: 20.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: CR rate with liso-cel in R/R CLL/SLL
+    source_citation: TRANSCEND CLL 004
+    tier: silver
+    confidence: medium
+    category: Treatment Outcomes
+  rwt_median_ttnt_ibrutinib_1l:
+    value: 53.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median TTNT after ibrutinib 1L
+    source_citation: Published RWE (INFORMCLL registry)
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_median_ttnt_venetoclax_1l:
+    value: 48.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median TTNT after VenG 1L
+    source_citation: Published RWE (Flatiron Health)
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_median_dot_ibrutinib:
+    value: 28.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median duration of therapy with ibrutinib
+    source_citation: US claims data analysis
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_median_dot_acalabrutinib:
+    value: 24.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median duration of therapy with acalabrutinib
+    source_citation: US claims data analysis
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_median_dot_venetoclax:
+    value: 12.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median duration of therapy with venetoclax (fixed-duration)
+    source_citation: US claims data analysis
+    tier: silver
+    confidence: high
+    category: Real-World Evidence
+  rwt_discontinuation_rate_btki_1yr:
+    value: 18.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: BTKi discontinuation rate at 1 year (all causes)
+    source_citation: Published RWE meta-analysis
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_discontinuation_rate_btki_3yr:
+    value: 35.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: BTKi discontinuation rate at 3 years (all causes)
+    source_citation: Published RWE meta-analysis
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_pct_btki_to_venetoclax_switch:
+    value: 42.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Patients switching from BTKi to venetoclax-based at 2L
+    source_citation: Published treatment patterns analysis
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_pct_venetoclax_to_btki_switch:
+    value: 55.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Patients switching from venetoclax to BTKi at 2L
+    source_citation: Published treatment patterns analysis
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_median_os_real_world_1l:
+    value: 78.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median OS in real-world 1L CLL (all agents)
+    source_citation: Published RWE cohort study
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_median_os_real_world_rr:
+    value: 42.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median OS in real-world R/R CLL (all agents)
+    source_citation: Published RWE cohort study
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_hospitalization_rate_cll:
+    value: 22.0
+    unit: percent per year
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Annual hospitalization rate in CLL patients
+    source_citation: Published claims data / SEER-Medicare
+    tier: gold
+    confidence: medium
+    category: Real-World Evidence
+  rwt_infection_rate_cll:
+    value: 35.0
+    unit: percent per year
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Annual serious infection rate in CLL
+    source_citation: Published claims data / SEER-Medicare
+    tier: gold
+    confidence: medium
+    category: Real-World Evidence
+  rwt_treatment_rate_within_1yr:
+    value: 30.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients receiving treatment within 1 year of diagnosis
+    source_citation: Published RWE / SEER patterns
+    tier: gold
+    confidence: high
+    category: Real-World Evidence
+  rwt_treatment_rate_within_5yr:
+    value: 55.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients receiving treatment within 5 years of diagnosis
+    source_citation: Published RWE / SEER patterns
+    tier: gold
+    confidence: high
+    category: Real-World Evidence
+  rwt_median_time_to_first_tx:
+    value: 24.0
+    unit: months
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Median time from diagnosis to first treatment
+    source_citation: Published RWE / SEER patterns
+    tier: gold
+    confidence: medium
+    category: Real-World Evidence
+  rwt_pct_treated_academic_center:
+    value: 35.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients treated at academic/NCI centers
+    source_citation: Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  rwt_pct_treated_community:
+    value: 65.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients treated in community settings
+    source_citation: Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Real-World Evidence
+  notch1_mutation_pct:
+    value: 10.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: NOTCH1 mutation prevalence in CLL
+    source_citation: Published literature / Puente et al.
+    tier: silver
+    confidence: high
+    category: Biomarkers & Genetics
+  sf3b1_mutation_pct:
+    value: 10.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: SF3B1 mutation prevalence in CLL
+    source_citation: Published literature / Quesada et al.
+    tier: silver
+    confidence: high
+    category: Biomarkers & Genetics
+  birc3_mutation_pct:
+    value: 4.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: BIRC3 mutation/deletion prevalence in CLL
+    source_citation: Published literature / Rossi et al.
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  complex_karyotype_pct:
+    value: 16.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Complex karyotype (>=3 aberrations) prevalence
+    source_citation: Published literature / Baliakas et al.
+    tier: silver
+    confidence: high
+    category: Biomarkers & Genetics
+  ighv_unmutated_del17p_pct:
+    value: 8.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: IGHV-unmutated + del(17p) double-hit prevalence
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  ighv_unmutated_del11q_pct:
+    value: 15.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: IGHV-unmutated + del(11q) prevalence
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  beta2_microglobulin_elevated_pct:
+    value: 45.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Elevated beta-2 microglobulin (>3.5 mg/L) at diagnosis
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  zap70_positive_pct:
+    value: 35.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: ZAP-70 positive (>=20%) prevalence
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  cd38_positive_pct:
+    value: 30.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: CD38 positive (>=30%) prevalence
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  atm_deletion_pct:
+    value: 18.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: ATM deletion/mutation prevalence in CLL
+    source_citation: Published literature / Dohner et al.
+    tier: silver
+    confidence: high
+    category: Biomarkers & Genetics
+  gain_2p_pct:
+    value: 7.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Gain(2p) prevalence in CLL
+    source_citation: Published FISH/array CGH data
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  gain_8q_pct:
+    value: 5.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Gain(8q24) / MYC gain prevalence in CLL
+    source_citation: Published FISH/array CGH data
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  richter_transformation_annual_rate:
+    value: 0.5
+    unit: percent per year
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Annual Richter transformation rate
+    source_citation: Published literature / Rossi et al.
+    tier: silver
+    confidence: high
+    category: Biomarkers & Genetics
+  cll_to_dlbcl_transformation_pct:
+    value: 90.0
+    unit: percent of transformations
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Richter transformation to DLBCL (vs Hodgkin)
+    source_citation: Published literature
+    tier: silver
+    confidence: high
+    category: Biomarkers & Genetics
+  prolymphocytic_transformation_pct:
+    value: 2.0
+    unit: percent
+    year: 2023
+    geography: Global
+    population: CLL patients
+    definition: Prolymphocytic transformation rate in CLL
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Biomarkers & Genetics
+  annual_cost_ibrutinib:
+    value: 178000
+    unit: USD per year
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Annual treatment cost of ibrutinib
+    source_citation: Published health economics / WAC pricing
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_acalabrutinib:
+    value: 172000
+    unit: USD per year
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Annual treatment cost of acalabrutinib
+    source_citation: Published health economics / WAC pricing
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_zanubrutinib:
+    value: 168000
+    unit: USD per year
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Annual treatment cost of zanubrutinib
+    source_citation: Published health economics / WAC pricing
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_venetoclax_obinutuzumab:
+    value: 145000
+    unit: USD total course
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Total cost of fixed-duration VenG (12-month course)
+    source_citation: Published health economics
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_fcr:
+    value: 25000
+    unit: USD total course
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Total cost of 6 cycles FCR
+    source_citation: Published health economics
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_br:
+    value: 18000
+    unit: USD total course
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Total cost of 6 cycles BR
+    source_citation: Published health economics
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  cost_per_hospitalization_cll:
+    value: 22000
+    unit: USD per event
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Average cost per CLL-related hospitalization
+    source_citation: Published claims data
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_monitoring_ww:
+    value: 3500
+    unit: USD per year
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Annual monitoring cost for W&W CLL patients
+    source_citation: Published health economics
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_2l_treatment:
+    value: 195000
+    unit: USD per year
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Average annual 2L treatment cost (weighted)
+    source_citation: Published health economics
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  annual_cost_3l_plus:
+    value: 210000
+    unit: USD per year
+    year: 2024
+    geography: US
+    population: CLL patients
+    definition: Average annual 3L+ treatment cost (weighted)
+    source_citation: Published health economics / Market research
+    tier: bronze
+    confidence: low
+    category: Healthcare Burden
+  qaly_gain_btki_vs_cit:
+    value: 2.5
+    unit: QALYs
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: 'Incremental QALYs: BTKi vs chemoimmunotherapy 1L'
+    source_citation: Published cost-effectiveness analyses
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  qaly_gain_venetoclax_vs_cit:
+    value: 2.2
+    unit: QALYs
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: 'Incremental QALYs: VenG vs chemoimmunotherapy 1L'
+    source_citation: Published cost-effectiveness analyses
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  icer_ibrutinib_vs_fcr:
+    value: 125000
+    unit: USD per QALY
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: 'ICER: ibrutinib vs FCR in fit 1L CLL'
+    source_citation: Published cost-effectiveness analyses
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  icer_venetoclax_vs_fcr:
+    value: 95000
+    unit: USD per QALY
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: 'ICER: VenG vs FCR in fit 1L CLL'
+    source_citation: Published cost-effectiveness analyses
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  eq5d_utility_remission:
+    value: 0.85
+    unit: utility score
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: EQ-5D utility in CLL remission/stable disease
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  eq5d_utility_progression:
+    value: 0.68
+    unit: utility score
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: EQ-5D utility in CLL progression/relapse
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  eq5d_utility_watch_wait:
+    value: 0.82
+    unit: utility score
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: EQ-5D utility in W&W CLL patients
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Healthcare Burden
+  market_size_us_2024:
+    value: 8500
+    unit: million USD
+    year: 2024
+    geography: US
+    population: CLL patients
+    definition: US CLL treatment market size 2024
+    source_citation: Market research / Industry reports
+    tier: bronze
+    confidence: medium
+    category: Healthcare Burden
+  market_size_global_2024:
+    value: 14500
+    unit: million USD
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Global CLL treatment market size 2024
+    source_citation: Market research / Industry reports
+    tier: bronze
+    confidence: medium
+    category: Healthcare Burden
+  market_cagr_2024_2030:
+    value: 7.5
+    unit: percent per year
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: CLL market CAGR 2024-2030 (projected)
+    source_citation: Market research / Industry reports
+    tier: bronze
+    confidence: medium
+    category: Healthcare Burden
+  incidence_rate_male_40_49:
+    value: 2.8
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 40-49
+    definition: CLL incidence rate - Males aged 40-49
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_male_50_59:
+    value: 8.5
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 50-59
+    definition: CLL incidence rate - Males aged 50-59
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_male_60_69:
+    value: 19.2
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 60-69
+    definition: CLL incidence rate - Males aged 60-69
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_male_70_79:
+    value: 28.1
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 70-79
+    definition: CLL incidence rate - Males aged 70-79
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_male_80_plus:
+    value: 25.3
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 80+
+    definition: CLL incidence rate - Males aged 80+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_female_40_49:
+    value: 1.5
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 40-49
+    definition: CLL incidence rate - Females aged 40-49
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_female_50_59:
+    value: 4.8
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 50-59
+    definition: CLL incidence rate - Females aged 50-59
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_female_60_69:
+    value: 10.5
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 60-69
+    definition: CLL incidence rate - Females aged 60-69
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_female_70_79:
+    value: 16.2
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 70-79
+    definition: CLL incidence rate - Females aged 70-79
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  incidence_rate_female_80_plus:
+    value: 14.8
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 80+
+    definition: CLL incidence rate - Females aged 80+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_male_50_59:
+    value: 0.8
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 50-59
+    definition: CLL mortality rate - Males aged 50-59
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_male_60_69:
+    value: 3.2
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 60-69
+    definition: CLL mortality rate - Males aged 60-69
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_male_70_79:
+    value: 9.5
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 70-79
+    definition: CLL mortality rate - Males aged 70-79
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_male_80_plus:
+    value: 18.2
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Males aged 80+
+    definition: CLL mortality rate - Males aged 80+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_female_50_59:
+    value: 0.4
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 50-59
+    definition: CLL mortality rate - Females aged 50-59
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_female_60_69:
+    value: 1.5
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 60-69
+    definition: CLL mortality rate - Females aged 60-69
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_female_70_79:
+    value: 5.1
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 70-79
+    definition: CLL mortality rate - Females aged 70-79
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  mortality_rate_female_80_plus:
+    value: 9.8
+    unit: per 100,000 per year
+    year: 2022
+    geography: US
+    population: Females aged 80+
+    definition: CLL mortality rate - Females aged 80+
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    source_url: https://seer.cancer.gov/statfacts/html/clyl.html
+    tier: gold
+    confidence: high
+    category: Age-Specific Rates
+  five_year_survival_1975_1979:
+    value: 63.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 1975-1979
+    definition: CLL survival rate - 1975-1979
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_1980_1984:
+    value: 66.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 1980-1984
+    definition: CLL survival rate - 1980-1984
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_1985_1989:
+    value: 68.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 1985-1989
+    definition: CLL survival rate - 1985-1989
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_1990_1994:
+    value: 72.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 1990-1994
+    definition: CLL survival rate - 1990-1994
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_2000_2004:
+    value: 78.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 2000-2004
+    definition: CLL survival rate - 2000-2004
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_2010_2014:
+    value: 85.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 2010-2014
+    definition: CLL survival rate - 2010-2014
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  five_year_survival_2015_2019:
+    value: 87.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 2015-2019
+    definition: CLL survival rate - 2015-2019
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  ten_year_survival_overall:
+    value: 64.7
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - All periods
+    definition: CLL survival rate - All periods
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  ten_year_survival_2000_2009:
+    value: 60.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 2000-2009
+    definition: CLL survival rate - 2000-2009
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  ten_year_survival_2010_2019:
+    value: 72.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 2010-2019
+    definition: CLL survival rate - 2010-2019
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  relative_survival_1yr:
+    value: 95.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 1 year
+    definition: CLL survival rate - 1 year
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  relative_survival_3yr:
+    value: 91.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 3 year
+    definition: CLL survival rate - 3 year
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  relative_survival_10yr:
+    value: 64.7
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 10 year
+    definition: CLL survival rate - 10 year
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  relative_survival_15yr:
+    value: 50.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 15 year
+    definition: CLL survival rate - 15 year
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  relative_survival_20yr:
+    value: 37.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - 20 year
+    definition: CLL survival rate - 20 year
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  conditional_5yr_survival_after_5yr:
+    value: 92.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients - Conditional on surviving 5 years
+    definition: CLL survival rate - Conditional on surviving 5 years
+    source_citation: 'SEER Cancer Stat Facts: CLL'
+    tier: gold
+    confidence: high
+    category: Survival
+  active_trials_cll_phase3:
+    value: 45
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Active Phase 3 CLL clinical trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: high
+    category: Clinical Trials
+  active_trials_cll_phase2:
+    value: 120
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Active Phase 2 CLL clinical trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: high
+    category: Clinical Trials
+  active_trials_cll_phase1:
+    value: 85
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Active Phase 1/1b CLL clinical trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: high
+    category: Clinical Trials
+  active_trials_cll_total:
+    value: 310
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Total active CLL clinical trials (all phases)
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: high
+    category: Clinical Trials
+  trial_enrollment_btki_class:
+    value: 4500
+    unit: patients
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Patients enrolled in active BTKi CLL trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: medium
+    category: Clinical Trials
+  trial_enrollment_bcl2_class:
+    value: 3200
+    unit: patients
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Patients enrolled in active BCL-2 inhibitor CLL trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: medium
+    category: Clinical Trials
+  trial_enrollment_car_t:
+    value: 850
+    unit: patients
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Patients enrolled in active CAR-T CLL trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: medium
+    category: Clinical Trials
+  trial_enrollment_bispecific:
+    value: 650
+    unit: patients
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Patients enrolled in active bispecific antibody CLL trials
+    source_citation: ClinicalTrials.gov
+    tier: gold
+    confidence: medium
+    category: Clinical Trials
+  pct_cll_patients_in_trials:
+    value: 5.0
+    unit: percent
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: CLL patients enrolled in clinical trials
+    source_citation: Published literature / NCI
+    tier: silver
+    confidence: medium
+    category: Clinical Trials
+  median_trial_duration_phase3:
+    value: 36.0
+    unit: months
+    year: 2024
+    geography: Global
+    population: CLL patients/trials
+    definition: Median duration of Phase 3 CLL trials
+    source_citation: ClinicalTrials.gov analysis
+    tier: gold
+    confidence: medium
+    category: Clinical Trials
+  pfs_nemtabrutinib_rr:
+    value: 24.0
+    unit: months
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Median PFS with nemtabrutinib in R/R CLL (non-covalent BTKi)
+    source_citation: BELLWAVE-001 trial
+    tier: silver
+    confidence: medium
+    category: Emerging Therapies
+  orr_nemtabrutinib_rr:
+    value: 56.0
+    unit: percent
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: ORR with nemtabrutinib in BTKi-pretreated R/R CLL
+    source_citation: BELLWAVE-001 trial
+    tier: silver
+    confidence: medium
+    category: Emerging Therapies
+  orr_epcoritamab_rr:
+    value: 35.0
+    unit: percent
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: ORR with epcoritamab in R/R CLL/SLL
+    source_citation: Phase 1/2 trial data
+    tier: silver
+    confidence: medium
+    category: Emerging Therapies
+  orr_glofitamab_rr:
+    value: 30.0
+    unit: percent
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: ORR with glofitamab in R/R CLL
+    source_citation: Phase 1 trial data
+    tier: silver
+    confidence: low
+    category: Emerging Therapies
+  pfs_sonrotoclax_rr:
+    value: 18.0
+    unit: months
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Estimated median PFS with sonrotoclax (next-gen BCL-2i) R/R
+    source_citation: Phase 2 trial preliminary data
+    tier: silver
+    confidence: low
+    category: Emerging Therapies
+  orr_zilovertamab_rr:
+    value: 40.0
+    unit: percent
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: ORR with zilovertamab vedotin + ibrutinib in R/R CLL
+    source_citation: Phase 1/2 WAVELINE trial
+    tier: silver
+    confidence: low
+    category: Emerging Therapies
+  pipeline_drugs_phase3:
+    value: 8
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: CLL drugs in Phase 3 development
+    source_citation: ClinicalTrials.gov / Pharma intelligence
+    tier: silver
+    confidence: medium
+    category: Emerging Therapies
+  pipeline_drugs_phase2:
+    value: 22
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: CLL drugs in Phase 2 development
+    source_citation: ClinicalTrials.gov / Pharma intelligence
+    tier: silver
+    confidence: medium
+    category: Emerging Therapies
+  pipeline_drugs_phase1:
+    value: 35
+    unit: count
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: CLL drugs in Phase 1 development
+    source_citation: ClinicalTrials.gov / Pharma intelligence
+    tier: silver
+    confidence: medium
+    category: Emerging Therapies
+  pct_btki_market_share_2030_proj:
+    value: 55.0
+    unit: percent (projected)
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Projected BTKi class market share in CLL by 2030
+    source_citation: Market research / Industry reports
+    tier: bronze
+    confidence: low
+    category: Emerging Therapies
+  pct_bcl2i_market_share_2030_proj:
+    value: 30.0
+    unit: percent (projected)
+    year: 2024
+    geography: Global
+    population: CLL patients
+    definition: Projected BCL-2i class market share in CLL by 2030
+    source_citation: Market research / Industry reports
+    tier: bronze
+    confidence: low
+    category: Emerging Therapies
+  aapc_incidence_overall:
+    value: 1.1
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: Average annual percent change in CLL incidence (overall)
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_male:
+    value: 0.9
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - males
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_female:
+    value: 1.5
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - females
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_white:
+    value: 1.0
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - White
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_black:
+    value: 1.8
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - Black
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_hispanic:
+    value: 2.1
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - Hispanic
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_asian_pi:
+    value: 2.5
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - Asian/Pacific Islander
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_65_plus:
+    value: 0.8
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - age 65+
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_incidence_under_65:
+    value: 1.3
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL incidence - age <65
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_mortality_overall:
+    value: -2.0
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL mortality (overall)
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_mortality_male:
+    value: -1.8
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL mortality - males
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_mortality_female:
+    value: -2.3
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: AAPC in CLL mortality - females
+    source_citation: SEER AAPC 2012-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  aapc_survival_improvement:
+    value: 0.5
+    unit: percent per year
+    year: 2022
+    geography: US
+    population: All CLL patients
+    definition: Average annual improvement in 5-year relative survival
+    source_citation: SEER historical trend 2000-2022
+    tier: gold
+    confidence: high
+    category: Epidemiology Trends
+  pct_diagnosed_localized:
+    value: 82.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL diagnosed at localized stage
+    source_citation: SEER stage distribution
+    tier: gold
+    confidence: high
+    category: Diagnostic Patterns
+  pct_diagnosed_regional:
+    value: 9.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL diagnosed at regional stage
+    source_citation: SEER stage distribution
+    tier: gold
+    confidence: high
+    category: Diagnostic Patterns
+  pct_diagnosed_distant:
+    value: 6.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL diagnosed at distant/advanced stage
+    source_citation: SEER stage distribution
+    tier: gold
+    confidence: high
+    category: Diagnostic Patterns
+  pct_diagnosed_unstaged:
+    value: 3.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL diagnosed with unknown staging
+    source_citation: SEER stage distribution
+    tier: gold
+    confidence: high
+    category: Diagnostic Patterns
+  median_time_to_diagnosis:
+    value: 2.0
+    unit: months
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: Median time from symptom onset to CLL diagnosis
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Diagnostic Patterns
+  pct_diagnosed_55_74:
+    value: 52.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL diagnosed in patients aged 55-74
+    source_citation: SEER age distribution
+    tier: gold
+    confidence: high
+    category: Diagnostic Patterns
+  pct_diagnosed_75_plus:
+    value: 30.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL diagnosed in patients aged 75+
+    source_citation: SEER age distribution
+    tier: gold
+    confidence: high
+    category: Diagnostic Patterns
+  pct_misdiagnosed_initially:
+    value: 8.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: CLL initially misdiagnosed as other lymphoproliferative disorder
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Diagnostic Patterns
+  facit_f_mean_score_cll:
+    value: 38.0
+    unit: score (0-52)
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Mean FACIT-Fatigue score in CLL patients
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  facit_f_mean_score_general_pop:
+    value: 43.6
+    unit: score (0-52)
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Mean FACIT-Fatigue in general population (reference)
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  pct_cll_patients_fatigue:
+    value: 80.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients reporting fatigue
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  pct_cll_patients_anxiety:
+    value: 40.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients reporting anxiety about disease
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  pct_cll_patients_depression:
+    value: 20.0
+    unit: percent
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: CLL patients reporting depression
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  sf36_pcs_cll:
+    value: 42.0
+    unit: score
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Mean SF-36 Physical Component Summary in CLL
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  sf36_mcs_cll:
+    value: 48.0
+    unit: score
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Mean SF-36 Mental Component Summary in CLL
+    source_citation: Published PRO literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  daly_cll_per_patient:
+    value: 3.2
+    unit: DALYs per patient
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Disability-adjusted life years per CLL patient
+    source_citation: GBD 2022 / IHME
+    tier: gold
+    confidence: medium
+    category: Quality of Life
+  years_of_life_lost_cll:
+    value: 8.5
+    unit: years
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Average years of life lost due to CLL
+    source_citation: GBD 2022 / IHME
+    tier: gold
+    confidence: medium
+    category: Quality of Life
+  caregiver_burden_hours_per_week:
+    value: 12.0
+    unit: hours per week
+    year: 2023
+    geography: US
+    population: CLL patients
+    definition: Average caregiver time for CLL patients on treatment
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Quality of Life
+  incidence_count_canada:
+    value: 2800
+    unit: new cases per year
+    year: 2022
+    geography: Canada
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Canada
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_france:
+    value: 4500
+    unit: new cases per year
+    year: 2022
+    geography: France
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in France
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_spain:
+    value: 3800
+    unit: new cases per year
+    year: 2022
+    geography: Spain
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Spain
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_italy:
+    value: 5200
+    unit: new cases per year
+    year: 2022
+    geography: Italy
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Italy
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_netherlands:
+    value: 1200
+    unit: new cases per year
+    year: 2022
+    geography: Netherlands
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Netherlands
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_sweden:
+    value: 700
+    unit: new cases per year
+    year: 2022
+    geography: Sweden
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Sweden
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_norway:
+    value: 400
+    unit: new cases per year
+    year: 2022
+    geography: Norway
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Norway
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_denmark:
+    value: 450
+    unit: new cases per year
+    year: 2022
+    geography: Denmark
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Denmark
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_poland:
+    value: 2200
+    unit: new cases per year
+    year: 2022
+    geography: Poland
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Poland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_switzerland:
+    value: 600
+    unit: new cases per year
+    year: 2022
+    geography: Switzerland
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Switzerland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_belgium:
+    value: 800
+    unit: new cases per year
+    year: 2022
+    geography: Belgium
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Belgium
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_austria:
+    value: 650
+    unit: new cases per year
+    year: 2022
+    geography: Austria
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Austria
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_israel:
+    value: 600
+    unit: new cases per year
+    year: 2022
+    geography: Israel
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Israel
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_new_zealand:
+    value: 350
+    unit: new cases per year
+    year: 2022
+    geography: New Zealand
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in New Zealand
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_ireland:
+    value: 280
+    unit: new cases per year
+    year: 2022
+    geography: Ireland
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Ireland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_finland:
+    value: 350
+    unit: new cases per year
+    year: 2022
+    geography: Finland
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Finland
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_czech_republic:
+    value: 950
+    unit: new cases per year
+    year: 2022
+    geography: Czech Republic
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Czech Republic
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_south_korea:
+    value: 800
+    unit: new cases per year
+    year: 2022
+    geography: South Korea
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in South Korea
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_china:
+    value: 13500
+    unit: new cases per year
+    year: 2022
+    geography: China
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in China
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_brazil:
+    value: 3800
+    unit: new cases per year
+    year: 2022
+    geography: Brazil
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Brazil
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_india:
+    value: 5500
+    unit: new cases per year
+    year: 2022
+    geography: India
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in India
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_mexico:
+    value: 2100
+    unit: new cases per year
+    year: 2022
+    geography: Mexico
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Mexico
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_russia:
+    value: 4200
+    unit: new cases per year
+    year: 2022
+    geography: Russia
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Russia
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_turkey:
+    value: 2800
+    unit: new cases per year
+    year: 2022
+    geography: Turkey
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Turkey
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_argentina:
+    value: 1500
+    unit: new cases per year
+    year: 2022
+    geography: Argentina
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Argentina
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_colombia:
+    value: 900
+    unit: new cases per year
+    year: 2022
+    geography: Colombia
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Colombia
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_egypt:
+    value: 1800
+    unit: new cases per year
+    year: 2022
+    geography: Egypt
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Egypt
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_south_africa:
+    value: 600
+    unit: new cases per year
+    year: 2022
+    geography: South Africa
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in South Africa
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_thailand:
+    value: 450
+    unit: new cases per year
+    year: 2022
+    geography: Thailand
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Thailand
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_vietnam:
+    value: 380
+    unit: new cases per year
+    year: 2022
+    geography: Vietnam
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Vietnam
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_indonesia:
+    value: 1200
+    unit: new cases per year
+    year: 2022
+    geography: Indonesia
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Indonesia
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_philippines:
+    value: 650
+    unit: new cases per year
+    year: 2022
+    geography: Philippines
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Philippines
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_saudi_arabia:
+    value: 350
+    unit: new cases per year
+    year: 2022
+    geography: Saudi Arabia
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Saudi Arabia
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  incidence_count_uae:
+    value: 120
+    unit: new cases per year
+    year: 2022
+    geography: Uae
+    population: All ages, both sexes
+    definition: Estimated new CLL cases in Uae
+    source_citation: GLOBOCAN 2022 / IARC
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  pct_btki_1l_us:
+    value: 65.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: 1L CLL patients
+    definition: BTKi market share in 1L CLL - US
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_btki_1l_eu5:
+    value: 45.0
+    unit: percent
+    year: 2024
+    geography: EU5
+    population: 1L CLL patients
+    definition: BTKi market share in 1L CLL - EU5
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_btki_1l_japan:
+    value: 70.0
+    unit: percent
+    year: 2024
+    geography: Japan
+    population: 1L CLL patients
+    definition: BTKi market share in 1L CLL - Japan
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_venetoclax_1l_us:
+    value: 25.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: 1L CLL patients
+    definition: Venetoclax-based market share 1L CLL - US
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_venetoclax_1l_eu5:
+    value: 35.0
+    unit: percent
+    year: 2024
+    geography: EU5
+    population: 1L CLL patients
+    definition: Venetoclax-based market share 1L CLL - EU5
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_cit_1l_us:
+    value: 5.0
+    unit: percent
+    year: 2024
+    geography: US
+    population: 1L CLL patients
+    definition: Chemoimmunotherapy market share 1L CLL - US
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_cit_1l_eu5:
+    value: 15.0
+    unit: percent
+    year: 2024
+    geography: EU5
+    population: 1L CLL patients
+    definition: Chemoimmunotherapy market share 1L CLL - EU5
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_cit_1l_japan:
+    value: 20.0
+    unit: percent
+    year: 2024
+    geography: Japan
+    population: 1L CLL patients
+    definition: Chemoimmunotherapy market share 1L CLL - Japan
+    source_citation: Market research / Published treatment patterns
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  rai_stage_0_pct_at_diagnosis:
+    value: 50.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai stage 0 at diagnosis
+    source_citation: Published literature / SEER patterns
+    tier: silver
+    confidence: medium
+    category: Staging
+  rai_stage_i_pct_at_diagnosis:
+    value: 25.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai stage I at diagnosis
+    source_citation: Published literature / SEER patterns
+    tier: silver
+    confidence: medium
+    category: Staging
+  rai_stage_ii_pct_at_diagnosis:
+    value: 15.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai stage II at diagnosis
+    source_citation: Published literature / SEER patterns
+    tier: silver
+    confidence: medium
+    category: Staging
+  rai_stage_iii_pct_at_diagnosis:
+    value: 5.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai stage III at diagnosis
+    source_citation: Published literature / SEER patterns
+    tier: silver
+    confidence: medium
+    category: Staging
+  rai_stage_iv_pct_at_diagnosis:
+    value: 5.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: Newly diagnosed CLL
+    definition: Rai stage IV at diagnosis
+    source_citation: Published literature / SEER patterns
+    tier: silver
+    confidence: medium
+    category: Staging
+  pct_cll_of_all_leukemia_global:
+    value: 25.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: CLL as share of all leukemia globally
+    source_citation: GLOBOCAN 2022
+    tier: gold
+    confidence: high
+    category: Demographics
+  incidence_count_world:
+    value: 105000
+    unit: new cases per year
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: Global CLL new cases per year
+    source_citation: GLOBOCAN 2022
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  mortality_count_world:
+    value: 35000
+    unit: deaths per year
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: Global CLL deaths per year
+    source_citation: GLOBOCAN 2022
+    tier: gold
+    confidence: high
+    category: Global Epidemiology
+  prevalence_5yr_world:
+    value: 350000
+    unit: patients (5-year prevalence)
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: Global CLL 5-year prevalence
+    source_citation: GLOBOCAN 2022
+    tier: gold
+    confidence: medium
+    category: Global Epidemiology
+  pct_early_stage_requiring_tx_5yr:
+    value: 35.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: Early-stage CLL requiring treatment within 5 years
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  pct_advanced_stage_requiring_tx_1yr:
+    value: 80.0
+    unit: percent
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: Advanced-stage CLL requiring treatment within 1 year
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Treatment Patterns
+  median_wbc_at_diagnosis:
+    value: 30000
+    unit: cells per microliter
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: Median WBC count at CLL diagnosis
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Diagnostic Patterns
+  median_alc_at_diagnosis:
+    value: 20000
+    unit: cells per microliter
+    year: 2022
+    geography: US
+    population: CLL patients
+    definition: Median absolute lymphocyte count at CLL diagnosis
+    source_citation: Published literature
+    tier: silver
+    confidence: medium
+    category: Diagnostic Patterns
+  pct_cll_with_autoimmune_cytopenia:
+    value: 10.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: CLL patients developing autoimmune cytopenia
+    source_citation: Published literature
+    tier: silver
+    confidence: high
+    category: Comorbidities
+  pct_cll_with_aiha:
+    value: 7.0
+    unit: percent
+    year: 2022
+    geography: Global
+    population: CLL patients
+    definition: CLL patients with autoimmune hemolytic anemia
+    source_citation: Published literature
+    tier: silver
+    confidence: high
+    category: Comorbidities
+plausibility:
+  incidence:
+    min: 15000
+    max: 30000
+    note: US annual new CLL cases
+  prevalence:
+    min: 150000
+    max: 350000
+    note: US CLL prevalence (point)
+  incidence_rate:
+    min: 3.0
+    max: 8.0
+    note: Per 100,000 age-adjusted
+  mortality:
+    min: 3000
+    max: 6000
+    note: US annual CLL deaths
+  five_year_survival:
+    min: 80.0
+    max: 95.0
+    note: 5-year relative survival %

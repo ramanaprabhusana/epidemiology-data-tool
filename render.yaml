@@ -1,9 +1,11 @@
 # Render Blueprint: Flask app (app_web.py) deployment
 # Docs: https://render.com/docs/blueprint-spec
+# Repo root should be the "Data Pipeline tool" folder (app_web.py at top level).
+# If this file lives inside a monorepo, set rootDir on the service or use a Web Service with Root Directory.
 
 services:
   - type: web
     name: epidemiology-data-tool
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -b 0.0.0.0:$PORT -w 1 app_web:app
+    startCommand: gunicorn -b 0.0.0.0:$PORT -w 1 --timeout 300 app_web:app

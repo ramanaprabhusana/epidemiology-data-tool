@@ -14,11 +14,81 @@ import yaml
 
 from ..schema import EvidenceRecord
 
+
+def load_curated_records(config_dir: Path, indication: str, country: str) -> List[EvidenceRecord]:
+    """
+    Load curated epidemiology data from config/curated_data/{indication_slug}.yaml.
+    Returns high-quality EvidenceRecord instances with gold tier and real numeric values.
+    This is the primary data source — far more reliable than web scraping.
+    """
+    indication_slug = (indication or "").strip().lower().replace(" ", "_").replace("(", "").replace(")", "")
+    # Try exact match, then common aliases
+    candidates = [indication_slug]
+    # Add alias lookups: "CLL (Chronic Lymphocytic Leukemia)" -> "cll"
+    for alias in ["cll", "chronic_lymphocytic_leukemia"]:
+        if alias in indication_slug and alias not in candidates:
+            candidates.insert(0, alias)
+    if "lung" in indication_slug:
+        candidates.insert(0, "lung_cancer")
+    if "breast" in indication_slug:
+        candidates.insert(0, "breast_cancer")
+
+    curated_path = None
+    for slug in candidates:
+        p = config_dir / "curated_data" / f"{slug}.yaml"
+        if p.exists():
+            curated_path = p
+            break
+    if curated_path is None:
+        return []
+
+    try:
+        with open(curated_path, "r") as f:
+            data = yaml.safe_load(f) or {}
+    except Exception:
+        return []
+
+    metrics = data.get("metrics", {})
+    if not isinstance(metrics, dict):
+        return []
+
+    records = []
+    country_lower = (country or "").strip().lower()
+    for metric_id, info in metrics.items():
+        if not isinstance(info, dict):
+            continue
+        # Allow all curated data through — global/regional context is valuable
+        # The category and geography columns let users filter downstream
+        # Strip year suffix from metric ID: "incidence_2024" -> metric="incidence", year=2024
+        import re as _re
+        _year_suffix = _re.search(r"_(\d{4})$", metric_id)
+        clean_metric = metric_id[:_year_suffix.start()] if _year_suffix else metric_id
+        year_val = _year_suffix.group(1) if _year_suffix else str(info.get("year", ""))
+        # If YAML already has a year field, prefer it over the suffix
+        if info.get("year"):
+            year_val = str(info["year"])
+        rec = EvidenceRecord(
+            indication=indication or data.get("indication", ""),
+            metric=clean_metric,
+            value=str(info.get("value", "")),
+            source_citation=info.get("source_citation", "Curated reference"),
+            source_tier=info.get("tier", "gold"),
+            definition=info.get("definition", ""),
+            population=info.get("population"),
+            year_or_range=year_val,
+            geography=info.get("geography", country or ""),
+            split_logic=None,
+            source_url=info.get("source_url", ""),
+            notes=f"Curated reference value ({info.get('unit', '')})",
+            confidence=info.get("confidence", "high"),
+            category=info.get("category", ""),
+        )
+        records.append(rec)
+    return records
+
 # Registry of API connector factories: connector_id -> (lambda **kwargs -> callable(indication, config, **kwargs))
 def _get_registry():
-    from .clinicaltrials import clinicaltrials_connector_factory
-    from .pubmed import pubmed_connector_factory
-    from .who_gho import who_gho_connector_factory
+    from .api_connectors import clinicaltrials_connector_factory, pubmed_connector_factory, who_gho_connector_factory
     return {
         "clinicaltrials": lambda **kw: clinicaltrials_connector_factory(),
         "pubmed": lambda **kw: pubmed_connector_factory(
@@ -75,11 +145,6 @@ def explore_all_sources(
     if config_dir is None:
         config_dir = Path(__file__).resolve().parents[2] / "config"
     config_dir = Path(config_dir)
-    try:
-        from .link_value_extractor import set_config_dir_for_proxy
-        set_config_dir_for_proxy(config_dir)
-    except Exception:
-        pass
     sources = load_sources_to_explore(config_dir)
     # Process link sources by extract_priority (1 first, then 2, then rest) so high-value sources get deep-dive before time cap
     def _source_order(s: dict) -> tuple:
@@ -90,6 +155,19 @@ def explore_all_sources(
     all_records: List[EvidenceRecord] = []
     registry = _get_registry()
     link_records_added = 0  # for deep-dive limit
+
+    # PHASE 0: Load curated data first — this is the most reliable source.
+    curated_records = load_curated_records(config_dir, indication_clean, country)
+    all_records.extend(curated_records)
+    curated_metrics = {r.metric for r in curated_records}
+
+    # Set indication context for the web extractor so it filters
+    # for indication-specific data (e.g., only CLL numbers, not all-cancer).
+    try:
+        from .web_extractor import set_indication_context
+        set_indication_context(indication_clean)
+    except Exception:
+        pass
 
     # Cap total run time (e.g. 30 min) so we never run indefinitely
     max_run_seconds = kwargs.get("max_run_seconds")
@@ -122,9 +200,24 @@ def explore_all_sources(
             url_raw = src.get("url") or ""
             url = _apply_placeholders(url_raw, indication_clean, country)
             stub_value = "See link for incidence, prevalence, and KPIs"
+            # Determine proper metric label: use the configured metric, or
+            # infer from the extracted value labels. Fallback to source ID
+            # only if the source is a reference link (no data extracted).
+            configured_metric = src.get("metric") or ""
+            # If metric is just the source id (e.g. "aacr", "bmj"), it's not
+            # a real epidemiology metric — use a descriptive label instead.
+            valid_metrics = {"incidence", "prevalence", "mortality", "survival",
+                           "incidence_rate", "prevalence_rate", "cases", "link",
+                           "clinical_trials_count", "literature_count",
+                           "life_expectancy_at_birth"}
+            if configured_metric and configured_metric.lower() in valid_metrics:
+                metric_label = configured_metric
+            else:
+                metric_label = f"{src_id}_links"
+
             rec = EvidenceRecord(
                 indication=indication or "cancer",
-                metric=src.get("metric") or "link",
+                metric=metric_label,
                 value=stub_value,
                 source_citation=name,
                 source_tier=tier,
@@ -139,25 +232,27 @@ def explore_all_sources(
             )
             all_records.append(rec)
             link_records_added += 1
-            # Deep-dive: bounded extraction per source (single run, ~55 URLs max per attempt, 2 attempts)
-            # Skip deep-dive if we're past the run-time cap (e.g. 30 min)
+            # Web extraction: single-page extraction per source (no recursive link following)
+            # Skip if we're past the run-time cap or if curated data already covers this metric
             deep_dive_links = kwargs.get("deep_dive_links", True)
             max_deep_dive = int(kwargs.get("max_deep_dive_links", 100))
             if run_deadline is not None and time.time() >= run_deadline:
                 rec.notes = (rec.notes or "") + " [Skipped: time limit]"
+            elif metric_label in curated_metrics:
+                rec.notes = (rec.notes or "") + " [Skipped: curated value available]"
             elif deep_dive_links and url and link_records_added <= max_deep_dive:
                 try:
-                    from .link_value_extractor import deep_dive_link_record
+                    from .web_extractor import deep_dive_link_record
                     extracted = deep_dive_link_record(
                         url, delay=True, indication=indication_clean, country=country, deadline=run_deadline
                     )
                     if extracted and len(str(extracted).strip()) > 0:
                         rec.value = extracted
-                        rec.notes = (rec.notes or "") + " [Value extracted via deep-dive]"
+                        rec.notes = (rec.notes or "") + " [Value extracted]"
                     else:
-                        rec.notes = (rec.notes or "") + " [Extraction attempted; no datapoints found]"
+                        rec.notes = (rec.notes or "") + " [No datapoints found]"
                 except Exception:
-                    rec.notes = (rec.notes or "") + " [Extraction attempted; error]"
+                    rec.notes = (rec.notes or "") + " [Extraction error]"
             continue
         if src.get("type") == "api":
             connector_id = src.get("connector_id")

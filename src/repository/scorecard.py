@@ -9,53 +9,16 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
+import yaml
+
+from ..utils import is_stub_value as _is_stub_value, extract_first_numeric as _extract_first_numeric, tier_rank as _tier_rank
 
 
-def _is_stub_value(value: Any) -> bool:
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return True
-    s = str(value).strip().lower()
-    return "see link" in s or s == "" or s == "nan"
-
-
-def _extract_first_numeric(value: Any) -> Optional[float]:
-    """
-    Extract first plausible numeric from value string.
-    Handles "21000", "100,000 (incidence)", "2.5 (rate); 10 (percent)", etc.
-    """
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return None
-    s = str(value).strip()
-    if not s or _is_stub_value(value):
-        return None
-    # Remove parenthetical suffixes like "(incidence)" for parsing
-    s_clean = re.sub(r"\s*\([^)]*\)\s*", " ", s)
-    # Match numbers: prefer full integers (with optional commas) then decimals
-    match = re.search(r"(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+\.\d+|\d+)", s_clean.replace(" ", ""))
-    if not match:
-        return None
-    try:
-        num = float(match.group(1).replace(",", ""))
-        # Sanity: exclude years, tiny decimals that might be rates
-        if 1e-2 <= num <= 1e8 or (0 < num < 1e-2 and "." in match.group(1)):
-            return num
-        if num >= 1900 and num <= 2030:
-            return None  # likely a year
-        return num
-    except (ValueError, TypeError):
-        return None
-
-
-def _tier_rank(tier: Any) -> int:
-    """Lower is better: gold=0, silver=1, bronze=2."""
-    if tier is None or (isinstance(tier, float) and pd.isna(tier)):
-        return 2
-    t = str(tier).strip().lower()
-    if t == "gold":
-        return 0
-    if t == "silver":
-        return 1
-    return 2
+def load_required_metrics(config_path: Path) -> list[dict[str, Any]]:
+    """Load required_metrics.yaml for an indication."""
+    with open(config_path, "r") as f:
+        data = yaml.safe_load(f)
+    return data.get("metrics", [])
 
 
 def _agreement_within_pct(values: List[float], pct: float = 20.0) -> Tuple[bool, str]:

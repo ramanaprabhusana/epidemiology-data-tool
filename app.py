@@ -3,7 +3,9 @@ Epidemiology Data Tool — Get data for an indication and country, then use the 
 Designed so someone receiving the tool can run it without editing code.
 """
 
+import io
 import sys
+import zipfile
 from pathlib import Path
 from datetime import datetime
 
@@ -16,6 +18,27 @@ import yaml
 import pandas as pd
 
 from src.pipeline.runner import run_pipeline
+
+# Match app_web.py: only these extensions go into the downloadable ZIP
+_ZIP_ALLOWED_EXT = (".csv", ".xlsx", ".db", ".md")
+
+
+def _build_outputs_zip_bytes(output_dir: Path) -> bytes:
+    """Zip top-level output files plus output/dashboard/* (same layout as Flask /download_zip)."""
+    output_dir = Path(output_dir)
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        if output_dir.is_dir():
+            for path in sorted(output_dir.iterdir()):
+                if path.is_file() and any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
+                    zf.write(path, path.name)
+            dashboard_dir = output_dir / "dashboard"
+            if dashboard_dir.is_dir():
+                for path in sorted(dashboard_dir.iterdir()):
+                    if path.is_file() and any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
+                        zf.write(path, f"dashboard/{path.name}")
+    buf.seek(0)
+    return buf.read()
 
 
 def load_ui_options():
@@ -39,7 +62,11 @@ def main():
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
     st.markdown("**Get data** for an indication and country. Use the output files for analysis, dashboards, or reporting.")
-    st.caption("Choose your options below, then click **Get data**. Your files will be in the `output` folder.")
+    st.caption(
+        "Choose your options below, then click **Get data**. "
+        "After a run, download the **ZIP** (or individual CSVs). "
+        "On your own computer, files also appear under the `output` folder next to this app."
+    )
 
     # --- Sidebar ---
     with st.sidebar:
@@ -140,14 +167,34 @@ def main():
         if result["success"]:
             st.success("Your data is ready.")
             n = result.get("record_count", 0)
-            st.info(f"**{n}** evidence row(s) processed. Outputs are in the **`output`** folder in this project.")
+            st.info(
+                f"**{n}** evidence row(s) processed. "
+                "Use **Download all outputs (ZIP)** below to save everything. "
+                "When you run this app on your own machine, files are also written under the **`output`** folder."
+            )
 
             # --- 3. Your outputs ---
             st.subheader("3. Your outputs")
             ind_safe = indication_for_pipeline.replace(" ", "_")
             c_safe = country_id.replace(" ", "_")
             suffix = f"{ind_safe}_{c_safe}"
-            st.markdown("All files are in the **`output`** folder. Names include your indication and country:")
+            zip_bytes = _build_outputs_zip_bytes(ROOT / "output")
+            zip_name = f"epidemiology_outputs_{suffix}.zip"
+            st.download_button(
+                label="Download all outputs (ZIP)",
+                data=zip_bytes,
+                file_name=zip_name,
+                mime="application/zip",
+                type="primary",
+                use_container_width=True,
+                key="dl_zip_all",
+                help="Contains CSVs (and dashboard folder files) from this run.",
+            )
+            st.caption(
+                "In **Chrome**, if **Ask where to save each file before downloading** is on "
+                "(Settings → Downloads), you can pick the folder when the ZIP saves."
+            )
+            st.markdown("Included file names (also inside the ZIP):")
             st.markdown(f"- **Evidence** (sources & values) → `evidence_{suffix}.csv`")
             st.markdown(f"- **Tool-ready table** → `tool_ready_{suffix}.csv`")
             st.markdown(f"- **KPI** (coverage & gaps) → `kpi_table_{suffix}.csv`")
@@ -185,10 +232,11 @@ def main():
             st.subheader("4. What to do next")
             st.markdown("""
             Use the output files for your work:
-            - **Open in Excel** — Open any CSV from the `output` folder to review or share.
-            - **Use in Power BI or Tableau** — Connect to `output/dashboard` (see **docs/DASHBOARD_AND_ANALYTICS.md**).
+            - **Unzip** — Extract the ZIP, then open CSVs from the folder you chose (or from Downloads).
+            - **Open in Excel** — Open any CSV to review or share.
+            - **Use in Power BI or Tableau** — Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
             - **Feed another system** — Use the tool-ready or InsightACE CSV as input for your models or platform.
-            - **Share** — Send the `output` folder or the CSVs to a colleague.
+            - **Share** — Send the ZIP or individual CSVs to a colleague.
             - **Check quality** — Use the KPI table to see coverage and gaps; add evidence and run again if needed.
             """)
         else:

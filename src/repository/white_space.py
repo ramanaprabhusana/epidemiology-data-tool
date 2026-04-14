@@ -8,12 +8,7 @@ from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
-
-def _is_stub_value(value: Any) -> bool:
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return True
-    s = str(value).strip().lower()
-    return "see link" in s or s == "" or s == "nan"
+from ..utils import is_stub_value as _is_stub_value
 
 
 def build_coverage_matrix(

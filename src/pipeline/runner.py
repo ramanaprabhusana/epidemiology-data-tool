@@ -19,7 +19,8 @@ from ..data_builder.builder import (
     build_insightace_epidemiology_table,
     load_scenario_options,
 )
-from ..repository.kpi_table import load_required_metrics, compute_conflicts
+from ..repository.scorecard import load_required_metrics
+from ..repository.reconciliation import compute_conflicts
 from ..repository.confidence import add_computed_confidence, export_rubric as export_confidence_rubric
 from ..repository.scorecard import build_kpi_scorecard, export_kpi_scorecard
 from ..repository.white_space import (
@@ -45,8 +46,17 @@ def _excel_sheet_name(path: Path, key: str) -> str:
 
 
 def _consolidate_csvs_to_excel(paths: Dict[str, str], output_path: Path) -> None:
-    """Write all CSV outputs from paths into a single Excel file, one sheet per CSV."""
-    csv_items = [(k, Path(p)) for k, p in paths.items() if p and str(p).lower().endswith(".csv")]
+    """Write key CSV outputs from paths into a single Excel file. Skip redundant sheets."""
+    # Only include these sheets (in order), skip redundant ones like tool_ready, scenario_registry
+    INCLUDE_KEYS = [
+        "evidence", "kpi_scorecard", "insightace_epi", "source_log",
+        "reference_links", "validation_report", "forecast", "insights_summary",
+    ]
+    csv_items = [(k, Path(p)) for k, p in paths.items()
+                 if p and str(p).lower().endswith(".csv") and k in INCLUDE_KEYS]
+    # Sort by INCLUDE_KEYS order
+    key_order = {k: i for i, k in enumerate(INCLUDE_KEYS)}
+    csv_items.sort(key=lambda x: key_order.get(x[0], 99))
     if not csv_items:
         return
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
@@ -117,7 +127,7 @@ def run_pipeline(
     strict_validation: bool = False,
     use_pubmed: bool = False,
     add_pubmed_stubs: bool = True,
-    max_run_seconds: Optional[int] = None,
+    max_run_seconds: Optional[int] = 2400,  # 40 minutes default
 ) -> Dict[str, Any]:
     """
     Run the full pipeline for one indication and optional country.
@@ -199,6 +209,21 @@ def run_pipeline(
             connectors=connectors,
             connector_kwargs=connector_kwargs,
         )
+        # Filter out stub/empty rows and noisy web-scraped link rows
+        # Reference_links CSV already captures source URLs separately
+        def _is_low_quality(r):
+            v = getattr(r, 'value', None)
+            if not isinstance(v, str):
+                return False
+            vl = v.strip().lower()
+            if 'see link' in vl or vl == '' or vl == 'nan':
+                return True
+            # Drop *_links metrics — these are noisy web scraping artifacts
+            m = getattr(r, 'metric', '')
+            if isinstance(m, str) and m.endswith('_links'):
+                return True
+            return False
+        records = [r for r in records if not _is_low_quality(r)]
         # Single evidence file: sorted by metric (evidence_by_metric); used for all downstream steps
         evidence_path_out = output_dir / f"evidence_by_metric_{file_suffix}.csv"
         evidence_df_raw = pd.DataFrame([r.to_row() for r in records])

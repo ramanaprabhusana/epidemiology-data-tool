@@ -8,33 +8,7 @@ from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
-
-def _is_stub_value(value: Any) -> bool:
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return True
-    s = str(value).strip().lower()
-    return "see link" in s or s == "" or s == "nan"
-
-
-def _extract_first_numeric(value: Any) -> Optional[float]:
-    import re
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return None
-    s = str(value).strip()
-    if not s or _is_stub_value(value):
-        return None
-    match = re.search(r"(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+\.\d+|\d+)", s.replace(" ", ""))
-    if not match:
-        return None
-    try:
-        num = float(match.group(1).replace(",", ""))
-        if 1e-2 <= num <= 1e8 or (0 < num < 1 and "." in match.group(1)):
-            return num
-        if 1900 <= num <= 2030:
-            return None
-        return num
-    except (ValueError, TypeError):
-        return None
+from ..utils import is_stub_value as _is_stub_value, extract_first_numeric as _extract_first_numeric
 
 
 def generate_evidence_summary_md(

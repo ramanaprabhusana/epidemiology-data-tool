@@ -9,44 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
 
-
-def _is_stub_value(value: Any) -> bool:
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return True
-    s = str(value).strip().lower()
-    return "see link" in s or s == "" or s == "nan"
-
-
-def _extract_first_numeric(value: Any) -> Optional[float]:
-    if value is None or (isinstance(value, float) and pd.isna(value)):
-        return None
-    s = str(value).strip()
-    if not s or _is_stub_value(value):
-        return None
-    s_clean = re.sub(r"\s*\([^)]*\)\s*", " ", s)
-    match = re.search(r"(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+\.\d+|\d+)", s_clean.replace(" ", ""))
-    if not match:
-        return None
-    try:
-        num = float(match.group(1).replace(",", ""))
-        if 1e-2 <= num <= 1e8 or (0 < num < 1e-2 and "." in match.group(1)):
-            return num
-        if 1900 <= num <= 2030:
-            return None
-        return num
-    except (ValueError, TypeError):
-        return None
-
-
-def _tier_rank(tier: Any) -> int:
-    if tier is None or (isinstance(tier, float) and pd.isna(tier)):
-        return 2
-    t = str(tier).strip().lower()
-    if t == "gold":
-        return 0
-    if t == "silver":
-        return 1
-    return 2
+from ..utils import is_stub_value as _is_stub_value, extract_first_numeric as _extract_first_numeric, tier_rank as _tier_rank
 
 
 def build_reconciliation_table(
@@ -122,3 +85,35 @@ def export_reconciliation(df: pd.DataFrame, output_path: Path, also_excel: bool 
     df.to_csv(output_path, index=False)
     if also_excel and not df.empty:
         df.to_excel(output_path.with_suffix(".xlsx"), index=False)
+
+
+def compute_conflicts(evidence_df: pd.DataFrame) -> List[dict]:
+    """
+    Flag conflicts: same metric + same population/year but different values.
+    Returns list of {metric, year_or_range, population, value_1, value_2, source_1, source_2, conflict_note}.
+    """
+    if evidence_df.empty or len(evidence_df) < 2:
+        return []
+    df = evidence_df.copy()
+    df["year_or_range"] = df.get("year_or_range", "").fillna("").astype(str).str.strip()
+    df["population"] = df.get("population", "").fillna("").astype(str).str.strip()
+    conflicts = []
+    for (metric, yr, pop), grp in df.groupby(["metric", "year_or_range", "population"]):
+        if len(grp) < 2:
+            continue
+        vals = grp["value"].astype(str).str.strip()
+        if vals.nunique() < 2:
+            continue
+        uniq = vals.unique().tolist()
+        sources = grp["source_citation"].fillna("").astype(str).tolist()
+        conflicts.append({
+            "metric": metric,
+            "year_or_range": yr or "(blank)",
+            "population": pop or "(blank)",
+            "value_1": uniq[0],
+            "value_2": uniq[1] if len(uniq) > 1 else "",
+            "source_1": sources[0] if sources else "",
+            "source_2": sources[1] if len(sources) > 1 else "",
+            "conflict_note": f"Different values for same metric/year/population: {uniq[0]} vs {uniq[1]}",
+        })
+    return conflicts
