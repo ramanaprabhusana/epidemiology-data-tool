@@ -30,6 +30,8 @@ Pilot tool for **PharmaACE** Industry Practicum: consolidate epidemiology eviden
 
 **Docs:** [Quick start](docs/QUICK_START.md) · [Scope & spec](docs/EVIDENCE_FINDER_DATA_BUILDER_SCOPE.md) · [Build order](docs/BUILD_ORDER.md) · [Company & platform context](docs/COMPANY_AND_PLATFORM_CONTEXT.md) · [Handoff](docs/HANDOFF.md) · [Dashboard & analytics](docs/DASHBOARD_AND_ANALYTICS.md).
 
+**Share a browser link (Streamlit Cloud):** Step-by-step [STREAMLIT_CLOUD_DEPLOY.md](STREAMLIT_CLOUD_DEPLOY.md) (you sign in at [share.streamlit.io](https://share.streamlit.io) to finish deploy).
+
 ## Project layout
 
 ```

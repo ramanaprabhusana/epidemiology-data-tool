@@ -1,5 +1,6 @@
 # Python
 .venv/
+.venv_streamlit_cli/
 venv/
 __pycache__/
 *.py[cod]
@@ -15,6 +16,7 @@ build/
 .env
 .env.local
 *.local
+.streamlit/secrets.toml
 
 # IDE
 .idea/
