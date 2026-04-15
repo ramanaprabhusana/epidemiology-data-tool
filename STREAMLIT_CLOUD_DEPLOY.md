@@ -73,7 +73,27 @@ Wait for the build. When it succeeds, copy the app URL (example shape: `https://
 
 ---
 
-## 5. Files Streamlit Cloud uses (already in this project)
+## 5. Public access (fix “You do not have access to this app”)
+
+Apps deployed from a **private** GitHub repo are **private by default**. Viewers must either use an **invited** account or you must make the app **public**.
+
+**Option A — Keep the repo private (preferred if code must stay private)**  
+1. Open your app on **[share.streamlit.io](https://share.streamlit.io)** (signed in as the **owner** / deployer).  
+2. Use **Share** (top right of the app) or **⚙ Settings → Sharing** (wording varies slightly by Streamlit version).  
+3. Choose **Make this app public** / **This app is public** (or similar), so **anyone with the link** can open it **without** signing in as you.  
+4. Send the same URL again to your teammate.
+
+**Option B — Invite specific viewers**  
+In **Share**, add your teammate’s email (e.g. their `@purdue.edu` account) as a viewer. They may need to **accept** the invite and use that account when opening the link.
+
+**Option C — Public GitHub repo**  
+If policy allows, set the GitHub repo to **Public**. Streamlit often treats the app as **public by default** for public repos. **Do not** do this if the repo contains confidential client data or anything NDA forbids from public hosting.
+
+**NDA:** A **public** app URL means anyone who discovers or receives the link may use the app. Confirm with PharmaACE and your instructor before making the app public.
+
+---
+
+## 6. Files Streamlit Cloud uses (already in this project)
 
 | File / folder | Role |
 |---------------|------|
@@ -84,7 +104,7 @@ Wait for the build. When it succeeds, copy the app URL (example shape: `https://
 
 ---
 
-## 6. Optional: secrets
+## 7. Optional: secrets
 
 If you add API keys later, use **Streamlit Cloud → App → Settings → Secrets**. Do **not** commit real secrets.
 
@@ -92,7 +112,7 @@ Example template (for local copy only): [.streamlit/secrets.toml.example](.strea
 
 ---
 
-## 7. What often breaks on free Cloud
+## 8. What often breaks on free Cloud
 
 - **Cold start:** First open after idle can take a minute.
 - **Selenium / heavy scraping:** May not match your laptop. For demos, use **built-in templates** or **upload a CSV** in the app.
@@ -100,12 +120,12 @@ Example template (for local copy only): [.streamlit/secrets.toml.example](.strea
 
 ---
 
-## 8. Redeploy after changes
+## 9. Redeploy after changes
 
 Push commits to GitHub. Streamlit Cloud usually **rebuilds automatically**; you can also use **Reboot app** in the dashboard.
 
 ---
 
-## 9. Other hosting
+## 10. Other hosting
 
 For Flask (`app_web.py`) on Render instead, see [render.yaml](render.yaml) and [DEPLOY.md](DEPLOY.md).
