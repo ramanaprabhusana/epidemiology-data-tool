@@ -31,7 +31,7 @@ Then open **http://127.0.0.1:5000** in your browser. Choose indication and count
 streamlit run app.py
 ```
 
-Choose **Indication** and **Country**, optionally upload an evidence CSV or check **Include PubMed search**, then click **Get data**. Download from the page or use files in `output/`.
+Choose **Indication** and **Country**, optionally upload an evidence CSV, then click **Get data**. PubMed is always queried for literature counts (silver tier). Download from the page or use files in `output/`.
 
 **Option C — Command line**
 
@@ -42,8 +42,8 @@ python run_tool.py --indication CLL --country US
 # Without dashboard export
 python run_tool.py --indication CLL --country US --no-dashboard
 
-# With PubMed search (adds silver-tier stub rows with PMIDs)
-python run_tool.py --indication CLL --country US  # use_pubmed via UI for now
+# PubMed is on by default. To skip (faster/offline):
+python run_tool.py --indication CLL --country US --no-pubmed
 ```
 
 ---

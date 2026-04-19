@@ -30,10 +30,15 @@ def main():
     parser.add_argument("--dashboard", action="store_true", default=True, help="Export dashboard layer (default: True)")
     parser.add_argument("--no-dashboard", action="store_true", help="Skip dashboard export")
     parser.add_argument("--no-forecast", action="store_true", help="Skip forecast table when exporting dashboard")
-    parser.add_argument("--pubmed", action="store_true", help="Include PubMed search (silver tier); add stub rows with PMIDs")
+    parser.add_argument(
+        "--no-pubmed",
+        action="store_true",
+        help="Skip PubMed API calls (faster/offline; default is PubMed on with stub rows)",
+    )
     args = parser.parse_args()
 
     export_dashboard = args.dashboard and not args.no_dashboard
+    use_pubmed = not args.no_pubmed
     result = run_pipeline(
         indication=args.indication,
         country=args.country,
@@ -43,8 +48,8 @@ def main():
         metrics_config_path=args.metrics_config,
         export_dashboard=export_dashboard,
         include_forecast=not args.no_forecast,
-        use_pubmed=args.pubmed,
-        add_pubmed_stubs=args.pubmed,
+        use_pubmed=use_pubmed,
+        add_pubmed_stubs=use_pubmed,
     )
 
     if result["success"]:

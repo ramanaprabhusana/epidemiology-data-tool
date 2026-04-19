@@ -2,7 +2,7 @@
 # The tool explores ALL sources below for your indication and country. Add/remove entries as needed.
 #
 # type: link = stub with source_url (placeholders: {indication}, {country}, {indication_encoded}, {country_encoded})
-# type: api  = live search (connector_id: clinicaltrials, pubmed). enabled_when: use_pubmed for PubMed only.
+# type: api  = live search (connector_id: clinicaltrials, pubmed). Optional enabled_when skips a source if the flag is false.
 # extract_priority: 1 = run deep-dive first (before time cap), 2 = next, default 99. Lower = earlier.
 
 sources:
@@ -780,4 +780,3 @@ sources:
     type: api
     connector_id: pubmed
     metric: literature_search
-    enabled_when: use_pubmed

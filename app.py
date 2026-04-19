@@ -139,7 +139,9 @@ def main():
         evidence_path_for_run = temp_path
         st.caption(f"Using: {uploaded_file.name}")
 
-    use_pubmed = st.checkbox("Also search PubMed for literature", value=False, help="Adds search results (PMIDs) as silver-tier evidence.")
+    # PubMed (expanded queries + stub rows) is always included for every run.
+    use_pubmed = True
+    add_pubmed_stubs = True
 
     # --- 2. Get the data ---
     st.subheader("2. Get the data")
@@ -157,7 +159,7 @@ def main():
                 export_dashboard=export_dashboard,
                 include_forecast=True,
                 use_pubmed=use_pubmed,
-                add_pubmed_stubs=use_pubmed,
+                add_pubmed_stubs=add_pubmed_stubs,
             )
             st.session_state.last_run = {
                 "indication": indication_for_pipeline,

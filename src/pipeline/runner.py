@@ -10,6 +10,7 @@ import pandas as pd
 
 from ..evidence_finder.sources import collect_from_multiple_levels
 from ..evidence_finder.collector import write_source_log, export_evidence_by_metric
+from ..evidence_finder.indication_context import curated_slug_candidates
 from ..data_builder.builder import (
     load_evidence_table,
     build_tool_ready_table,
@@ -34,6 +35,17 @@ from ..repository.evidence_summary import generate_evidence_summary_md, export_e
 
 def _safe_name(s: str) -> str:
     return s.replace(" ", "_").replace(",", "").strip() or "unknown"
+
+
+def _metrics_suffix_candidates(indication: str) -> list[str]:
+    """Try filesystem slug first, then curated YAML slugs (e.g. nhl for long NHL workbook labels)."""
+    ind_safe = _safe_name(indication)
+    slug = ind_safe.lower().replace(" ", "_").replace("(", "").replace(")", "").strip("_")
+    out: list[str] = []
+    for s in [slug, *curated_slug_candidates(indication), "cll", "lung_cancer", "example", "nhl", "hodgkin"]:
+        if s and s not in out:
+            out.append(s)
+    return out
 
 
 def _excel_sheet_name(path: Path, key: str) -> str:
@@ -125,7 +137,7 @@ def run_pipeline(
     include_forecast: bool = True,
     validate_evidence: bool = True,
     strict_validation: bool = False,
-    use_pubmed: bool = False,
+    use_pubmed: bool = True,
     add_pubmed_stubs: bool = True,
     max_run_seconds: Optional[int] = 2400,  # 40 minutes default
 ) -> Dict[str, Any]:
@@ -174,8 +186,7 @@ def run_pipeline(
 
     # Resolve metrics config (indication-specific file or default)
     if metrics_config_path is None or not Path(metrics_config_path).exists():
-        slug = ind_safe.lower().replace(" ", "_").replace("(", "").replace(")", "")
-        for suffix in [slug, "cll", "lung_cancer", "example"]:
+        for suffix in _metrics_suffix_candidates(indication):
             candidate = config_dir / f"required_metrics_{suffix}.yaml"
             if candidate.exists():
                 metrics_config_path = candidate

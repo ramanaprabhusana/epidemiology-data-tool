@@ -20,6 +20,9 @@ Usage:
     # Run for a subset
     python run_all_indications.py --indications CLL "Hodgkin Lymphoma"
 
+    # Skip PubMed (faster batch; default is PubMed on)
+    python run_all_indications.py --no-pubmed
+
 Outputs:
     output/<indication>_<country>/...                 per-indication CSVs, tool-ready tables, KPI scorecard
     output/dashboard/epidemiology_dashboard.db        SQLite (Tableau data source)
@@ -88,7 +91,7 @@ def _sha256_of_file(path: Path) -> str:
 
 
 def run_one(indication: str, country: str, output_dir: Path, config_dir: Path,
-            use_pubmed: bool = False) -> Dict[str, Any]:
+            use_pubmed: bool = True) -> Dict[str, Any]:
     """Run the pipeline for one indication. Returns per-indication result dict."""
     started = time.time()
     print(f"\n{'=' * 60}\n► {indication}  ({country})\n{'=' * 60}")
@@ -220,7 +223,11 @@ def main() -> int:
                         help="Path to the v5.2 workbook to patch")
     parser.add_argument("--no-workbook-patch", action="store_true",
                         help="Skip patching the workbook — just produce pipeline outputs")
-    parser.add_argument("--pubmed", action="store_true", help="Include PubMed silver-tier records")
+    parser.add_argument(
+        "--no-pubmed",
+        action="store_true",
+        help="Skip PubMed for each indication (default: PubMed on; faster batch or offline)",
+    )
     parser.add_argument("--consolidated-excel-name", default="consolidated_run.xlsx",
                         help="Filename under output/ for the aggregated Excel")
     args = parser.parse_args()
@@ -236,7 +243,7 @@ def main() -> int:
                 country=args.country,
                 output_dir=args.output_dir,
                 config_dir=args.config_dir,
-                use_pubmed=args.pubmed,
+                use_pubmed=not args.no_pubmed,
             )
         )
 

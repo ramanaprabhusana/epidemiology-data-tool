@@ -99,7 +99,7 @@ python run_tool.py --indication CLL --country US --no-dashboard
 - **Multi-level finder:** Evidence is collected from Gold → Silver → Bronze (manual CSV and/or future API connectors). KPI includes **conflict detection** (same metric/year/population, different values).
 - **Dashboard:** With `--dashboard`, outputs go to `output/dashboard/` (CSV + SQLite + manifest and data dictionary for BI). Connect Tableau or Power BI; see [docs/DASHBOARD_AND_ANALYTICS.md](docs/DASHBOARD_AND_ANALYTICS.md).
 - **Validation:** Evidence is validated (required columns, tier values); report is in the pipeline result and optional in the UI.
-- **PubMed:** Optional `use_pubmed=True` (e.g. from UI) runs a PubMed search (silver tier) and can add stub evidence rows with PMIDs.
+- **PubMed:** Every run queries PubMed (expanded queries, silver tier) and adds stub evidence rows with PMIDs. CLI: use `python run_tool.py ... --no-pubmed` to skip for speed or offline runs.
 - **Scenarios:** Scenario options (growth rate, stage split) are read from `config/scenario_options.yaml`; edit there to add alternatives.
 - **Tests:** `python -m pytest tests/ -v`
 

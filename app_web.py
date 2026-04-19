@@ -68,7 +68,9 @@ def run():
     indication = (data.get("indication") or "").strip() or "CLL"
     country = (data.get("country") or "").strip() or "US"
     export_dashboard = data.get("export_dashboard", True)
-    use_pubmed = data.get("use_pubmed", True)
+    # PubMed is always on; client cannot disable it.
+    use_pubmed = True
+    add_pubmed_stubs = True
     evidence_path = None
     if data.get("evidence_filename"):
         up = ROOT / "output" / "temp_upload" / (data.get("evidence_filename") or "").lstrip("/")
@@ -84,7 +86,7 @@ def run():
             export_dashboard=export_dashboard,
             include_forecast=True,
             use_pubmed=use_pubmed,
-            add_pubmed_stubs=use_pubmed,
+            add_pubmed_stubs=add_pubmed_stubs,
             max_run_seconds=45 * 60,  # 45 min cap; priority sources get deep-dive first
         )
     except Exception as e:

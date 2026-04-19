@@ -98,7 +98,7 @@ This will:
 4. **Review outputs:**  
    `output/evidence_*.csv`, `output/tool_ready_*.csv`, `output/kpi_table_*.csv`, `output/kpi_conflicts_*.csv` (if any conflicts), `output/insightace_epi_*.csv`. Use the KPI table for coverage and gaps.
 
-**Optional:** Evidence is validated (required columns, valid source_tier). To fail the pipeline when validation has errors, use `run_pipeline(..., strict_validation=True)`. Scenario options (growth rate, stage split) are configurable in `config/scenario_options.yaml`. PubMed search can be enabled from the UI or by passing `use_pubmed=True` to `run_pipeline`.
+**Optional:** Evidence is validated (required columns, valid source_tier). To fail the pipeline when validation has errors, use `run_pipeline(..., strict_validation=True)`. Scenario options (growth rate, stage split) are configurable in `config/scenario_options.yaml`. **PubMed** is on by default for every UI and pipeline run; pass `use_pubmed=False` (and `add_pubmed_stubs=False`) to `run_pipeline` only for tests or special offline jobs. CLI: `run_tool.py` / `run_all_indications.py` support `--no-pubmed`.
 
 ---
 

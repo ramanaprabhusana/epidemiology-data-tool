@@ -20,6 +20,11 @@ from ..indication_context import (
 )
 
 
+def _bundled_pipeline_config_dir() -> Path:
+    """config/ at pipeline root (parent of src/)."""
+    return Path(__file__).resolve().parents[3] / "config"
+
+
 def load_curated_records(config_dir: Path, indication: str, country: str) -> List[EvidenceRecord]:
     """
     Load curated epidemiology data from config/curated_data/{indication_slug}.yaml.
@@ -28,12 +33,19 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
     """
     # Map long UI labels to curated_data/{slug}.yaml (e.g. NHL -> nhl.yaml)
     candidates = curated_slug_candidates(indication or "")
+    roots = [Path(config_dir)]
+    bundled = _bundled_pipeline_config_dir()
+    if bundled.resolve() != Path(config_dir).resolve():
+        roots.append(bundled)
 
     curated_path = None
-    for slug in candidates:
-        p = config_dir / "curated_data" / f"{slug}.yaml"
-        if p.exists():
-            curated_path = p
+    for root in roots:
+        for slug in candidates:
+            p = root / "curated_data" / f"{slug}.yaml"
+            if p.exists():
+                curated_path = p
+                break
+        if curated_path is not None:
             break
     if curated_path is None:
         return []
@@ -49,7 +61,6 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
         return []
 
     records = []
-    country_lower = (country or "").strip().lower()
     for metric_id, info in metrics.items():
         if not isinstance(info, dict):
             continue
@@ -127,7 +138,7 @@ def explore_all_sources(
     config: Dict[str, Any],
     country: str = None,
     config_dir: Path = None,
-    use_pubmed: bool = False,
+    use_pubmed: bool = True,
     add_pubmed_stubs: bool = True,
     **kwargs,
 ) -> List[EvidenceRecord]:
@@ -145,7 +156,7 @@ def explore_all_sources(
     api_kwargs["pubmed_queries"] = pubmed_expanded_queries(display_indication, country)
 
     if config_dir is None:
-        config_dir = Path(__file__).resolve().parents[2] / "config"
+        config_dir = _bundled_pipeline_config_dir()
     config_dir = Path(config_dir)
     sources = load_sources_to_explore(config_dir)
     # Process link sources by extract_priority (1 first, then 2, then rest) so high-value sources get deep-dive before time cap
