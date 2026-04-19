@@ -15,12 +15,25 @@ def _lower(s: str) -> str:
     return (s or "").strip().lower()
 
 
+def _match_normalize(s: str) -> str:
+    """
+    Lowercase text for substring checks. Maps Unicode dashes to ASCII hyphen so
+    labels that use Unicode dash characters still match "non-hodgkin".
+    """
+    t = _lower(s)
+    for ch in ("\u2013", "\u2014", "\u2212"):
+        t = t.replace(ch, "-")
+    return t
+
+
 def curated_slug_candidates(indication: str) -> List[str]:
     """
     Ordered slugs to try for config/curated_data/{slug}.yaml (basename without .yaml).
     """
     raw = (indication or "").strip()
     slug = raw.lower().replace(" ", "_").replace("(", "").replace(")", "")
+    for ch in ("\u2013", "\u2014", "\u2212"):
+        slug = slug.replace(ch, "-")
     out: List[str] = []
 
     def add(x: str) -> None:
@@ -29,12 +42,23 @@ def curated_slug_candidates(indication: str) -> List[str]:
 
     add(slug)
 
-    sl = _lower(raw)
+    sl = _match_normalize(raw)
+    compact = re.sub(r"[\s\-]+", "", sl)
     if "cll" in sl or "chronic lymphocytic" in sl:
         add("cll")
     if "hodgkin" in sl and "non" not in sl:
         add("hodgkin")
-    if "non-hodgkin" in sl or "non hodgkin" in sl or "nonhodgkin" in sl or ("nhl" in sl and "hodgkin" in sl):
+    is_nhl = (
+        "non-hodgkin" in sl
+        or "non hodgkin" in sl
+        or "nonhodgkin" in compact
+        or ("nhl" in sl and "hodgkin" in sl)
+        or (re.search(r"\bnhl\b", sl) is not None and "lymphoma" in sl)
+        or (re.search(r"\bnhl\b", sl) is not None and "dlbcl" in sl)
+        or ("hogdkin" in sl and "non" in sl and "lymphoma" in sl)
+        or ("lymphoma" in sl and "dlbcl" in sl and "excl" in sl)
+    )
+    if is_nhl:
         add("nhl")
     if "gastric" in sl or "(gc)" in sl:
         add("gc")
@@ -47,13 +71,27 @@ def curated_slug_candidates(indication: str) -> List[str]:
     if "breast" in sl:
         add("breast_cancer")
 
+    if "nhl" in out:
+        out.remove("nhl")
+        out.insert(0, "nhl")
+
     return out
 
 
 def trial_search_conditions(display_indication: str) -> List[str]:
     """Short condition strings for ClinicalTrials.gov (tried in order until counts stabilize)."""
-    sl = _lower(display_indication)
-    if "non-hodgkin" in sl or "non hodgkin" in sl or "nonhodgkin" in sl or ("nhl" in sl and "non" in sl):
+    sl = _match_normalize(display_indication)
+    compact = re.sub(r"[\s\-]+", "", sl)
+    if (
+        "non-hodgkin" in sl
+        or "non hodgkin" in sl
+        or "nonhodgkin" in compact
+        or ("nhl" in sl and "non" in sl)
+        or (re.search(r"\bnhl\b", sl) is not None and "lymphoma" in sl)
+        or (re.search(r"\bnhl\b", sl) is not None and "dlbcl" in sl)
+        or ("hogdkin" in sl and "non" in sl and "lymphoma" in sl)
+        or ("lymphoma" in sl and "dlbcl" in sl and "excl" in sl)
+    ):
         return [
             "Non-Hodgkin lymphoma",
             "Lymphoma, Non-Hodgkin",
@@ -77,7 +115,8 @@ def pubmed_expanded_queries(display_indication: str, country: Optional[str]) -> 
     """
     Multiple PubMed query strings (concept expansion, not strict lexical AND on one long UI label).
     """
-    sl = _lower(display_indication)
+    sl = _match_normalize(display_indication)
+    compact = re.sub(r"[\s\-]+", "", sl)
     geo = f" {country}" if country else ""
     queries: List[str] = []
 
@@ -85,7 +124,16 @@ def pubmed_expanded_queries(display_indication: str, country: Optional[str]) -> 
         if s.strip() and s not in queries:
             queries.append(s.strip())
 
-    if "non-hodgkin" in sl or "non hodgkin" in sl or "nonhodgkin" in sl or ("nhl" in sl and "non" in sl):
+    if (
+        "non-hodgkin" in sl
+        or "non hodgkin" in sl
+        or "nonhodgkin" in compact
+        or ("nhl" in sl and "non" in sl)
+        or (re.search(r"\bnhl\b", sl) is not None and "lymphoma" in sl)
+        or (re.search(r"\bnhl\b", sl) is not None and "dlbcl" in sl)
+        or ("hogdkin" in sl and "non" in sl and "lymphoma" in sl)
+        or ("lymphoma" in sl and "dlbcl" in sl and "excl" in sl)
+    ):
         q(f"non-Hodgkin lymphoma epidemiology incidence prevalence{geo}")
         q(f"NHL lymphoma population-based cohort United States{geo}")
         q(f"B-cell lymphoma epidemiology SEER{geo}")

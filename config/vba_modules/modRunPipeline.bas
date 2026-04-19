@@ -1,12 +1,22 @@
 Attribute VB_Name = "modRunPipeline"
 Option Explicit
 
-' CLL Data Pipeline Trigger for Excel
+' Multi-Indication Data Pipeline Trigger for Excel (v5.2 edition)
 ' Import this module via VBA Editor (Alt+F11 > File > Import)
-' Then assign RunPipeline to a button on the Pipeline Metadata sheet
+'
+' Public entry points for buttons on the Control Panel sheet:
+'   - RefreshAll(): runs pipeline for all 6 indications + patches workbook
+'   - RefreshIndication("CLL"): runs pipeline for a single indication + patches workbook
+'   - RefreshCLL / RefreshHodgkin / RefreshNonHodgkin / RefreshGastric / RefreshOvarian / RefreshProstate
+'     convenience wrappers for button assignment
+'   - RunPipeline(): legacy single-indication (CLL) trigger, kept for back-compat
 '
 ' SETUP: Place this workbook inside the "Data Pipeline tool" folder,
-' or adjust GetPipelineDir() to point to the correct location.
+' or adjust GetPipelineDir() to point to the correct location. The usual layout is:
+'   <project root>/
+'     Data Pipeline tool/          ← this module's scripts live here
+'     Client presentation/
+'       CLL_Consolidated_Forecast_Model_v5.2.xlsx   ← this workbook
 
 Private Function GetPipelineDir() As String
     ' Detect pipeline directory relative to this workbook
@@ -151,7 +161,7 @@ Sub RefreshEvidenceData()
     If pipelineDir = "" Then Exit Sub
     
     Dim csvPath As String
-    csvPath = pipelineDir & "/output/evidence_by_metric_CLL_(Chronic_Lymphocytic_Leukemia)_US.csv"
+    csvPath = pipelineDir & "/output/evidence_by_metric_CLL_US.csv"
 
     Dim wsEv As Worksheet
     On Error Resume Next
@@ -211,3 +221,154 @@ CSVError:
     Close #fNum
     MsgBox "Could not read CSV file:" & vbCr & csvPath & vbCr & vbCr & Err.Description, vbExclamation, "CSV Import Error"
 End Sub
+
+' ─────────────────────────────────────────────────────────────────────────────
+' MULTI-INDICATION REFRESH (v5.2 workflow)
+' ─────────────────────────────────────────────────────────────────────────────
+' These subs shell out to run_all_indications.py which, in turn:
+'   1. Runs src/pipeline/runner.py for each indication (SEER/GLOBOCAN/WHO pulls)
+'   2. Writes pipeline outputs under output/ (evidence_by_metric_<suffix>.csv, etc.)
+'   3. Builds output/consolidated_run.xlsx and output/run_manifest.json
+'   4. Invokes refresh_workbook.py which patches this workbook's
+'      Lookup Tables (Model Inputs rows 5-10) + Evidence sheets + Pipeline Metadata
+'   USER EDITS ON FORECAST / SUMMARY DASHBOARD / SCENARIOS ARE NEVER TOUCHED.
+
+Public Sub RefreshAll()
+    Call DoMultiRefresh("")   ' empty string → all 6 indications (run_all_indications default)
+End Sub
+
+Public Sub RefreshIndication(ind As String)
+    If Len(Trim(ind)) = 0 Then
+        MsgBox "RefreshIndication requires an indication name (e.g. 'CLL' or 'Hodgkin Lymphoma').", vbExclamation
+        Exit Sub
+    End If
+    Call DoMultiRefresh(ind)
+End Sub
+
+' Convenience wrappers: assign these directly to shape buttons on Control Panel
+' Use full pipeline labels for Hodgkin / NHL so they match run_all_indications.py / INDICATION_SUFFIX.
+Public Sub RefreshCLL():         Call DoMultiRefresh("CLL"):                   End Sub
+Public Sub RefreshHodgkin():     Call DoMultiRefresh("Hodgkin Lymphoma"):     End Sub
+Public Sub RefreshNonHodgkin():  Call DoMultiRefresh("Non-Hodgkin Lymphoma"): End Sub
+Public Sub RefreshGastric():     Call DoMultiRefresh("Gastric"):               End Sub
+Public Sub RefreshOvarian():     Call DoMultiRefresh("Ovarian"):               End Sub
+Public Sub RefreshProstate():    Call DoMultiRefresh("Prostate"):             End Sub
+
+Private Sub DoMultiRefresh(ind As String)
+    Dim pipelineDir As String
+    pipelineDir = GetPipelineDir()
+    If pipelineDir = "" Then
+        MsgBox "Could not find the Data Pipeline tool folder." & vbCr & vbCr & _
+            "Expected layout:" & vbCr & _
+            "  <project>/Data Pipeline tool/run_all_indications.py" & vbCr & _
+            "  <project>/Client presentation/CLL_Consolidated_Forecast_Model_v5.2.xlsx", _
+            vbExclamation, "Pipeline Not Found"
+        Exit Sub
+    End If
+
+    Dim batchScript As String
+    batchScript = pipelineDir & "/run_all_indications.py"
+    If Dir(batchScript) = "" Then
+        MsgBox "run_all_indications.py not found at:" & vbCr & batchScript, vbExclamation
+        Exit Sub
+    End If
+
+    Dim pythonPath As String
+    pythonPath = GetPythonPath(pipelineDir)
+
+    Dim title As String, prompt As String
+    If Len(ind) = 0 Then
+        title = "Refresh All Indications"
+        prompt = "Run the Data Pipeline for ALL 6 indications (CLL, Hodgkin Lymphoma, Non-Hodgkin Lymphoma, Gastric, Ovarian, Prostate)?" & vbCr & vbCr
+    Else
+        title = "Refresh " & ind
+        prompt = "Run the Data Pipeline for " & ind & " only?" & vbCr & vbCr
+    End If
+    prompt = prompt & "Pipeline: " & pipelineDir & vbCr & _
+                      "Python:   " & pythonPath & vbCr & _
+                      "Workbook: " & ThisWorkbook.FullName & vbCr & vbCr & _
+                      "This will update Lookup Tables, Evidence sheets, and Pipeline Metadata." & vbCr & _
+                      "Forecast sheets, Summary Dashboard, and Scenarios are NOT touched." & vbCr & vbCr & _
+                      "Estimated time: " & IIf(Len(ind) = 0, "10-20", "2-5") & " minutes."
+
+    Dim answer As VbMsgBoxResult
+    answer = MsgBox(prompt, vbYesNo + vbQuestion, title)
+    If answer = vbNo Then Exit Sub
+
+    ' Save + close so refresh_workbook.py can open it, then reopen after
+    Dim wbPath As String, wbName As String
+    wbPath = ThisWorkbook.FullName
+    wbName = ThisWorkbook.Name
+
+    If ThisWorkbook.Path = "" Then
+        MsgBox "Please save this workbook before running the refresh.", vbExclamation
+        Exit Sub
+    End If
+    ThisWorkbook.Save
+
+    ' Build command line
+    Dim cmd As String
+    cmd = """" & pythonPath & """ """ & batchScript & """ --country US --workbook """ & wbPath & """"
+    If Len(ind) > 0 Then
+        cmd = cmd & " --indications """ & ind & """"
+    End If
+
+    Dim startTime As Double
+    startTime = Timer
+    Application.ScreenUpdating = False
+    Application.StatusBar = "Running pipeline for " & IIf(Len(ind) = 0, "all indications", ind) & "..."
+
+    ' Run the shell command and wait for completion
+    Dim ok As Boolean
+    ok = ShellAndWait(cmd, pipelineDir)
+
+    Application.StatusBar = False
+    Application.ScreenUpdating = True
+
+    Dim elapsed As Double
+    elapsed = Timer - startTime
+
+    If Not ok Then
+        MsgBox "Pipeline run failed. Check terminal output / log files under:" & vbCr & _
+               pipelineDir & "/output/", vbCritical, "Refresh Failed"
+        Exit Sub
+    End If
+
+    ' refresh_workbook.py saved changes to the file on disk. We need to reopen
+    ' this workbook to see them. Close without saving (we already saved above
+    ' and the on-disk copy is the fresh one).
+    Application.DisplayAlerts = False
+    ThisWorkbook.Close SaveChanges:=False
+    Application.DisplayAlerts = True
+
+    Workbooks.Open Filename:=wbPath
+    MsgBox "Refresh complete." & vbCr & _
+           "Duration: " & Format(elapsed, "0.0") & " seconds" & vbCr & vbCr & _
+           "Review Pipeline Metadata sheet for updated run details.", _
+           vbInformation, "Done"
+End Sub
+
+Private Function ShellAndWait(cmd As String, workDir As String) As Boolean
+    On Error GoTo RunErr
+    #If Mac Then
+        ' AppleScript chains: cd to pipeline dir, then run the command, capture exit status
+        Dim applCmd As String
+        applCmd = "do shell script ""cd '" & workDir & "' && " & _
+                  Replace(Replace(cmd, "\", "\\"), """", "\""") & " 2>&1"""
+        Dim res As String
+        res = MacScript(applCmd)
+        ShellAndWait = True
+    #Else
+        ' Windows: use WScript.Shell and wait for completion
+        Dim wsh As Object
+        Set wsh = CreateObject("WScript.Shell")
+        wsh.CurrentDirectory = workDir
+        Dim rc As Long
+        rc = wsh.Run("cmd /c " & cmd, 1, True)   ' 1 = show window, True = wait
+        ShellAndWait = (rc = 0)
+    #End If
+    Exit Function
+
+RunErr:
+    ShellAndWait = False
+End Function

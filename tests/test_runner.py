@@ -45,7 +45,7 @@ def test_run_pipeline_example_no_dashboard(tmp_path):
     assert result["success"] is True
     assert result["record_count"] >= 1
     assert "evidence" in result["paths"]
-    assert "kpi" in result["paths"]
+    assert "kpi_scorecard" in result["paths"]
     assert (tmp_path / "evidence_Example.csv").exists() or any("evidence" in p for p in result["paths"].values())
 
 
