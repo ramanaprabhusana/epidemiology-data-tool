@@ -278,7 +278,8 @@ def explore_all_sources(
                     add_pubmed_stubs=add_pubmed_stubs,
                     use_pubmed=use_pubmed,
                 )
-                recs = connector(indication_clean, config, country=country, **api_kwargs)
+                # api_kwargs already includes country; do not pass country twice (breaks PubMed connector).
+                recs = connector(indication_clean, config, **api_kwargs)
                 all_records.extend(recs)
             except Exception:
                 pass
