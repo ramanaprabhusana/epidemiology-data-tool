@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 Batch runner: executes the Data Pipeline for all 6 indications
-(CLL, Hodgkin Lymphoma, Non-Hodgkin Lymphoma [excl. DLBCL], Gastric, Ovarian, Prostate)
+(CLL, Hodgkin Lymphoma, Non-Hodgkin Lymphoma, Gastric, Ovarian, Prostate)
 and optionally patches the Client-presentation workbook (Lookup Tables + Evidence sheets).
 
-NOTE: DLBCL was removed as a standalone indication on 2026-04-18 and replaced by
-Hodgkin + Non-Hodgkin Lymphoma (with NHL scoped to exclude DLBCL subtype).
+NOTE: DLBCL is not a standalone indication; it is reported as a subtype inside NHL
+(full Non-Hodgkin Lymphoma, including DLBCL in totals and subtype mix).
 
 Usage:
     # Run for all 6 indications with country US, produce SQLite + CSV + consolidated Excel

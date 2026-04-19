@@ -1,18 +1,15 @@
 # Required epidemiology metrics for Non-Hodgkin Lymphoma (NHL)
-# SCOPE: All NHL subtypes EXCLUDING DLBCL (per project decision 2026-04-18).
-#   NHL totals published by SEER include DLBCL (~30% of NHL). This indication
-#   carries SEER all-NHL figures MINUS DLBCL subtype figures. All evidence
-#   records must document the derivation: "SEER NHL all-subtypes (X) − SEER DLBCL (Y) = value".
-#   Where exact subtype-stratified figures are unavailable, use SEER*Stat custom
-#   queries or approximations from NHL Facts & Figures, and document the source.
+# SCOPE: All NHL subtypes including DLBCL. Use SEER all-NHL totals and subtype
+#   breakdowns directly; do not subtract DLBCL from NHL totals. Document sources
+#   (SEER*Stat, NHL Facts & Figures, registry reports) in evidence rows.
 #
+# DLBCL is not a standalone indication; it appears as subtype_dlbcl below.
 # Aligns with InsightACE Epidemiology Beta and project scope.
-# Generated: 2026-04-18 as part of 6-indication refactor (replaces DLBCL).
 
-indication: "Non-Hodgkin Lymphoma (excl. DLBCL)"
+indication: "Non-Hodgkin Lymphoma"
 
 metrics:
-  # ─── Core epidemiology ───
+  # --- Core epidemiology ---
   - id: incidence
     label: "Incidence"
     required: true
@@ -46,7 +43,7 @@ metrics:
     required: true
     splits: []
 
-  # ─── Stage distribution (Ann Arbor) ───
+  # --- Stage distribution (Ann Arbor) ---
   - id: stage_i
     label: "Stage I (%)"
     required: true
@@ -64,58 +61,59 @@ metrics:
     required: true
     splits: []
 
-  # ─── Subtype mix (NHL excluding DLBCL) ───
-  # SEER reports DLBCL as ~30% of all NHL. With DLBCL excluded, the remaining
-  # mix rebalances — indolent B-cell (FL, MZL, SLL) and aggressive/T-cell
-  # subtypes weighted higher. Percentages below refer to % of NHL-excl-DLBCL.
+  # Subtype mix as % of all NHL (sums approximately to 100% with DLBCL included).
+  - id: subtype_dlbcl
+    label: "Diffuse Large B-Cell Lymphoma (DLBCL) - % of NHL"
+    required: false
+    splits: []
   - id: subtype_follicular
-    label: "Follicular Lymphoma (FL) — % of NHL-excl-DLBCL"
+    label: "Follicular Lymphoma (FL) - % of NHL"
     required: false
     splits: []
   - id: subtype_mantle_cell
-    label: "Mantle Cell Lymphoma (MCL) — % of NHL-excl-DLBCL"
+    label: "Mantle Cell Lymphoma (MCL) - % of NHL"
     required: false
     splits: []
   - id: subtype_marginal_zone
-    label: "Marginal Zone Lymphoma (MZL) — % of NHL-excl-DLBCL"
+    label: "Marginal Zone Lymphoma (MZL) - % of NHL"
     required: false
     splits: []
   - id: subtype_small_lymphocytic
-    label: "Small Lymphocytic Lymphoma (SLL) — % of NHL-excl-DLBCL"
+    label: "Small Lymphocytic Lymphoma (SLL) - % of NHL"
     required: false
     splits: []
   - id: subtype_burkitt
-    label: "Burkitt Lymphoma — % of NHL-excl-DLBCL"
+    label: "Burkitt Lymphoma - % of NHL"
     required: false
     splits: []
   - id: subtype_tcell_peripheral
-    label: "Peripheral T-cell Lymphoma (PTCL) — % of NHL-excl-DLBCL"
+    label: "Peripheral T-cell Lymphoma (PTCL) - % of NHL"
     required: false
     splits: []
   - id: subtype_tcell_cutaneous
-    label: "Cutaneous T-cell Lymphoma (CTCL / MF-SS) — % of NHL-excl-DLBCL"
+    label: "Cutaneous T-cell Lymphoma (CTCL / MF-SS) - % of NHL"
     required: false
     splits: []
   - id: subtype_other
-    label: "Other NHL subtypes — % of NHL-excl-DLBCL"
+    label: "Other NHL subtypes - % of NHL"
     required: false
     splits: []
 
-  # ─── Treatment lines (subtype-weighted) ───
+  # --- Treatment lines (subtype-weighted) ---
   - id: indolent_watch
     label: "Indolent watch-and-wait (FL/MZL low-burden)"
     required: false
     splits: []
   - id: first_line_aggressive
-    label: "1L aggressive — R-CHOP (non-DLBCL aggressive, e.g. transformed FL)"
+    label: "1L aggressive - R-CHOP (DLBCL, transformed FL, other aggressive B-cell)"
     required: false
     splits: ["by_line"]
   - id: first_line_indolent
-    label: "1L indolent — BR / R2 / obinutuzumab-based (FL, MZL)"
+    label: "1L indolent - BR / R2 / obinutuzumab-based (FL, MZL)"
     required: false
     splits: ["by_line"]
   - id: first_line_mcl
-    label: "1L MCL — R-CHOP/R-DHAP + ASCT, or ibrutinib-based"
+    label: "1L MCL - R-CHOP/R-DHAP + ASCT, or ibrutinib-based"
     required: false
     splits: ["by_line"]
   - id: relapsed_refractory
