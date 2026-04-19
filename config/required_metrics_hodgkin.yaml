@@ -1,0 +1,100 @@
+# Required epidemiology metrics for Hodgkin Lymphoma (HL)
+# Aligns with InsightACE Epidemiology Beta and project scope.
+# Generated: 2026-04-18 as part of 6-indication refactor (replaces DLBCL).
+
+indication: "Hodgkin Lymphoma"
+
+metrics:
+  # ─── Core epidemiology ───
+  - id: incidence
+    label: "Incidence"
+    required: true
+    splits: []
+  - id: incidence_rate
+    label: "Incidence Rate (per 100k)"
+    required: true
+    splits: []
+  - id: prevalence
+    label: "Prevalence"
+    required: true
+    splits: []
+  - id: mortality
+    label: "Mortality"
+    required: true
+    splits: []
+  - id: mortality_rate
+    label: "Mortality Rate (per 100k)"
+    required: true
+    splits: []
+  - id: five_year_survival
+    label: "5-Year Survival Rate (%)"
+    required: true
+    splits: []
+  - id: median_age_at_diagnosis
+    label: "Median Age at Diagnosis"
+    required: true
+    splits: []
+  - id: male_female_ratio
+    label: "Male:Female Ratio"
+    required: true
+    splits: []
+
+  # ─── Stage distribution (Ann Arbor / Lugano) ───
+  - id: stage_i
+    label: "Stage I (%)"
+    required: true
+    splits: []
+  - id: stage_ii
+    label: "Stage II (%)"
+    required: true
+    splits: []
+  - id: stage_iii
+    label: "Stage III (%)"
+    required: true
+    splits: []
+  - id: stage_iv
+    label: "Stage IV (%)"
+    required: true
+    splits: []
+
+  # ─── Histology subtypes ───
+  - id: subtype_classical
+    label: "Classical HL — Nodular sclerosis / Mixed cellularity / Lymphocyte-rich / Lymphocyte-depleted (%)"
+    required: false
+    splits: []
+  - id: subtype_nlphl
+    label: "Nodular lymphocyte-predominant HL (NLPHL) (%)"
+    required: false
+    splits: []
+
+  # ─── Treatment lines ───
+  - id: first_line
+    label: "First line (1L) — ABVD / BV-AVD / A+AVD"
+    required: false
+    splits: ["by_line"]
+  - id: early_stage
+    label: "Early-stage combined-modality (2 cycles ABVD + IFRT) response"
+    required: false
+    splits: []
+  - id: advanced_stage
+    label: "Advanced-stage outcomes (BV-AVD vs ABVD)"
+    required: false
+    splits: []
+  - id: relapsed_refractory
+    label: "Relapsed/refractory (r/r) post-auto-HSCT"
+    required: false
+    splits: ["by_line"]
+  - id: second_line_salvage
+    label: "2L Salvage chemo + auto-HSCT"
+    required: false
+    splits: ["by_line"]
+  - id: third_line_plus
+    label: "3L+ (Brentuximab vedotin / Nivolumab / Pembrolizumab)"
+    required: false
+    splits: ["by_line"]
+
+year_range:
+  min: 2015
+  max: 2029
+
+geography: "US"

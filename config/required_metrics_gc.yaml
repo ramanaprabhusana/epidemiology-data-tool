@@ -1,0 +1,102 @@
+# Required epidemiology metrics for GC (Gastric Cancer, Stomach Cancer)
+# Aligns with InsightACE Epidemiology Beta and project scope.
+# Generated: 2026-04-15 as part of multi-indication Data Pipeline extension.
+
+indication: "Gastric"
+
+metrics:
+  # ─── Core epidemiology ───
+  - id: incidence
+    label: "Incidence"
+    required: true
+    splits: []
+  - id: incidence_rate
+    label: "Incidence Rate (per 100k)"
+    required: true
+    splits: []
+  - id: prevalence
+    label: "Prevalence"
+    required: true
+    splits: []
+  - id: mortality
+    label: "Mortality"
+    required: true
+    splits: []
+  - id: mortality_rate
+    label: "Mortality Rate (per 100k)"
+    required: true
+    splits: []
+  - id: five_year_survival
+    label: "5-Year Survival Rate (%)"
+    required: true
+    splits: []
+  - id: median_age_at_diagnosis
+    label: "Median Age at Diagnosis"
+    required: true
+    splits: []
+  - id: male_female_ratio
+    label: "Male:Female Ratio"
+    required: true
+    splits: []
+
+  # ─── Stage distribution (SEER Summary Stage) ───
+  - id: stage_localized
+    label: "Localized (%)"
+    required: true
+    splits: []
+  - id: stage_regional
+    label: "Regional (%)"
+    required: true
+    splits: []
+  - id: stage_distant
+    label: "Distant / Metastatic (%)"
+    required: true
+    splits: []
+
+  # ─── Stage-specific survival ───
+  - id: survival_localized
+    label: "5-year survival — Localized (%)"
+    required: false
+    splits: []
+  - id: survival_regional
+    label: "5-year survival — Regional (%)"
+    required: false
+    splits: []
+  - id: survival_distant
+    label: "5-year survival — Distant (%)"
+    required: false
+    splits: []
+
+  # ─── Treatment lines ───
+  - id: resected_curative
+    label: "Resected / curative intent"
+    required: false
+    splits: ["by_line"]
+  - id: metastatic_first_line
+    label: "Metastatic 1L (FOLFOX + Nivo/Pembro)"
+    required: false
+    splits: ["by_line"]
+  - id: second_line
+    label: "2L (Ramucirumab ± Paclitaxel)"
+    required: false
+    splits: ["by_line"]
+  - id: third_line_plus
+    label: "3L+ / BSC"
+    required: false
+    splits: ["by_line"]
+
+  # ─── Biomarkers ───
+  - id: her2_positive
+    label: "HER2 positive (%)"
+    required: false
+    splits: []
+  - id: pdl1_positive
+    label: "PD-L1 CPS ≥1 (%)"
+    required: false
+    splits: []
+
+year_range:
+  min: 2015
+  max: 2029
+
+geography: "US"

@@ -6,9 +6,12 @@ indications:
   - id: cll
     label: "CLL (Chronic Lymphocytic Leukemia)"
     config_suffix: "cll"
-  - id: dlbcl
-    label: "Diffuse Large B‑Cell Lymphoma (DLBCL)"
-    config_suffix: "dlbcl"
+  - id: hodgkin
+    label: "Hodgkin Lymphoma"
+    config_suffix: "hodgkin"
+  - id: nhl
+    label: "Non-Hodgkin Lymphoma (excl. DLBCL)"
+    config_suffix: "nhl"
   - id: gastric
     label: "Gastric Cancer (GC)"
     config_suffix: "gc"
