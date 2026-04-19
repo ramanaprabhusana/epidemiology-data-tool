@@ -39,6 +39,16 @@ _indication_aliases: List[str] = []
 _INDICATION_ALIAS_MAP = {
     "cll": ["cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia", "cll/sll"],
     "chronic lymphocytic leukemia": ["cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia"],
+    "non-hodgkin": [
+        "non-hodgkin lymphoma",
+        "non hodgkin lymphoma",
+        "nhl",
+        "b-cell lymphoma",
+        "diffuse large b-cell",
+        "follicular lymphoma",
+        "lymphoma",
+    ],
+    "hodgkin": ["hodgkin lymphoma", "hodgkin", "classical hodgkin", "reed-sternberg"],
 }
 
 # Epidemiology metric keywords

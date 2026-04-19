@@ -13,6 +13,11 @@ import time
 import yaml
 
 from ..schema import EvidenceRecord
+from ..indication_context import (
+    curated_slug_candidates,
+    pubmed_expanded_queries,
+    trial_search_conditions,
+)
 
 
 def load_curated_records(config_dir: Path, indication: str, country: str) -> List[EvidenceRecord]:
@@ -21,17 +26,8 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
     Returns high-quality EvidenceRecord instances with gold tier and real numeric values.
     This is the primary data source — far more reliable than web scraping.
     """
-    indication_slug = (indication or "").strip().lower().replace(" ", "_").replace("(", "").replace(")", "")
-    # Try exact match, then common aliases
-    candidates = [indication_slug]
-    # Add alias lookups: "CLL (Chronic Lymphocytic Leukemia)" -> "cll"
-    for alias in ["cll", "chronic_lymphocytic_leukemia"]:
-        if alias in indication_slug and alias not in candidates:
-            candidates.insert(0, alias)
-    if "lung" in indication_slug:
-        candidates.insert(0, "lung_cancer")
-    if "breast" in indication_slug:
-        candidates.insert(0, "breast_cancer")
+    # Map long UI labels to curated_data/{slug}.yaml (e.g. NHL -> nhl.yaml)
+    candidates = curated_slug_candidates(indication or "")
 
     curated_path = None
     for slug in candidates:
@@ -142,6 +138,12 @@ def explore_all_sources(
     """
     country = country or kwargs.get("country") or ""
     indication_clean = (indication or "").strip() or "cancer"
+    display_indication = indication_clean
+    api_kwargs = dict(kwargs)
+    api_kwargs["indication_display"] = display_indication
+    api_kwargs["trial_conditions"] = trial_search_conditions(display_indication)
+    api_kwargs["pubmed_queries"] = pubmed_expanded_queries(display_indication, country)
+
     if config_dir is None:
         config_dir = Path(__file__).resolve().parents[2] / "config"
     config_dir = Path(config_dir)
@@ -216,7 +218,7 @@ def explore_all_sources(
                 metric_label = f"{src_id}_links"
 
             rec = EvidenceRecord(
-                indication=indication or "cancer",
+                indication=display_indication or "cancer",
                 metric=metric_label,
                 value=stub_value,
                 source_citation=name,
@@ -260,8 +262,12 @@ def explore_all_sources(
                 continue
             try:
                 factory = registry[connector_id]
-                connector = factory(**kwargs, add_pubmed_stubs=add_pubmed_stubs, use_pubmed=use_pubmed)
-                recs = connector(indication, config, country=country, **kwargs)
+                connector = factory(
+                    **api_kwargs,
+                    add_pubmed_stubs=add_pubmed_stubs,
+                    use_pubmed=use_pubmed,
+                )
+                recs = connector(indication_clean, config, country=country, **api_kwargs)
                 all_records.extend(recs)
             except Exception:
                 pass

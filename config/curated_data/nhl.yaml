@@ -1,0 +1,414 @@
+# Curated public statistics: Non-Hodgkin Lymphoma (all NHL, including DLBCL in population totals).
+# Primary source: SEER Cancer Stat Facts — Non-Hodgkin Lymphoma (accessed 2026), plus ACS projections cited therein.
+# https://seer.cancer.gov/statfacts/html/nhl.html
+
+indication: "Non-Hodgkin Lymphoma (NHL)"
+full_name: Non-Hodgkin Lymphoma
+aliases:
+  - NHL
+  - non-Hodgkin lymphoma
+  - Non-Hodgkin Lymphoma (NHL)
+
+metrics:
+  estimated_new_cases_2025:
+    value: 80350
+    unit: estimated new cases
+    year: 2025
+    geography: US
+    population: All races, both sexes (projection)
+    definition: Estimated new cases of non-Hodgkin lymphoma in the United States
+    source_citation: SEER Cancer Stat Facts / ACS projections (NCI)
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+
+  estimated_deaths_2025:
+    value: 19390
+    unit: estimated deaths
+    year: 2025
+    geography: US
+    population: All races, both sexes (projection)
+    definition: Estimated deaths from non-Hodgkin lymphoma in the United States
+    source_citation: SEER Cancer Stat Facts / ACS projections (NCI)
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+
+  pct_all_new_cancer_cases:
+    value: 3.9
+    unit: percent
+    year: 2025
+    geography: US
+    population: All cancers
+    definition: NHL as percent of all new cancer cases
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+
+  pct_all_cancer_deaths:
+    value: 3.1
+    unit: percent
+    year: 2025
+    geography: US
+    population: All cancers
+    definition: NHL as percent of all cancer deaths
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+
+  five_year_relative_survival:
+    value: 74.2
+    unit: percent
+    year: 2021
+    geography: US
+    population: SEER 21 (excluding IL), 2015-2021
+    definition: Five-year relative survival for non-Hodgkin lymphoma
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Survival
+
+  prevalence_living_cases_2022:
+    value: 835496
+    unit: persons living with disease
+    year: 2022
+    geography: US
+    population: All races, both sexes
+    definition: Estimated number of people living with non-Hodgkin lymphoma in the United States
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Prevalence
+
+  lifetime_risk_pct:
+    value: 2.0
+    unit: percent
+    year: 2021
+    geography: US
+    population: Men and women (2018-2021, excluding 2020 COVID)
+    definition: Approximate lifetime risk of being diagnosed with NHL
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: medium
+    category: Risk
+
+  incidence_rate_per_100k_combined:
+    value: 18.7
+    unit: per 100000 age-adjusted
+    year: 2022
+    geography: US
+    population: All races, both sexes, 2018-2022
+    definition: Rate of new NHL cases per 100,000 persons per year (age-adjusted)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+
+  mortality_rate_per_100k_combined:
+    value: 4.9
+    unit: per 100000 age-adjusted
+    year: 2023
+    geography: US
+    population: All races, both sexes, 2019-2023
+    definition: NHL death rate per 100,000 persons per year (age-adjusted)
+    source_citation: SEER / US Mortality (NCI)
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+
+  median_age_diagnosis:
+    value: 68
+    unit: years
+    year: 2022
+    geography: US
+    population: SEER 21, all races, both sexes
+    definition: Median age at diagnosis for NHL
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+
+  median_age_death:
+    value: 76
+    unit: years
+    year: 2023
+    geography: US
+    population: US mortality, all races, both sexes
+    definition: Median age at death for NHL
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+
+  stage_i_pct_cases:
+    value: 21.4
+    unit: percent of cases
+    year: 2021
+    geography: US
+    population: SEER 17, Ann Arbor stage, 2015-2021
+    definition: Percent of NHL cases diagnosed at stage I
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Stage
+
+  stage_i_5yr_survival:
+    value: 87.7
+    unit: percent
+    year: 2021
+    geography: US
+    population: Stage I, 5-year relative survival
+    definition: Five-year relative survival when diagnosed at stage I
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Survival
+
+  stage_ii_pct_cases:
+    value: 14.0
+    unit: percent of cases
+    year: 2021
+    geography: US
+    population: SEER 17, 2015-2021
+    definition: Percent of NHL cases diagnosed at stage II
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Stage
+
+  stage_ii_5yr_survival:
+    value: 79.1
+    unit: percent
+    year: 2021
+    geography: US
+    population: Stage II
+    definition: Five-year relative survival when diagnosed at stage II
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Survival
+
+  stage_iii_pct_cases:
+    value: 15.0
+    unit: percent of cases
+    year: 2021
+    geography: US
+    population: SEER 17, 2015-2021
+    definition: Percent of NHL cases diagnosed at stage III
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Stage
+
+  stage_iii_5yr_survival:
+    value: 73.9
+    unit: percent
+    year: 2021
+    geography: US
+    population: Stage III
+    definition: Five-year relative survival when diagnosed at stage III
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Survival
+
+  stage_iv_pct_cases:
+    value: 33.0
+    unit: percent of cases
+    year: 2021
+    geography: US
+    population: SEER 17, 2015-2021
+    definition: Percent of NHL cases diagnosed at stage IV
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Stage
+
+  stage_iv_5yr_survival:
+    value: 63.8
+    unit: percent
+    year: 2021
+    geography: US
+    population: Stage IV
+    definition: Five-year relative survival when diagnosed at stage IV
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Survival
+
+  stage_unknown_pct_cases:
+    value: 16.0
+    unit: percent of cases
+    year: 2021
+    geography: US
+    population: Unstaged / unknown
+    definition: Percent of NHL cases with unknown stage
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: medium
+    category: Stage
+
+  incidence_rate_male_all_races:
+    value: 22.4
+    unit: per 100000 age-adjusted
+    year: 2022
+    geography: US
+    population: Males, SEER 21, 2018-2022
+    definition: NHL incidence rate among males (age-adjusted)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+
+  incidence_rate_female_all_races:
+    value: 15.7
+    unit: per 100000 age-adjusted
+    year: 2022
+    geography: US
+    population: Females, SEER 21, 2018-2022
+    definition: NHL incidence rate among females (age-adjusted)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Incidence
+
+  mortality_rate_male_all_races:
+    value: 6.4
+    unit: per 100000 age-adjusted
+    year: 2023
+    geography: US
+    population: Males, US mortality 2019-2023
+    definition: NHL mortality rate among males (age-adjusted)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+
+  mortality_rate_female_all_races:
+    value: 3.7
+    unit: per 100000 age-adjusted
+    year: 2023
+    geography: US
+    population: Females, US mortality 2019-2023
+    definition: NHL mortality rate among females (age-adjusted)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Mortality
+
+  new_cases_pct_age_under_20:
+    value: 1.6
+    unit: percent of new cases
+    year: 2022
+    geography: US
+    population: By age at diagnosis
+    definition: Percent of new NHL cases diagnosed before age 20
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+
+  new_cases_pct_age_65_74:
+    value: 28.5
+    unit: percent of new cases
+    year: 2022
+    geography: US
+    population: Ages 65-74 at diagnosis
+    definition: Percent of new NHL cases diagnosed at ages 65-74
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+
+  deaths_pct_age_75_84:
+    value: 33.3
+    unit: percent of deaths
+    year: 2023
+    geography: US
+    population: By age at death
+    definition: Percent of NHL deaths occurring at ages 75-84
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Demographics
+
+  trend_new_cases_apc:
+    value: -0.6
+    unit: percent per year (average)
+    year: 2022
+    geography: US
+    population: Age-adjusted incidence trend 2013-2022
+    definition: Average annual percent change in new case rates (modeled)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: medium
+    category: Trends
+
+  trend_deaths_apc:
+    value: -2.0
+    unit: percent per year (average)
+    year: 2023
+    geography: US
+    population: Age-adjusted mortality trend 2014-2023
+    definition: Average annual percent change in death rates (modeled)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: medium
+    category: Trends
+
+  ranking_new_cases_among_cancers:
+    value: 8
+    unit: rank
+    year: 2025
+    geography: US
+    population: All cancer sites
+    definition: NHL rank among common cancers by estimated new cases (2025)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Burden
+
+  ranking_deaths_among_cancers:
+    value: 8
+    unit: rank
+    year: 2025
+    geography: US
+    population: All cancer sites
+    definition: NHL rank among common cancers by estimated deaths (2025)
+    source_citation: SEER Cancer Stat Facts
+    source_url: https://seer.cancer.gov/statfacts/html/nhl.html
+    tier: gold
+    confidence: high
+    category: Burden

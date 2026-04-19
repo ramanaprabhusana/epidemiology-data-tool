@@ -196,6 +196,7 @@ def run_pipeline(
             "config_dir": config_dir,
             "use_pubmed": use_pubmed,
             "add_pubmed_stubs": add_pubmed_stubs,
+            "max_deep_dive_links": 140,
         }
         if max_run_seconds is not None:
             connector_kwargs["max_run_seconds"] = max_run_seconds

@@ -1,0 +1,130 @@
+"""
+Resolve UI indication labels to curated-data slugs and API-friendly search strings.
+
+PubMed uses multiple phrasings (concept expansion) instead of a single literal string.
+ClinicalTrials tries several condition strings and keeps the best hit count.
+"""
+
+from __future__ import annotations
+
+import re
+from typing import List, Optional
+
+
+def _lower(s: str) -> str:
+    return (s or "").strip().lower()
+
+
+def curated_slug_candidates(indication: str) -> List[str]:
+    """
+    Ordered slugs to try for config/curated_data/{slug}.yaml (basename without .yaml).
+    """
+    raw = (indication or "").strip()
+    slug = raw.lower().replace(" ", "_").replace("(", "").replace(")", "")
+    out: List[str] = []
+
+    def add(x: str) -> None:
+        if x and x not in out:
+            out.append(x)
+
+    add(slug)
+
+    sl = _lower(raw)
+    if "cll" in sl or "chronic lymphocytic" in sl:
+        add("cll")
+    if "hodgkin" in sl and "non" not in sl:
+        add("hodgkin")
+    if "non-hodgkin" in sl or "non hodgkin" in sl or "nonhodgkin" in sl or ("nhl" in sl and "hodgkin" in sl):
+        add("nhl")
+    if "gastric" in sl or "(gc)" in sl:
+        add("gc")
+    if "ovarian" in sl:
+        add("ovarian")
+    if "prostate" in sl:
+        add("prostate")
+    if "lung" in sl:
+        add("lung_cancer")
+    if "breast" in sl:
+        add("breast_cancer")
+
+    return out
+
+
+def trial_search_conditions(display_indication: str) -> List[str]:
+    """Short condition strings for ClinicalTrials.gov (tried in order until counts stabilize)."""
+    sl = _lower(display_indication)
+    if "non-hodgkin" in sl or "non hodgkin" in sl or "nonhodgkin" in sl or ("nhl" in sl and "non" in sl):
+        return [
+            "Non-Hodgkin lymphoma",
+            "Lymphoma, Non-Hodgkin",
+            "NHL",
+        ]
+    if "hodgkin" in sl and "non" not in sl:
+        return ["Hodgkin lymphoma", "Hodgkin Lymphoma"]
+    if "cll" in sl or "chronic lymphocytic" in sl:
+        return ["Chronic lymphocytic leukemia", "CLL", "Chronic Lymphocytic Leukemia"]
+    if "gastric" in sl or "(gc)" in sl:
+        return ["Gastric cancer", "Stomach cancer"]
+    if "ovarian" in sl:
+        return ["Ovarian cancer", "Ovarian neoplasms"]
+    if "prostate" in sl:
+        return ["Prostate cancer", "Prostatic neoplasms"]
+    base = re.sub(r"\s*\([^)]*\)\s*", " ", display_indication or "").strip()
+    return [base] if base else ["cancer"]
+
+
+def pubmed_expanded_queries(display_indication: str, country: Optional[str]) -> List[str]:
+    """
+    Multiple PubMed query strings (concept expansion, not strict lexical AND on one long UI label).
+    """
+    sl = _lower(display_indication)
+    geo = f" {country}" if country else ""
+    queries: List[str] = []
+
+    def q(s: str) -> None:
+        if s.strip() and s not in queries:
+            queries.append(s.strip())
+
+    if "non-hodgkin" in sl or "non hodgkin" in sl or "nonhodgkin" in sl or ("nhl" in sl and "non" in sl):
+        q(f"non-Hodgkin lymphoma epidemiology incidence prevalence{geo}")
+        q(f"NHL lymphoma population-based cohort United States{geo}")
+        q(f"B-cell lymphoma epidemiology SEER{geo}")
+        q(f"T-cell lymphoma epidemiology United States{geo}")
+        q(f"diffuse large B-cell lymphoma incidence prevalence{geo}")
+        q(f"follicular lymphoma epidemiology United States{geo}")
+    elif "hodgkin" in sl and "non" not in sl:
+        q(f"Hodgkin lymphoma epidemiology incidence survival{geo}")
+        q(f"classical Hodgkin lymphoma population cohort{geo}")
+    elif "cll" in sl or "chronic lymphocytic" in sl:
+        q(f"chronic lymphocytic leukemia epidemiology incidence prevalence{geo}")
+        q(f"CLL population-based study United States{geo}")
+    elif "gastric" in sl or "(gc)" in sl:
+        q(f"gastric cancer epidemiology incidence mortality{geo}")
+        q(f"stomach neoplasm SEER{geo}")
+    elif "ovarian" in sl:
+        q(f"ovarian cancer epidemiology incidence prevalence{geo}")
+    elif "prostate" in sl:
+        q(f"prostate cancer epidemiology incidence mortality{geo}")
+    else:
+        q(f"{display_indication} cancer epidemiology{geo}")
+
+    return queries[:8]
+
+
+def semantic_abstract_score(abstract: str, reference_blob: str) -> float:
+    """
+    Lightweight relevance: token overlap between abstract and a reference string,
+    boosted for epidemiology terms (no external ML models).
+    """
+    def tok(s: str) -> set:
+        return set(re.findall(r"[a-zA-Z]{3,}", (s or "").lower()))
+
+    a = tok(abstract)
+    r = tok(reference_blob)
+    if not a or not r:
+        return 0.0
+    inter = len(a & r)
+    union = len(a | r) or 1
+    jacc = inter / union
+    epi = sum(1 for w in ("incidence", "prevalence", "cohort", "population", "epidemiol", "mortality", "survival") if w in abstract.lower())
+    return jacc + 0.07 * min(epi, 6)

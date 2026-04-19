@@ -6,7 +6,7 @@ Each connector returns List[EvidenceRecord] and has a factory function for the s
 
 import time
 from typing import Any, Dict, List, Optional
-from urllib.parse import quote_plus, urlencode
+from urllib.parse import quote_plus
 
 import requests
 
@@ -45,40 +45,89 @@ def search_pubmed(term: str, retmax: int = 20, retmode: str = "json") -> Dict[st
 def pubmed_connector(
     indication: str, config: Dict[str, Any],
     country: Optional[str] = None, metrics: Optional[List[str]] = None,
-    retmax_per_query: int = 10, create_stub_evidence: bool = False,
+    retmax_per_query: int = 18, create_stub_evidence: bool = False,
+    **kwargs: Any,
 ) -> List[EvidenceRecord]:
     """Search PubMed for indication + metric + epidemiology; optionally create stub evidence."""
-    if metrics is None:
-        metrics = ["incidence", "prevalence"]
+    display = kwargs.get("indication_display") or indication
+    expanded = kwargs.get("pubmed_queries")
     records: List[EvidenceRecord] = []
+
+    if expanded and isinstance(expanded, list) and len(expanded) > 0:
+        if not create_stub_evidence:
+            return []
+        for i, term in enumerate(expanded):
+            out = search_pubmed(term, retmax=min(retmax_per_query, 25))
+            time.sleep(0.35)
+            count = int(out.get("count", 0) or 0)
+            pmids_str = ", ".join(out.get("pmids", [])[:8])
+            if len(out.get("pmids", [])) > 8:
+                pmids_str += f" (+{len(out['pmids'])-8} more)"
+            records.append(
+                EvidenceRecord(
+                    indication=display,
+                    metric=f"literature_pubmed_q{i + 1}",
+                    value=str(count),
+                    source_citation="PubMed",
+                    source_tier="silver",
+                    definition="PubMed hit count (expanded epidemiology query, not title-only keyword match)",
+                    population=None,
+                    year_or_range=None,
+                    geography=country,
+                    split_logic=None,
+                    source_url=f"https://pubmed.ncbi.nlm.nih.gov/?term={quote_plus(term)}",
+                    notes=(f"Query: {term[:180]}. PMIDs (sample): {pmids_str}" if pmids_str else f"Query: {term[:180]}. {count} articles"),
+                    confidence="low",
+                    category="Literature & Research",
+                )
+            )
+        return records
+
+    if metrics is None:
+        metrics = ["incidence", "prevalence", "mortality", "survival"]
     for metric in metrics:
         term = f"{indication} {metric} epidemiology" + (f" {country}" if country else "")
         out = search_pubmed(term, retmax=retmax_per_query)
-        time.sleep(0.4)
+        time.sleep(0.35)
         if create_stub_evidence and out.get("count", 0) >= 0:
             count = out.get("count", 0)
             pmids_str = ", ".join(out.get("pmids", [])[:10])
             if len(out.get("pmids", [])) > 10:
                 pmids_str += f" (+{len(out['pmids'])-10} more)"
-            records.append(EvidenceRecord(
-                indication=indication, metric=f"literature_count_{metric}",
-                value=str(count), source_citation="PubMed", source_tier="silver",
-                definition=f"Number of PubMed articles (indication + {metric} + epidemiology)",
-                population=None, year_or_range=None, geography=country,
-                split_logic=None,
-                source_url=f"https://pubmed.ncbi.nlm.nih.gov/?term={term.replace(' ', '+')}",
-                notes=f"PMIDs (sample): {pmids_str}" if pmids_str else f"{count} articles",
-                confidence="low",
-                category="Literature & Research",
-            ))
+            records.append(
+                EvidenceRecord(
+                    indication=display,
+                    metric=f"literature_count_{metric}",
+                    value=str(count),
+                    source_citation="PubMed",
+                    source_tier="silver",
+                    definition=f"Number of PubMed articles (indication + {metric} + epidemiology)",
+                    population=None,
+                    year_or_range=None,
+                    geography=country,
+                    split_logic=None,
+                    source_url=f"https://pubmed.ncbi.nlm.nih.gov/?term={term.replace(' ', '+')}",
+                    notes=f"PMIDs (sample): {pmids_str}" if pmids_str else f"{count} articles",
+                    confidence="low",
+                    category="Literature & Research",
+                )
+            )
     return records
 
 
 def pubmed_connector_factory(create_stub_evidence: bool = False, metrics: Optional[List[str]] = None):
     """Returns callable(indication, config, **kwargs) -> list[EvidenceRecord]."""
+
     def _connector(indication: str, config: Dict[str, Any], **kwargs) -> List[EvidenceRecord]:
-        return pubmed_connector(indication, config, country=kwargs.get("country"),
-                                metrics=metrics, create_stub_evidence=create_stub_evidence)
+        return pubmed_connector(
+            indication,
+            config,
+            country=kwargs.get("country"),
+            metrics=metrics,
+            create_stub_evidence=create_stub_evidence,
+            **kwargs,
+        )
+
     return _connector
 
 
@@ -114,25 +163,50 @@ def search_clinical_trials(condition: str, country: str = None, page_size: int =
 def clinicaltrials_connector(indication: str, config: Dict[str, Any], country: str = None, **kwargs) -> List[EvidenceRecord]:
     """Search ClinicalTrials.gov and return stub evidence with study count."""
     country = country or kwargs.get("country") or ""
-    out = search_clinical_trials(indication, country=country or None, page_size=5)
-    if out.get("error"):
-        return []
-    total = out.get("total_count", 0)
-    return [EvidenceRecord(
-        indication=indication, metric="clinical_trials_count", value=str(total),
-        source_citation="ClinicalTrials.gov", source_tier="bronze",
-        definition="Number of studies matching condition and location",
-        population=None, year_or_range=None, geography=country or None, split_logic=None,
-        source_url=out.get("search_url", "https://clinicaltrials.gov/search"),
-        notes=f"{total} studies; open link to view and filter.", confidence="low",
-        category="Literature & Research",
-    )]
+    display = kwargs.get("indication_display") or indication
+    conditions = kwargs.get("trial_conditions")
+    if not conditions:
+        conditions = [indication]
+    best_total = 0
+    best_url = "https://clinicaltrials.gov/search"
+    parts: List[str] = []
+    for cond in conditions:
+        out = search_clinical_trials(cond, country=country or None, page_size=25)
+        if out.get("error"):
+            continue
+        total = int(out.get("total_count", 0) or 0)
+        parts.append(f"{cond[:48]}: {total}")
+        if total > best_total:
+            best_total = total
+            best_url = out.get("search_url", best_url) or best_url
+        time.sleep(0.2)
+    notes = f"{best_total} studies (best of {len(conditions)} condition phrasings). " + "; ".join(parts[:4])
+    return [
+        EvidenceRecord(
+            indication=display,
+            metric="clinical_trials_count",
+            value=str(best_total),
+            source_citation="ClinicalTrials.gov",
+            source_tier="bronze",
+            definition="Number of studies matching condition (best count across expanded condition strings)",
+            population=None,
+            year_or_range=None,
+            geography=country or None,
+            split_logic=None,
+            source_url=best_url,
+            notes=notes[:900],
+            confidence="low",
+            category="Literature & Research",
+        )
+    ]
 
 
 def clinicaltrials_connector_factory():
     """Returns callable(indication, config, **kwargs) -> list[EvidenceRecord]."""
+
     def _connector(indication: str, config: Dict[str, Any], **kwargs) -> List[EvidenceRecord]:
         return clinicaltrials_connector(indication, config, **kwargs)
+
     return _connector
 
 
@@ -175,6 +249,7 @@ def fetch_gho_indicator(indicator_code: str, country_code: str = None, top: int 
 def who_gho_connector(indication: str, config: Dict[str, Any], country: str = None, **kwargs) -> List[EvidenceRecord]:
     """Fetch WHO GHO indicators (life expectancy, NCD mortality) for the country."""
     country = country or kwargs.get("country") or ""
+    display = kwargs.get("indication_display") or indication
     gho_country = _country_to_gho_code(country)
     records: List[EvidenceRecord] = []
 
@@ -190,7 +265,7 @@ def who_gho_connector(indication: str, config: Dict[str, Any], country: str = No
                     val_str = str(val)
                 year = row.get("TimeDimensionBegin", "")[:4] if row.get("TimeDimensionBegin") else None
                 records.append(EvidenceRecord(
-                    indication=indication, metric="life_expectancy_at_birth", value=val_str,
+                    indication=display, metric="life_expectancy_at_birth", value=val_str,
                     source_citation="WHO GHO", source_tier="gold",
                     definition="Life expectancy at birth (years)",
                     population=row.get("Dim1") or None, year_or_range=year,
@@ -214,7 +289,7 @@ def who_gho_connector(indication: str, config: Dict[str, Any], country: str = No
                     except (TypeError, ValueError):
                         val_str = str(val)
                     records.append(EvidenceRecord(
-                        indication=indication, metric="ncd_mortality_30_70_pct", value=val_str,
+                        indication=display, metric="ncd_mortality_30_70_pct", value=val_str,
                         source_citation="WHO GHO", source_tier="gold",
                         definition="Probability of dying 30-70 from NCDs (%)",
                         population=None,
