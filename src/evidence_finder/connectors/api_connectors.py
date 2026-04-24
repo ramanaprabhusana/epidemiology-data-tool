@@ -223,32 +223,89 @@ COUNTRY_MAP = {
     # United States
     "us": "USA", "usa": "USA", "united states": "USA",
     "united states of america": "USA", "america": "USA",
-    "u.s.": "USA", "u.s.a.": "USA",
+    "u.s.": "USA", "u.s.a.": "USA", "american": "USA",
     # United Kingdom
     "uk": "GBR", "gbr": "GBR", "united kingdom": "GBR",
-    "great britain": "GBR", "england": "GBR", "britain": "GBR", "gb": "GBR",
+    "great britain": "GBR", "england": "GBR", "britain": "GBR",
+    "gb": "GBR", "british": "GBR", "scotland": "GBR",
+    "wales": "GBR", "northern ireland": "GBR",
     # Germany
-    "de": "DEU", "deu": "DEU", "germany": "DEU", "deutschland": "DEU",
+    "de": "DEU", "deu": "DEU", "germany": "DEU",
+    "deutschland": "DEU", "german": "DEU", "bundesrepublik": "DEU",
     # France
     "fr": "FRA", "fra": "FRA", "france": "FRA",
-    "eu5": "FRA", "eu": "FRA",
-    # Other common
-    "ca": "CAN", "can": "CAN", "canada": "CAN",
-    "au": "AUS", "aus": "AUS", "australia": "AUS",
+    "french": "FRA", "republique francaise": "FRA",
+    # Canada
+    "ca": "CAN", "can": "CAN", "canada": "CAN", "canadian": "CAN",
+    # Japan
     "jp": "JPN", "jpn": "JPN", "japan": "JPN",
-    "it": "ITA", "ita": "ITA", "italy": "ITA",
-    "es": "ESP", "esp": "ESP", "spain": "ESP",
-    "nl": "NLD", "nld": "NLD", "netherlands": "NLD", "holland": "NLD",
-    "se": "SWE", "swe": "SWE", "sweden": "SWE",
-    "no": "NOR", "nor": "NOR", "norway": "NOR",
-    "dk": "DNK", "dnk": "DNK", "denmark": "DNK",
-    "fi": "FIN", "fin": "FIN", "finland": "FIN",
-    "be": "BEL", "bel": "BEL", "belgium": "BEL",
-    "ch": "CHE", "che": "CHE", "switzerland": "CHE",
-    "at": "AUT", "aut": "AUT", "austria": "AUT",
+    "japanese": "JPN", "nippon": "JPN", "nihon": "JPN",
+    # China
     "cn": "CHN", "chn": "CHN", "china": "CHN",
-    "in": "IND", "ind": "IND", "india": "IND",
-    "br": "BRA", "bra": "BRA", "brazil": "BRA", "brasil": "BRA",
+    "chinese": "CHN", "prc": "CHN",
+    "people's republic of china": "CHN", "peoples republic of china": "CHN",
+    "mainland china": "CHN", "zhongguo": "CHN",
+    # Australia
+    "au": "AUS", "aus": "AUS", "australia": "AUS",
+    "australian": "AUS", "oz": "AUS",
+    # South Korea
+    "kr": "KOR", "kor": "KOR", "south korea": "KOR",
+    "korea": "KOR", "republic of korea": "KOR", "korean": "KOR",
+    # Italy
+    "it": "ITA", "ita": "ITA", "italy": "ITA",
+    "italian": "ITA", "italia": "ITA",
+    # Spain
+    "es": "ESP", "esp": "ESP", "spain": "ESP",
+    "spanish": "ESP", "espana": "ESP",
+    # Netherlands
+    "nl": "NLD", "nld": "NLD", "netherlands": "NLD",
+    "holland": "NLD", "dutch": "NLD",
+    # Sweden
+    "se": "SWE", "swe": "SWE", "sweden": "SWE", "swedish": "SWE",
+    # Norway
+    "no": "NOR", "nor": "NOR", "norway": "NOR", "norwegian": "NOR",
+    # Denmark
+    "dk": "DNK", "dnk": "DNK", "denmark": "DNK", "danish": "DNK",
+    # Finland
+    "fi": "FIN", "fin": "FIN", "finland": "FIN", "finnish": "FIN",
+    # Belgium
+    "be": "BEL", "bel": "BEL", "belgium": "BEL", "belgian": "BEL",
+    # Switzerland
+    "ch": "CHE", "che": "CHE", "switzerland": "CHE", "swiss": "CHE",
+    # Austria
+    "at": "AUT", "aut": "AUT", "austria": "AUT", "austrian": "AUT",
+    # India
+    "in": "IND", "ind": "IND", "india": "IND", "indian": "IND",
+    # Brazil
+    "br": "BRA", "bra": "BRA", "brazil": "BRA",
+    "brasil": "BRA", "brazilian": "BRA",
+    # Mexico
+    "mx": "MEX", "mex": "MEX", "mexico": "MEX", "mexican": "MEX",
+    # Russia
+    "ru": "RUS", "rus": "RUS", "russia": "RUS",
+    "russian": "RUS", "russian federation": "RUS",
+    # South Africa
+    "za": "ZAF", "zaf": "ZAF", "south africa": "ZAF", "south african": "ZAF",
+    # Saudi Arabia
+    "sa": "SAU", "sau": "SAU", "saudi arabia": "SAU",
+    "ksa": "SAU", "saudi": "SAU",
+    # Turkey
+    "tr": "TUR", "tur": "TUR", "turkey": "TUR",
+    "turkish": "TUR", "turkiye": "TUR",
+    # Singapore
+    "sg": "SGP", "sgp": "SGP", "singapore": "SGP", "singaporean": "SGP",
+    # Taiwan
+    "tw": "TWN", "twn": "TWN", "taiwan": "TWN", "chinese taipei": "TWN",
+    # Portugal
+    "pt": "PRT", "prt": "PRT", "portugal": "PRT", "portuguese": "PRT",
+    # Poland
+    "pl": "POL", "pol": "POL", "poland": "POL", "polish": "POL",
+    # Israel
+    "il": "ISR", "isr": "ISR", "israel": "ISR", "israeli": "ISR",
+    # New Zealand
+    "nz": "NZL", "nzl": "NZL", "new zealand": "NZL", "aotearoa": "NZL",
+    # EU aggregates (kept for backward compat)
+    "eu5": "FRA", "eu": "FRA",
 }
 
 

@@ -122,6 +122,23 @@ def main():
     country_id = country_ids[country_index]
     indication_for_pipeline = indication_label
 
+    # "Other" country - show a free-text input below the selectors
+    if country_id == "OTHER":
+        custom_country = st.text_input(
+            "Enter country / geography",
+            placeholder="e.g. Australia, South Korea, Netherlands, AU, KR ...",
+            help=(
+                "Type any country name or ISO code. "
+                "Common abbreviations and local names are understood "
+                "(e.g. 'nippon' -> Japan, 'prc' -> China, 'oz' -> Australia)."
+            ),
+        )
+        country_for_pipeline = custom_country.strip() if custom_country and custom_country.strip() else None
+        country_display = custom_country.strip() if custom_country and custom_country.strip() else "Other"
+    else:
+        country_for_pipeline = country_id      # e.g. "US", "JP", "CN"
+        country_display = country_label
+
     # Output options
     with st.expander("⚙️ Output options", expanded=False):
         col_a, col_b = st.columns(2)
@@ -187,42 +204,45 @@ def main():
     run_clicked = st.button("Get data", type="primary", use_container_width=True)
 
     if run_clicked:
-        with st.spinner("Collecting and building data…"):
-            result = run_pipeline(
-                indication=indication_for_pipeline,
-                country=country_id,
-                evidence_path=evidence_path_for_run,
-                config_dir=ROOT / "config",
-                output_dir=ROOT / "output",
-                metrics_config_path=None,
-                include_evidence=include_evidence,
-                include_kpi_scorecard=include_kpi_scorecard,
-                include_consolidated_xlsx=include_consolidated_xlsx,
-                include_tool_ready=include_tool_ready,
-                include_evidence_summary=include_evidence_summary,
-                export_dashboard=export_dashboard,
-                include_forecast=include_forecast,
-                use_pubmed=use_pubmed,
-                add_pubmed_stubs=add_pubmed_stubs,
-                export_insightace=export_insightace,
-                export_insights_summary=export_insights_summary,
-                export_source_log=export_source_log,
-                export_reference_links=export_reference_links,
-                include_seer_sheet=include_seer_sheet,
-                export_reconciliation=export_reconciliation,
-                export_kpi_conflicts=export_kpi_conflicts,
-                export_white_space=export_white_space,
-                export_validation_report_file=export_validation_report_file,
-            )
-            st.session_state.last_run = {
-                "indication": indication_for_pipeline,
-                "country": country_id,
-                "record_count": result.get("record_count", 0),
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
-                "success": result.get("success", False),
-            }
-            st.session_state.last_result = result
-            st.session_state.last_export_dashboard = export_dashboard
+        if country_id == "OTHER" and not country_for_pipeline:
+            st.warning("Please enter a country / geography name before running.")
+        else:
+            with st.spinner("Collecting and building data…"):
+                result = run_pipeline(
+                    indication=indication_for_pipeline,
+                    country=country_for_pipeline,
+                    evidence_path=evidence_path_for_run,
+                    config_dir=ROOT / "config",
+                    output_dir=ROOT / "output",
+                    metrics_config_path=None,
+                    include_evidence=include_evidence,
+                    include_kpi_scorecard=include_kpi_scorecard,
+                    include_consolidated_xlsx=include_consolidated_xlsx,
+                    include_tool_ready=include_tool_ready,
+                    include_evidence_summary=include_evidence_summary,
+                    export_dashboard=export_dashboard,
+                    include_forecast=include_forecast,
+                    use_pubmed=use_pubmed,
+                    add_pubmed_stubs=add_pubmed_stubs,
+                    export_insightace=export_insightace,
+                    export_insights_summary=export_insights_summary,
+                    export_source_log=export_source_log,
+                    export_reference_links=export_reference_links,
+                    include_seer_sheet=include_seer_sheet,
+                    export_reconciliation=export_reconciliation,
+                    export_kpi_conflicts=export_kpi_conflicts,
+                    export_white_space=export_white_space,
+                    export_validation_report_file=export_validation_report_file,
+                )
+                st.session_state.last_run = {
+                    "indication": indication_for_pipeline,
+                    "country": country_for_pipeline,
+                    "record_count": result.get("record_count", 0),
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                    "success": result.get("success", False),
+                }
+                st.session_state.last_result = result
+                st.session_state.last_export_dashboard = export_dashboard
 
     # Render from session_state so download-button reruns do not hide this block
     result = st.session_state.get("last_result")

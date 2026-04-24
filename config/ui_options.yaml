@@ -32,5 +32,11 @@ countries:
     label: "Germany"
   - id: FR
     label: "France"
-  - id: EU5
-    label: "EU5"
+  - id: CA
+    label: "Canada"
+  - id: JP
+    label: "Japan"
+  - id: CN
+    label: "China"
+  - id: OTHER
+    label: "Other (specify below)"
