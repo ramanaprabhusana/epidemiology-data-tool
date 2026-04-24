@@ -28,33 +28,41 @@ try:
 except ImportError:
     HAS_BS4 = False
 
-REQUEST_DELAY = 0.3          # per-thread courtesy delay; parallel threads run concurrently
-REQUEST_TIMEOUT = 15         # tighter timeout to fail-fast on slow servers
+REQUEST_TIMEOUT = 20         # keep original timeout so slow-loading SEER/NCI pages are not missed
 USER_AGENT = "Mozilla/5.0 (compatible; EpidemiologyDataTool/1.0; +https://github.com)"
 
 # Per-domain rate limiter: prevents hammering the same server from multiple threads.
-# Maps netloc -> last-access timestamp.
-_domain_last_access: Dict[str, float] = {}
+# _domain_next_ok maps netloc -> earliest timestamp at which the next request may be sent.
+_domain_next_ok: Dict[str, float] = {}
 _domain_lock = threading.Lock()
-_MIN_DOMAIN_INTERVAL = 1.0   # seconds between requests to the same domain
+_MIN_DOMAIN_INTERVAL = 1.0   # minimum seconds between consecutive requests to the same domain
 
 
 def _domain_wait(url: str) -> None:
-    """Sleep if we recently hit the same domain, to avoid hammering one server."""
+    """
+    Enforce a minimum interval between consecutive requests to the same domain.
+    Each thread atomically claims a time-slot inside the lock, then sleeps
+    outside it so other domains are never blocked.
+
+    Correctness guarantee: if N threads all target the same domain and arrive
+    simultaneously, they will be serialised with exactly _MIN_DOMAIN_INTERVAL
+    between each request (no compounding, no missed sleeps).
+    """
     try:
         netloc = urlparse(url).netloc or url
     except Exception:
         netloc = url
     with _domain_lock:
-        last = _domain_last_access.get(netloc, 0.0)
-        wait = _MIN_DOMAIN_INTERVAL - (time.time() - last)
-        if wait > 0:
-            # Release lock while sleeping so other domains are not blocked
-            _domain_last_access[netloc] = time.time() + wait
-        else:
-            _domain_last_access[netloc] = time.time()
-    if wait > 0:
-        time.sleep(wait)
+        now = time.time()
+        slot = _domain_next_ok.get(netloc, 0.0)
+        if slot <= now:
+            # Domain is free — take it immediately
+            _domain_next_ok[netloc] = now + _MIN_DOMAIN_INTERVAL
+            return          # no sleep needed
+        # Domain is busy — claim the next available slot
+        wait = slot - now
+        _domain_next_ok[netloc] = slot + _MIN_DOMAIN_INTERVAL
+    time.sleep(wait)        # sleep outside the lock
 
 
 # Indication context for filtering
@@ -258,11 +266,15 @@ def _fetch_page(url: str) -> Optional[str]:
 
 
 def _text_mentions_indication(text: str) -> bool:
-    """Check if text mentions the target indication."""
-    if not _indication_aliases:
+    """Check if text mentions the target indication.
+    Takes a local snapshot of the alias list to be safe under concurrent access.
+    """
+    with _indication_lock:
+        aliases = _indication_aliases[:]   # snapshot
+    if not aliases:
         return True
     text_lower = text.lower()
-    return any(alias in text_lower for alias in _indication_aliases)
+    return any(alias in text_lower for alias in aliases)
 
 
 def _classify_metric(text: str) -> str:
