@@ -10,6 +10,8 @@ from __future__ import annotations
 import re
 from typing import List, Optional
 
+from .country_utils import pubmed_country_term, country_aliases
+
 
 def _lower(s: str) -> str:
     return (s or "").strip().lower()
@@ -114,10 +116,27 @@ def trial_search_conditions(display_indication: str) -> List[str]:
 def pubmed_expanded_queries(display_indication: str, country: Optional[str]) -> List[str]:
     """
     Multiple PubMed query strings (concept expansion, not strict lexical AND on one long UI label).
+
+    Uses the canonical PubMed/MeSH country term (e.g. "United States" instead of "US")
+    so that results are not missed due to abbreviation mismatches. All country aliases
+    are preserved as additional query variants to maximise recall.
     """
     sl = _match_normalize(display_indication)
     compact = re.sub(r"[\s\-]+", "", sl)
-    geo = f" {country}" if country else ""
+
+    # Primary geo term - use canonical MeSH form for best PubMed recall
+    geo_primary = pubmed_country_term(country or "")
+    geo = f" {geo_primary}" if geo_primary else ""
+
+    # Build extra geo variants from all aliases (e.g. add "US" and "USA" queries too)
+    extra_geo_variants: List[str] = []
+    if country:
+        aliases = country_aliases(country)
+        canonical_lower = geo_primary.lower()
+        for alias in sorted(aliases):
+            if alias != canonical_lower and len(alias) <= 30:
+                extra_geo_variants.append(alias.upper() if len(alias) <= 3 else alias.title())
+
     queries: List[str] = []
 
     def q(s: str) -> None:
@@ -135,17 +154,17 @@ def pubmed_expanded_queries(display_indication: str, country: Optional[str]) -> 
         or ("lymphoma" in sl and "dlbcl" in sl and "excl" in sl)
     ):
         q(f"non-Hodgkin lymphoma epidemiology incidence prevalence{geo}")
-        q(f"NHL lymphoma population-based cohort United States{geo}")
+        q(f"NHL lymphoma population-based cohort{geo}")
         q(f"B-cell lymphoma epidemiology SEER{geo}")
-        q(f"T-cell lymphoma epidemiology United States{geo}")
+        q(f"T-cell lymphoma epidemiology{geo}")
         q(f"diffuse large B-cell lymphoma incidence prevalence{geo}")
-        q(f"follicular lymphoma epidemiology United States{geo}")
+        q(f"follicular lymphoma epidemiology{geo}")
     elif "hodgkin" in sl and "non" not in sl:
         q(f"Hodgkin lymphoma epidemiology incidence survival{geo}")
         q(f"classical Hodgkin lymphoma population cohort{geo}")
     elif "cll" in sl or "chronic lymphocytic" in sl:
         q(f"chronic lymphocytic leukemia epidemiology incidence prevalence{geo}")
-        q(f"CLL population-based study United States{geo}")
+        q(f"CLL population-based study{geo}")
     elif "gastric" in sl or "(gc)" in sl:
         q(f"gastric cancer epidemiology incidence mortality{geo}")
         q(f"stomach neoplasm SEER{geo}")
@@ -156,7 +175,15 @@ def pubmed_expanded_queries(display_indication: str, country: Optional[str]) -> 
     else:
         q(f"{display_indication} cancer epidemiology{geo}")
 
-    return queries[:8]
+    # Add alias-variant queries for extra coverage (e.g. same query with "US" or "USA")
+    base_queries = list(queries)
+    for variant in extra_geo_variants:
+        for bq in base_queries:
+            if geo_primary and geo_primary in bq:
+                alias_q = bq.replace(geo_primary, variant)
+                q(alias_q)
+
+    return queries[:12]
 
 
 def semantic_abstract_score(abstract: str, reference_blob: str) -> float:

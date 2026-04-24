@@ -18,6 +18,7 @@ from ..indication_context import (
     pubmed_expanded_queries,
     trial_search_conditions,
 )
+from ..country_utils import country_aliases
 
 
 def _bundled_pipeline_config_dir() -> Path:
@@ -114,10 +115,16 @@ def _apply_placeholders(url: str, indication: str, country: str) -> str:
 
 
 def _country_matches_filter(country: str, country_filter: List[str]) -> bool:
+    """Return True if *country* matches any entry in *country_filter*.
+
+    Matching is alias-aware: "US", "USA", and "United States" all match each
+    other, so a source with country_filter ["United States"] is correctly
+    included when the pipeline is run with country="US".
+    """
     if not country_filter:
         return True
-    c = (country or "").strip().lower()
-    return any((f or "").strip().lower() == c for f in country_filter)
+    aliases = country_aliases(country)
+    return any((f or "").strip().lower() in aliases for f in country_filter)
 
 
 def load_sources_to_explore(config_dir: Path) -> List[Dict[str, Any]]:

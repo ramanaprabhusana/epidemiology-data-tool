@@ -11,6 +11,7 @@ from urllib.parse import quote_plus
 import requests
 
 from ..schema import EvidenceRecord
+from ..country_utils import pubmed_country_term, country_aliases
 
 # ============================================================
 # PubMed (NCBI) connector
@@ -86,7 +87,9 @@ def pubmed_connector(
     if metrics is None:
         metrics = ["incidence", "prevalence", "mortality", "survival"]
     for metric in metrics:
-        term = f"{indication} {metric} epidemiology" + (f" {country}" if country else "")
+        # Use canonical PubMed/MeSH country term for best recall
+        geo_term = pubmed_country_term(country or "")
+        term = f"{indication} {metric} epidemiology" + (f" {geo_term}" if geo_term else "")
         out = search_pubmed(term, retmax=retmax_per_query)
         time.sleep(0.35)
         if create_stub_evidence and out.get("count", 0) >= 0:
@@ -217,11 +220,35 @@ def clinicaltrials_connector_factory():
 GHO_BASE = "https://ghoapi.azureedge.net/api"
 
 COUNTRY_MAP = {
+    # United States
     "us": "USA", "usa": "USA", "united states": "USA",
+    "united states of america": "USA", "america": "USA",
+    "u.s.": "USA", "u.s.a.": "USA",
+    # United Kingdom
     "uk": "GBR", "gbr": "GBR", "united kingdom": "GBR",
-    "de": "DEU", "deu": "DEU", "germany": "DEU",
+    "great britain": "GBR", "england": "GBR", "britain": "GBR", "gb": "GBR",
+    # Germany
+    "de": "DEU", "deu": "DEU", "germany": "DEU", "deutschland": "DEU",
+    # France
     "fr": "FRA", "fra": "FRA", "france": "FRA",
     "eu5": "FRA", "eu": "FRA",
+    # Other common
+    "ca": "CAN", "can": "CAN", "canada": "CAN",
+    "au": "AUS", "aus": "AUS", "australia": "AUS",
+    "jp": "JPN", "jpn": "JPN", "japan": "JPN",
+    "it": "ITA", "ita": "ITA", "italy": "ITA",
+    "es": "ESP", "esp": "ESP", "spain": "ESP",
+    "nl": "NLD", "nld": "NLD", "netherlands": "NLD", "holland": "NLD",
+    "se": "SWE", "swe": "SWE", "sweden": "SWE",
+    "no": "NOR", "nor": "NOR", "norway": "NOR",
+    "dk": "DNK", "dnk": "DNK", "denmark": "DNK",
+    "fi": "FIN", "fin": "FIN", "finland": "FIN",
+    "be": "BEL", "bel": "BEL", "belgium": "BEL",
+    "ch": "CHE", "che": "CHE", "switzerland": "CHE",
+    "at": "AUT", "aut": "AUT", "austria": "AUT",
+    "cn": "CHN", "chn": "CHN", "china": "CHN",
+    "in": "IND", "ind": "IND", "india": "IND",
+    "br": "BRA", "bra": "BRA", "brazil": "BRA", "brasil": "BRA",
 }
 
 
