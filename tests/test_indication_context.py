@@ -35,7 +35,8 @@ def test_load_curated_fallback_wrong_config_dir(tmp_path: Path) -> None:
     recs = load_curated_records(empty_cfg, "Non-Hodgkin Lymphoma (excl. DLBCL)", "US")
     assert len(recs) >= 20
     metrics = {r.metric for r in recs}
-    assert "estimated_new_cases" in metrics or "five_year_relative_survival" in metrics
+    # Metric names updated to SEER-enriched keys (incidence_rate_YYYY / mortality_rate_YYYY)
+    assert any(m.startswith("incidence_rate_") or m.startswith("mortality_rate_") for m in metrics)
 
 
 def test_trial_search_nhl_unicode_dash() -> None:

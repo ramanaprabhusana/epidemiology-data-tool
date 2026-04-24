@@ -31,6 +31,7 @@ from ..repository.white_space import (
 )
 from ..repository.reconciliation import build_reconciliation_table, export_reconciliation
 from ..repository.evidence_summary import generate_evidence_summary_md, export_evidence_summary
+from ..evidence_finder.connectors.explore_all import explore_all_connector_factory
 
 
 def _safe_name(s: str) -> str:
@@ -49,7 +50,21 @@ def _metrics_suffix_candidates(indication: str) -> list[str]:
 
 
 def _excel_sheet_name(path: Path, key: str) -> str:
-    """Return a valid Excel sheet name (max 31 chars, no : \\ / ? * [ ])."""
+    """Return a readable Excel sheet name (max 31 chars, no : \\ / ? * [ ])."""
+    SHEET_LABELS = {
+        "evidence":          "Evidence by Metric",
+        "kpi_scorecard":     "KPI Scorecard",
+        "kpi_conflicts":     "KPI Conflicts",
+        "reconciliation":    "Reconciliation",
+        "insightace_epi":    "InsightACE Epi",
+        "source_log":        "Source Log",
+        "reference_links":   "Reference Links",
+        "validation_report": "Validation Report",
+        "forecast":          "Forecast",
+        "insights_summary":  "Insights Summary",
+    }
+    if key in SHEET_LABELS:
+        return SHEET_LABELS[key]
     s = key.replace("-", "_").strip()
     for c in ":\\/?*[]":
         s = s.replace(c, "")
@@ -57,19 +72,24 @@ def _excel_sheet_name(path: Path, key: str) -> str:
     return s or "Sheet"
 
 
-def _consolidate_csvs_to_excel(paths: Dict[str, str], output_path: Path) -> None:
+def _consolidate_csvs_to_excel(
+    paths: Dict[str, str],
+    output_path: Path,
+    seer_df: Optional[pd.DataFrame] = None,
+) -> None:
     """Write key CSV outputs from paths into a single Excel file. Skip redundant sheets."""
     # Only include these sheets (in order), skip redundant ones like tool_ready, scenario_registry
     INCLUDE_KEYS = [
-        "evidence", "kpi_scorecard", "insightace_epi", "source_log",
-        "reference_links", "validation_report", "forecast", "insights_summary",
+        "evidence", "kpi_scorecard", "reconciliation", "kpi_conflicts",
+        "insightace_epi", "source_log", "reference_links", "validation_report",
+        "forecast", "insights_summary",
     ]
     csv_items = [(k, Path(p)) for k, p in paths.items()
                  if p and str(p).lower().endswith(".csv") and k in INCLUDE_KEYS]
     # Sort by INCLUDE_KEYS order
     key_order = {k: i for i, k in enumerate(INCLUDE_KEYS)}
     csv_items.sort(key=lambda x: key_order.get(x[0], 99))
-    if not csv_items:
+    if not csv_items and (seer_df is None or seer_df.empty):
         return
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
         used = set()
@@ -87,6 +107,54 @@ def _consolidate_csvs_to_excel(paths: Dict[str, str], output_path: Path) -> None
                 df.to_excel(writer, sheet_name=sheet, index=False)
             except Exception:
                 pass
+        # SEER Trends sheet — historical 1975–2024 SEER annual data from curated YAML
+        if seer_df is not None and not seer_df.empty:
+            seer_df.to_excel(writer, sheet_name="SEER Trends", index=False)
+
+
+def _build_seer_sheet_df(indication: str, config_dir: Path) -> Optional[pd.DataFrame]:
+    """Read curated YAML and return historical SEER annual trends as a tidy DataFrame.
+    Returns columns: Year | Incidence Rate (per 100k) | Mortality Rate (per 100k) | 5-Year Survival (%)
+    """
+    import re
+    import yaml as _yaml
+
+    SLUG_MAP = {
+        "cll": "cll", "chronic lymphocytic": "cll",
+        "hodgkin": "hodgkin",
+        "non-hodgkin": "nhl", "nhl": "nhl",
+        "gastric": "gc", "stomach": "gc",
+        "ovarian": "ovarian",
+        "prostate": "prostate",
+    }
+    slug = next((v for k, v in SLUG_MAP.items() if k in indication.lower()), None)
+    if not slug:
+        return None
+    yaml_path = config_dir / "curated_data" / f"{slug}.yaml"
+    if not yaml_path.exists():
+        return None
+    try:
+        data = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    metrics = data.get("metrics", {})
+    col_map = {
+        "incidence_rate": "Incidence Rate (per 100k)",
+        "mortality_rate": "Mortality Rate (per 100k)",
+        "five_year_survival_period": "5-Year Survival (%)",
+    }
+    rows: Dict[int, Dict] = {}
+    for key, entry in metrics.items():
+        m = re.match(r"^(incidence_rate|mortality_rate|five_year_survival_period)_(\d{4})$", key)
+        if not m:
+            continue
+        metric_type, year = m.group(1), int(m.group(2))
+        if year not in rows:
+            rows[year] = {"Year": year}
+        rows[year][col_map[metric_type]] = entry.get("value", "") if isinstance(entry, dict) else ""
+    if not rows:
+        return None
+    return pd.DataFrame(sorted(rows.values(), key=lambda r: r["Year"]))
 
 
 def _add_year_column(df: pd.DataFrame) -> pd.DataFrame:
@@ -140,6 +208,21 @@ def run_pipeline(
     use_pubmed: bool = True,
     add_pubmed_stubs: bool = True,
     max_run_seconds: Optional[int] = 2400,  # 40 minutes default
+    # Output selection flags — core outputs default True; optional extras default False
+    include_evidence: bool = True,
+    include_kpi_scorecard: bool = True,
+    include_consolidated_xlsx: bool = True,
+    include_tool_ready: bool = True,
+    include_evidence_summary: bool = True,
+    export_insightace: bool = True,
+    export_insights_summary: bool = True,
+    export_source_log: bool = True,
+    export_reference_links: bool = True,
+    include_seer_sheet: bool = True,
+    export_validation_report_file: bool = False,
+    export_reconciliation: bool = False,
+    export_kpi_conflicts: bool = False,
+    export_white_space: bool = False,
 ) -> Dict[str, Any]:
     """
     Run the full pipeline for one indication and optional country.
@@ -198,7 +281,6 @@ def run_pipeline(
 
     try:
         # Single dynamic connector: explores all sources in config/sources_to_explore.yaml (links + APIs)
-        from ..evidence_finder.connectors.explore_all import explore_all_connector_factory
         connectors = {
             "bronze:Explore all": explore_all_connector_factory(),
         }
@@ -240,14 +322,16 @@ def run_pipeline(
         evidence_path_out = output_dir / f"evidence_by_metric_{file_suffix}.csv"
         evidence_df_raw = pd.DataFrame([r.to_row() for r in records])
         export_evidence_by_metric(evidence_df_raw, evidence_path_out)
-        result["paths"]["evidence"] = str(evidence_path_out)
+        if include_evidence:
+            result["paths"]["evidence"] = str(evidence_path_out)
         source_log_path = output_dir / f"source_log_{file_suffix}.csv"
         write_source_log(source_log, source_log_path)
-        result["paths"]["source_log"] = str(source_log_path)
+        if export_source_log:
+            result["paths"]["source_log"] = str(source_log_path)
         # Reference links (all link-type sources) – no extracted value; user opens these to find data
         from ..evidence_finder.connectors.explore_all import build_reference_links
         reference_links = build_reference_links(config_dir, indication, country)
-        if reference_links:
+        if reference_links and export_reference_links:
             ref_path = output_dir / f"reference_links_{file_suffix}.csv"
             pd.DataFrame(reference_links).to_csv(ref_path, index=False)
             result["paths"]["reference_links"] = str(ref_path)
@@ -270,9 +354,10 @@ def run_pipeline(
             val_ok, val_report = validate_evidence_df(evidence_df_check)
             result["validation_report"] = val_report
             result["validation_passed"] = val_ok
-            # Persist validation report for audit trail (CSV only)
+            # Persist validation report only when explicitly requested
             val_path = export_validation_report(val_report, output_dir, file_suffix)
-            result["paths"]["validation_report"] = str(val_path)
+            if export_validation_report_file:
+                result["paths"]["validation_report"] = str(val_path)
             if strict_validation and not val_ok:
                 result["message"] = "Validation failed: " + "; ".join(
                     e["message"] for e in val_report if e.get("level") == "error"
@@ -286,7 +371,8 @@ def run_pipeline(
         # 2) Data Builder (scenario options from config)
         scenario_config = config_dir / "scenario_options.yaml"
         scenario_options, selected = load_scenario_options(scenario_config)
-        scenario_path = output_dir / f"scenario_registry_{file_suffix}.csv"
+        # Scenario registry is indication-agnostic — write once as a shared file
+        scenario_path = output_dir / "scenario_registry.csv"
         build_scenario_registry(scenario_options, scenario_path)
         result["paths"]["scenario_registry"] = str(scenario_path)
         evidence_df = load_evidence_table(evidence_path_out)
@@ -294,17 +380,19 @@ def run_pipeline(
         tool_rows = build_tool_ready_table(evidence_df, indication, selected)
         tool_path = output_dir / f"tool_ready_{file_suffix}.csv"
         export_tool_ready(tool_rows, tool_path)
-        insightace_path = output_dir / f"insightace_epi_{file_suffix}.csv"
-        export_insightace_epidemiology(tool_rows, insightace_path, scenario_label="High")
-        result["paths"]["tool_ready"] = str(tool_path)
-        result["paths"]["insightace_epi"] = str(insightace_path)
+        if include_tool_ready:
+            result["paths"]["tool_ready"] = str(tool_path)
+        if export_insightace:
+            insightace_path = output_dir / f"insightace_epi_{file_suffix}.csv"
+            export_insightace_epidemiology(tool_rows, insightace_path, scenario_label="High")
+            result["paths"]["insightace_epi"] = str(insightace_path)
 
-        # 3) Conflicts only (kpi_table dropped; scorecard built in 3b after confidence)
-        conflicts_path = output_dir / f"kpi_conflicts_{file_suffix}.csv"
+        # 3) Conflicts — always detected in-memory; written to CSV only when requested
         conflicts = compute_conflicts(evidence_df)
-        if conflicts:
+        if export_kpi_conflicts and conflicts:
             cdf = pd.DataFrame(conflicts)
             cdf.insert(0, "indication", indication)
+            conflicts_path = output_dir / f"kpi_conflicts_{file_suffix}.csv"
             conflicts_path.parent.mkdir(parents=True, exist_ok=True)
             cdf.to_csv(conflicts_path, index=False)
             result["paths"]["kpi_conflicts"] = str(conflicts_path)
@@ -322,14 +410,16 @@ def run_pipeline(
         scorecard_df = build_kpi_scorecard(evidence_df_epi, required_metrics_list, indication=indication)
         scorecard_path = output_dir / f"kpi_scorecard_{file_suffix}.csv"
         export_kpi_scorecard(scorecard_df, scorecard_path)
-        result["paths"]["kpi_scorecard"] = str(scorecard_path)
+        if include_kpi_scorecard:
+            result["paths"]["kpi_scorecard"] = str(scorecard_path)
         result["kpi_df"] = scorecard_df
         coverage_df = build_coverage_matrix(evidence_df_epi, required_metrics_list, indication=indication, geography=country or "")
         white_space_summary_text = build_white_space_summary(coverage_df, indication=indication, geography=country or "")
-        export_white_space_files(coverage_df, white_space_summary_text, output_dir, file_suffix)
-        result["paths"]["white_space_summary"] = str(output_dir / f"white_space_{file_suffix}_summary.md")
+        if export_white_space:
+            export_white_space_files(coverage_df, white_space_summary_text, output_dir, file_suffix)
+            result["paths"]["white_space_summary"] = str(output_dir / f"white_space_{file_suffix}_summary.md")
         recon_df = build_reconciliation_table(evidence_df_epi, required_metrics_list, indication=indication, geography=country or "")
-        if not recon_df.empty:
+        if export_reconciliation and not recon_df.empty:
             recon_path = output_dir / f"reconciliation_{file_suffix}.csv"
             export_reconciliation(recon_df, recon_path)
             result["paths"]["reconciliation"] = str(recon_path)
@@ -340,7 +430,8 @@ def run_pipeline(
         )
         summary_path = output_dir / f"evidence_summary_{file_suffix}.md"
         export_evidence_summary(summary_md, summary_path)
-        result["paths"]["evidence_summary"] = str(summary_path)
+        if include_evidence_summary:
+            result["paths"]["evidence_summary"] = str(summary_path)
         rubric_path = output_dir / "confidence_rubric.md"
         export_confidence_rubric(rubric_path)
         result["paths"]["confidence_rubric"] = str(rubric_path)
@@ -364,9 +455,10 @@ def run_pipeline(
                 result["paths"]["forecast"] = str(fp)
 
             insights_df = build_insights_summary(evidence_df_for_analytics, kpi_df=kpi_df, indication=indication)
-            ip = output_dir / f"insights_summary_{file_suffix}.csv"
-            insights_df.to_csv(ip, index=False)
-            result["paths"]["insights_summary"] = str(ip)
+            if export_insights_summary:
+                ip = output_dir / f"insights_summary_{file_suffix}.csv"
+                insights_df.to_csv(ip, index=False)
+                result["paths"]["insights_summary"] = str(ip)
 
             tool_ready_df = result["tool_ready_df"]
             insightace_epi_df = build_insightace_epidemiology_table(tool_rows, scenario_label="High")
@@ -390,10 +482,12 @@ def run_pipeline(
             result["paths"]["dashboard_dir"] = str(dashboard_dir)
 
         # Consolidate all CSVs into a single Excel file (one sheet per extract)
-        excel_path = output_dir / f"extract_consolidated_{file_suffix}.xlsx"
-        _consolidate_csvs_to_excel(result["paths"], excel_path)
-        if excel_path.exists():
-            result["paths"]["extract_consolidated"] = str(excel_path)
+        if include_consolidated_xlsx:
+            excel_path = output_dir / f"extract_consolidated_{file_suffix}.xlsx"
+            seer_df = _build_seer_sheet_df(indication, config_dir) if include_seer_sheet else None
+            _consolidate_csvs_to_excel(result["paths"], excel_path, seer_df=seer_df)
+            if excel_path.exists():
+                result["paths"]["extract_consolidated"] = str(excel_path)
 
         result["success"] = True
         result["message"] = f"Pipeline complete. {result['record_count']} evidence rows; outputs in {output_dir}."

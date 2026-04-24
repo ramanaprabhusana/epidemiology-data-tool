@@ -12,9 +12,6 @@ indications:
   - id: nhl
     label: "Non-Hodgkin Lymphoma (NHL)"
     config_suffix: "nhl"
-  - id: nhl_excl_dlbcl
-    label: "Non-Hodgkin Lymphoma (excl. DLBCL)"
-    config_suffix: "nhl"
   - id: gastric
     label: "Gastric Cancer (GC)"
     config_suffix: "gc"

@@ -5,6 +5,7 @@ Produces 0-100 score and Low/Medium/High label; supports a one-page rubric for m
 """
 
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Optional, Union
 
@@ -50,8 +51,10 @@ def _completeness_score(row: Union[Dict[str, Any], pd.Series]) -> int:
     return min(total, 25)
 
 
-def _recency_score(row: Union[Dict[str, Any], pd.Series], current_year: int = 2025) -> int:
+def _recency_score(row: Union[Dict[str, Any], pd.Series], current_year: int = None) -> int:
     """Points from year_or_range being recent (e.g. within 5 years)."""
+    if current_year is None:
+        current_year = datetime.now().year
     yr = row.get("year_or_range") if hasattr(row, "get") else getattr(row, "year_or_range", None)
     if yr is None or (isinstance(yr, float) and pd.isna(yr)):
         return 0

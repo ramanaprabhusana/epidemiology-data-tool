@@ -114,14 +114,51 @@ def main():
             index=0,
             help="Geography for the data (e.g. US, UK).",
         )
-    with col3:
-        export_dashboard = st.checkbox("Include dashboard export", value=True, help="Also create files in output/dashboard for Tableau or Power BI.")
-
     indication_label = indication_labels[ind_index]
     indication_id = indication_ids[ind_index]
     country_label = country_labels[country_index]
     country_id = country_ids[country_index]
     indication_for_pipeline = indication_label
+
+    # Output options
+    with st.expander("⚙️ Output options", expanded=False):
+        col_a, col_b = st.columns(2)
+        with col_a:
+            st.markdown("**Checked by default**")
+            include_evidence          = st.checkbox("Evidence by Metric (CSV + Excel sheet)", value=True,
+                                                     help="Full evidence table — every data point with source, value, year, tier, confidence score and URL.")
+            include_kpi_scorecard     = st.checkbox("KPI Scorecard (CSV + Excel sheet)", value=True,
+                                                     help="Best value + source range per required metric.")
+            include_consolidated_xlsx = st.checkbox("Consolidated Excel workbook", value=True,
+                                                     help="extract_consolidated XLSX containing all enabled sheets in one file.")
+            include_tool_ready        = st.checkbox("Tool-ready table (CSV)", value=True,
+                                                     help="Scenario-ready evidence table that feeds the Excel forecast model.")
+            include_evidence_summary  = st.checkbox("Evidence summary (.md)", value=True,
+                                                     help="Human-readable summary of key numbers, top sources and gaps.")
+            include_seer_sheet      = st.checkbox("SEER Trends sheet (Excel)", value=True,
+                                                   help="Adds a 'SEER Trends' tab to the consolidated Excel with 1975–2024 incidence / mortality / survival data")
+            include_forecast        = st.checkbox("Forecast projections", value=True,
+                                                   help="Generates forecast CSV with 2018–2029 scenario projections")
+            export_dashboard        = st.checkbox("Dashboard export (BI / Tableau)", value=True,
+                                                   help="Creates output/dashboard/ folder with aggregated CSVs and SQLite DB for Power BI or Tableau")
+        with col_b:
+            st.markdown("**Unchecked by default**")
+            export_insightace            = st.checkbox("InsightACE format", value=False,
+                                                        help="insightace_epi CSV — wide year-column pivot for the InsightACE tool")
+            export_insights_summary      = st.checkbox("Insights summary", value=False,
+                                                        help="insights_summary CSV — broad coverage view across 90+ metrics")
+            export_source_log            = st.checkbox("Source log", value=False,
+                                                        help="source_log CSV — records which data sources were loaded and row counts")
+            export_reference_links       = st.checkbox("Reference links", value=False,
+                                                        help="reference_links CSV — curated source URLs for this indication")
+            export_reconciliation        = st.checkbox("Reconciliation table", value=False,
+                                                        help="reconciliation CSV — recommended best value per metric with source comparison")
+            export_kpi_conflicts         = st.checkbox("KPI conflicts", value=False,
+                                                        help="kpi_conflicts CSV — flags where two sources give different values for the same metric/year")
+            export_white_space           = st.checkbox("White-space summary", value=False,
+                                                        help="white_space_summary.md — gap analysis showing which required metrics have no source")
+            export_validation_report_file = st.checkbox("Validation report", value=False,
+                                                         help="validation_report CSV — pipeline QA checks (duplicate keys, missing fields)")
 
     # Optional: evidence upload
     uploaded_file = st.file_uploader(
@@ -156,10 +193,24 @@ def main():
                 config_dir=ROOT / "config",
                 output_dir=ROOT / "output",
                 metrics_config_path=None,
+                include_evidence=include_evidence,
+                include_kpi_scorecard=include_kpi_scorecard,
+                include_consolidated_xlsx=include_consolidated_xlsx,
+                include_tool_ready=include_tool_ready,
+                include_evidence_summary=include_evidence_summary,
                 export_dashboard=export_dashboard,
-                include_forecast=True,
+                include_forecast=include_forecast,
                 use_pubmed=use_pubmed,
                 add_pubmed_stubs=add_pubmed_stubs,
+                export_insightace=export_insightace,
+                export_insights_summary=export_insights_summary,
+                export_source_log=export_source_log,
+                export_reference_links=export_reference_links,
+                include_seer_sheet=include_seer_sheet,
+                export_reconciliation=export_reconciliation,
+                export_kpi_conflicts=export_kpi_conflicts,
+                export_white_space=export_white_space,
+                export_validation_report_file=export_validation_report_file,
             )
             st.session_state.last_run = {
                 "indication": indication_for_pipeline,

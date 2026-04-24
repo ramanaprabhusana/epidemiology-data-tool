@@ -73,7 +73,7 @@ def run():
     add_pubmed_stubs = True
     evidence_path = None
     if data.get("evidence_filename"):
-        up = ROOT / "output" / "temp_upload" / (data.get("evidence_filename") or "").lstrip("/")
+        up = ROOT / "output" / "temp_upload" / Path((data.get("evidence_filename") or "")).name
         if up.exists() and up.suffix.lower() == ".csv":
             evidence_path = up
     try:
