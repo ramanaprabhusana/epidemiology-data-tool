@@ -43,12 +43,42 @@ def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "") -> bytes:
     return buf.read()
 
 
+_UI_OPTIONS_FALLBACK = {
+    "indications": [
+        {"id": "cll",     "label": "CLL (Chronic Lymphocytic Leukemia)", "config_suffix": "cll"},
+        {"id": "hodgkin", "label": "Hodgkin Lymphoma",                   "config_suffix": "hodgkin"},
+        {"id": "nhl",     "label": "Non-Hodgkin Lymphoma (NHL)",          "config_suffix": "nhl"},
+        {"id": "gastric", "label": "Gastric Cancer (GC)",                "config_suffix": "gc"},
+        {"id": "ovarian", "label": "Ovarian Cancer",                     "config_suffix": "ovarian"},
+        {"id": "prostate","label": "Prostate Cancer",                    "config_suffix": "prostate"},
+        {"id": "OTHER",   "label": "Other (specify below)",              "config_suffix": ""},
+    ],
+    "countries": [
+        {"id": "US",    "label": "United States"},
+        {"id": "DE",    "label": "Germany"},
+        {"id": "FR",    "label": "France"},
+        {"id": "UK",    "label": "United Kingdom"},
+        {"id": "CA",    "label": "Canada"},
+        {"id": "JP",    "label": "Japan"},
+        {"id": "CN",    "label": "China"},
+        {"id": "OTHER", "label": "Other (specify below)"},
+    ],
+}
+
+
 def load_ui_options():
     config_path = ROOT / "config" / "ui_options.yaml"
     if not config_path.exists():
-        return {"indications": [{"id": "cll", "label": "CLL", "config_suffix": "cll"}], "countries": [{"id": "US", "label": "United States"}]}
-    with open(config_path, "r") as f:
-        return yaml.safe_load(f)
+        return _UI_OPTIONS_FALLBACK
+    try:
+        with open(config_path, "r") as f:
+            data = yaml.safe_load(f) or {}
+        # Validate: ensure both keys are present and non-empty
+        if data.get("indications") and data.get("countries"):
+            return data
+    except Exception:
+        pass
+    return _UI_OPTIONS_FALLBACK
 
 
 def main():
