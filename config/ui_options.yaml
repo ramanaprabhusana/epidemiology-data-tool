@@ -26,12 +26,12 @@ indications:
 countries:
   - id: US
     label: "United States"
-  - id: UK
-    label: "United Kingdom"
   - id: DE
     label: "Germany"
   - id: FR
     label: "France"
+  - id: UK
+    label: "United Kingdom"
   - id: CA
     label: "Canada"
   - id: JP
