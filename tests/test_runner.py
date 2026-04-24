@@ -26,8 +26,8 @@ def test_consolidate_csvs_to_excel(tmp_path):
     assert out.exists()
     xl = pd.ExcelFile(out)
     assert len(xl.sheet_names) == 2
-    assert "evidence" in xl.sheet_names
-    assert "source_log" in xl.sheet_names
+    assert "Evidence by Metric" in xl.sheet_names
+    assert "Source Log" in xl.sheet_names
 
 
 def test_run_pipeline_example_no_dashboard(tmp_path):
