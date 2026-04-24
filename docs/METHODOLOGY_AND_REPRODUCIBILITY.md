@@ -1,4 +1,4 @@
-# Epidemiology Evidence Pack — Methodology and Reproducibility
+# Epidemiology Evidence Pack - Methodology and Reproducibility
 
 **Purpose:** Describe how sources are selected, how extraction works, how confidence is calculated, and how the KPI scorecard and white-space are produced. Use this for handoff and to run the pipeline for a new indication.
 
@@ -8,8 +8,8 @@
 
 - **Tiers:** Evidence Finder uses three tiers: **Gold** (authoritative, e.g. SEER, CDC/NCHS, Census, NIH), **Silver** (peer-reviewed, widely cited, e.g. PubMed, registry reports), **Bronze** (grey literature, discovery links, trials, journals).
 - **Config:** Sources are defined in:
-  - `config/source_tiers.yaml` — tier names and high-level source list.
-  - `config/sources_to_explore.yaml` — full list of link and API sources explored per run (URL templates with placeholders `{indication}`, `{country}`).
+  - `config/source_tiers.yaml` - tier names and high-level source list.
+  - `config/sources_to_explore.yaml` - full list of link and API sources explored per run (URL templates with placeholders `{indication}`, `{country}`).
 - **Order:** Discovery runs **Gold → Silver → Bronze** so high-value sources are prioritized. Within a run, the “Explore all” connector visits each entry in `sources_to_explore.yaml` (link sources get a stub and optional deep-dive; API sources are queried).
 - **Adding a source:** Add an entry under `sources` in `sources_to_explore.yaml` with `name`, `tier`, `url` (with placeholders), and optional `metric`, `definition`, `notes`, `confidence`.
 
@@ -54,9 +54,9 @@
 ## 5. White-space (gaps)
 
 - **Coverage matrix:** For each required metric we classify:
-  - **Has value** — at least one row with an extracted numeric (not stub).
-  - **Stub only** — only “See link” rows.
-  - **Missing** — no evidence row.
+  - **Has value** - at least one row with an extracted numeric (not stub).
+  - **Stub only** - only “See link” rows.
+  - **Missing** - no evidence row.
 - **Outputs:** `white_space_{suffix}.csv` (one row per metric, columns: coverage_status, n_sources, n_with_value, n_stub_only, source_list) and `white_space_{suffix}_summary.md` (narrative: what’s covered, what’s stub-only, what’s missing). This addresses “clear identification of white-space gaps.”
 
 ---
@@ -75,7 +75,7 @@
 
 ---
 
-## 8. Reproducibility — how to run for a new indication
+## 8. Reproducibility - how to run for a new indication
 
 1. **Config**
    - Ensure `config/sources_to_explore.yaml` and `config/source_tiers.yaml` are in place (no change needed for a new indication if you use the same source list).
@@ -99,13 +99,13 @@
      ```
 
 3. **Outputs (in `output/`)**
-   - `evidence_by_metric_{indication}_{country}.csv` — evidence table (sorted by metric; with computed_confidence).
-   - `kpi_scorecard_*.csv` — per-metric coverage, validation status; `kpi_conflicts_*.csv` when conflicts exist.
-   - `white_space_*_summary.md` — white-space narrative.
-   - `validation_report_*.csv` — validation audit trail.
+   - `evidence_by_metric_{indication}_{country}.csv` - evidence table (sorted by metric; with computed_confidence).
+   - `kpi_scorecard_*.csv` - per-metric coverage, validation status; `kpi_conflicts_*.csv` when conflicts exist.
+   - `white_space_*_summary.md` - white-space narrative.
+   - `validation_report_*.csv` - validation audit trail.
    - `reconciliation_*.csv` (if there are conflicting values).
-   - `evidence_summary_*.md` — one-pager.
-   - `confidence_rubric.md` — scoring rubric.
+   - `evidence_summary_*.md` - one-pager.
+   - `confidence_rubric.md` - scoring rubric.
    - `tool_ready_*.csv`, `insightace_epi_*.csv`, `forecast_*.csv`, `insights_summary_*.csv`, and optionally `output/dashboard/` (CSV + SQLite).
 
 4. **Dependencies:** Python 3.x, pandas, openpyxl, PyYAML, requests, beautifulsoup4, flask (see `requirements.txt`). Optional: python-docx for Word export.
@@ -114,12 +114,12 @@
 
 ## 9. How to read the KPI scorecard
 
-- **best_value** — Single value we recommend for this metric (from best available source).
-- **best_source** — Source that supplied best_value.
-- **range_min / range_max** — Spread of parsed numeric values across sources; large range suggests need for reconciliation.
-- **n_sources** — Number of distinct sources; **n_with_value** — Rows with an extracted number (not stub).
-- **agreement_flag** — “X of Y agree” or “no numeric values”; use to see if sources align.
-- **validation_status** — **Ready** = use with confidence; **Needs review** = check sources or reconciliation table; **No source** = gap, add source or manual entry.
+- **best_value** - Single value we recommend for this metric (from best available source).
+- **best_source** - Source that supplied best_value.
+- **range_min / range_max** - Spread of parsed numeric values across sources; large range suggests need for reconciliation.
+- **n_sources** - Number of distinct sources; **n_with_value** - Rows with an extracted number (not stub).
+- **agreement_flag** - “X of Y agree” or “no numeric values”; use to see if sources align.
+- **validation_status** - **Ready** = use with confidence; **Needs review** = check sources or reconciliation table; **No source** = gap, add source or manual entry.
 
 ---
 

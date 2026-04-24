@@ -1,5 +1,5 @@
 """
-Epidemiology Data Tool — Get data for an indication and country, then use the outputs for your next steps.
+Epidemiology Data Tool - Get data for an indication and country, then use the outputs for your next steps.
 Designed so someone receiving the tool can run it without editing code.
 """
 
@@ -77,10 +77,10 @@ def main():
         st.subheader("Last run")
         if st.session_state.last_run:
             lr = st.session_state.last_run
-            st.write(f"**Indication:** {lr.get('indication', '—')}")
-            st.write(f"**Country:** {lr.get('country', '—')}")
+            st.write(f"**Indication:** {lr.get('indication', '-')}")
+            st.write(f"**Country:** {lr.get('country', '-')}")
             st.write(f"**Records:** {lr.get('record_count', 0)}")
-            st.write(f"**Time:** {lr.get('timestamp', '—')}")
+            st.write(f"**Time:** {lr.get('timestamp', '-')}")
         else:
             st.write("No run yet.")
         st.divider()
@@ -126,7 +126,7 @@ def main():
         with col_a:
             st.markdown("**Checked by default**")
             include_evidence          = st.checkbox("Evidence by Metric (CSV + Excel sheet)", value=True,
-                                                     help="Full evidence table — every data point with source, value, year, tier, confidence score and URL.")
+                                                     help="Full evidence table - every data point with source, value, year, tier, confidence score and URL.")
             include_kpi_scorecard     = st.checkbox("KPI Scorecard (CSV + Excel sheet)", value=True,
                                                      help="Best value + source range per required metric.")
             include_consolidated_xlsx = st.checkbox("Consolidated Excel workbook", value=True,
@@ -144,21 +144,21 @@ def main():
         with col_b:
             st.markdown("**Unchecked by default**")
             export_insightace            = st.checkbox("InsightACE format", value=False,
-                                                        help="insightace_epi CSV — wide year-column pivot for the InsightACE tool")
+                                                        help="insightace_epi CSV - wide year-column pivot for the InsightACE tool")
             export_insights_summary      = st.checkbox("Insights summary", value=False,
-                                                        help="insights_summary CSV — broad coverage view across 90+ metrics")
+                                                        help="insights_summary CSV - broad coverage view across 90+ metrics")
             export_source_log            = st.checkbox("Source log", value=False,
-                                                        help="source_log CSV — records which data sources were loaded and row counts")
+                                                        help="source_log CSV - records which data sources were loaded and row counts")
             export_reference_links       = st.checkbox("Reference links", value=False,
-                                                        help="reference_links CSV — curated source URLs for this indication")
+                                                        help="reference_links CSV - curated source URLs for this indication")
             export_reconciliation        = st.checkbox("Reconciliation table", value=False,
-                                                        help="reconciliation CSV — recommended best value per metric with source comparison")
+                                                        help="reconciliation CSV - recommended best value per metric with source comparison")
             export_kpi_conflicts         = st.checkbox("KPI conflicts", value=False,
-                                                        help="kpi_conflicts CSV — flags where two sources give different values for the same metric/year")
+                                                        help="kpi_conflicts CSV - flags where two sources give different values for the same metric/year")
             export_white_space           = st.checkbox("White-space summary", value=False,
-                                                        help="white_space_summary.md — gap analysis showing which required metrics have no source")
+                                                        help="white_space_summary.md - gap analysis showing which required metrics have no source")
             export_validation_report_file = st.checkbox("Validation report", value=False,
-                                                         help="validation_report CSV — pipeline QA checks (duplicate keys, missing fields)")
+                                                         help="validation_report CSV - pipeline QA checks (duplicate keys, missing fields)")
 
     # Optional: evidence upload
     uploaded_file = st.file_uploader(
@@ -297,12 +297,12 @@ def main():
         st.subheader("4. What to do next")
         st.markdown("""
         Use the output files for your work:
-        - **Unzip** — Extract the ZIP, then open CSVs from the folder you chose (or from Downloads).
-        - **Open in Excel** — Open any CSV to review or share.
-        - **Use in Power BI or Tableau** — Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
-        - **Feed another system** — Use the tool-ready or InsightACE CSV as input for your models or platform.
-        - **Share** — Send the ZIP or individual CSVs to a colleague.
-        - **Check quality** — Use the KPI table to see coverage and gaps; add evidence and run again if needed.
+        - **Unzip** - Extract the ZIP, then open CSVs from the folder you chose (or from Downloads).
+        - **Open in Excel** - Open any CSV to review or share.
+        - **Use in Power BI or Tableau** - Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
+        - **Feed another system** - Use the tool-ready or InsightACE CSV as input for your models or platform.
+        - **Share** - Send the ZIP or individual CSVs to a colleague.
+        - **Check quality** - Use the KPI table to see coverage and gaps; add evidence and run again if needed.
         """)
     elif result and not result.get("success"):
         st.error("Something went wrong.")

@@ -284,7 +284,7 @@ def extract_from_url(url: str, indication: str = "", country: str = "") -> Optio
     """
     Extract epidemiology data from a single URL.
     Returns formatted string of extracted values, or None if nothing useful found.
-    No recursive link following — single page only.
+    No recursive link following - single page only.
     """
     if not HAS_BS4 or not HAS_REQUESTS:
         return None

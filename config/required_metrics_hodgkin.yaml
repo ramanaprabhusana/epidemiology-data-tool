@@ -59,7 +59,7 @@ metrics:
 
   # ─── Histology subtypes ───
   - id: subtype_classical
-    label: "Classical HL — Nodular sclerosis / Mixed cellularity / Lymphocyte-rich / Lymphocyte-depleted (%)"
+    label: "Classical HL - Nodular sclerosis / Mixed cellularity / Lymphocyte-rich / Lymphocyte-depleted (%)"
     required: false
     splits: []
   - id: subtype_nlphl
@@ -69,7 +69,7 @@ metrics:
 
   # ─── Treatment lines ───
   - id: first_line
-    label: "First line (1L) — ABVD / BV-AVD / A+AVD"
+    label: "First line (1L) - ABVD / BV-AVD / A+AVD"
     required: false
     splits: ["by_line"]
   - id: early_stage

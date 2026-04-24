@@ -222,7 +222,7 @@ def main() -> int:
     parser.add_argument("--workbook", type=Path, default=_REPO_ROOT / DEFAULT_WORKBOOK_REL,
                         help="Path to the v5.2 workbook to patch")
     parser.add_argument("--no-workbook-patch", action="store_true",
-                        help="Skip patching the workbook — just produce pipeline outputs")
+                        help="Skip patching the workbook - just produce pipeline outputs")
     parser.add_argument(
         "--no-pubmed",
         action="store_true",
@@ -235,7 +235,7 @@ def main() -> int:
     results: List[Dict[str, Any]] = []
     for ind in args.indications:
         if ind not in INDICATION_SUFFIX:
-            print(f"  [warn] unknown indication '{ind}' — skipping")
+            print(f"  [warn] unknown indication '{ind}' - skipping")
             continue
         results.append(
             run_one(

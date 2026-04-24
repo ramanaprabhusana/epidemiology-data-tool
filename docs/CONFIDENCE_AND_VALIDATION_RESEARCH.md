@@ -14,7 +14,7 @@
 | **Score** | 0–100, additive: **Source tier** (35 max: gold 35, silver 22, bronze 15) + **Extraction success** (30 if numeric extracted, 0 if "See link") + **Completeness** (25 max: definition, year_or_range, geography, population, 6 pts each) + **Recency** (10 max: year within 1 yr = 5, within 5 yr = 3). |
 | **Label** | High (70–100), Medium (40–69), Low (0–39). |
 | **Output** | `computed_confidence_score`, `computed_confidence` on evidence CSV; `confidence_rubric.md`; scorecard uses these for **validation_status** (Ready = agreement + high confidence or gold). |
-| **Manual vs computed** | Evidence schema has optional manual `confidence` (low/medium/high); pipeline adds **computed** columns and does not overwrite manual—both can coexist. |
+| **Manual vs computed** | Evidence schema has optional manual `confidence` (low/medium/high); pipeline adds **computed** columns and does not overwrite manual-both can coexist. |
 
 **Strengths:** Transparent, rule-based, no black box. Tier + extraction + completeness + recency match common “evidence quality” dimensions. Rubric is documented.
 
@@ -37,7 +37,7 @@
 ### 1. GRADE (evidence certainty)
 
 - **GRADE** uses: risk of bias, inconsistency, indirectness, imprecision, publication bias; levels High / Moderate / Low / Very low.
-- **Our model** does not map 1:1: we have **source tier** (proxy for “risk of bias” / authority), **extraction** (direct vs stub), **completeness** (indirectness/proxy for applicability), **recency** (timeliness). We do not explicitly model **inconsistency** (agreement across sources) or **imprecision** (e.g. CIs) at the **evidence row** level—those appear in the **scorecard** (agreement_flag) and **reconciliation**.
+- **Our model** does not map 1:1: we have **source tier** (proxy for “risk of bias” / authority), **extraction** (direct vs stub), **completeness** (indirectness/proxy for applicability), **recency** (timeliness). We do not explicitly model **inconsistency** (agreement across sources) or **imprecision** (e.g. CIs) at the **evidence row** level-those appear in the **scorecard** (agreement_flag) and **reconciliation**.
 - **Takeaway:** We can strengthen the narrative by (a) documenting that our confidence rubric is “GRADE-inspired” for epidemiology **sources** (tier, completeness, recency) and (b) adding an explicit **inconsistency** dimension when multiple sources disagree for the same metric/year (e.g. downgrade or flag).
 
 ### 2. CDC standard framework for evaluating health care data (MMWR 2024)
@@ -56,7 +56,7 @@
 ### 4. Provenance and audit (FHIR Provenance, ONC)
 
 - **Provenance** = who/what/when produced or modified data; supports authenticity and trust.
-- **Our model:** We have **source_citation**, **source_url**, **source_tier**—good for lineage. We do not have a formal “provenance” object per value (e.g. extraction method, timestamp of run).
+- **Our model:** We have **source_citation**, **source_url**, **source_tier**-good for lineage. We do not have a formal “provenance” object per value (e.g. extraction method, timestamp of run).
 - **Takeaway:** A **lineage** or **provenance** table (metric, value, source, tier, year, extraction_type, pipeline_run_id) would strengthen “every number traces to a source” and audit readiness.
 
 ---
@@ -125,14 +125,14 @@
 | Dimension | Confidence (today) | Validation (today) | After enhancements (suggested) |
 |-----------|---------------------|--------------------|----------------------------------|
 | **Source quality** | Tier weight (35 pts) | Tier must be gold/silver/bronze | Same |
-| **Extraction** | 30 or 0 | — | Same |
-| **Completeness** | 25 pts from 4 fields | — | Validation: optional completeness % warning |
-| **Recency** | 10 pts | — | Same |
-| **Schema** | — | Required cols, valid tiers | Same + optional row-level flag |
-| **Plausibility** | — | — | Validation: metric-level bounds → report + optional flag |
-| **Consistency** | — | Duplicate key warning | Validation: conflict warning; Confidence: optional inconsistency downgrade |
+| **Extraction** | 30 or 0 | - | Same |
+| **Completeness** | 25 pts from 4 fields | - | Validation: optional completeness % warning |
+| **Recency** | 10 pts | - | Same |
+| **Schema** | - | Required cols, valid tiers | Same + optional row-level flag |
+| **Plausibility** | - | - | Validation: metric-level bounds → report + optional flag |
+| **Consistency** | - | Duplicate key warning | Validation: conflict warning; Confidence: optional inconsistency downgrade |
 | **Audit** | Rubric + columns | In-memory report only | Validation report CSV/md; optional provenance/lineage |
-| **Labels** | High/Medium/Low | — | High/Medium/Low/**Very low** |
+| **Labels** | High/Medium/Low | - | High/Medium/Low/**Very low** |
 
 ---
 

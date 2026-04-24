@@ -107,7 +107,7 @@ def _consolidate_csvs_to_excel(
                 df.to_excel(writer, sheet_name=sheet, index=False)
             except Exception:
                 pass
-        # SEER Trends sheet — historical 1975–2024 SEER annual data from curated YAML
+        # SEER Trends sheet - historical 1975–2024 SEER annual data from curated YAML
         if seer_df is not None and not seer_df.empty:
             seer_df.to_excel(writer, sheet_name="SEER Trends", index=False)
 
@@ -208,7 +208,7 @@ def run_pipeline(
     use_pubmed: bool = True,
     add_pubmed_stubs: bool = True,
     max_run_seconds: Optional[int] = 2400,  # 40 minutes default
-    # Output selection flags — core outputs default True; optional extras default False
+    # Output selection flags - core outputs default True; optional extras default False
     include_evidence: bool = True,
     include_kpi_scorecard: bool = True,
     include_consolidated_xlsx: bool = True,
@@ -312,7 +312,7 @@ def run_pipeline(
             vl = v.strip().lower()
             if 'see link' in vl or vl == '' or vl == 'nan':
                 return True
-            # Drop *_links metrics — these are noisy web scraping artifacts
+            # Drop *_links metrics - these are noisy web scraping artifacts
             m = getattr(r, 'metric', '')
             if isinstance(m, str) and m.endswith('_links'):
                 return True
@@ -371,7 +371,7 @@ def run_pipeline(
         # 2) Data Builder (scenario options from config)
         scenario_config = config_dir / "scenario_options.yaml"
         scenario_options, selected = load_scenario_options(scenario_config)
-        # Scenario registry is indication-agnostic — write once as a shared file
+        # Scenario registry is indication-agnostic - write once as a shared file
         scenario_path = output_dir / "scenario_registry.csv"
         build_scenario_registry(scenario_options, scenario_path)
         result["paths"]["scenario_registry"] = str(scenario_path)
@@ -387,7 +387,7 @@ def run_pipeline(
             export_insightace_epidemiology(tool_rows, insightace_path, scenario_label="High")
             result["paths"]["insightace_epi"] = str(insightace_path)
 
-        # 3) Conflicts — always detected in-memory; written to CSV only when requested
+        # 3) Conflicts - always detected in-memory; written to CSV only when requested
         conflicts = compute_conflicts(evidence_df)
         if export_kpi_conflicts and conflicts:
             cdf = pd.DataFrame(conflicts)

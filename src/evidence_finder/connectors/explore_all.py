@@ -29,7 +29,7 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
     """
     Load curated epidemiology data from config/curated_data/{indication_slug}.yaml.
     Returns high-quality EvidenceRecord instances with gold tier and real numeric values.
-    This is the primary data source — far more reliable than web scraping.
+    This is the primary data source - far more reliable than web scraping.
     """
     # Map long UI labels to curated_data/{slug}.yaml (e.g. NHL -> nhl.yaml)
     candidates = curated_slug_candidates(indication or "")
@@ -64,7 +64,7 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
     for metric_id, info in metrics.items():
         if not isinstance(info, dict):
             continue
-        # Allow all curated data through — global/regional context is valuable
+        # Allow all curated data through - global/regional context is valuable
         # The category and geography columns let users filter downstream
         # Strip year suffix from metric ID: "incidence_2024" -> metric="incidence", year=2024
         import re as _re
@@ -169,7 +169,7 @@ def explore_all_sources(
     registry = _get_registry()
     link_records_added = 0  # for deep-dive limit
 
-    # PHASE 0: Load curated data first — this is the most reliable source.
+    # PHASE 0: Load curated data first - this is the most reliable source.
     curated_records = load_curated_records(config_dir, indication_clean, country)
     all_records.extend(curated_records)
     curated_metrics = {r.metric for r in curated_records}
@@ -218,7 +218,7 @@ def explore_all_sources(
             # only if the source is a reference link (no data extracted).
             configured_metric = src.get("metric") or ""
             # If metric is just the source id (e.g. "aacr", "bmj"), it's not
-            # a real epidemiology metric — use a descriptive label instead.
+            # a real epidemiology metric - use a descriptive label instead.
             valid_metrics = {"incidence", "prevalence", "mortality", "survival",
                            "incidence_rate", "prevalence_rate", "cases", "link",
                            "clinical_trials_count", "literature_count",

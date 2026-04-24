@@ -1,4 +1,4 @@
-# Epidemiology Evidence Pack — Plan to Remember
+# Epidemiology Evidence Pack - Plan to Remember
 
 **Canonical reference for capstone deliverable ideas.** Use this when implementing features or aligning with PharmaACE.
 
@@ -119,7 +119,7 @@ Plus a reproducibility pack: config files, how to run the pipeline for a new ind
 **Name the product:** e.g. "Epidemiology Evidence Pack" or "Source-backed epidemiology pack for InsightACE".
 
 **One-sentence for PharmaACE:**  
-"We deliver, per indication, a curated evidence table, a confidence-scored and source-mapped dataset, a KPI scorecard (validated vs. AI-ready), a white-space summary, optional reconciliation view and forecast, and a methodology + reproducibility pack—all from public sources, no AI-generated numbers, ready to feed InsightACE or your own analytics."
+"We deliver, per indication, a curated evidence table, a confidence-scored and source-mapped dataset, a KPI scorecard (validated vs. AI-ready), a white-space summary, optional reconciliation view and forecast, and a methodology + reproducibility pack-all from public sources, no AI-generated numbers, ready to feed InsightACE or your own analytics."
 
 **One-sentence for your team:**  
 "We don't just list sources; we extract, score, reconcile, gap-analyze, and document so the deliverable is analytical and client-ready."
@@ -147,7 +147,7 @@ Plus a reproducibility pack: config files, how to run the pipeline for a new ind
 ## How this addresses "no clear goal" and "not analytical"
 
 - **Goal** becomes: "Deliver the Epidemiology Evidence Pack per indication: evidence + confidence + scorecard + white-space + methodology (and optionally reconciliation + forecast)."
-- **Analytical part** is explicit: scoring, agreement, gaps, reconciliation, optional forecasting, and a clear methodology—all on top of extraction.
+- **Analytical part** is explicit: scoring, agreement, gaps, reconciliation, optional forecasting, and a clear methodology-all on top of extraction.
 - **Recognition:** You're not "just" building a scraper; you're defining how epidemiology should be sourced, scored, and validated for InsightACE, which matches the project plan and the slides.
 
 ---

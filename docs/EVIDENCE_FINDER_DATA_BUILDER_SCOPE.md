@@ -1,4 +1,4 @@
-# Evidence Finder + Data Builder — Scope & Specification
+# Evidence Finder + Data Builder - Scope & Specification
 
 ## Vision
 
@@ -142,10 +142,10 @@ Turn raw evidence into **tool-ready, consolidated datasets** while **retaining m
 
 ## 6. Optional Enhancements (your ideas + a few more)
 
-- **Dropdown-style scenario options with rationale** — Implement as a small “scenario selector” (e.g., Excel data validation + hidden sheet, or a simple HTML/Streamlit form) that writes the chosen scenario into the tool-ready file.
-- **Future paid sources** — Abstract “source” behind an interface (e.g., `GoldSource`, `SilverSource`, `PaidSource`) so new connectors don’t break Evidence Finder.
-- **Conflict detection** — Rule of thumb: same metric + same population + same year but different value → flag and list both evidence items in KPI table.
-- **Market basket alignment note** — One short doc per indication: which epi fields support the numbers (link to evidence and scenario choices); can be auto-generated from the scenario registry + evidence table.
+- **Dropdown-style scenario options with rationale** - Implement as a small “scenario selector” (e.g., Excel data validation + hidden sheet, or a simple HTML/Streamlit form) that writes the chosen scenario into the tool-ready file.
+- **Future paid sources** - Abstract “source” behind an interface (e.g., `GoldSource`, `SilverSource`, `PaidSource`) so new connectors don’t break Evidence Finder.
+- **Conflict detection** - Rule of thumb: same metric + same population + same year but different value → flag and list both evidence items in KPI table.
+- **Market basket alignment note** - One short doc per indication: which epi fields support the numbers (link to evidence and scenario choices); can be auto-generated from the scenario registry + evidence table.
 
 ---
 

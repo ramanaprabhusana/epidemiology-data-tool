@@ -1,4 +1,4 @@
-# Handoff Guide — Evidence Finder + Data Builder
+# Handoff Guide - Evidence Finder + Data Builder
 
 This guide is for **PharmaACE** teams who will use or extend this tool. It explains how to run it, what to share, and how outputs align with **InsightACE** (Epidemiology Beta).
 

@@ -322,7 +322,7 @@ if __name__ == "__main__":
     except Exception:
         pass
     url = "http://127.0.0.1:{}".format(port)
-    print("Epidemiology Data Tool — Web")
+    print("Epidemiology Data Tool - Web")
     print("Open in browser: {}".format(url))
 
     def _open_browser_once():

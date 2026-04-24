@@ -1,4 +1,4 @@
-# Quick Start — Evidence Finder + Data Builder
+# Quick Start - Evidence Finder + Data Builder
 
 Get the pipeline running in a few minutes.
 
@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## 2. Run the pipeline
 
-**Option A — Streamlined web page**
+**Option A - Streamlined web page**
 
 ```bash
 python app_web.py
@@ -25,7 +25,7 @@ python app_web.py
 
 Then open **http://127.0.0.1:5000** in your browser. Choose indication and country, optionally upload evidence CSV, then click **Get data**. Download links appear after the run.
 
-**Option B — Interactive app**
+**Option B - Interactive app**
 
 ```bash
 streamlit run app.py
@@ -33,7 +33,7 @@ streamlit run app.py
 
 Choose **Indication** and **Country**, optionally upload an evidence CSV, then click **Get data**. PubMed is always queried for literature counts (silver tier). Download from the page or use files in `output/`.
 
-**Option C — Command line**
+**Option C - Command line**
 
 ```bash
 # CLL + US (outputs in output/)
@@ -63,9 +63,9 @@ python run_tool.py --indication CLL --country US --no-pubmed
 
 ## 4. Add a new indication
 
-1. **Metrics config** — Copy `config/required_metrics.yaml` to `config/required_metrics_<slug>.yaml` (e.g. `required_metrics_my_indication.yaml`). Set `indication` and the list of `metrics` (id, label, required, splits).
-2. **Evidence** — Add `templates/evidence_<slug>.csv` with columns: indication, metric, value, source_citation, source_tier (gold/silver/bronze), and optional definition, population, year_or_range, geography, split_logic, source_url, notes, confidence.
-3. **UI** — Add an entry to `config/ui_options.yaml` under `indications` (id, label, config_suffix).
+1. **Metrics config** - Copy `config/required_metrics.yaml` to `config/required_metrics_<slug>.yaml` (e.g. `required_metrics_my_indication.yaml`). Set `indication` and the list of `metrics` (id, label, required, splits).
+2. **Evidence** - Add `templates/evidence_<slug>.csv` with columns: indication, metric, value, source_citation, source_tier (gold/silver/bronze), and optional definition, population, year_or_range, geography, split_logic, source_url, notes, confidence.
+3. **UI** - Add an entry to `config/ui_options.yaml` under `indications` (id, label, config_suffix).
 4. Run from UI or: `python run_tool.py --indication "My Indication" --country US`
 
 ---

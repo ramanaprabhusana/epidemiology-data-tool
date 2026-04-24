@@ -2,7 +2,7 @@
 
 The client prefers **both Tableau and Power BI**. The right sequence is:
 
-1. **Build the tool first** — Evidence Finder, Data Builder, multi-level sources, KPI, export (and optionally forecast/insights).
+1. **Build the tool first** - Evidence Finder, Data Builder, multi-level sources, KPI, export (and optionally forecast/insights).
 2. **Then** connect Tableau and Power BI to the tool’s output.
 
 The tool produces the data; the dashboards consume it. So the pipeline and output schema need to be solid before spending time on BI connection details.

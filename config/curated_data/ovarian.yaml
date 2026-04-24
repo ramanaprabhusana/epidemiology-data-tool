@@ -313,7 +313,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -325,7 +325,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -337,7 +337,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -349,7 +349,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -361,7 +361,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -373,7 +373,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -385,7 +385,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -397,7 +397,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -409,7 +409,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -421,7 +421,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -433,7 +433,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -445,7 +445,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -457,7 +457,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -469,7 +469,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -481,7 +481,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -493,7 +493,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -505,7 +505,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -517,7 +517,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -529,7 +529,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -541,7 +541,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -553,7 +553,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -565,7 +565,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -577,7 +577,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted incidence rate — White (non-Hispanic)
+    definition: Age-adjusted incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -589,7 +589,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: Black
-    definition: Age-adjusted incidence rate — Black
+    definition: Age-adjusted incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -601,7 +601,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: Hispanic
-    definition: Age-adjusted incidence rate — Hispanic
+    definition: Age-adjusted incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -613,7 +613,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -625,7 +625,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -937,7 +937,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -949,7 +949,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -961,7 +961,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -973,7 +973,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -985,7 +985,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -997,7 +997,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1009,7 +1009,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1021,7 +1021,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1033,7 +1033,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1045,7 +1045,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1057,7 +1057,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1069,7 +1069,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1081,7 +1081,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1093,7 +1093,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1105,7 +1105,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1117,7 +1117,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1129,7 +1129,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1141,7 +1141,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1153,7 +1153,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1165,7 +1165,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1177,7 +1177,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1189,7 +1189,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1393,7 +1393,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Localized
-    definition: 5-year relative survival — Localized
+    definition: 5-year relative survival - Localized
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1405,7 +1405,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Regional
-    definition: 5-year relative survival — Regional
+    definition: 5-year relative survival - Regional
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1417,7 +1417,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Distant
-    definition: 5-year relative survival — Distant
+    definition: 5-year relative survival - Distant
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1429,7 +1429,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Unknown
-    definition: 5-year relative survival — Unknown
+    definition: 5-year relative survival - Unknown
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1441,7 +1441,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Localized (2017-2021)'
+    definition: '% ovarian cancer cases - Localized (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1453,7 +1453,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Regional (2017-2021)'
+    definition: '% ovarian cancer cases - Regional (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1465,7 +1465,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Distant (2017-2021)'
+    definition: '% ovarian cancer cases - Distant (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1477,7 +1477,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Unknown (2017-2021)'
+    definition: '% ovarian cancer cases - Unknown (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1489,7 +1489,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Localized (2013-2016)'
+    definition: '% ovarian cancer cases - Localized (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1501,7 +1501,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Regional (2013-2016)'
+    definition: '% ovarian cancer cases - Regional (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1513,7 +1513,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Distant (2013-2016)'
+    definition: '% ovarian cancer cases - Distant (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1525,7 +1525,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Unknown (2013-2016)'
+    definition: '% ovarian cancer cases - Unknown (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1537,7 +1537,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Localized (2009-2012)'
+    definition: '% ovarian cancer cases - Localized (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1549,7 +1549,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Regional (2009-2012)'
+    definition: '% ovarian cancer cases - Regional (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1561,7 +1561,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Distant (2009-2012)'
+    definition: '% ovarian cancer cases - Distant (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1573,7 +1573,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All females
-    definition: '% ovarian cancer cases — Unknown (2009-2012)'
+    definition: '% ovarian cancer cases - Unknown (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1717,7 +1717,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer — High-grade serous'
+    definition: '% ovarian cancer - High-grade serous'
     source_citation: IARC / published literature
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: silver
@@ -1729,7 +1729,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer — Low-grade serous'
+    definition: '% ovarian cancer - Low-grade serous'
     source_citation: IARC / published literature
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: silver
@@ -1741,7 +1741,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer — Clear cell'
+    definition: '% ovarian cancer - Clear cell'
     source_citation: IARC / published literature
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: silver
@@ -1753,7 +1753,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer — Endometrioid'
+    definition: '% ovarian cancer - Endometrioid'
     source_citation: IARC / published literature
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: silver
@@ -1765,7 +1765,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer — Mucinous'
+    definition: '% ovarian cancer - Mucinous'
     source_citation: IARC / published literature
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: silver
@@ -1777,7 +1777,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All females
-    definition: '% ovarian cancer — Other'
+    definition: '% ovarian cancer - Other'
     source_citation: IARC / published literature
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: silver
@@ -1801,7 +1801,7 @@ metrics:
     year: '2000'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1813,7 +1813,7 @@ metrics:
     year: '2000'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1825,7 +1825,7 @@ metrics:
     year: '2000'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1837,7 +1837,7 @@ metrics:
     year: '2000'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1849,7 +1849,7 @@ metrics:
     year: '2000'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1861,7 +1861,7 @@ metrics:
     year: '2001'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1873,7 +1873,7 @@ metrics:
     year: '2001'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1885,7 +1885,7 @@ metrics:
     year: '2001'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1897,7 +1897,7 @@ metrics:
     year: '2001'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1909,7 +1909,7 @@ metrics:
     year: '2001'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1921,7 +1921,7 @@ metrics:
     year: '2002'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1933,7 +1933,7 @@ metrics:
     year: '2002'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1945,7 +1945,7 @@ metrics:
     year: '2002'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1957,7 +1957,7 @@ metrics:
     year: '2002'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1969,7 +1969,7 @@ metrics:
     year: '2002'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1981,7 +1981,7 @@ metrics:
     year: '2003'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -1993,7 +1993,7 @@ metrics:
     year: '2003'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2005,7 +2005,7 @@ metrics:
     year: '2003'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2017,7 +2017,7 @@ metrics:
     year: '2003'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2029,7 +2029,7 @@ metrics:
     year: '2003'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2041,7 +2041,7 @@ metrics:
     year: '2004'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2053,7 +2053,7 @@ metrics:
     year: '2004'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2065,7 +2065,7 @@ metrics:
     year: '2004'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2077,7 +2077,7 @@ metrics:
     year: '2004'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2089,7 +2089,7 @@ metrics:
     year: '2004'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2101,7 +2101,7 @@ metrics:
     year: '2005'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2113,7 +2113,7 @@ metrics:
     year: '2005'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2125,7 +2125,7 @@ metrics:
     year: '2005'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2137,7 +2137,7 @@ metrics:
     year: '2005'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2149,7 +2149,7 @@ metrics:
     year: '2005'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2161,7 +2161,7 @@ metrics:
     year: '2006'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2173,7 +2173,7 @@ metrics:
     year: '2006'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2185,7 +2185,7 @@ metrics:
     year: '2006'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2197,7 +2197,7 @@ metrics:
     year: '2006'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2209,7 +2209,7 @@ metrics:
     year: '2006'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2221,7 +2221,7 @@ metrics:
     year: '2007'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2233,7 +2233,7 @@ metrics:
     year: '2007'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2245,7 +2245,7 @@ metrics:
     year: '2007'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2257,7 +2257,7 @@ metrics:
     year: '2007'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2269,7 +2269,7 @@ metrics:
     year: '2007'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2281,7 +2281,7 @@ metrics:
     year: '2008'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2293,7 +2293,7 @@ metrics:
     year: '2008'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2305,7 +2305,7 @@ metrics:
     year: '2008'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2317,7 +2317,7 @@ metrics:
     year: '2008'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2329,7 +2329,7 @@ metrics:
     year: '2008'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2341,7 +2341,7 @@ metrics:
     year: '2009'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2353,7 +2353,7 @@ metrics:
     year: '2009'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2365,7 +2365,7 @@ metrics:
     year: '2009'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2377,7 +2377,7 @@ metrics:
     year: '2009'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2389,7 +2389,7 @@ metrics:
     year: '2009'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2401,7 +2401,7 @@ metrics:
     year: '2010'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2413,7 +2413,7 @@ metrics:
     year: '2010'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2425,7 +2425,7 @@ metrics:
     year: '2010'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2437,7 +2437,7 @@ metrics:
     year: '2010'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2449,7 +2449,7 @@ metrics:
     year: '2010'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2461,7 +2461,7 @@ metrics:
     year: '2011'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2473,7 +2473,7 @@ metrics:
     year: '2011'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2485,7 +2485,7 @@ metrics:
     year: '2011'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2497,7 +2497,7 @@ metrics:
     year: '2011'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2509,7 +2509,7 @@ metrics:
     year: '2011'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2521,7 +2521,7 @@ metrics:
     year: '2012'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2533,7 +2533,7 @@ metrics:
     year: '2012'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2545,7 +2545,7 @@ metrics:
     year: '2012'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2557,7 +2557,7 @@ metrics:
     year: '2012'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2569,7 +2569,7 @@ metrics:
     year: '2012'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2581,7 +2581,7 @@ metrics:
     year: '2013'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2593,7 +2593,7 @@ metrics:
     year: '2013'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2605,7 +2605,7 @@ metrics:
     year: '2013'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2617,7 +2617,7 @@ metrics:
     year: '2013'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2629,7 +2629,7 @@ metrics:
     year: '2013'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2641,7 +2641,7 @@ metrics:
     year: '2014'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2653,7 +2653,7 @@ metrics:
     year: '2014'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2665,7 +2665,7 @@ metrics:
     year: '2014'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2677,7 +2677,7 @@ metrics:
     year: '2014'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2689,7 +2689,7 @@ metrics:
     year: '2014'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2701,7 +2701,7 @@ metrics:
     year: '2015'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2713,7 +2713,7 @@ metrics:
     year: '2015'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2725,7 +2725,7 @@ metrics:
     year: '2015'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2737,7 +2737,7 @@ metrics:
     year: '2015'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2749,7 +2749,7 @@ metrics:
     year: '2015'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2761,7 +2761,7 @@ metrics:
     year: '2016'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2773,7 +2773,7 @@ metrics:
     year: '2016'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2785,7 +2785,7 @@ metrics:
     year: '2016'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2797,7 +2797,7 @@ metrics:
     year: '2016'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2809,7 +2809,7 @@ metrics:
     year: '2016'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2821,7 +2821,7 @@ metrics:
     year: '2017'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2833,7 +2833,7 @@ metrics:
     year: '2017'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2845,7 +2845,7 @@ metrics:
     year: '2017'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2857,7 +2857,7 @@ metrics:
     year: '2017'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2869,7 +2869,7 @@ metrics:
     year: '2017'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2881,7 +2881,7 @@ metrics:
     year: '2018'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2893,7 +2893,7 @@ metrics:
     year: '2018'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2905,7 +2905,7 @@ metrics:
     year: '2018'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2917,7 +2917,7 @@ metrics:
     year: '2018'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2929,7 +2929,7 @@ metrics:
     year: '2018'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2941,7 +2941,7 @@ metrics:
     year: '2019'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2953,7 +2953,7 @@ metrics:
     year: '2019'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2965,7 +2965,7 @@ metrics:
     year: '2019'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2977,7 +2977,7 @@ metrics:
     year: '2019'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -2989,7 +2989,7 @@ metrics:
     year: '2019'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3001,7 +3001,7 @@ metrics:
     year: '2020'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3013,7 +3013,7 @@ metrics:
     year: '2020'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3025,7 +3025,7 @@ metrics:
     year: '2020'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3037,7 +3037,7 @@ metrics:
     year: '2020'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3049,7 +3049,7 @@ metrics:
     year: '2020'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3061,7 +3061,7 @@ metrics:
     year: '2021'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer incidence rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3073,7 +3073,7 @@ metrics:
     year: '2021'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer incidence rate — Black
+    definition: Age-adjusted ovarian cancer incidence rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3085,7 +3085,7 @@ metrics:
     year: '2021'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer incidence rate — Hispanic
+    definition: Age-adjusted ovarian cancer incidence rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3097,7 +3097,7 @@ metrics:
     year: '2021'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer incidence rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer incidence rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3109,7 +3109,7 @@ metrics:
     year: '2021'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3121,7 +3121,7 @@ metrics:
     year: '2000'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3133,7 +3133,7 @@ metrics:
     year: '2000'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3145,7 +3145,7 @@ metrics:
     year: '2000'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3157,7 +3157,7 @@ metrics:
     year: '2000'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3169,7 +3169,7 @@ metrics:
     year: '2000'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3181,7 +3181,7 @@ metrics:
     year: '2001'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3193,7 +3193,7 @@ metrics:
     year: '2001'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3205,7 +3205,7 @@ metrics:
     year: '2001'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3217,7 +3217,7 @@ metrics:
     year: '2001'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3229,7 +3229,7 @@ metrics:
     year: '2001'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3241,7 +3241,7 @@ metrics:
     year: '2002'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3253,7 +3253,7 @@ metrics:
     year: '2002'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3265,7 +3265,7 @@ metrics:
     year: '2002'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3277,7 +3277,7 @@ metrics:
     year: '2002'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3289,7 +3289,7 @@ metrics:
     year: '2002'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3301,7 +3301,7 @@ metrics:
     year: '2003'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3313,7 +3313,7 @@ metrics:
     year: '2003'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3325,7 +3325,7 @@ metrics:
     year: '2003'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3337,7 +3337,7 @@ metrics:
     year: '2003'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3349,7 +3349,7 @@ metrics:
     year: '2003'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3361,7 +3361,7 @@ metrics:
     year: '2004'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3373,7 +3373,7 @@ metrics:
     year: '2004'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3385,7 +3385,7 @@ metrics:
     year: '2004'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3397,7 +3397,7 @@ metrics:
     year: '2004'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3409,7 +3409,7 @@ metrics:
     year: '2004'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3421,7 +3421,7 @@ metrics:
     year: '2005'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3433,7 +3433,7 @@ metrics:
     year: '2005'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3445,7 +3445,7 @@ metrics:
     year: '2005'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3457,7 +3457,7 @@ metrics:
     year: '2005'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3469,7 +3469,7 @@ metrics:
     year: '2005'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3481,7 +3481,7 @@ metrics:
     year: '2006'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3493,7 +3493,7 @@ metrics:
     year: '2006'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3505,7 +3505,7 @@ metrics:
     year: '2006'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3517,7 +3517,7 @@ metrics:
     year: '2006'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3529,7 +3529,7 @@ metrics:
     year: '2006'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3541,7 +3541,7 @@ metrics:
     year: '2007'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3553,7 +3553,7 @@ metrics:
     year: '2007'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3565,7 +3565,7 @@ metrics:
     year: '2007'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3577,7 +3577,7 @@ metrics:
     year: '2007'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3589,7 +3589,7 @@ metrics:
     year: '2007'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3601,7 +3601,7 @@ metrics:
     year: '2008'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3613,7 +3613,7 @@ metrics:
     year: '2008'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3625,7 +3625,7 @@ metrics:
     year: '2008'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3637,7 +3637,7 @@ metrics:
     year: '2008'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3649,7 +3649,7 @@ metrics:
     year: '2008'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3661,7 +3661,7 @@ metrics:
     year: '2009'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3673,7 +3673,7 @@ metrics:
     year: '2009'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3685,7 +3685,7 @@ metrics:
     year: '2009'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3697,7 +3697,7 @@ metrics:
     year: '2009'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3709,7 +3709,7 @@ metrics:
     year: '2009'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3721,7 +3721,7 @@ metrics:
     year: '2010'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3733,7 +3733,7 @@ metrics:
     year: '2010'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3745,7 +3745,7 @@ metrics:
     year: '2010'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3757,7 +3757,7 @@ metrics:
     year: '2010'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3769,7 +3769,7 @@ metrics:
     year: '2010'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3781,7 +3781,7 @@ metrics:
     year: '2011'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3793,7 +3793,7 @@ metrics:
     year: '2011'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3805,7 +3805,7 @@ metrics:
     year: '2011'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3817,7 +3817,7 @@ metrics:
     year: '2011'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3829,7 +3829,7 @@ metrics:
     year: '2011'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3841,7 +3841,7 @@ metrics:
     year: '2012'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3853,7 +3853,7 @@ metrics:
     year: '2012'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3865,7 +3865,7 @@ metrics:
     year: '2012'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3877,7 +3877,7 @@ metrics:
     year: '2012'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3889,7 +3889,7 @@ metrics:
     year: '2012'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3901,7 +3901,7 @@ metrics:
     year: '2013'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3913,7 +3913,7 @@ metrics:
     year: '2013'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3925,7 +3925,7 @@ metrics:
     year: '2013'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3937,7 +3937,7 @@ metrics:
     year: '2013'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3949,7 +3949,7 @@ metrics:
     year: '2013'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3961,7 +3961,7 @@ metrics:
     year: '2014'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3973,7 +3973,7 @@ metrics:
     year: '2014'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3985,7 +3985,7 @@ metrics:
     year: '2014'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -3997,7 +3997,7 @@ metrics:
     year: '2014'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4009,7 +4009,7 @@ metrics:
     year: '2014'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4021,7 +4021,7 @@ metrics:
     year: '2015'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4033,7 +4033,7 @@ metrics:
     year: '2015'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4045,7 +4045,7 @@ metrics:
     year: '2015'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4057,7 +4057,7 @@ metrics:
     year: '2015'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4069,7 +4069,7 @@ metrics:
     year: '2015'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4081,7 +4081,7 @@ metrics:
     year: '2016'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4093,7 +4093,7 @@ metrics:
     year: '2016'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4105,7 +4105,7 @@ metrics:
     year: '2016'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4117,7 +4117,7 @@ metrics:
     year: '2016'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4129,7 +4129,7 @@ metrics:
     year: '2016'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4141,7 +4141,7 @@ metrics:
     year: '2017'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4153,7 +4153,7 @@ metrics:
     year: '2017'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4165,7 +4165,7 @@ metrics:
     year: '2017'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4177,7 +4177,7 @@ metrics:
     year: '2017'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4189,7 +4189,7 @@ metrics:
     year: '2017'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4201,7 +4201,7 @@ metrics:
     year: '2018'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4213,7 +4213,7 @@ metrics:
     year: '2018'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4225,7 +4225,7 @@ metrics:
     year: '2018'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4237,7 +4237,7 @@ metrics:
     year: '2018'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4249,7 +4249,7 @@ metrics:
     year: '2018'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4261,7 +4261,7 @@ metrics:
     year: '2019'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4273,7 +4273,7 @@ metrics:
     year: '2019'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4285,7 +4285,7 @@ metrics:
     year: '2019'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4297,7 +4297,7 @@ metrics:
     year: '2019'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4309,7 +4309,7 @@ metrics:
     year: '2019'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4321,7 +4321,7 @@ metrics:
     year: '2020'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4333,7 +4333,7 @@ metrics:
     year: '2020'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4345,7 +4345,7 @@ metrics:
     year: '2020'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4357,7 +4357,7 @@ metrics:
     year: '2020'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4369,7 +4369,7 @@ metrics:
     year: '2020'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4381,7 +4381,7 @@ metrics:
     year: '2021'
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted ovarian cancer mortality rate — White (non-Hispanic)
+    definition: Age-adjusted ovarian cancer mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4393,7 +4393,7 @@ metrics:
     year: '2021'
     geography: US
     population: Black
-    definition: Age-adjusted ovarian cancer mortality rate — Black
+    definition: Age-adjusted ovarian cancer mortality rate - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4405,7 +4405,7 @@ metrics:
     year: '2021'
     geography: US
     population: Hispanic
-    definition: Age-adjusted ovarian cancer mortality rate — Hispanic
+    definition: Age-adjusted ovarian cancer mortality rate - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4417,7 +4417,7 @@ metrics:
     year: '2021'
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted ovarian cancer mortality rate — Asian/Pacific Islander
+    definition: Age-adjusted ovarian cancer mortality rate - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4429,7 +4429,7 @@ metrics:
     year: '2021'
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted ovarian cancer mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted ovarian cancer mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4441,7 +4441,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: White (non-Hispanic)
-    definition: 5-year relative survival — White (non-Hispanic)
+    definition: 5-year relative survival - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4453,7 +4453,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Black
-    definition: 5-year relative survival — Black
+    definition: 5-year relative survival - Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4465,7 +4465,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Hispanic
-    definition: 5-year relative survival — Hispanic
+    definition: 5-year relative survival - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4477,7 +4477,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Asian/Pacific Islander
-    definition: 5-year relative survival — Asian/Pacific Islander
+    definition: 5-year relative survival - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4489,7 +4489,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: American Indian/Alaska Native
-    definition: 5-year relative survival — American Indian/Alaska Native
+    definition: 5-year relative survival - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4501,7 +4501,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: White (non-Hispanic), localized
-    definition: 5-year relative survival — localized, White (non-Hispanic)
+    definition: 5-year relative survival - localized, White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4513,7 +4513,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Black, localized
-    definition: 5-year relative survival — localized, Black
+    definition: 5-year relative survival - localized, Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4525,7 +4525,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Hispanic, localized
-    definition: 5-year relative survival — localized, Hispanic
+    definition: 5-year relative survival - localized, Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4537,7 +4537,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: White (non-Hispanic), distant
-    definition: 5-year relative survival — distant, White (non-Hispanic)
+    definition: 5-year relative survival - distant, White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4549,7 +4549,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Black, distant
-    definition: 5-year relative survival — distant, Black
+    definition: 5-year relative survival - distant, Black
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4561,7 +4561,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Hispanic, distant
-    definition: 5-year relative survival — distant, Hispanic
+    definition: 5-year relative survival - distant, Hispanic
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4639,7 +4639,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4651,7 +4651,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4663,7 +4663,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4675,7 +4675,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4687,7 +4687,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4699,7 +4699,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4711,7 +4711,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4723,7 +4723,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4735,7 +4735,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4747,7 +4747,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4759,7 +4759,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4771,7 +4771,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4783,7 +4783,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4795,7 +4795,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4807,7 +4807,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4819,7 +4819,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4831,7 +4831,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4843,7 +4843,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4855,7 +4855,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4867,7 +4867,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4879,7 +4879,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4891,7 +4891,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4903,7 +4903,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4915,7 +4915,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4927,7 +4927,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4939,7 +4939,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4951,7 +4951,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4963,7 +4963,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4975,7 +4975,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4987,7 +4987,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -4999,7 +4999,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5011,7 +5011,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5023,7 +5023,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5035,7 +5035,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5047,7 +5047,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5059,7 +5059,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5071,7 +5071,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5083,7 +5083,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5095,7 +5095,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5107,7 +5107,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5119,7 +5119,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5131,7 +5131,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5143,7 +5143,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5155,7 +5155,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5167,7 +5167,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5179,7 +5179,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5191,7 +5191,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5203,7 +5203,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5215,7 +5215,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5227,7 +5227,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5239,7 +5239,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5251,7 +5251,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5263,7 +5263,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5275,7 +5275,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5287,7 +5287,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5299,7 +5299,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5311,7 +5311,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5323,7 +5323,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5335,7 +5335,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5347,7 +5347,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5359,7 +5359,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5371,7 +5371,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5383,7 +5383,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5395,7 +5395,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5407,7 +5407,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5419,7 +5419,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5431,7 +5431,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5443,7 +5443,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5455,7 +5455,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5467,7 +5467,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5479,7 +5479,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5491,7 +5491,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5503,7 +5503,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5515,7 +5515,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5527,7 +5527,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5539,7 +5539,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5551,7 +5551,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5563,7 +5563,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5575,7 +5575,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5587,7 +5587,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5599,7 +5599,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5611,7 +5611,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5623,7 +5623,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5635,7 +5635,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5647,7 +5647,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5659,7 +5659,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5671,7 +5671,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5683,7 +5683,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5695,7 +5695,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5707,7 +5707,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5719,7 +5719,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5731,7 +5731,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5743,7 +5743,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5755,7 +5755,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5767,7 +5767,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5779,7 +5779,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5791,7 +5791,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5803,7 +5803,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5815,7 +5815,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5827,7 +5827,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5839,7 +5839,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, females
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5851,7 +5851,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5863,7 +5863,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, females
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold
@@ -5875,7 +5875,7 @@ metrics:
     year: '2024'
     geography: US
     population: All ages, females
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Ovarian Cancer. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/ovary.html
     tier: gold

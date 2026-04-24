@@ -132,7 +132,7 @@ metrics:
     year: 2024
     geography: US
     population: Males
-    definition: Estimated new CLL cases — males
+    definition: Estimated new CLL cases - males
     source_citation: ACS Cancer Facts & Figures 2024
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -144,7 +144,7 @@ metrics:
     year: 2024
     geography: US
     population: Females
-    definition: Estimated new CLL cases — females
+    definition: Estimated new CLL cases - females
     source_citation: ACS Cancer Facts & Figures 2024
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -168,7 +168,7 @@ metrics:
     year: 2024
     geography: US
     population: Males
-    definition: Age-adjusted incidence rate — males
+    definition: Age-adjusted incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -180,7 +180,7 @@ metrics:
     year: 2024
     geography: US
     population: Females
-    definition: Age-adjusted incidence rate — females
+    definition: Age-adjusted incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -192,7 +192,7 @@ metrics:
     year: 2024
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted incidence rate — White
+    definition: Age-adjusted incidence rate - White
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -204,7 +204,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Black
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic Black — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic Black - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -217,7 +217,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Hispanic
-    definition: Age-adjusted incidence rate per 100,000 — Hispanic — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Hispanic - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -230,7 +230,7 @@ metrics:
     year: 2024
     geography: US
     population: Asian/Pacific Islander
-    definition: Age-adjusted incidence rate — Asian/PI
+    definition: Age-adjusted incidence rate - Asian/PI
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -242,7 +242,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic American Indian/Alaska Native
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic American Indian/Alaska Native — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic American Indian/Alaska Native - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -471,7 +471,7 @@ metrics:
     year: 2024
     geography: US
     population: Males
-    definition: Age-adjusted mortality rate — males
+    definition: Age-adjusted mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -483,7 +483,7 @@ metrics:
     year: 2024
     geography: US
     population: Females
-    definition: Age-adjusted mortality rate — females
+    definition: Age-adjusted mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -495,7 +495,7 @@ metrics:
     year: 2024
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted mortality rate — White
+    definition: Age-adjusted mortality rate - White
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -507,7 +507,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Black
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic Black — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic Black - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -544,7 +544,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Localized stage
-    definition: 5-year relative survival — localized
+    definition: 5-year relative survival - localized
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -556,7 +556,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Regional stage
-    definition: 5-year relative survival — regional
+    definition: 5-year relative survival - regional
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -568,7 +568,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Distant stage
-    definition: 5-year relative survival — distant
+    definition: 5-year relative survival - distant
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -592,7 +592,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Males
-    definition: 5-year relative survival — males
+    definition: 5-year relative survival - males
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -604,7 +604,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Females
-    definition: 5-year relative survival — females
+    definition: 5-year relative survival - females
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -616,7 +616,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Age < 50
-    definition: 5-year relative survival — under 50
+    definition: 5-year relative survival - under 50
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -628,7 +628,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Age 50-64
-    definition: 5-year relative survival — age 50-64
+    definition: 5-year relative survival - age 50-64
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -640,7 +640,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Age 65-74
-    definition: 5-year relative survival — age 65-74
+    definition: 5-year relative survival - age 65-74
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -652,7 +652,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Age 75+
-    definition: 5-year relative survival — age 75+
+    definition: 5-year relative survival - age 75+
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1912,7 +1912,7 @@ metrics:
     year: 2024
     geography: US
     population: Under 20
-    definition: CLL incidence rate — under 20 (extremely rare)
+    definition: CLL incidence rate - under 20 (extremely rare)
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1924,7 +1924,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 20-34
-    definition: CLL incidence rate — age 20-34
+    definition: CLL incidence rate - age 20-34
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1936,7 +1936,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 35-44
-    definition: CLL incidence rate — age 35-44
+    definition: CLL incidence rate - age 35-44
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1948,7 +1948,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 45-54
-    definition: CLL incidence rate — age 45-54
+    definition: CLL incidence rate - age 45-54
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1960,7 +1960,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 55-64
-    definition: CLL incidence rate — age 55-64
+    definition: CLL incidence rate - age 55-64
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1972,7 +1972,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 65-74
-    definition: CLL incidence rate — age 65-74
+    definition: CLL incidence rate - age 65-74
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1984,7 +1984,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 75-84
-    definition: CLL incidence rate — age 75-84
+    definition: CLL incidence rate - age 75-84
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -1996,7 +1996,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 85+
-    definition: CLL incidence rate — age 85+
+    definition: CLL incidence rate - age 85+
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2008,7 +2008,7 @@ metrics:
     year: 2024
     geography: US
     population: Under 50
-    definition: CLL mortality rate — under 50
+    definition: CLL mortality rate - under 50
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2020,7 +2020,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 50-64
-    definition: CLL mortality rate — age 50-64
+    definition: CLL mortality rate - age 50-64
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2032,7 +2032,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 65-74
-    definition: CLL mortality rate — age 65-74
+    definition: CLL mortality rate - age 65-74
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2044,7 +2044,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 75-84
-    definition: CLL mortality rate — age 75-84
+    definition: CLL mortality rate - age 75-84
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2056,7 +2056,7 @@ metrics:
     year: 2024
     geography: US
     population: Age 85+
-    definition: CLL mortality rate — age 85+
+    definition: CLL mortality rate - age 85+
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2272,7 +2272,7 @@ metrics:
     year: 2024
     geography: US
     population: Males
-    definition: Lifetime risk of developing CLL — males
+    definition: Lifetime risk of developing CLL - males
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2284,7 +2284,7 @@ metrics:
     year: 2024
     geography: US
     population: Females
-    definition: Lifetime risk of developing CLL — females
+    definition: Lifetime risk of developing CLL - females
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -2296,7 +2296,7 @@ metrics:
     year: 2024
     geography: US
     population: All
-    definition: Lifetime risk of developing CLL — overall
+    definition: Lifetime risk of developing CLL - overall
     source_citation: 'SEER Cancer Stat Facts: CLL'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5810,7 +5810,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5822,7 +5822,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5834,7 +5834,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5846,7 +5846,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5858,7 +5858,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5870,7 +5870,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5882,7 +5882,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5894,7 +5894,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5906,7 +5906,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5918,7 +5918,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5930,7 +5930,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5942,7 +5942,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5954,7 +5954,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5966,7 +5966,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5978,7 +5978,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -5990,7 +5990,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6002,7 +6002,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6014,7 +6014,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6026,7 +6026,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6038,7 +6038,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6050,7 +6050,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6062,7 +6062,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6074,7 +6074,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6086,7 +6086,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6098,7 +6098,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6110,7 +6110,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6122,7 +6122,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6134,7 +6134,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6146,7 +6146,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6158,7 +6158,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6170,7 +6170,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6182,7 +6182,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6194,7 +6194,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6206,7 +6206,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6218,7 +6218,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6230,7 +6230,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6242,7 +6242,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6254,7 +6254,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6266,7 +6266,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6278,7 +6278,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6290,7 +6290,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6302,7 +6302,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6314,7 +6314,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6326,7 +6326,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6338,7 +6338,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6350,7 +6350,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6362,7 +6362,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6374,7 +6374,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6386,7 +6386,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6398,7 +6398,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6410,7 +6410,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6422,7 +6422,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6434,7 +6434,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6446,7 +6446,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6458,7 +6458,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6470,7 +6470,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6482,7 +6482,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6494,7 +6494,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6506,7 +6506,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6518,7 +6518,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6530,7 +6530,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6542,7 +6542,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6554,7 +6554,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6566,7 +6566,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6578,7 +6578,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6590,7 +6590,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6602,7 +6602,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6614,7 +6614,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6626,7 +6626,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6638,7 +6638,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6650,7 +6650,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6662,7 +6662,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6674,7 +6674,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6686,7 +6686,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6698,7 +6698,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6710,7 +6710,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6722,7 +6722,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6734,7 +6734,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6746,7 +6746,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6758,7 +6758,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6770,7 +6770,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6782,7 +6782,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6794,7 +6794,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6806,7 +6806,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6818,7 +6818,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6830,7 +6830,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6842,7 +6842,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6854,7 +6854,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6866,7 +6866,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6878,7 +6878,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6890,7 +6890,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6902,7 +6902,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6914,7 +6914,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6926,7 +6926,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6938,7 +6938,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6950,7 +6950,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6962,7 +6962,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6974,7 +6974,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6986,7 +6986,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -6998,7 +6998,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7010,7 +7010,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7022,7 +7022,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7034,7 +7034,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7046,7 +7046,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7058,7 +7058,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7070,7 +7070,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7082,7 +7082,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7094,7 +7094,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7106,7 +7106,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7118,7 +7118,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7130,7 +7130,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7142,7 +7142,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7154,7 +7154,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7166,7 +7166,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7178,7 +7178,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7190,7 +7190,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7202,7 +7202,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7214,7 +7214,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7226,7 +7226,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7238,7 +7238,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7250,7 +7250,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7262,7 +7262,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7274,7 +7274,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7286,7 +7286,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7298,7 +7298,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7310,7 +7310,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7322,7 +7322,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7334,7 +7334,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7346,7 +7346,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7358,7 +7358,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7370,7 +7370,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7382,7 +7382,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7394,7 +7394,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7406,7 +7406,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7418,7 +7418,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7430,7 +7430,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7442,7 +7442,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7454,7 +7454,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7466,7 +7466,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7478,7 +7478,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7490,7 +7490,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7502,7 +7502,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7514,7 +7514,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7526,7 +7526,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7538,7 +7538,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7550,7 +7550,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7562,7 +7562,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7574,7 +7574,7 @@ metrics:
     year: '2024'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
     tier: gold
@@ -7586,7 +7586,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, All Races
-    definition: Age-adjusted incidence rate per 100,000 — All Races — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - All Races - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7599,7 +7599,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Asian/Pacific Islander
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic Asian/Pacific Islander — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic Asian/Pacific Islander - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7612,7 +7612,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic White
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic White — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic White - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7625,7 +7625,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, All Races
-    definition: Age-adjusted mortality rate per 100,000 — All Races — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - All Races - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7638,7 +7638,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Hispanic
-    definition: Age-adjusted mortality rate per 100,000 — Hispanic — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Hispanic - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7651,7 +7651,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic American Indian/Alaska Native
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic American Indian/Alaska Native — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic American Indian/Alaska Native - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7664,7 +7664,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Asian/Pacific Islander
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic Asian/Pacific Islander — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic Asian/Pacific Islander - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html
@@ -7677,7 +7677,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic White
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic White — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic White - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Chronic Lymphocytic Leukemia. National Cancer Institute. Bethesda, MD, 2024
       (2020-2024 average)'
     source_url: https://seer.cancer.gov/statfacts/html/clyl.html

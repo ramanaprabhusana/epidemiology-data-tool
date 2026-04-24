@@ -141,7 +141,7 @@ Each evidence row receives a **confidence score (0–100)** and a **label (Low /
 ## How to Use
 - In the evidence table, use **computed_confidence** (or **confidence** if overwritten) to filter or sort.
 - In the KPI scorecard, "validation readiness" can use these labels (e.g. require at least one High for "Ready").
-- Do not treat Low as invalid—it may still be the only available link; treat it as "needs review."
+- Do not treat Low as invalid-it may still be the only available link; treat it as "needs review."
 """
 
 

@@ -55,15 +55,15 @@ metrics:
 
   # ─── Stage-specific survival ───
   - id: survival_localized
-    label: "5-year survival — Localized (%)"
+    label: "5-year survival - Localized (%)"
     required: false
     splits: []
   - id: survival_regional
-    label: "5-year survival — Regional (%)"
+    label: "5-year survival - Regional (%)"
     required: false
     splits: []
   - id: survival_distant
-    label: "5-year survival — Distant (%)"
+    label: "5-year survival - Distant (%)"
     required: false
     splits: []
 

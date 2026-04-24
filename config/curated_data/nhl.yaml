@@ -29,7 +29,7 @@ metrics:
     year: '2000'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2000
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -41,7 +41,7 @@ metrics:
     year: '2000'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2000
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -65,7 +65,7 @@ metrics:
     year: '2001'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2001
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -77,7 +77,7 @@ metrics:
     year: '2001'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2001
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -101,7 +101,7 @@ metrics:
     year: '2002'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2002
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -113,7 +113,7 @@ metrics:
     year: '2002'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2002
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -137,7 +137,7 @@ metrics:
     year: '2003'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2003
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -149,7 +149,7 @@ metrics:
     year: '2003'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2003
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -173,7 +173,7 @@ metrics:
     year: '2004'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2004
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -185,7 +185,7 @@ metrics:
     year: '2004'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2004
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -209,7 +209,7 @@ metrics:
     year: '2005'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2005
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -221,7 +221,7 @@ metrics:
     year: '2005'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2005
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -245,7 +245,7 @@ metrics:
     year: '2006'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2006
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -257,7 +257,7 @@ metrics:
     year: '2006'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2006
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -281,7 +281,7 @@ metrics:
     year: '2007'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2007
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -293,7 +293,7 @@ metrics:
     year: '2007'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2007
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -317,7 +317,7 @@ metrics:
     year: '2008'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2008
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -329,7 +329,7 @@ metrics:
     year: '2008'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2008
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -353,7 +353,7 @@ metrics:
     year: '2009'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2009
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -365,7 +365,7 @@ metrics:
     year: '2009'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2009
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -389,7 +389,7 @@ metrics:
     year: '2010'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2010
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -401,7 +401,7 @@ metrics:
     year: '2010'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2010
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -425,7 +425,7 @@ metrics:
     year: '2011'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2011
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -437,7 +437,7 @@ metrics:
     year: '2011'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2011
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -461,7 +461,7 @@ metrics:
     year: '2012'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2012
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -473,7 +473,7 @@ metrics:
     year: '2012'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2012
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -497,7 +497,7 @@ metrics:
     year: '2013'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2013
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -509,7 +509,7 @@ metrics:
     year: '2013'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2013
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -533,7 +533,7 @@ metrics:
     year: '2014'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2014
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -545,7 +545,7 @@ metrics:
     year: '2014'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2014
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -569,7 +569,7 @@ metrics:
     year: '2015'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2015
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -581,7 +581,7 @@ metrics:
     year: '2015'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2015
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -605,7 +605,7 @@ metrics:
     year: '2016'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2016
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -617,7 +617,7 @@ metrics:
     year: '2016'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2016
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -641,7 +641,7 @@ metrics:
     year: '2017'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2017
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -653,7 +653,7 @@ metrics:
     year: '2017'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2017
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -677,7 +677,7 @@ metrics:
     year: '2018'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2018
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -689,7 +689,7 @@ metrics:
     year: '2018'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2018
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -713,7 +713,7 @@ metrics:
     year: '2019'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2019
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -725,7 +725,7 @@ metrics:
     year: '2019'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2019
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -749,7 +749,7 @@ metrics:
     year: '2020'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2020
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -761,7 +761,7 @@ metrics:
     year: '2020'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2020
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -785,7 +785,7 @@ metrics:
     year: '2021'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2021
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -797,7 +797,7 @@ metrics:
     year: '2021'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2021
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -821,7 +821,7 @@ metrics:
     year: '2022'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -833,7 +833,7 @@ metrics:
     year: '2022'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -857,7 +857,7 @@ metrics:
     year: '2023'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2023
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -869,7 +869,7 @@ metrics:
     year: '2023'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2023
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -893,7 +893,7 @@ metrics:
     year: '2024'
     geography: US
     population: Males
-    definition: Estimated new NHL cases — males
+    definition: Estimated new NHL cases - males
     source_citation: ACS Cancer Facts & Figures 2024
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -905,7 +905,7 @@ metrics:
     year: '2024'
     geography: US
     population: Females
-    definition: Estimated new NHL cases — females
+    definition: Estimated new NHL cases - females
     source_citation: ACS Cancer Facts & Figures 2024
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -917,7 +917,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -929,7 +929,7 @@ metrics:
     year: '2000'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -941,7 +941,7 @@ metrics:
     year: '2000'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -953,7 +953,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -965,7 +965,7 @@ metrics:
     year: '2001'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -977,7 +977,7 @@ metrics:
     year: '2001'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -989,7 +989,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1001,7 +1001,7 @@ metrics:
     year: '2002'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1013,7 +1013,7 @@ metrics:
     year: '2002'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1025,7 +1025,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1037,7 +1037,7 @@ metrics:
     year: '2003'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1049,7 +1049,7 @@ metrics:
     year: '2003'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1061,7 +1061,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1073,7 +1073,7 @@ metrics:
     year: '2004'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1085,7 +1085,7 @@ metrics:
     year: '2004'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1097,7 +1097,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1109,7 +1109,7 @@ metrics:
     year: '2005'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1121,7 +1121,7 @@ metrics:
     year: '2005'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1133,7 +1133,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1145,7 +1145,7 @@ metrics:
     year: '2006'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1157,7 +1157,7 @@ metrics:
     year: '2006'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1169,7 +1169,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1181,7 +1181,7 @@ metrics:
     year: '2007'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1193,7 +1193,7 @@ metrics:
     year: '2007'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1205,7 +1205,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1217,7 +1217,7 @@ metrics:
     year: '2008'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1229,7 +1229,7 @@ metrics:
     year: '2008'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1241,7 +1241,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1253,7 +1253,7 @@ metrics:
     year: '2009'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1265,7 +1265,7 @@ metrics:
     year: '2009'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1277,7 +1277,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1289,7 +1289,7 @@ metrics:
     year: '2010'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1301,7 +1301,7 @@ metrics:
     year: '2010'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1313,7 +1313,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1325,7 +1325,7 @@ metrics:
     year: '2011'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1337,7 +1337,7 @@ metrics:
     year: '2011'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1349,7 +1349,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1361,7 +1361,7 @@ metrics:
     year: '2012'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1373,7 +1373,7 @@ metrics:
     year: '2012'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1385,7 +1385,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1397,7 +1397,7 @@ metrics:
     year: '2013'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1409,7 +1409,7 @@ metrics:
     year: '2013'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1421,7 +1421,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1433,7 +1433,7 @@ metrics:
     year: '2014'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1445,7 +1445,7 @@ metrics:
     year: '2014'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1457,7 +1457,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1469,7 +1469,7 @@ metrics:
     year: '2015'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1481,7 +1481,7 @@ metrics:
     year: '2015'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1493,7 +1493,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1505,7 +1505,7 @@ metrics:
     year: '2016'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1517,7 +1517,7 @@ metrics:
     year: '2016'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1529,7 +1529,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1541,7 +1541,7 @@ metrics:
     year: '2017'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1553,7 +1553,7 @@ metrics:
     year: '2017'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1565,7 +1565,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1577,7 +1577,7 @@ metrics:
     year: '2018'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1589,7 +1589,7 @@ metrics:
     year: '2018'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1601,7 +1601,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1613,7 +1613,7 @@ metrics:
     year: '2019'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1625,7 +1625,7 @@ metrics:
     year: '2019'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1637,7 +1637,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1649,7 +1649,7 @@ metrics:
     year: '2020'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1661,7 +1661,7 @@ metrics:
     year: '2020'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1673,7 +1673,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1685,7 +1685,7 @@ metrics:
     year: '2021'
     geography: US
     population: Males
-    definition: Age-adjusted NHL incidence rate — males
+    definition: Age-adjusted NHL incidence rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1697,7 +1697,7 @@ metrics:
     year: '2021'
     geography: US
     population: Females
-    definition: Age-adjusted NHL incidence rate — females
+    definition: Age-adjusted NHL incidence rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1709,7 +1709,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted NHL incidence rate — White (non-Hispanic)
+    definition: Age-adjusted NHL incidence rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1721,7 +1721,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Black
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic Black — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic Black - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -1734,7 +1734,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Hispanic
-    definition: Age-adjusted incidence rate per 100,000 — Hispanic — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Hispanic - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -1747,7 +1747,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Asian/Pacific Islander
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic Asian/Pacific Islander — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic Asian/Pacific Islander - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -1760,7 +1760,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted NHL incidence rate — American Indian/Alaska Native
+    definition: Age-adjusted NHL incidence rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1784,7 +1784,7 @@ metrics:
     year: '2000'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2000
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1796,7 +1796,7 @@ metrics:
     year: '2000'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2000
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1820,7 +1820,7 @@ metrics:
     year: '2001'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2001
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1832,7 +1832,7 @@ metrics:
     year: '2001'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2001
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1856,7 +1856,7 @@ metrics:
     year: '2002'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2002
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1868,7 +1868,7 @@ metrics:
     year: '2002'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2002
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1892,7 +1892,7 @@ metrics:
     year: '2003'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2003
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1904,7 +1904,7 @@ metrics:
     year: '2003'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2003
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1928,7 +1928,7 @@ metrics:
     year: '2004'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2004
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1940,7 +1940,7 @@ metrics:
     year: '2004'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2004
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1964,7 +1964,7 @@ metrics:
     year: '2005'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2005
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -1976,7 +1976,7 @@ metrics:
     year: '2005'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2005
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2000,7 +2000,7 @@ metrics:
     year: '2006'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2006
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2012,7 +2012,7 @@ metrics:
     year: '2006'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2006
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2036,7 +2036,7 @@ metrics:
     year: '2007'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2007
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2048,7 +2048,7 @@ metrics:
     year: '2007'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2007
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2072,7 +2072,7 @@ metrics:
     year: '2008'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2008
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2084,7 +2084,7 @@ metrics:
     year: '2008'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2008
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2108,7 +2108,7 @@ metrics:
     year: '2009'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2009
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2120,7 +2120,7 @@ metrics:
     year: '2009'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2009
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2144,7 +2144,7 @@ metrics:
     year: '2010'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2010
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2156,7 +2156,7 @@ metrics:
     year: '2010'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2010
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2180,7 +2180,7 @@ metrics:
     year: '2011'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2011
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2192,7 +2192,7 @@ metrics:
     year: '2011'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2011
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2216,7 +2216,7 @@ metrics:
     year: '2012'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2012
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2228,7 +2228,7 @@ metrics:
     year: '2012'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2012
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2252,7 +2252,7 @@ metrics:
     year: '2013'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2013
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2264,7 +2264,7 @@ metrics:
     year: '2013'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2013
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2288,7 +2288,7 @@ metrics:
     year: '2014'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2014
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2300,7 +2300,7 @@ metrics:
     year: '2014'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2014
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2324,7 +2324,7 @@ metrics:
     year: '2015'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2015
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2336,7 +2336,7 @@ metrics:
     year: '2015'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2015
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2360,7 +2360,7 @@ metrics:
     year: '2016'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2016
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2372,7 +2372,7 @@ metrics:
     year: '2016'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2016
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2396,7 +2396,7 @@ metrics:
     year: '2017'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2017
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2408,7 +2408,7 @@ metrics:
     year: '2017'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2017
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2432,7 +2432,7 @@ metrics:
     year: '2018'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2018
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2444,7 +2444,7 @@ metrics:
     year: '2018'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2018
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2468,7 +2468,7 @@ metrics:
     year: '2019'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2019
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2480,7 +2480,7 @@ metrics:
     year: '2019'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2019
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2504,7 +2504,7 @@ metrics:
     year: '2020'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2020
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2516,7 +2516,7 @@ metrics:
     year: '2020'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2020
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2540,7 +2540,7 @@ metrics:
     year: '2021'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2021
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2552,7 +2552,7 @@ metrics:
     year: '2021'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2021
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2576,7 +2576,7 @@ metrics:
     year: '2022'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2588,7 +2588,7 @@ metrics:
     year: '2022'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2612,7 +2612,7 @@ metrics:
     year: '2023'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2023
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2624,7 +2624,7 @@ metrics:
     year: '2023'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2023
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2648,7 +2648,7 @@ metrics:
     year: '2024'
     geography: US
     population: Males
-    definition: Estimated NHL deaths — males
+    definition: Estimated NHL deaths - males
     source_citation: ACS Cancer Facts & Figures 2024
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2660,7 +2660,7 @@ metrics:
     year: '2024'
     geography: US
     population: Females
-    definition: Estimated NHL deaths — females
+    definition: Estimated NHL deaths - females
     source_citation: ACS Cancer Facts & Figures 2024
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2672,7 +2672,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2684,7 +2684,7 @@ metrics:
     year: '2000'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2696,7 +2696,7 @@ metrics:
     year: '2000'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2708,7 +2708,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2720,7 +2720,7 @@ metrics:
     year: '2001'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2732,7 +2732,7 @@ metrics:
     year: '2001'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2744,7 +2744,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2756,7 +2756,7 @@ metrics:
     year: '2002'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2768,7 +2768,7 @@ metrics:
     year: '2002'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2780,7 +2780,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2792,7 +2792,7 @@ metrics:
     year: '2003'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2804,7 +2804,7 @@ metrics:
     year: '2003'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2816,7 +2816,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2828,7 +2828,7 @@ metrics:
     year: '2004'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2840,7 +2840,7 @@ metrics:
     year: '2004'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2852,7 +2852,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2864,7 +2864,7 @@ metrics:
     year: '2005'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2876,7 +2876,7 @@ metrics:
     year: '2005'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2888,7 +2888,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2900,7 +2900,7 @@ metrics:
     year: '2006'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2912,7 +2912,7 @@ metrics:
     year: '2006'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2924,7 +2924,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2936,7 +2936,7 @@ metrics:
     year: '2007'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2948,7 +2948,7 @@ metrics:
     year: '2007'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2960,7 +2960,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2972,7 +2972,7 @@ metrics:
     year: '2008'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2984,7 +2984,7 @@ metrics:
     year: '2008'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -2996,7 +2996,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3008,7 +3008,7 @@ metrics:
     year: '2009'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3020,7 +3020,7 @@ metrics:
     year: '2009'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3032,7 +3032,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3044,7 +3044,7 @@ metrics:
     year: '2010'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3056,7 +3056,7 @@ metrics:
     year: '2010'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3068,7 +3068,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3080,7 +3080,7 @@ metrics:
     year: '2011'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3092,7 +3092,7 @@ metrics:
     year: '2011'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3104,7 +3104,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3116,7 +3116,7 @@ metrics:
     year: '2012'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3128,7 +3128,7 @@ metrics:
     year: '2012'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3140,7 +3140,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3152,7 +3152,7 @@ metrics:
     year: '2013'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3164,7 +3164,7 @@ metrics:
     year: '2013'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3176,7 +3176,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3188,7 +3188,7 @@ metrics:
     year: '2014'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3200,7 +3200,7 @@ metrics:
     year: '2014'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3212,7 +3212,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3224,7 +3224,7 @@ metrics:
     year: '2015'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3236,7 +3236,7 @@ metrics:
     year: '2015'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3248,7 +3248,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3260,7 +3260,7 @@ metrics:
     year: '2016'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3272,7 +3272,7 @@ metrics:
     year: '2016'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3284,7 +3284,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3296,7 +3296,7 @@ metrics:
     year: '2017'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3308,7 +3308,7 @@ metrics:
     year: '2017'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3320,7 +3320,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3332,7 +3332,7 @@ metrics:
     year: '2018'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3344,7 +3344,7 @@ metrics:
     year: '2018'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3356,7 +3356,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3368,7 +3368,7 @@ metrics:
     year: '2019'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3380,7 +3380,7 @@ metrics:
     year: '2019'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3392,7 +3392,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3404,7 +3404,7 @@ metrics:
     year: '2020'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3416,7 +3416,7 @@ metrics:
     year: '2020'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3428,7 +3428,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3440,7 +3440,7 @@ metrics:
     year: '2021'
     geography: US
     population: Males
-    definition: Age-adjusted NHL mortality rate — males
+    definition: Age-adjusted NHL mortality rate - males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3452,7 +3452,7 @@ metrics:
     year: '2021'
     geography: US
     population: Females
-    definition: Age-adjusted NHL mortality rate — females
+    definition: Age-adjusted NHL mortality rate - females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3464,7 +3464,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: White (non-Hispanic)
-    definition: Age-adjusted NHL mortality rate — White (non-Hispanic)
+    definition: Age-adjusted NHL mortality rate - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3476,7 +3476,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Black
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic Black — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic Black - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -3489,7 +3489,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Hispanic
-    definition: Age-adjusted mortality rate per 100,000 — Hispanic — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Hispanic - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -3502,7 +3502,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic Asian/Pacific Islander
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic Asian/Pacific Islander — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic Asian/Pacific Islander - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -3515,7 +3515,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: American Indian/Alaska Native
-    definition: Age-adjusted NHL mortality rate — American Indian/Alaska Native
+    definition: Age-adjusted NHL mortality rate - American Indian/Alaska Native
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3743,7 +3743,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Localized
-    definition: 5-year relative survival — Localized
+    definition: 5-year relative survival - Localized
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3755,7 +3755,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Regional
-    definition: 5-year relative survival — Regional
+    definition: 5-year relative survival - Regional
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3767,7 +3767,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Distant
-    definition: 5-year relative survival — Distant
+    definition: 5-year relative survival - Distant
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3779,7 +3779,7 @@ metrics:
     year: 2013-2019
     geography: US
     population: Unknown
-    definition: 5-year relative survival — Unknown
+    definition: 5-year relative survival - Unknown
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3791,7 +3791,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Males
-    definition: 5-year relative survival — Males
+    definition: 5-year relative survival - Males
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3803,7 +3803,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Females
-    definition: 5-year relative survival — Females
+    definition: 5-year relative survival - Females
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3815,7 +3815,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: White (non-Hispanic)
-    definition: 5-year relative survival — White (non-Hispanic)
+    definition: 5-year relative survival - White (non-Hispanic)
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3827,7 +3827,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Black
-    definition: 5-year relative survival — Black
+    definition: 5-year relative survival - Black
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3839,7 +3839,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Hispanic
-    definition: 5-year relative survival — Hispanic
+    definition: 5-year relative survival - Hispanic
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3851,7 +3851,7 @@ metrics:
     year: 2014-2020
     geography: US
     population: Asian/Pacific Islander
-    definition: 5-year relative survival — Asian/Pacific Islander
+    definition: 5-year relative survival - Asian/Pacific Islander
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3971,7 +3971,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: Males
-    definition: '% NHL cases — males'
+    definition: '% NHL cases - males'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3983,7 +3983,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: Females
-    definition: '% NHL cases — females'
+    definition: '% NHL cases - females'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -3995,7 +3995,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — DLBCL'
+    definition: '% NHL cases - DLBCL'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4007,7 +4007,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Follicular'
+    definition: '% NHL cases - Follicular'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4019,7 +4019,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Marginal zone'
+    definition: '% NHL cases - Marginal zone'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4031,7 +4031,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — T-cell'
+    definition: '% NHL cases - T-cell'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4043,7 +4043,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Mantle cell'
+    definition: '% NHL cases - Mantle cell'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4055,7 +4055,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Burkitt'
+    definition: '% NHL cases - Burkitt'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4067,7 +4067,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Other/NOS'
+    definition: '% NHL cases - Other/NOS'
     source_citation: WHO Classification of Lymphoid Neoplasms 2022
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: silver
@@ -4079,7 +4079,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Localized (2017-2021)'
+    definition: '% NHL cases - Localized (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4091,7 +4091,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Regional (2017-2021)'
+    definition: '% NHL cases - Regional (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4103,7 +4103,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Distant (2017-2021)'
+    definition: '% NHL cases - Distant (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4115,7 +4115,7 @@ metrics:
     year: 2017-2021
     geography: US
     population: All
-    definition: '% NHL cases — Unknown (2017-2021)'
+    definition: '% NHL cases - Unknown (2017-2021)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4127,7 +4127,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All
-    definition: '% NHL cases — Localized (2013-2016)'
+    definition: '% NHL cases - Localized (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4139,7 +4139,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All
-    definition: '% NHL cases — Regional (2013-2016)'
+    definition: '% NHL cases - Regional (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4151,7 +4151,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All
-    definition: '% NHL cases — Distant (2013-2016)'
+    definition: '% NHL cases - Distant (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4163,7 +4163,7 @@ metrics:
     year: 2013-2016
     geography: US
     population: All
-    definition: '% NHL cases — Unknown (2013-2016)'
+    definition: '% NHL cases - Unknown (2013-2016)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4175,7 +4175,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All
-    definition: '% NHL cases — Localized (2009-2012)'
+    definition: '% NHL cases - Localized (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4187,7 +4187,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All
-    definition: '% NHL cases — Regional (2009-2012)'
+    definition: '% NHL cases - Regional (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4199,7 +4199,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All
-    definition: '% NHL cases — Distant (2009-2012)'
+    definition: '% NHL cases - Distant (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4211,7 +4211,7 @@ metrics:
     year: 2009-2012
     geography: US
     population: All
-    definition: '% NHL cases — Unknown (2009-2012)'
+    definition: '% NHL cases - Unknown (2009-2012)'
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4300,7 +4300,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4312,7 +4312,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4324,7 +4324,7 @@ metrics:
     year: '1975'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4336,7 +4336,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4348,7 +4348,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4360,7 +4360,7 @@ metrics:
     year: '1976'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4372,7 +4372,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4384,7 +4384,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4396,7 +4396,7 @@ metrics:
     year: '1977'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4408,7 +4408,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4420,7 +4420,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4432,7 +4432,7 @@ metrics:
     year: '1978'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4444,7 +4444,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4456,7 +4456,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4468,7 +4468,7 @@ metrics:
     year: '1979'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4480,7 +4480,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4492,7 +4492,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4504,7 +4504,7 @@ metrics:
     year: '1980'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4516,7 +4516,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4528,7 +4528,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4540,7 +4540,7 @@ metrics:
     year: '1981'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4552,7 +4552,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4564,7 +4564,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4576,7 +4576,7 @@ metrics:
     year: '1982'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4588,7 +4588,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4600,7 +4600,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4612,7 +4612,7 @@ metrics:
     year: '1983'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4624,7 +4624,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4636,7 +4636,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4648,7 +4648,7 @@ metrics:
     year: '1984'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4660,7 +4660,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4672,7 +4672,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4684,7 +4684,7 @@ metrics:
     year: '1985'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4696,7 +4696,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4708,7 +4708,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4720,7 +4720,7 @@ metrics:
     year: '1986'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4732,7 +4732,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4744,7 +4744,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4756,7 +4756,7 @@ metrics:
     year: '1987'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4768,7 +4768,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4780,7 +4780,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4792,7 +4792,7 @@ metrics:
     year: '1988'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4804,7 +4804,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4816,7 +4816,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4828,7 +4828,7 @@ metrics:
     year: '1989'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4840,7 +4840,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4852,7 +4852,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4864,7 +4864,7 @@ metrics:
     year: '1990'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4876,7 +4876,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 8 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4888,7 +4888,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4900,7 +4900,7 @@ metrics:
     year: '1991'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4912,7 +4912,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4924,7 +4924,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4936,7 +4936,7 @@ metrics:
     year: '1992'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4948,7 +4948,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4960,7 +4960,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4972,7 +4972,7 @@ metrics:
     year: '1993'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4984,7 +4984,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -4996,7 +4996,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5008,7 +5008,7 @@ metrics:
     year: '1994'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5020,7 +5020,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5032,7 +5032,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5044,7 +5044,7 @@ metrics:
     year: '1995'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5056,7 +5056,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5068,7 +5068,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5080,7 +5080,7 @@ metrics:
     year: '1996'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5092,7 +5092,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5104,7 +5104,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5116,7 +5116,7 @@ metrics:
     year: '1997'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5128,7 +5128,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5140,7 +5140,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5152,7 +5152,7 @@ metrics:
     year: '1998'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5164,7 +5164,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5176,7 +5176,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5188,7 +5188,7 @@ metrics:
     year: '1999'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5200,7 +5200,7 @@ metrics:
     year: '2000'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5212,7 +5212,7 @@ metrics:
     year: '2001'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5224,7 +5224,7 @@ metrics:
     year: '2002'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5236,7 +5236,7 @@ metrics:
     year: '2003'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5248,7 +5248,7 @@ metrics:
     year: '2004'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5260,7 +5260,7 @@ metrics:
     year: '2005'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5272,7 +5272,7 @@ metrics:
     year: '2006'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5284,7 +5284,7 @@ metrics:
     year: '2007'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5296,7 +5296,7 @@ metrics:
     year: '2008'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5308,7 +5308,7 @@ metrics:
     year: '2009'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5320,7 +5320,7 @@ metrics:
     year: '2010'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5332,7 +5332,7 @@ metrics:
     year: '2011'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5344,7 +5344,7 @@ metrics:
     year: '2012'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5356,7 +5356,7 @@ metrics:
     year: '2013'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5368,7 +5368,7 @@ metrics:
     year: '2014'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5380,7 +5380,7 @@ metrics:
     year: '2015'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5392,7 +5392,7 @@ metrics:
     year: '2016'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5404,7 +5404,7 @@ metrics:
     year: '2017'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5416,7 +5416,7 @@ metrics:
     year: '2018'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5428,7 +5428,7 @@ metrics:
     year: '2019'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5440,7 +5440,7 @@ metrics:
     year: '2020'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5452,7 +5452,7 @@ metrics:
     year: '2021'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5464,7 +5464,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5476,7 +5476,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5488,7 +5488,7 @@ metrics:
     year: '2022'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5500,7 +5500,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted incidence rate per 100,000 — SEER 12 registry
+    definition: Age-adjusted incidence rate per 100,000 - SEER 12 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5512,7 +5512,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5524,7 +5524,7 @@ metrics:
     year: '2023'
     geography: US
     population: All ages, both sexes
-    definition: 5-year relative survival rate — SEER 8 registry
+    definition: 5-year relative survival rate - SEER 8 registry
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5536,7 +5536,7 @@ metrics:
     year: '2024'
     geography: US
     population: All ages, both sexes
-    definition: Age-adjusted mortality rate per 100,000 — United States
+    definition: Age-adjusted mortality rate per 100,000 - United States
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
     tier: gold
@@ -5548,7 +5548,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, All Races
-    definition: Age-adjusted incidence rate per 100,000 — All Races — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - All Races - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -5561,7 +5561,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic American Indian/Alaska Native
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic American Indian/Alaska Native — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic American Indian/Alaska Native - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -5574,7 +5574,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic White
-    definition: Age-adjusted incidence rate per 100,000 — Non-Hispanic White — 2020–2024 average
+    definition: Age-adjusted incidence rate per 100,000 - Non-Hispanic White - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -5587,7 +5587,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, All Races
-    definition: Age-adjusted mortality rate per 100,000 — All Races — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - All Races - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -5600,7 +5600,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic American Indian/Alaska Native
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic American Indian/Alaska Native — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic American Indian/Alaska Native - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html
@@ -5613,7 +5613,7 @@ metrics:
     year: 2020-2024
     geography: US
     population: All ages, both sexes, Non-Hispanic White
-    definition: Age-adjusted mortality rate per 100,000 — Non-Hispanic White — 2020–2024 average
+    definition: Age-adjusted mortality rate per 100,000 - Non-Hispanic White - 2020–2024 average
     source_citation: 'SEER Cancer Stat Facts: Non-Hodgkin Lymphoma. National Cancer Institute. Bethesda, MD, 2024 (2020-2024
       average)'
     source_url: https://seer.cancer.gov/statfacts/html/nhl.html

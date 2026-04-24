@@ -4,7 +4,7 @@
 
 ---
 
-## 1. **Evidence Quality Index (EQI) — One number per indication**
+## 1. **Evidence Quality Index (EQI) - One number per indication**
 
 **One-line value:** *“At a glance: how ready is this indication for InsightACE?”*
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 2. **Source lineage / audit trail — “Every number traces to a source”**
+## 2. **Source lineage / audit trail - “Every number traces to a source”**
 
 **One-line value:** *“Proof pack: for any EPI value, see exactly where it came from and how it was derived.”*
 
@@ -28,7 +28,7 @@
 
 ## 3. **“What changed” vs last run (delta report)**
 
-**One-line value:** *“See exactly what’s new or different since the last pipeline run — no re-reading everything.”*
+**One-line value:** *“See exactly what’s new or different since the last pipeline run - no re-reading everything.”*
 
 - **What:** When the pipeline runs, compare current evidence and KPI outputs to the **previous run** (same indication+country) if it exists. Produce a **delta report**: new sources, changed values (metric/year), new conflicts, coverage changes. Output: `delta_report_{suffix}.md` and optionally a small CSV of changed rows.
 - **Why breakthrough:** Saves time on refresh cycles; supports “point-in-time” and “what’s new” storytelling. Fits InsightACE’s refresh and CI use cases.
@@ -50,7 +50,7 @@
 
 ## 5. **Multi-indication comparison (portfolio view)**
 
-**One-line value:** *“Compare evidence quality and gaps across all indications you run — one view.”*
+**One-line value:** *“Compare evidence quality and gaps across all indications you run - one view.”*
 
 - **What:** After multiple runs (e.g. CLL US, Lung Cancer UK, …), produce a **portfolio summary**: one row per (indication, country) with EQI (if built), metric coverage %, number of sources, key gaps, last run date. Output: `portfolio_summary.csv` and optionally a simple **portfolio summary markdown**.
 - **Why breakthrough:** Strategic view: “Where are we strongest? Where do we need more sources?” Fits “reusable across tumor areas.”
@@ -83,7 +83,7 @@
 
 ## 8. **Reconciliation rules (documented and traceable)**
 
-**One-line value:** *“When sources disagree, here’s exactly how we chose the recommended value — and you can change the rule.”*
+**One-line value:** *“When sources disagree, here’s exactly how we chose the recommended value - and you can change the rule.”*
 
 - **What:** Document **reconciliation rules** in a short, client-facing doc (e.g. “We prefer gold tier; if tie, median; if only one source, that value with a note”). Optionally: add a **rule_id** or **rule_name** column to the reconciliation table so each recommended value points to the rule used. Config-driven so the client could later suggest a different rule (e.g. “prefer SEER for US incidence”).
 - **Why breakthrough:** “Assumption-clear” and “validated” in one place; supports handoff and future tuning.

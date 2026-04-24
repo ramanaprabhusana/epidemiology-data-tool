@@ -1,4 +1,4 @@
-# Company & Platform Context — PharmaACE & InsightACE
+# Company & Platform Context - PharmaACE & InsightACE
 
 **Confidential / Internal use only.** Subject to the PharmaACE NDA. See [CONFIDENTIALITY.md](CONFIDENTIALITY.md).
 
@@ -20,13 +20,13 @@ This document summarizes the company and platform context so the **Evidence Find
 - **What it is:** PharmaACE’s in-house, AI-powered **Competitive Intelligence (CI) platform** for multiple use cases.
 - **Purpose:** Streamline information gathering, synthesis, and dissemination; reduce effort-intensive data mining and manual structuring; aggregate data from multiple sources; support point-in-time refresh and custom views.
 - **Key modules (from the platform):**
-  - **Trial Scanner** — Global trial data (phases, indications, companies, regions, targets), trial design, MoA, approval timelines.
-  - **Opportunity Scanner** — Strategic insights from trials, launch timelines, planning analytics.
-  - **Market Scanner** — Market baskets by indication/MoA/targets, sales and ACOT data, 20K+ assets.
-  - **Product Profile** — Brand insights, FDA labels, approvals, revenue, competitor impact.
-  - **Company Profile** — Products, technology, financials, partnerships, competitors.
-  - **Insights Hub** — News, sentiment, KYC alerts, watchlists, PDUFA calendar.
-  - **Disease Overview** — Including **Epidemiology (Beta)** (see below).
+  - **Trial Scanner** - Global trial data (phases, indications, companies, regions, targets), trial design, MoA, approval timelines.
+  - **Opportunity Scanner** - Strategic insights from trials, launch timelines, planning analytics.
+  - **Market Scanner** - Market baskets by indication/MoA/targets, sales and ACOT data, 20K+ assets.
+  - **Product Profile** - Brand insights, FDA labels, approvals, revenue, competitor impact.
+  - **Company Profile** - Products, technology, financials, partnerships, competitors.
+  - **Insights Hub** - News, sentiment, KYC alerts, watchlists, PDUFA calendar.
+  - **Disease Overview** - Including **Epidemiology (Beta)** (see below).
 
 - **Epidemiology (Beta)** lives under Disease Overview and shows:
   - **Geography:** e.g. United States.
@@ -47,7 +47,7 @@ This document summarizes the company and platform context so the **Evidence Find
   - **Validate, reconcile, and standardize** data across public and high-quality sources.
   - Build **reusable, transparent pipelines** for extraction and validation.
   - Prepare datasets for **efficient ingestion into InsightACE**.
-  - **No AI-generated data** — this tool’s outputs become the **trusted foundation** the platform relies on.
+  - **No AI-generated data** - this tool’s outputs become the **trusted foundation** the platform relies on.
 
 - **Success looks like:**
   - InsightACE populated with **verified, well-documented** epidemiology.
@@ -57,10 +57,10 @@ This document summarizes the company and platform context so the **Evidence Find
   - **Pipeline repeatable and expandable** for new tumor areas.
 
 - **Epidemiology (from project slides):**
-  - **How many patients exist** — size of population today and in future (opportunity/burden).
-  - **Who they are** — age, sex, disease stage, risk group (unmet demand).
-  - **Where they are** — geography (market/region prioritization).
-  - **How disease patterns change over time** — forecasting and planning.
+  - **How many patients exist** - size of population today and in future (opportunity/burden).
+  - **Who they are** - age, sex, disease stage, risk group (unmet demand).
+  - **Where they are** - geography (market/region prioritization).
+  - **How disease patterns change over time** - forecasting and planning.
 
 - **Common metrics:** Incidence, Prevalence, Mortality and Survival, Population Splits (e.g. by stage, age, sex), Geographic Splits.
 

@@ -163,7 +163,7 @@ def parse_annual_trends(soup, cfg: dict) -> dict:
                 _clean(inc_obs),
                 f"per 100k/yr (age-adjusted, {registry})",
                 year, pop,
-                f"Age-adjusted incidence rate per 100,000 — {registry} registry",
+                f"Age-adjusted incidence rate per 100,000 - {registry} registry",
                 citation_base, url, "Incidence Rate",
             )
 
@@ -172,7 +172,7 @@ def parse_annual_trends(soup, cfg: dict) -> dict:
                 _clean(mort_obs),
                 "per 100k/yr (age-adjusted, U.S.)",
                 year, pop,
-                "Age-adjusted mortality rate per 100,000 — United States",
+                "Age-adjusted mortality rate per 100,000 - United States",
                 citation_base, url, "Mortality Rate",
             )
 
@@ -181,7 +181,7 @@ def parse_annual_trends(soup, cfg: dict) -> dict:
                 _clean(surv_val),
                 "% 5-year relative survival (SEER 8)",
                 year, pop,
-                f"5-year relative survival rate — SEER 8 registry",
+                f"5-year relative survival rate - SEER 8 registry",
                 citation_base, url, "Survival",
             )
 
@@ -215,7 +215,7 @@ def parse_race_incidence(soup, cfg: dict) -> dict:
         entries[f"incidence_rate_{race_key}"] = _entry(
             rate_raw, "per 100k/yr (age-adjusted)", "2020-2024",
             f"{pop_base}, {race_raw}",
-            f"Age-adjusted incidence rate per 100,000 — {race_raw} — 2020–2024 average",
+            f"Age-adjusted incidence rate per 100,000 - {race_raw} - 2020–2024 average",
             citation, url, "Incidence Rate",
         )
     return entries
@@ -247,7 +247,7 @@ def parse_race_mortality(soup, cfg: dict) -> dict:
         entries[f"mortality_rate_{race_key}"] = _entry(
             rate_raw, "per 100k/yr (age-adjusted)", "2020-2024",
             f"{pop_base}, {race_raw}",
-            f"Age-adjusted mortality rate per 100,000 — {race_raw} — 2020–2024 average",
+            f"Age-adjusted mortality rate per 100,000 - {race_raw} - 2020–2024 average",
             citation, url, "Mortality Rate",
         )
     return entries
@@ -303,7 +303,7 @@ def parse_stage_distribution(soup, cfg: dict) -> dict:
 
 def process_indication(key: str, cfg: dict):
     print(f"\n{'='*60}")
-    print(f"  {key.upper()} — {cfg['label']}")
+    print(f"  {key.upper()} - {cfg['label']}")
     print(f"  URL: {cfg['url']}")
     print(f"{'='*60}")
 

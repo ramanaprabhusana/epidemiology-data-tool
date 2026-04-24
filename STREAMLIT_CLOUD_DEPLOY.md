@@ -77,16 +77,16 @@ Wait for the build. When it succeeds, copy the app URL (example shape: `https://
 
 Apps deployed from a **private** GitHub repo are **private by default**. Viewers must either use an **invited** account or you must make the app **public**.
 
-**Option A — Keep the repo private (preferred if code must stay private)**  
+**Option A - Keep the repo private (preferred if code must stay private)**  
 1. Open your app on **[share.streamlit.io](https://share.streamlit.io)** (signed in as the **owner** / deployer).  
 2. Use **Share** (top right of the app) or **⚙ Settings → Sharing** (wording varies slightly by Streamlit version).  
 3. Choose **Make this app public** / **This app is public** (or similar), so **anyone with the link** can open it **without** signing in as you.  
 4. Send the same URL again to your teammate.
 
-**Option B — Invite specific viewers**  
+**Option B - Invite specific viewers**  
 In **Share**, add your teammate’s email (e.g. their `@purdue.edu` account) as a viewer. They may need to **accept** the invite and use that account when opening the link.
 
-**Option C — Public GitHub repo**  
+**Option C - Public GitHub repo**  
 If policy allows, set the GitHub repo to **Public**. Streamlit often treats the app as **public by default** for public repos. **Do not** do this if the repo contains confidential client data or anything NDA forbids from public hosting.
 
 **NDA:** A **public** app URL means anyone who discovers or receives the link may use the app. Confirm with PharmaACE and your instructor before making the app public.

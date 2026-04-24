@@ -268,8 +268,8 @@ def stamp_pipeline_metadata(wb, manifest: Dict[str, Any]) -> None:
         for source, checksum in checksums.items():
             ws.cell(row=r, column=1, value=source)
             ws.cell(row=r, column=2, value=ind)
-            ws.cell(row=r, column=3, value="—")
-            ws.cell(row=r, column=4, value=ind_entry.get("record_count", "—"))
+            ws.cell(row=r, column=3, value="-")
+            ws.cell(row=r, column=4, value=ind_entry.get("record_count", "-"))
             ws.cell(row=r, column=5, value=checksum)
             r += 1
 

@@ -5,7 +5,7 @@
 **You use this tool to get epidemiology data for an indication and country.** No code editing needed.
 
 1. **Open the tool** (first time: see [HOW_TO_USE_THIS_TOOL.md](HOW_TO_USE_THIS_TOOL.md) for setup). Use **one** of:
-   - **Double-click (no terminal):** **Windows:** `Start_Web_App.bat` · **Mac:** `Start_Web_App.command` — browser opens automatically.
+   - **Double-click (no terminal):** **Windows:** `Start_Web_App.bat` · **Mac:** `Start_Web_App.command` - browser opens automatically.
    - **Streamlined web page:** `python app_web.py` → then open **http://127.0.0.1:5000** in your browser
    - **Interactive app:** `streamlit run app.py` → browser opens automatically
 2. **Choose** indication and country, then click **Get data**.
@@ -15,7 +15,7 @@ Full instructions: **[HOW_TO_USE_THIS_TOOL.md](HOW_TO_USE_THIS_TOOL.md)**.
 
 ---
 
-Pilot tool for **PharmaACE** Industry Practicum: consolidate epidemiology evidence for an indication in one place and build tool-ready datasets with **multiple defensible scenario options** (e.g., alternate growth rates, stage splits) so forecasters can choose inputs with clear rationale. Outputs are designed for **efficient ingestion into InsightACE** (Epidemiology Beta) and align with the project mission: *making epidemiology trustworthy enough to act on* — source-backed, validated, no AI-generated numbers.
+Pilot tool for **PharmaACE** Industry Practicum: consolidate epidemiology evidence for an indication in one place and build tool-ready datasets with **multiple defensible scenario options** (e.g., alternate growth rates, stage splits) so forecasters can choose inputs with clear rationale. Outputs are designed for **efficient ingestion into InsightACE** (Epidemiology Beta) and align with the project mission: *making epidemiology trustworthy enough to act on* - source-backed, validated, no AI-generated numbers.
 
 **Confidential / Internal use only.** This project is subject to the PharmaACE NDA. See [docs/CONFIDENTIALITY.md](docs/CONFIDENTIALITY.md).
 

@@ -3,7 +3,7 @@
 **This tool helps you get epidemiology data for an indication and country.** You choose what you need, run it once, and then use the output files for your next steps (analysis, dashboards, reporting).
 
 **What this tool does:** Collects and organizes evidence from configured sources, builds a tool-ready table and KPI, and writes everything to the `output` folder. The workflow is **streamlined**: choose indication and country, get data, then use the files for your next steps.  
-**What you do next:** Use those files in Excel, Power BI, Tableau, or another system—the tool only *gets the data*; your analysis and reporting are the next steps.
+**What you do next:** Use those files in Excel, Power BI, Tableau, or another system-the tool only *gets the data*; your analysis and reporting are the next steps.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## Step 1: Open the tool (first time only)
 
-**Easiest — no terminal needed:**  
+**Easiest - no terminal needed:**  
 After the one-time setup below, you can start the tool by **double-clicking** a launcher in this folder:
 
 - **Windows:** Double-click **`Start_Web_App.bat`**. A window will open; your browser will open to the tool. Keep the window open while using the tool.
@@ -41,13 +41,13 @@ After the one-time setup below, you can start the tool by **double-clicking** a 
    ```
 5. Start the tool using **one** of these options:
 
-   **Option A — Streamlined web page**  
+   **Option A - Streamlined web page**  
    ```text
    python app_web.py
    ```
-   Then open in your browser: **http://127.0.0.1:5000** — simple form, get data, download links.
+   Then open in your browser: **http://127.0.0.1:5000** - simple form, get data, download links.
 
-   **Option B — Interactive app**  
+   **Option B - Interactive app**  
    ```text
    streamlit run app.py
    ```
@@ -59,8 +59,8 @@ After the one-time setup below, you can start the tool by **double-clicking** a 
 
 ## Step 2: Get the data
 
-1. **Indication** — Choose the disease/indication (e.g. CLL, Lung Cancer).
-2. **Country** — Choose the geography (e.g. United States, UK).
+1. **Indication** - Choose the disease/indication (e.g. CLL, Lung Cancer).
+2. **Country** - Choose the geography (e.g. United States, UK).
 3. *(Optional)* Upload your own evidence CSV if you have one; otherwise the tool uses built-in templates.
 4. Click **“Get data”**.
 5. Wait until you see **“Your data is ready.”**
@@ -90,11 +90,11 @@ You can **download** some of these directly from the app after the run, or **ope
 
 Use the output files in whatever way you need:
 
-- **Open in Excel** — Open any of the CSV files to review, filter, or share.
-- **Use in Power BI or Tableau** — Connect to the `output/dashboard` folder (or the `.db` file there) and build or refresh your dashboards. See the doc *Dashboard & Advanced Analytics* in the `docs` folder for connection steps.
-- **Feed another system** — Use `tool_ready_*.csv` or `insightace_epi_*.csv` as the input format for your models or platforms.
-- **Share with a colleague** — Send the whole `output` folder or the specific CSVs they need.
-- **Check quality** — Use `kpi_table_*.csv` to see coverage and gaps; fix or add evidence and run again if needed.
+- **Open in Excel** - Open any of the CSV files to review, filter, or share.
+- **Use in Power BI or Tableau** - Connect to the `output/dashboard` folder (or the `.db` file there) and build or refresh your dashboards. See the doc *Dashboard & Advanced Analytics* in the `docs` folder for connection steps.
+- **Feed another system** - Use `tool_ready_*.csv` or `insightace_epi_*.csv` as the input format for your models or platforms.
+- **Share with a colleague** - Send the whole `output` folder or the specific CSVs they need.
+- **Check quality** - Use `kpi_table_*.csv` to see coverage and gaps; fix or add evidence and run again if needed.
 
 The tool only **gets the data**. All analysis, forecasting, and reporting are your next steps using these files.
 
@@ -102,9 +102,9 @@ The tool only **gets the data**. All analysis, forecasting, and reporting are yo
 
 ## If something goes wrong
 
-- **“No evidence records”** — The tool didn’t find any data for your choice. Try another indication/country or upload an evidence CSV that has data for that combination.
-- **App won’t start** — Make sure you’re in the project folder, the environment is activated (`.venv`), and you ran `pip install -r requirements.txt`.
-- **Need a different indication or country** — Ask the person who gave you the tool to add it (or see the *Quick start* / *Handoff* docs in the `docs` folder for how new options are added).
+- **“No evidence records”** - The tool didn’t find any data for your choice. Try another indication/country or upload an evidence CSV that has data for that combination.
+- **App won’t start** - Make sure you’re in the project folder, the environment is activated (`.venv`), and you ran `pip install -r requirements.txt`.
+- **Need a different indication or country** - Ask the person who gave you the tool to add it (or see the *Quick start* / *Handoff* docs in the `docs` folder for how new options are added).
 
 ---
 
