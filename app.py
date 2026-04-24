@@ -23,20 +23,22 @@ from src.pipeline.runner import run_pipeline
 _ZIP_ALLOWED_EXT = (".csv", ".xlsx", ".db", ".md")
 
 
-def _build_outputs_zip_bytes(output_dir: Path) -> bytes:
-    """Zip top-level output files plus output/dashboard/* (same layout as Flask /download_zip)."""
+def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "") -> bytes:
+    """Zip output files for the given suffix (indication + country) plus dashboard/* files."""
     output_dir = Path(output_dir)
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
         if output_dir.is_dir():
             for path in sorted(output_dir.iterdir()):
                 if path.is_file() and any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
-                    zf.write(path, path.name)
+                    if not suffix or suffix in path.name:
+                        zf.write(path, path.name)
             dashboard_dir = output_dir / "dashboard"
             if dashboard_dir.is_dir():
                 for path in sorted(dashboard_dir.iterdir()):
                     if path.is_file() and any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
-                        zf.write(path, f"dashboard/{path.name}")
+                        if not suffix or suffix in path.name:
+                            zf.write(path, f"dashboard/{path.name}")
     buf.seek(0)
     return buf.read()
 
@@ -243,7 +245,7 @@ def main():
 
         # --- 3. Your outputs ---
         st.subheader("3. Your outputs")
-        zip_bytes = _build_outputs_zip_bytes(ROOT / "output")
+        zip_bytes = _build_outputs_zip_bytes(ROOT / "output", suffix=suffix)
         zip_name = f"epidemiology_outputs_{suffix}.zip"
         st.download_button(
             label="Download all outputs (ZIP)",
