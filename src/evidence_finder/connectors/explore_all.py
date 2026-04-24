@@ -7,8 +7,10 @@ Add or remove sources in the YAML to change what the tool explores (no code chan
 
 from pathlib import Path
 from urllib.parse import quote_plus
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional, Tuple
+import concurrent.futures
 import time
+import threading
 
 import yaml
 
@@ -195,6 +197,11 @@ def explore_all_sources(
     if max_run_seconds is not None and max_run_seconds > 0:
         run_deadline = time.time() + max_run_seconds
 
+    # pending_dives: list of (rec, url) for parallel web extraction
+    pending_dives: List[Tuple[EvidenceRecord, str]] = []
+    deep_dive_links = kwargs.get("deep_dive_links", True)
+    max_deep_dive = int(kwargs.get("max_deep_dive_links", 100))
+
     for src in sources:
         if not isinstance(src, dict):
             continue
@@ -252,27 +259,14 @@ def explore_all_sources(
             )
             all_records.append(rec)
             link_records_added += 1
-            # Web extraction: single-page extraction per source (no recursive link following)
-            # Skip if we're past the run-time cap or if curated data already covers this metric
-            deep_dive_links = kwargs.get("deep_dive_links", True)
-            max_deep_dive = int(kwargs.get("max_deep_dive_links", 100))
+
+            # Decide whether to queue this URL for deep-dive extraction
             if run_deadline is not None and time.time() >= run_deadline:
                 rec.notes = (rec.notes or "") + " [Skipped: time limit]"
             elif metric_label in curated_metrics:
                 rec.notes = (rec.notes or "") + " [Skipped: curated value available]"
             elif deep_dive_links and url and link_records_added <= max_deep_dive:
-                try:
-                    from .web_extractor import deep_dive_link_record
-                    extracted = deep_dive_link_record(
-                        url, delay=True, indication=indication_clean, country=country, deadline=run_deadline
-                    )
-                    if extracted and len(str(extracted).strip()) > 0:
-                        rec.value = extracted
-                        rec.notes = (rec.notes or "") + " [Value extracted]"
-                    else:
-                        rec.notes = (rec.notes or "") + " [No datapoints found]"
-                except Exception:
-                    rec.notes = (rec.notes or "") + " [Extraction error]"
+                pending_dives.append((rec, url))
             continue
         if src.get("type") == "api":
             connector_id = src.get("connector_id")
@@ -290,6 +284,51 @@ def explore_all_sources(
                 all_records.extend(recs)
             except Exception:
                 pass
+    # --- Parallel deep-dive for all queued link sources ---
+    if pending_dives:
+        try:
+            from .web_extractor import deep_dive_link_record
+        except Exception:
+            deep_dive_link_record = None  # type: ignore
+
+        if deep_dive_link_record is not None:
+            # Pre-set indication context once (shared read-only state; same indication for all)
+            try:
+                from .web_extractor import set_indication_context
+                set_indication_context(indication_clean)
+            except Exception:
+                pass
+
+            _notes_lock = threading.Lock()
+
+            def _dive(pair: Tuple[EvidenceRecord, str]) -> None:
+                rec, url = pair
+                if run_deadline is not None and time.time() >= run_deadline:
+                    with _notes_lock:
+                        rec.notes = (rec.notes or "") + " [Skipped: time limit]"
+                    return
+                try:
+                    extracted = deep_dive_link_record(
+                        url,
+                        delay=True,
+                        indication=indication_clean,
+                        country=country,
+                        deadline=run_deadline,
+                    )
+                    with _notes_lock:
+                        if extracted and len(str(extracted).strip()) > 0:
+                            rec.value = extracted
+                            rec.notes = (rec.notes or "") + " [Value extracted]"
+                        else:
+                            rec.notes = (rec.notes or "") + " [No datapoints found]"
+                except Exception:
+                    with _notes_lock:
+                        rec.notes = (rec.notes or "") + " [Extraction error]"
+
+            max_workers = min(12, len(pending_dives))
+            with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
+                list(pool.map(_dive, pending_dives))
+
     return all_records
 
 

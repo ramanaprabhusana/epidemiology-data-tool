@@ -12,6 +12,7 @@ Key improvement: only accepts numbers that appear in text mentioning the target 
 
 import re
 import time
+import threading
 from typing import Dict, List, Optional, Set, Tuple
 from urllib.parse import urlparse
 
@@ -27,13 +28,39 @@ try:
 except ImportError:
     HAS_BS4 = False
 
-REQUEST_DELAY = 0.7
-REQUEST_TIMEOUT = 20
+REQUEST_DELAY = 0.3          # per-thread courtesy delay; parallel threads run concurrently
+REQUEST_TIMEOUT = 15         # tighter timeout to fail-fast on slow servers
 USER_AGENT = "Mozilla/5.0 (compatible; EpidemiologyDataTool/1.0; +https://github.com)"
+
+# Per-domain rate limiter: prevents hammering the same server from multiple threads.
+# Maps netloc -> last-access timestamp.
+_domain_last_access: Dict[str, float] = {}
+_domain_lock = threading.Lock()
+_MIN_DOMAIN_INTERVAL = 1.0   # seconds between requests to the same domain
+
+
+def _domain_wait(url: str) -> None:
+    """Sleep if we recently hit the same domain, to avoid hammering one server."""
+    try:
+        netloc = urlparse(url).netloc or url
+    except Exception:
+        netloc = url
+    with _domain_lock:
+        last = _domain_last_access.get(netloc, 0.0)
+        wait = _MIN_DOMAIN_INTERVAL - (time.time() - last)
+        if wait > 0:
+            # Release lock while sleeping so other domains are not blocked
+            _domain_last_access[netloc] = time.time() + wait
+        else:
+            _domain_last_access[netloc] = time.time()
+    if wait > 0:
+        time.sleep(wait)
+
 
 # Indication context for filtering
 _indication: str = ""
 _indication_aliases: List[str] = []
+_indication_lock = threading.Lock()
 
 # Indication alias map - used to broaden text relevance matching during web extraction.
 # Keys are substrings matched against the normalised indication label.
@@ -198,20 +225,24 @@ METRIC_KEYWORDS = {
 
 
 def set_indication_context(indication: str) -> None:
-    """Set the target indication for filtering. Call at start of pipeline run."""
+    """Set the target indication for filtering. Thread-safe; call once before parallel dives."""
     global _indication, _indication_aliases
-    _indication = (indication or "").strip().lower()
-    _indication_aliases = [_indication] if _indication else []
-    for key, aliases in _INDICATION_ALIAS_MAP.items():
-        if key in _indication:
-            _indication_aliases = list(set(_indication_aliases + aliases))
+    ind = (indication or "").strip().lower()
+    aliases = [ind] if ind else []
+    for key, alias_list in _INDICATION_ALIAS_MAP.items():
+        if key in ind:
+            aliases = list(set(aliases + alias_list))
             break
+    with _indication_lock:
+        _indication = ind
+        _indication_aliases = aliases
 
 
 def _fetch_page(url: str) -> Optional[str]:
-    """Fetch page HTML with basic error handling."""
+    """Fetch page HTML with domain-aware rate limiting."""
     if not HAS_REQUESTS or not url or not url.startswith("http"):
         return None
+    _domain_wait(url)   # polite per-domain delay (replaces blanket time.sleep)
     try:
         r = requests.get(
             url,
@@ -425,11 +456,10 @@ def extract_from_url(url: str, indication: str = "", country: str = "") -> Optio
     if not HAS_BS4 or not HAS_REQUESTS:
         return None
 
-    # Set indication context
+    # Set indication context (thread-safe; no-op if already set to same value)
     if indication:
         set_indication_context(indication)
 
-    time.sleep(REQUEST_DELAY)
     html = _fetch_page(url)
     if not html:
         return None
