@@ -35,20 +35,156 @@ USER_AGENT = "Mozilla/5.0 (compatible; EpidemiologyDataTool/1.0; +https://github
 _indication: str = ""
 _indication_aliases: List[str] = []
 
-# Common CLL aliases
+# Indication alias map - used to broaden text relevance matching during web extraction.
+# Keys are substrings matched against the normalised indication label.
+# Values are all terms that should count as a match in extracted page text.
 _INDICATION_ALIAS_MAP = {
-    "cll": ["cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia", "cll/sll"],
-    "chronic lymphocytic leukemia": ["cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia"],
-    "non-hodgkin": [
-        "non-hodgkin lymphoma",
-        "non hodgkin lymphoma",
-        "nhl",
-        "b-cell lymphoma",
-        "diffuse large b-cell",
-        "follicular lymphoma",
-        "lymphoma",
+    # CLL
+    "cll": [
+        "cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia",
+        "cll/sll", "small lymphocytic lymphoma", "sll", "b-cell cll",
     ],
-    "hodgkin": ["hodgkin lymphoma", "hodgkin", "classical hodgkin", "reed-sternberg"],
+    "chronic lymphocytic leukemia": [
+        "cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia",
+        "cll/sll", "small lymphocytic lymphoma",
+    ],
+    "chronic lymphocytic leukaemia": [
+        "cll", "chronic lymphocytic leukemia", "chronic lymphocytic leukaemia",
+    ],
+    # Non-Hodgkin Lymphoma
+    "non-hodgkin": [
+        "non-hodgkin lymphoma", "non hodgkin lymphoma", "nhl",
+        "b-cell lymphoma", "diffuse large b-cell", "dlbcl",
+        "follicular lymphoma", "marginal zone lymphoma", "mantle cell lymphoma",
+        "burkitt lymphoma", "lymphoma",
+    ],
+    "nhl": [
+        "non-hodgkin lymphoma", "nhl", "b-cell lymphoma",
+        "diffuse large b-cell", "follicular lymphoma", "lymphoma",
+    ],
+    # Hodgkin Lymphoma
+    "hodgkin": [
+        "hodgkin lymphoma", "hodgkin", "classical hodgkin",
+        "reed-sternberg", "hodgkin disease", "hl",
+    ],
+    # Gastric / Stomach Cancer
+    "gastric": [
+        "gastric cancer", "stomach cancer", "gastric carcinoma",
+        "stomach neoplasm", "gastric adenocarcinoma", "gc",
+        "gastroesophageal cancer", "gastric tumour",
+    ],
+    "stomach": [
+        "stomach cancer", "gastric cancer", "stomach neoplasm",
+        "gastric carcinoma", "stomach carcinoma",
+    ],
+    # Ovarian Cancer
+    "ovarian": [
+        "ovarian cancer", "ovarian carcinoma", "ovarian neoplasm",
+        "epithelial ovarian cancer", "ovarian tumour", "fallopian tube cancer",
+        "peritoneal cancer",
+    ],
+    # Prostate Cancer
+    "prostate": [
+        "prostate cancer", "prostate carcinoma", "prostatic neoplasm",
+        "prostatic cancer", "prostate adenocarcinoma", "pca",
+    ],
+    # Lung Cancer
+    "lung": [
+        "lung cancer", "lung carcinoma", "non-small cell lung cancer", "nsclc",
+        "small cell lung cancer", "sclc", "lung neoplasm", "pulmonary cancer",
+    ],
+    "nsclc": [
+        "non-small cell lung cancer", "nsclc", "lung cancer", "lung carcinoma",
+    ],
+    # Breast Cancer
+    "breast": [
+        "breast cancer", "breast carcinoma", "breast neoplasm",
+        "breast tumour", "mammary cancer", "her2", "triple negative breast cancer",
+    ],
+    # Colorectal Cancer
+    "colorectal": [
+        "colorectal cancer", "colon cancer", "rectal cancer",
+        "colorectal carcinoma", "crc", "bowel cancer",
+    ],
+    "colon": [
+        "colon cancer", "colorectal cancer", "crc",
+    ],
+    # Pancreatic Cancer
+    "pancreatic": [
+        "pancreatic cancer", "pancreatic carcinoma", "pancreas cancer",
+        "pancreatic ductal adenocarcinoma", "pdac",
+    ],
+    # Liver Cancer / HCC
+    "hepatocellular": [
+        "hepatocellular carcinoma", "hcc", "liver cancer", "hepatic cancer",
+    ],
+    "liver cancer": [
+        "liver cancer", "hepatocellular carcinoma", "hcc", "hepatic cancer",
+    ],
+    # Bladder Cancer
+    "bladder": [
+        "bladder cancer", "urothelial carcinoma", "transitional cell carcinoma",
+        "bladder carcinoma",
+    ],
+    # Kidney / Renal Cancer
+    "renal": [
+        "renal cell carcinoma", "rcc", "kidney cancer", "renal cancer",
+        "clear cell carcinoma",
+    ],
+    "kidney": [
+        "kidney cancer", "renal cell carcinoma", "rcc", "renal cancer",
+    ],
+    # Melanoma
+    "melanoma": [
+        "melanoma", "malignant melanoma", "cutaneous melanoma",
+        "skin cancer", "metastatic melanoma",
+    ],
+    # Multiple Myeloma
+    "myeloma": [
+        "multiple myeloma", "myeloma", "plasma cell myeloma",
+        "plasmacytoma", "mm",
+    ],
+    # Acute Myeloid Leukemia
+    "aml": [
+        "acute myeloid leukemia", "aml", "acute myelogenous leukemia",
+        "acute myeloid leukaemia",
+    ],
+    "acute myeloid": [
+        "acute myeloid leukemia", "aml", "acute myelogenous leukemia",
+    ],
+    # Acute Lymphoblastic Leukemia
+    "all": [
+        "acute lymphoblastic leukemia", "all", "acute lymphocytic leukemia",
+        "acute lymphoid leukemia",
+    ],
+    # Cervical Cancer
+    "cervical": [
+        "cervical cancer", "cervical carcinoma", "cervix cancer",
+        "uterine cervix cancer",
+    ],
+    # Endometrial / Uterine Cancer
+    "endometrial": [
+        "endometrial cancer", "uterine cancer", "endometrial carcinoma",
+        "uterine corpus cancer",
+    ],
+    "uterine": [
+        "uterine cancer", "endometrial cancer", "uterine carcinoma",
+    ],
+    # Head and Neck Cancer
+    "head and neck": [
+        "head and neck cancer", "head neck squamous cell carcinoma",
+        "hnscc", "oral cancer", "pharyngeal cancer", "laryngeal cancer",
+    ],
+    # Thyroid Cancer
+    "thyroid": [
+        "thyroid cancer", "thyroid carcinoma", "papillary thyroid cancer",
+        "follicular thyroid cancer",
+    ],
+    # Esophageal Cancer
+    "esophageal": [
+        "esophageal cancer", "oesophageal cancer", "esophageal carcinoma",
+        "esophagus cancer",
+    ],
 }
 
 # Epidemiology metric keywords

@@ -120,7 +120,23 @@ def main():
     indication_id = indication_ids[ind_index]
     country_label = country_labels[country_index]
     country_id = country_ids[country_index]
-    indication_for_pipeline = indication_label
+
+    # "Other" indication - show a free-text input
+    if indication_id == "OTHER":
+        custom_indication = st.text_input(
+            "Enter indication / disease",
+            placeholder="e.g. Lung Cancer, Breast Cancer, Melanoma, AML, NSCLC ...",
+            help=(
+                "Type any cancer or disease. Common abbreviations are understood "
+                "(e.g. 'NSCLC', 'AML', 'HNSCC'). PubMed and ClinicalTrials searches "
+                "will be expanded automatically using known synonyms."
+            ),
+        )
+        indication_for_pipeline = custom_indication.strip() if custom_indication and custom_indication.strip() else None
+        indication_display = custom_indication.strip() if custom_indication and custom_indication.strip() else "Other"
+    else:
+        indication_for_pipeline = indication_label
+        indication_display = indication_label
 
     # "Other" country - show a free-text input below the selectors
     if country_id == "OTHER":
@@ -204,7 +220,9 @@ def main():
     run_clicked = st.button("Get data", type="primary", use_container_width=True)
 
     if run_clicked:
-        if country_id == "OTHER" and not country_for_pipeline:
+        if indication_id == "OTHER" and not indication_for_pipeline:
+            st.warning("Please enter an indication / disease name before running.")
+        elif country_id == "OTHER" and not country_for_pipeline:
             st.warning("Please enter a country / geography name before running.")
         else:
             with st.spinner("Collecting and building data…"):
