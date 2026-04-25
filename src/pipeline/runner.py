@@ -38,6 +38,29 @@ def _safe_name(s: str) -> str:
     return s.replace(" ", "_").replace(",", "").strip() or "unknown"
 
 
+def _clean_old_outputs(output_dir: Path, file_suffix: str) -> None:
+    """Remove files from a previous run with the same suffix so the ZIP never
+    accumulates stale optional outputs (forecast, dashboard, consolidated xlsx,
+    etc.) that were not requested in the current run."""
+    _ZIP_EXT = {".csv", ".xlsx", ".db", ".md"}
+    if not output_dir.is_dir():
+        return
+    for path in list(output_dir.iterdir()):
+        if path.is_file() and path.suffix.lower() in _ZIP_EXT and file_suffix in path.name:
+            try:
+                path.unlink()
+            except OSError:
+                pass
+    dashboard_dir = output_dir / "dashboard"
+    if dashboard_dir.is_dir():
+        for path in list(dashboard_dir.iterdir()):
+            if path.is_file() and path.suffix.lower() in _ZIP_EXT and file_suffix in path.name:
+                try:
+                    path.unlink()
+                except OSError:
+                    pass
+
+
 def _metrics_suffix_candidates(indication: str) -> list[str]:
     """Try filesystem slug first, then curated YAML slugs (e.g. nhl for long NHL workbook labels)."""
     ind_safe = _safe_name(indication)
@@ -279,6 +302,10 @@ def run_pipeline(
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Clean stale files from a previous run with the same suffix so the ZIP
+    # never accumulates old optional outputs that were not requested this time.
+    _clean_old_outputs(output_dir, file_suffix)
+
     try:
         # Single dynamic connector: explores all sources in config/sources_to_explore.yaml (links + APIs)
         connectors = {
@@ -436,9 +463,17 @@ def run_pipeline(
         export_confidence_rubric(rubric_path)
         result["paths"]["confidence_rubric"] = str(rubric_path)
 
-        # 4) Optional: dashboard layer + forecast + insights
-        if export_dashboard:
+        # 4a) Forecast — runs independently of dashboard
+        forecast_df = pd.DataFrame()
+        if include_forecast:
             from ..analytics.forecast import build_forecast_table
+            forecast_df = build_forecast_table(result["evidence_df"], indication, years_ahead=5)
+            fp = output_dir / f"forecast_{file_suffix}.csv"
+            forecast_df.to_csv(fp, index=False)
+            result["paths"]["forecast"] = str(fp)
+
+        # 4b) Optional: dashboard layer + insights
+        if export_dashboard:
             from ..analytics.insights import build_insights_summary
             from ..dashboard.export import export_dashboard_layer
 
@@ -446,13 +481,6 @@ def run_pipeline(
             dashboard_dir.mkdir(parents=True, exist_ok=True)
             kpi_df = result["kpi_df"]
             evidence_df_for_analytics = result["evidence_df"]
-
-            forecast_df = pd.DataFrame()
-            if include_forecast:
-                forecast_df = build_forecast_table(evidence_df_for_analytics, indication, years_ahead=5)
-                fp = output_dir / f"forecast_{file_suffix}.csv"
-                forecast_df.to_csv(fp, index=False)
-                result["paths"]["forecast"] = str(fp)
 
             insights_df = build_insights_summary(evidence_df_for_analytics, kpi_df=kpi_df, indication=indication)
             if export_insights_summary:
@@ -463,7 +491,11 @@ def run_pipeline(
             tool_ready_df = result["tool_ready_df"]
             insightace_epi_df = build_insightace_epidemiology_table(tool_rows, scenario_label="High")
             scenario_registry_df = pd.DataFrame([o.to_row() for o in scenario_options])
-            source_log_df = pd.read_csv(source_log_path)
+            # Load source log with fallback to empty DataFrame if file is missing/corrupt
+            try:
+                source_log_df = pd.read_csv(source_log_path) if source_log_path.exists() else pd.DataFrame()
+            except Exception:
+                source_log_df = pd.DataFrame()
 
             export_dashboard_layer(
                 dashboard_dir,
