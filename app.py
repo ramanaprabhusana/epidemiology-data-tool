@@ -95,9 +95,23 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
-    # Country dropdown: keep a generous height so all options are visible.
+    # Smaller font on indication + country dropdowns so all items fit in the
+    # dropdown viewport without scrolling (fixes CLL being cut off when Other
+    # is selected). Targets both the closed widget and the open list.
     st.markdown("""
 <style>
+/* Smaller font on the closed selectbox widget */
+div[data-testid="stSelectbox"] > div > div {
+    font-size: 0.82rem !important;
+}
+/* Smaller, more compact items in the open dropdown list */
+[data-baseweb="popover"] [role="option"] {
+    font-size: 0.82rem !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    min-height: 28px !important;
+    line-height: 1.3 !important;
+}
 [data-baseweb="popover"] ul[role="listbox"] {
     max-height: 600px !important;
 }
@@ -138,18 +152,15 @@ def main():
 
     # --- 1. Choose what you need ---
     st.subheader("1. Choose what you need")
-    # Indication uses st.radio (horizontal) so all options are always visible —
-    # no dropdown scrolling, CLL always on screen, Other stays at the bottom.
-    ind_label_selected = st.radio(
-        "Indication",
-        options=indication_labels,
-        index=0,   # Default: CLL (first item)
-        horizontal=True,
-        help="Select the disease or indication. Choose 'Other' to type any other cancer.",
-    )
-    ind_index = indication_labels.index(ind_label_selected)
-
     col1, col2, col3 = st.columns([2, 2, 1])
+    with col1:
+        ind_label_selected = st.selectbox(
+            "Indication",
+            options=indication_labels,
+            index=0,
+            help="Select the disease or indication. Choose 'Other (specify below)' to type any other cancer.",
+        )
+        ind_index = indication_labels.index(ind_label_selected)
     with col2:
         country_label_selected = st.selectbox(
             "Country / Geography",
@@ -158,7 +169,6 @@ def main():
             help="Geography for the data. Click the dropdown and type to search (e.g. 'US', 'Japan', 'Canada').",
         )
         country_index = country_labels.index(country_label_selected)
-        st.caption("💡 Type to search — e.g. **US**, **Japan**, **Canada**")
     indication_label = indication_labels[ind_index]
     indication_id = indication_ids[ind_index]
     country_label = country_labels[country_index]
