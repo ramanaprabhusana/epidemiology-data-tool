@@ -45,17 +45,13 @@ def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "") -> bytes:
 
 _UI_OPTIONS_FALLBACK = {
     "indications": [
-        # "Other" is first so that when it's selected, CLL (index 1) is still
-        # visible at the top of the dropdown list. Streamlit scrolls the list
-        # to show the selected item; with Other at 0 and CLL at 1, every
-        # possible selection keeps CLL within the visible range.
-        {"id": "OTHER",   "label": "Other (specify below)",              "config_suffix": ""},
         {"id": "cll",     "label": "CLL (Chronic Lymphocytic Leukemia)", "config_suffix": "cll"},
         {"id": "hodgkin", "label": "Hodgkin Lymphoma",                   "config_suffix": "hodgkin"},
         {"id": "nhl",     "label": "Non-Hodgkin Lymphoma (NHL)",          "config_suffix": "nhl"},
         {"id": "gastric", "label": "Gastric Cancer (GC)",                "config_suffix": "gc"},
         {"id": "ovarian", "label": "Ovarian Cancer",                     "config_suffix": "ovarian"},
         {"id": "prostate","label": "Prostate Cancer",                    "config_suffix": "prostate"},
+        {"id": "OTHER",   "label": "Other (specify below)",              "config_suffix": ""},
     ],
     "countries": [
         {"id": "US",    "label": "United States"},
@@ -99,19 +95,10 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
-    # --- Dropdown UX fix ---
-    # Streamlit's baseweb Select calls scrollTop on the listbox after rendering to
-    # position the currently-selected item. When "Other" (last item) is selected,
-    # CLL (first item) scrolls out of view.
-    #
-    # Fix: CSS `overflow: clip` (unlike `overflow: hidden`) also forbids programmatic
-    # scrollTop changes per the CSS spec, so the baseweb JS cannot scroll the list.
-    # Combined with a generous max-height (all 7-8 items fit in ~320px), every option
-    # is always visible without needing to scroll.
+    # Country dropdown: keep a generous height so all options are visible.
     st.markdown("""
 <style>
 [data-baseweb="popover"] ul[role="listbox"] {
-    overflow: clip !important;
     max-height: 600px !important;
 }
 </style>
@@ -151,18 +138,18 @@ def main():
 
     # --- 1. Choose what you need ---
     st.subheader("1. Choose what you need")
+    # Indication uses st.radio (horizontal) so all options are always visible —
+    # no dropdown scrolling, CLL always on screen, Other stays at the bottom.
+    ind_label_selected = st.radio(
+        "Indication",
+        options=indication_labels,
+        index=0,   # Default: CLL (first item)
+        horizontal=True,
+        help="Select the disease or indication. Choose 'Other' to type any other cancer.",
+    )
+    ind_index = indication_labels.index(ind_label_selected)
+
     col1, col2, col3 = st.columns([2, 2, 1])
-    with col1:
-        # Use label strings as options so Streamlit renders a type-to-search box.
-        # This lets users type "CLL", "Lung", etc. to find the indication instantly.
-        ind_label_selected = st.selectbox(
-            "Indication",
-            options=indication_labels,
-            index=1,   # Default to CLL (index 1; "Other" is index 0)
-            help="Disease or indication. Click the dropdown and type to search (e.g. 'CLL', 'Lung', 'Breast').",
-        )
-        ind_index = indication_labels.index(ind_label_selected)
-        st.caption("💡 Click and type to search — e.g. type **CLL** to jump straight to it")
     with col2:
         country_label_selected = st.selectbox(
             "Country / Geography",
