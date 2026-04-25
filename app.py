@@ -14,6 +14,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import streamlit as st
+import streamlit.components.v1 as _components
 import yaml
 import pandas as pd
 
@@ -95,11 +96,13 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
-    # Make selectbox dropdowns tall enough to show all options without scrolling.
-    # Streamlit 1.x renders the dropdown as a baseweb popover portal outside the main DOM.
+    # --- Dropdown UX fixes ---
+    # 1. CSS: expand the dropdown height so all options fit without scrolling.
+    # 2. JS (via components.html): MutationObserver scrolls every listbox to the
+    #    top the instant it appears, so the first option (CLL) is always visible
+    #    regardless of which item was previously selected.
     st.markdown("""
 <style>
-/* Expand dropdown list so all items are visible without scrolling */
 [data-baseweb="popover"] ul[role="listbox"] {
     max-height: 700px !important;
     overflow-y: auto !important;
@@ -108,12 +111,35 @@ def main():
     max-height: 700px !important;
     overflow-y: auto !important;
 }
-/* Search/filter input inside the dropdown */
-[data-baseweb="popover"] input[type="text"] {
-    font-size: 0.9rem !important;
-}
 </style>
 """, unsafe_allow_html=True)
+    _components.html("""
+<script>
+(function() {
+    const scrollToTop = (node) => {
+        const lists = node.querySelectorAll
+            ? node.querySelectorAll('[role="listbox"]')
+            : [];
+        lists.forEach(el => { el.scrollTop = 0; });
+        if (node.getAttribute && node.getAttribute('role') === 'listbox') {
+            node.scrollTop = 0;
+        }
+    };
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((m) => {
+            m.addedNodes.forEach((n) => {
+                if (n.nodeType === 1) {
+                    // Give baseweb a tick to finish rendering, then scroll to top
+                    setTimeout(() => scrollToTop(n), 0);
+                    setTimeout(() => scrollToTop(n), 50);
+                }
+            });
+        });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+""", height=0)
 
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
