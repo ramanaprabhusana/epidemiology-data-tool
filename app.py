@@ -129,6 +129,43 @@ div[data-testid="stSelectbox"] > div > div {
 </style>
 """, unsafe_allow_html=True)
 
+    # Fix baseweb virtual-list scroll bug: when "Other" (last item) is selected,
+    # baseweb skips rendering item 0 (CLL). Dispatching a Home keydown on the UL
+    # resets the virtual list's scroll offset to 0 so all items appear.
+    # Uses window.parent to reach the main page from inside the component iframe.
+    import streamlit.components.v1 as _components
+    _components.html("""
+<script>
+(function() {
+  var parentDoc;
+  try { parentDoc = window.parent.document; } catch(e) { return; }
+
+  function fixVirtualList() {
+    var popover = parentDoc.querySelector('[data-baseweb="popover"]');
+    if (!popover) return;
+    var ul = popover.querySelector('ul');
+    if (!ul) return;
+    var firstLi = ul.querySelector('li');
+    if (!firstLi) return;
+    // If first rendered item is NOT at top:0px, CLL is being skipped — fix it
+    var top = parseFloat(window.parent.getComputedStyle(firstLi).top) || 0;
+    if (top > 1) {
+      ul.focus();
+      var ev = new window.parent.KeyboardEvent('keydown', {
+        key: 'Home', keyCode: 36, which: 36, bubbles: true, cancelable: true
+      });
+      ul.dispatchEvent(ev);
+    }
+  }
+
+  var observer = new MutationObserver(function() {
+    fixVirtualList();
+  });
+  observer.observe(parentDoc.body, { childList: true, subtree: true });
+})();
+</script>
+""", height=0)
+
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
     st.markdown("**Get data** for an indication and country. Use the output files for analysis, dashboards, or reporting.")
