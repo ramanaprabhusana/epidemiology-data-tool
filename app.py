@@ -14,7 +14,6 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import streamlit as st
-import streamlit.components.v1 as _components
 import yaml
 import pandas as pd
 
@@ -96,50 +95,23 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
-    # --- Dropdown UX fixes ---
-    # 1. CSS: expand the dropdown height so all options fit without scrolling.
-    # 2. JS (via components.html): MutationObserver scrolls every listbox to the
-    #    top the instant it appears, so the first option (CLL) is always visible
-    #    regardless of which item was previously selected.
+    # --- Dropdown UX fix ---
+    # Streamlit's baseweb Select calls scrollTop on the listbox after rendering to
+    # position the currently-selected item. When "Other" (last item) is selected,
+    # CLL (first item) scrolls out of view.
+    #
+    # Fix: CSS `overflow: clip` (unlike `overflow: hidden`) also forbids programmatic
+    # scrollTop changes per the CSS spec, so the baseweb JS cannot scroll the list.
+    # Combined with a generous max-height (all 7-8 items fit in ~320px), every option
+    # is always visible without needing to scroll.
     st.markdown("""
 <style>
 [data-baseweb="popover"] ul[role="listbox"] {
-    max-height: 700px !important;
-    overflow-y: auto !important;
-}
-[data-baseweb="popover"] [data-baseweb="menu"] {
-    max-height: 700px !important;
-    overflow-y: auto !important;
+    overflow: clip !important;
+    max-height: 600px !important;
 }
 </style>
 """, unsafe_allow_html=True)
-    _components.html("""
-<script>
-(function() {
-    const scrollToTop = (node) => {
-        const lists = node.querySelectorAll
-            ? node.querySelectorAll('[role="listbox"]')
-            : [];
-        lists.forEach(el => { el.scrollTop = 0; });
-        if (node.getAttribute && node.getAttribute('role') === 'listbox') {
-            node.scrollTop = 0;
-        }
-    };
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((m) => {
-            m.addedNodes.forEach((n) => {
-                if (n.nodeType === 1) {
-                    // Give baseweb a tick to finish rendering, then scroll to top
-                    setTimeout(() => scrollToTop(n), 0);
-                    setTimeout(() => scrollToTop(n), 50);
-                }
-            });
-        });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-})();
-</script>
-""", height=0)
 
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
