@@ -95,25 +95,36 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
-    # Smaller font on indication + country dropdowns so all items fit in the
-    # dropdown viewport without scrolling (fixes CLL being cut off when Other
-    # is selected). Targets both the closed widget and the open list.
+    # Fix: when "Other" is selected and the dropdown reopens, baseweb scrolls
+    # to show "Other" (item 7) which pushes CLL (item 1) off the top.
+    # Root cause: 7 items × 40px = 280px but container only shows ~246px
+    # (container 282px minus ~36px search box). Fix: force item height to 34px
+    # so 7 × 34px = 238px < 246px — all items fit without any scroll.
+    # Also expand the container max-height for extra headroom.
     st.markdown("""
 <style>
 /* Smaller font on the closed selectbox widget */
 div[data-testid="stSelectbox"] > div > div {
     font-size: 0.82rem !important;
 }
-/* Smaller, more compact items in the open dropdown list */
+/* Force each dropdown item to 34px so all 7 fit without scrolling.
+   baseweb sets height:40px via its own CSS; we must override height, not
+   just min-height (min-height has no effect when height is already set). */
 [data-baseweb="popover"] [role="option"] {
     font-size: 0.82rem !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    min-height: 28px !important;
-    line-height: 1.3 !important;
+    height: 34px !important;
+    min-height: unset !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    line-height: 1.25 !important;
+    box-sizing: border-box !important;
 }
-[data-baseweb="popover"] ul[role="listbox"] {
-    max-height: 600px !important;
+/* Expand the dropdown container so 7 × 34px = 238px fits comfortably */
+[data-baseweb="popover"] [data-baseweb="menu"],
+[data-baseweb="popover"] ul[role="listbox"],
+[data-baseweb="popover"] > div > div {
+    max-height: 400px !important;
+    overflow-y: auto !important;
 }
 </style>
 """, unsafe_allow_html=True)
