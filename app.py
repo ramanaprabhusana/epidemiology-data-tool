@@ -119,7 +119,7 @@ div[data-testid="stSelectbox"] > div > div {
     line-height: 1.25 !important;
     box-sizing: border-box !important;
 }
-/* Expand the dropdown container so 7 × 34px = 238px fits comfortably */
+/* Expand the dropdown container */
 [data-baseweb="popover"] [data-baseweb="menu"],
 [data-baseweb="popover"] ul[role="listbox"],
 [data-baseweb="popover"] > div > div {
@@ -128,43 +128,6 @@ div[data-testid="stSelectbox"] > div > div {
 }
 </style>
 """, unsafe_allow_html=True)
-
-    # Fix baseweb virtual-list scroll bug: when "Other" (last item) is selected,
-    # baseweb skips rendering item 0 (CLL). Dispatching a Home keydown on the UL
-    # resets the virtual list's scroll offset to 0 so all items appear.
-    # Uses window.parent to reach the main page from inside the component iframe.
-    import streamlit.components.v1 as _components
-    _components.html("""
-<script>
-(function() {
-  var parentDoc;
-  try { parentDoc = window.parent.document; } catch(e) { return; }
-
-  function fixVirtualList() {
-    var popover = parentDoc.querySelector('[data-baseweb="popover"]');
-    if (!popover) return;
-    var ul = popover.querySelector('ul');
-    if (!ul) return;
-    var firstLi = ul.querySelector('li');
-    if (!firstLi) return;
-    // If first rendered item is NOT at top:0px, CLL is being skipped — fix it
-    var top = parseFloat(window.parent.getComputedStyle(firstLi).top) || 0;
-    if (top > 1) {
-      ul.focus();
-      var ev = new window.parent.KeyboardEvent('keydown', {
-        key: 'Home', keyCode: 36, which: 36, bubbles: true, cancelable: true
-      });
-      ul.dispatchEvent(ev);
-    }
-  }
-
-  var observer = new MutationObserver(function() {
-    fixVirtualList();
-  });
-  observer.observe(parentDoc.body, { childList: true, subtree: true });
-})();
-</script>
-""", height=0)
 
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
@@ -201,13 +164,30 @@ div[data-testid="stSelectbox"] > div > div {
     # --- 1. Choose what you need ---
     st.subheader("1. Choose what you need")
     col1, col2, col3 = st.columns([2, 2, 1])
+
+    # Why the dummy item?  The Country dropdown has 8 items (8×40px=320>282px
+    # container) so baseweb's virtual list allows scrolling and renders ALL
+    # items, including item-0.  The Indication dropdown only has 7 items
+    # (7×40=280<282) so baseweb thinks nothing overflows, sets no scroll, and
+    # its virtual renderer skips item-0 (CLL) when the last item (Other) is
+    # selected — CLL disappears from the open dropdown.  Adding a hidden 8th
+    # dummy pushes the total to 8×40=320px, baseweb enables scrolling and
+    # renders all items including CLL.  The dummy is hidden by CSS and
+    # intercepted in Python so it can never actually be used.
+    _IND_DUMMY = "​"          # zero-width space — unique, invisible label
+    ind_options_ui = indication_labels + [_IND_DUMMY]
+
     with col1:
         ind_label_selected = st.selectbox(
             "Indication",
-            options=indication_labels,
+            options=ind_options_ui,
             index=0,
+            format_func=lambda x: "" if x == _IND_DUMMY else x,
             help="Select the disease or indication. Choose 'Other (specify below)' to type any other cancer.",
         )
+        # If the dummy is somehow selected, fall back to CLL
+        if ind_label_selected == _IND_DUMMY:
+            ind_label_selected = indication_labels[0]
         ind_index = indication_labels.index(ind_label_selected)
     with col2:
         country_label_selected = st.selectbox(
