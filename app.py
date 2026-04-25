@@ -43,6 +43,14 @@ def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "") -> bytes:
     return buf.read()
 
 
+# Sentinel appended to BOTH selectbox option lists so baseweb's virtual list
+# sees overflow (N+1 items × 40px > 282px container) and renders ALL items,
+# including item-0 (CLL / United States). Without this, a 7-item list totals
+# 280px < 282px → no overflow → baseweb skips item-0 from the DOM when the
+# last item is selected. Hidden by CSS (li:last-child { height:0 }) and
+# intercepted in Python — can never reach the pipeline.
+_SELECTBOX_DUMMY = "​"   # zero-width space: unique, invisible
+
 _UI_OPTIONS_FALLBACK = {
     "indications": [
         {"id": "cll",     "label": "CLL (Chronic Lymphocytic Leukemia)", "config_suffix": "cll"},
@@ -95,36 +103,35 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
-    # Fix: when "Other" is selected and the dropdown reopens, baseweb scrolls
-    # to show "Other" (item 7) which pushes CLL (item 1) off the top.
-    # Root cause: 7 items × 40px = 280px but container only shows ~246px
-    # (container 282px minus ~36px search box). Fix: force item height to 34px
-    # so 7 × 34px = 238px < 246px — all items fit without any scroll.
-    # Also expand the container max-height for extra headroom.
+    # Smaller font on both closed selectbox widgets and their open dropdown
+    # items (user request). Also hides the dummy sentinel item appended to
+    # each list (see _SELECTBOX_DUMMY above) via li:last-child.
     st.markdown("""
 <style>
-/* Smaller font on the closed selectbox widget */
+/* Smaller font on closed selectbox widget */
 div[data-testid="stSelectbox"] > div > div {
     font-size: 0.82rem !important;
 }
-/* Force each dropdown item to 34px so all 7 fit without scrolling.
-   baseweb sets height:40px via its own CSS; we must override height, not
-   just min-height (min-height has no effect when height is already set). */
+/* Smaller font inside open dropdown list */
 [data-baseweb="popover"] [role="option"] {
     font-size: 0.82rem !important;
-    height: 34px !important;
-    min-height: unset !important;
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    line-height: 1.25 !important;
-    box-sizing: border-box !important;
 }
-/* Expand the dropdown container */
-[data-baseweb="popover"] [data-baseweb="menu"],
-[data-baseweb="popover"] ul[role="listbox"],
-[data-baseweb="popover"] > div > div {
+/* Extra headroom so long labels are never clipped */
+[data-baseweb="popover"] [data-baseweb="menu"] {
     max-height: 400px !important;
-    overflow-y: auto !important;
+}
+/* Hide the dummy sentinel (zero-width space) appended as the last item in
+   each selectbox.  It exists only to push total list height above 282 px so
+   baseweb enables virtual-list overflow and renders item-0 correctly.
+   Both selectboxes have a dummy as their final entry, so li:last-child
+   safely targets only the dummy in whichever dropdown is currently open. */
+[data-baseweb="popover"] ul li:last-child {
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -165,37 +172,44 @@ div[data-testid="stSelectbox"] > div > div {
     st.subheader("1. Choose what you need")
     col1, col2, col3 = st.columns([2, 2, 1])
 
-    # Why the dummy item?  The Country dropdown has 8 items (8×40px=320>282px
-    # container) so baseweb's virtual list allows scrolling and renders ALL
-    # items, including item-0.  The Indication dropdown only has 7 items
-    # (7×40=280<282) so baseweb thinks nothing overflows, sets no scroll, and
-    # its virtual renderer skips item-0 (CLL) when the last item (Other) is
-    # selected — CLL disappears from the open dropdown.  Adding a hidden 8th
-    # dummy pushes the total to 8×40=320px, baseweb enables scrolling and
-    # renders all items including CLL.  The dummy is hidden by CSS and
-    # intercepted in Python so it can never actually be used.
-    _IND_DUMMY = "​"          # zero-width space — unique, invisible label
-    ind_options_ui = indication_labels + [_IND_DUMMY]
+    # Resolve safe fallback labels by id (robust to YAML reordering)
+    _cll_label = next(
+        (x["label"] for x in indications if x.get("id") == "cll"),
+        indication_labels[0],
+    )
+    _us_label = next(
+        (x["label"] for x in countries if x.get("id") == "US"),
+        country_labels[0],
+    )
+
+    # Both selectboxes get a dummy sentinel as their final item so that
+    # li:last-child CSS can hide them symmetrically (see CSS block above).
+    ind_options_ui = indication_labels + [_SELECTBOX_DUMMY]
+    cty_options_ui = country_labels + [_SELECTBOX_DUMMY]
 
     with col1:
         ind_label_selected = st.selectbox(
             "Indication",
             options=ind_options_ui,
             index=0,
-            format_func=lambda x: "" if x == _IND_DUMMY else x,
+            format_func=lambda x: "" if x == _SELECTBOX_DUMMY else x,
+            key="ind_selectbox",
             help="Select the disease or indication. Choose 'Other (specify below)' to type any other cancer.",
         )
-        # If the dummy is somehow selected, fall back to CLL
-        if ind_label_selected == _IND_DUMMY:
-            ind_label_selected = indication_labels[0]
+        if ind_label_selected == _SELECTBOX_DUMMY:
+            ind_label_selected = _cll_label
         ind_index = indication_labels.index(ind_label_selected)
     with col2:
         country_label_selected = st.selectbox(
             "Country / Geography",
-            options=country_labels,
+            options=cty_options_ui,
             index=0,
+            format_func=lambda x: "" if x == _SELECTBOX_DUMMY else x,
+            key="cty_selectbox",
             help="Geography for the data. Click the dropdown and type to search (e.g. 'US', 'Japan', 'Canada').",
         )
+        if country_label_selected == _SELECTBOX_DUMMY:
+            country_label_selected = _us_label
         country_index = country_labels.index(country_label_selected)
     indication_label = indication_labels[ind_index]
     indication_id = indication_ids[ind_index]
