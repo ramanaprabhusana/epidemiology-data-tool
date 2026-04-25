@@ -45,13 +45,17 @@ def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "") -> bytes:
 
 _UI_OPTIONS_FALLBACK = {
     "indications": [
+        # "Other" is first so that when it's selected, CLL (index 1) is still
+        # visible at the top of the dropdown list. Streamlit scrolls the list
+        # to show the selected item; with Other at 0 and CLL at 1, every
+        # possible selection keeps CLL within the visible range.
+        {"id": "OTHER",   "label": "Other (specify below)",              "config_suffix": ""},
         {"id": "cll",     "label": "CLL (Chronic Lymphocytic Leukemia)", "config_suffix": "cll"},
         {"id": "hodgkin", "label": "Hodgkin Lymphoma",                   "config_suffix": "hodgkin"},
         {"id": "nhl",     "label": "Non-Hodgkin Lymphoma (NHL)",          "config_suffix": "nhl"},
         {"id": "gastric", "label": "Gastric Cancer (GC)",                "config_suffix": "gc"},
         {"id": "ovarian", "label": "Ovarian Cancer",                     "config_suffix": "ovarian"},
         {"id": "prostate","label": "Prostate Cancer",                    "config_suffix": "prostate"},
-        {"id": "OTHER",   "label": "Other (specify below)",              "config_suffix": ""},
     ],
     "countries": [
         {"id": "US",    "label": "United States"},
@@ -154,7 +158,7 @@ def main():
         ind_label_selected = st.selectbox(
             "Indication",
             options=indication_labels,
-            index=0,
+            index=1,   # Default to CLL (index 1; "Other" is index 0)
             help="Disease or indication. Click the dropdown and type to search (e.g. 'CLL', 'Lung', 'Breast').",
         )
         ind_index = indication_labels.index(ind_label_selected)

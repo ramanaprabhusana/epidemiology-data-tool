@@ -3,6 +3,9 @@
 # Add or remove countries as needed for the pipeline.
 
 indications:
+  - id: OTHER
+    label: "Other (specify below)"
+    config_suffix: ""
   - id: cll
     label: "CLL (Chronic Lymphocytic Leukemia)"
     config_suffix: "cll"
@@ -21,9 +24,6 @@ indications:
   - id: prostate
     label: "Prostate Cancer"
     config_suffix: "prostate"
-  - id: OTHER
-    label: "Other (specify below)"
-    config_suffix: ""
 
 # Countries/geographies the pipeline supports (evidence can be filtered or tagged by country).
 countries:
