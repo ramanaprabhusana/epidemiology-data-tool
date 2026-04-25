@@ -131,21 +131,24 @@ def main():
     st.subheader("1. Choose what you need")
     col1, col2, col3 = st.columns([2, 2, 1])
     with col1:
-        ind_index = st.selectbox(
+        # Use label strings as options so Streamlit renders a type-to-search box.
+        # This lets users type "CLL", "Lung", etc. to find the indication instantly
+        # and avoids the scroll-cut-off issue when "Other" is selected.
+        ind_label_selected = st.selectbox(
             "Indication",
-            range(len(indication_labels)),
-            format_func=lambda i: indication_labels[i],
+            options=indication_labels,
             index=0,
-            help="Disease or indication (e.g. CLL, Lung Cancer).",
+            help="Disease or indication. Type to search (e.g. 'CLL', 'Lung', 'Breast').",
         )
+        ind_index = indication_labels.index(ind_label_selected)
     with col2:
-        country_index = st.selectbox(
+        country_label_selected = st.selectbox(
             "Country / Geography",
-            range(len(country_labels)),
-            format_func=lambda i: country_labels[i],
+            options=country_labels,
             index=0,
-            help="Geography for the data (e.g. US, UK).",
+            help="Geography for the data. Type to search (e.g. 'US', 'Japan', 'Canada').",
         )
+        country_index = country_labels.index(country_label_selected)
     indication_label = indication_labels[ind_index]
     indication_id = indication_ids[ind_index]
     country_label = country_labels[country_index]
