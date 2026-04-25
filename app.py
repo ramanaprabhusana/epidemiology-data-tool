@@ -95,6 +95,26 @@ def main():
     if "last_export_dashboard" not in st.session_state:
         st.session_state.last_export_dashboard = True
 
+    # Make selectbox dropdowns tall enough to show all options without scrolling.
+    # Streamlit 1.x renders the dropdown as a baseweb popover portal outside the main DOM.
+    st.markdown("""
+<style>
+/* Expand dropdown list so all items are visible without scrolling */
+[data-baseweb="popover"] ul[role="listbox"] {
+    max-height: 700px !important;
+    overflow-y: auto !important;
+}
+[data-baseweb="popover"] [data-baseweb="menu"] {
+    max-height: 700px !important;
+    overflow-y: auto !important;
+}
+/* Search/filter input inside the dropdown */
+[data-baseweb="popover"] input[type="text"] {
+    font-size: 0.9rem !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
     # --- Header: purpose of the tool ---
     st.title("Epidemiology Data Tool")
     st.markdown("**Get data** for an indication and country. Use the output files for analysis, dashboards, or reporting.")
@@ -132,23 +152,24 @@ def main():
     col1, col2, col3 = st.columns([2, 2, 1])
     with col1:
         # Use label strings as options so Streamlit renders a type-to-search box.
-        # This lets users type "CLL", "Lung", etc. to find the indication instantly
-        # and avoids the scroll-cut-off issue when "Other" is selected.
+        # This lets users type "CLL", "Lung", etc. to find the indication instantly.
         ind_label_selected = st.selectbox(
             "Indication",
             options=indication_labels,
             index=0,
-            help="Disease or indication. Type to search (e.g. 'CLL', 'Lung', 'Breast').",
+            help="Disease or indication. Click the dropdown and type to search (e.g. 'CLL', 'Lung', 'Breast').",
         )
         ind_index = indication_labels.index(ind_label_selected)
+        st.caption("💡 Click and type to search — e.g. type **CLL** to jump straight to it")
     with col2:
         country_label_selected = st.selectbox(
             "Country / Geography",
             options=country_labels,
             index=0,
-            help="Geography for the data. Type to search (e.g. 'US', 'Japan', 'Canada').",
+            help="Geography for the data. Click the dropdown and type to search (e.g. 'US', 'Japan', 'Canada').",
         )
         country_index = country_labels.index(country_label_selected)
+        st.caption("💡 Type to search — e.g. **US**, **Japan**, **Canada**")
     indication_label = indication_labels[ind_index]
     indication_id = indication_ids[ind_index]
     country_label = country_labels[country_index]
