@@ -1543,49 +1543,49 @@ metrics:
     tier: gold
     confidence: high
     category: Stage Distribution
-  stage_localized_2013_2016:
-    value: 76.0
+  stage_localized_2016_2022:
+    value: 69.0
     unit: '%'
-    year: 2013-2016
+    year: 2016-2022
     geography: US
     population: All males
-    definition: '% prostate cancer cases - Localized (2013-2016)'
+    definition: '% prostate cancer cases - Localized (2016-2022)'
     source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
     confidence: high
     category: Stage Distribution
-  stage_regional_2013_2016:
-    value: 12.0
+  stage_regional_2016_2022:
+    value: 14.0
     unit: '%'
-    year: 2013-2016
+    year: 2016-2022
     geography: US
     population: All males
-    definition: '% prostate cancer cases - Regional (2013-2016)'
+    definition: '% prostate cancer cases - Regional (2016-2022)'
     source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
     confidence: high
     category: Stage Distribution
-  stage_distant_2013_2016:
+  stage_distant_2016_2022:
+    value: 9.0
+    unit: '%'
+    year: 2016-2022
+    geography: US
+    population: All males
+    definition: '% prostate cancer cases - Distant (2016-2022)'
+    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
+    source_url: https://seer.cancer.gov/statfacts/html/prost.html
+    tier: gold
+    confidence: high
+    category: Stage Distribution
+  stage_unknown_2016_2022:
     value: 8.0
     unit: '%'
-    year: 2013-2016
+    year: 2016-2022
     geography: US
     population: All males
-    definition: '% prostate cancer cases - Distant (2013-2016)'
-    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
-    source_url: https://seer.cancer.gov/statfacts/html/prost.html
-    tier: gold
-    confidence: high
-    category: Stage Distribution
-  stage_unknown_2013_2016:
-    value: 4.0
-    unit: '%'
-    year: 2013-2016
-    geography: US
-    population: All males
-    definition: '% prostate cancer cases - Unknown (2013-2016)'
+    definition: '% prostate cancer cases - Unknown (2016-2022)'
     source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
