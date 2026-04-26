@@ -1450,11 +1450,11 @@ metrics:
   five_year_survival_localized:
     value: 100.0
     unit: percent
-    year: 2013-2019
+    year: 2016-2022
     geography: US
     population: Localized
-    definition: 5-year relative survival - Localized
-    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
+    definition: 5-year relative survival - Localized (2016-2022)
+    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer. National Cancer Institute. Bethesda, MD, 2024 (2016-2022 data)'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
     confidence: high
@@ -1462,35 +1462,35 @@ metrics:
   five_year_survival_regional:
     value: 100.0
     unit: percent
-    year: 2013-2019
+    year: 2016-2022
     geography: US
     population: Regional
-    definition: 5-year relative survival - Regional
-    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
+    definition: 5-year relative survival - Regional (2016-2022)
+    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer. National Cancer Institute. Bethesda, MD, 2024 (2016-2022 data)'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
     confidence: high
     category: Survival
   five_year_survival_distant:
-    value: 34.1
+    value: 37.8
     unit: percent
-    year: 2013-2019
+    year: 2016-2022
     geography: US
     population: Distant
-    definition: 5-year relative survival - Distant
-    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
+    definition: 5-year relative survival - Distant (2016-2022)
+    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer. National Cancer Institute. Bethesda, MD, 2024 (2016-2022 data)'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
     confidence: high
     category: Survival
   five_year_survival_unknown:
-    value: 82.0
+    value: 85.3
     unit: percent
-    year: 2013-2019
+    year: 2016-2022
     geography: US
     population: Unknown
-    definition: 5-year relative survival - Unknown
-    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer'
+    definition: 5-year relative survival - Unknown (2016-2022)
+    source_citation: 'SEER Cancer Stat Facts: Prostate Cancer. National Cancer Institute. Bethesda, MD, 2024 (2016-2022 data)'
     source_url: https://seer.cancer.gov/statfacts/html/prost.html
     tier: gold
     confidence: high
