@@ -276,6 +276,8 @@ div[data-testid="stSelectbox"] > div > div {
                                                      help="Human-readable summary of key numbers, top sources and gaps.")
             include_seer_sheet      = st.checkbox("SEER Trends sheet (Excel)", value=True,
                                                    help="Adds a 'SEER Trends' tab to the consolidated Excel with 1975–2024 incidence / mortality / survival data")
+            include_forecast        = st.checkbox("Forecast projections", value=False,
+                                                   help="Generates forecast CSV with 2018–2029 scenario projections")
         with col_b:
             st.markdown("**Unchecked by default**")
             export_insightace            = st.checkbox("InsightACE format", value=False,
@@ -339,7 +341,7 @@ div[data-testid="stSelectbox"] > div > div {
                     include_tool_ready=include_tool_ready,
                     include_evidence_summary=include_evidence_summary,
                     export_dashboard=False,
-                    include_forecast=False,
+                    include_forecast=include_forecast,
                     use_pubmed=use_pubmed,
                     add_pubmed_stubs=add_pubmed_stubs,
                     export_insightace=export_insightace,
@@ -413,6 +415,7 @@ div[data-testid="stSelectbox"] > div > div {
             "extract_consolidated":"Consolidated Excel workbook (all selected sheets)",
             "tool_ready":          "Tool-ready table",
             "evidence_summary":    "Evidence summary (.md)",
+            "forecast":            "Forecast projections",
             "source_log":          "Source log",
             "reference_links":     "Reference links",
             "insightace_epi":      "InsightACE export",
@@ -462,6 +465,12 @@ div[data-testid="stSelectbox"] > div > div {
             csv_tr = result["tool_ready_df"].to_csv(index=False).encode("utf-8")
             st.download_button("Download tool-ready table (CSV)", data=csv_tr,
                                file_name=f"tool_ready_{suffix}.csv", mime="text/csv", key="dl_tool_ready")
+
+        if "forecast" in paths:
+            fp = Path(paths["forecast"])
+            if fp.exists():
+                st.download_button("Download forecast projections (CSV)", data=fp.read_bytes(),
+                                   file_name=fp.name, mime="text/csv", key="dl_forecast")
 
         if "extract_consolidated" in paths:
             ep = Path(paths["extract_consolidated"])
