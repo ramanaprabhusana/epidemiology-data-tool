@@ -39,6 +39,48 @@ Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Ev
 
 ---
 
+## 2026-04-27
+
+### Streamlit Community Cloud deployment + output options cleanup
+
+**Deployed to:** https://epi-data-tool.streamlit.app/
+- Pushed all local `"Data Pipeline tool"` changes to `ramanaprabhusana/epidemiology-data-tool` (main branch)
+- Streamlit Community Cloud auto-deployed from GitHub on each push
+
+**Changes to `app.py`:**
+
+1. **Removed `export_dashboard` checkbox** — Dashboard BI/Tableau export (SQLite + folder) is unreliable on Community Cloud's ephemeral filesystem; hardcoded `export_dashboard=False`
+2. **Removed `include_forecast` initially, then restored** — Forecast was incorrectly removed based on the pre-fix plan; it was always working independently. Restored as opt-in checkbox (unchecked by default) in left column of Output options
+3. **Removed `last_export_dashboard` from session state** — no longer needed
+
+**Changes to `src/pipeline/runner.py`:**
+
+1. **Decoupled `export_insights_summary` from `export_dashboard` block** — "Insights summary" was nested inside `if export_dashboard:`, so it never ran after dashboard was hardcoded to False. Moved to its own independent block so the checkbox works correctly
+
+**Output options audit — all 14 options verified working:**
+
+| Option | Default | Status |
+|---|---|---|
+| Evidence by Metric | ✅ on | ✅ Works |
+| KPI Scorecard | ✅ on | ✅ Works |
+| Consolidated Excel workbook | ✅ on | ✅ Works |
+| Tool-ready table | ✅ on | ✅ Works |
+| Evidence summary (.md) | ✅ on | ✅ Works |
+| SEER Trends sheet | ✅ on | ✅ Works |
+| Forecast projections | off | ✅ Works |
+| InsightACE format | off | ✅ Works |
+| Insights summary | off | ✅ Works (fixed) |
+| Source log | off | ✅ Works |
+| Reference links | off | ✅ Works |
+| Reconciliation table | off | ✅ Works |
+| KPI conflicts | off | ✅ Works |
+| White-space summary | off | ✅ Works |
+| Validation report | off | ✅ Works |
+
+**Tests:** 24/24 passed.
+
+---
+
 ## 2026-04-18 (and follow-up)
 
 ### Non-Hodgkin lymphoma: sparse evidence rows (curated not applied)
