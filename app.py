@@ -111,8 +111,6 @@ def main():
         st.session_state.last_run = None
     if "last_result" not in st.session_state:
         st.session_state.last_result = None
-    if "last_export_dashboard" not in st.session_state:
-        st.session_state.last_export_dashboard = True
 
     # Smaller font on both closed selectbox widgets and their open dropdown
     # items (user request). Also hides the dummy sentinel item appended to
@@ -278,10 +276,6 @@ div[data-testid="stSelectbox"] > div > div {
                                                      help="Human-readable summary of key numbers, top sources and gaps.")
             include_seer_sheet      = st.checkbox("SEER Trends sheet (Excel)", value=True,
                                                    help="Adds a 'SEER Trends' tab to the consolidated Excel with 1975–2024 incidence / mortality / survival data")
-            include_forecast        = st.checkbox("Forecast projections", value=True,
-                                                   help="Generates forecast CSV with 2018–2029 scenario projections")
-            export_dashboard        = st.checkbox("Dashboard export (BI / Tableau)", value=True,
-                                                   help="Creates output/dashboard/ folder with aggregated CSVs and SQLite DB for Power BI or Tableau")
         with col_b:
             st.markdown("**Unchecked by default**")
             export_insightace            = st.checkbox("InsightACE format", value=False,
@@ -344,8 +338,8 @@ div[data-testid="stSelectbox"] > div > div {
                     include_consolidated_xlsx=include_consolidated_xlsx,
                     include_tool_ready=include_tool_ready,
                     include_evidence_summary=include_evidence_summary,
-                    export_dashboard=export_dashboard,
-                    include_forecast=include_forecast,
+                    export_dashboard=False,
+                    include_forecast=False,
                     use_pubmed=use_pubmed,
                     add_pubmed_stubs=add_pubmed_stubs,
                     export_insightace=export_insightace,
@@ -371,7 +365,6 @@ div[data-testid="stSelectbox"] > div > div {
                 st.session_state.last_paths = {
                     str(Path(p).resolve()) for p in result.get("paths", {}).values() if p
                 }
-                st.session_state.last_export_dashboard = export_dashboard
 
     # Render from session_state so download-button reruns do not hide this block
     result = st.session_state.get("last_result")
@@ -420,7 +413,6 @@ div[data-testid="stSelectbox"] > div > div {
             "extract_consolidated":"Consolidated Excel workbook (all selected sheets)",
             "tool_ready":          "Tool-ready table",
             "evidence_summary":    "Evidence summary (.md)",
-            "forecast":            "Forecast projections",
             "source_log":          "Source log",
             "reference_links":     "Reference links",
             "insightace_epi":      "InsightACE export",
@@ -429,7 +421,6 @@ div[data-testid="stSelectbox"] > div > div {
             "kpi_conflicts":       "KPI conflicts",
             "white_space_summary": "White-space summary",
             "validation_report":   "Validation report",
-            "dashboard_dir":       "Dashboard pack (Power BI / Tableau)",
         }
         st.markdown("**Files included in the ZIP** (based on your Output options selection):")
         for key, label in _OUTPUT_LABELS.items():
@@ -472,12 +463,6 @@ div[data-testid="stSelectbox"] > div > div {
             st.download_button("Download tool-ready table (CSV)", data=csv_tr,
                                file_name=f"tool_ready_{suffix}.csv", mime="text/csv", key="dl_tool_ready")
 
-        if "forecast" in paths:
-            fp = Path(paths["forecast"])
-            if fp.exists():
-                st.download_button("Download forecast projections (CSV)", data=fp.read_bytes(),
-                                   file_name=fp.name, mime="text/csv", key="dl_forecast")
-
         if "extract_consolidated" in paths:
             ep = Path(paths["extract_consolidated"])
             if ep.exists():
@@ -494,7 +479,6 @@ div[data-testid="stSelectbox"] > div > div {
         Use the output files for your work:
         - **Unzip** — Extract the ZIP, then open the files from the folder you chose (or from Downloads).
         - **Open in Excel** — Open any CSV, or use the consolidated Excel workbook for all sheets in one file.
-        - **Use in Power BI or Tableau** — Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
         - **Feed another system** — Use the tool-ready or InsightACE CSV as input for your models or platform.
         - **Share** — Send the ZIP or individual files to a colleague.
         - **Check quality** — Use the KPI scorecard to see coverage and gaps; add evidence and run again if needed.
