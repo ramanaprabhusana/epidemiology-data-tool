@@ -472,7 +472,17 @@ def run_pipeline(
             forecast_df.to_csv(fp, index=False)
             result["paths"]["forecast"] = str(fp)
 
-        # 4b) Optional: dashboard layer + insights
+        # 4b) Insights summary — runs independently of dashboard
+        if export_insights_summary:
+            from ..analytics.insights import build_insights_summary
+            kpi_df = result["kpi_df"]
+            evidence_df_for_analytics = result["evidence_df"]
+            insights_df = build_insights_summary(evidence_df_for_analytics, kpi_df=kpi_df, indication=indication)
+            ip = output_dir / f"insights_summary_{file_suffix}.csv"
+            insights_df.to_csv(ip, index=False)
+            result["paths"]["insights_summary"] = str(ip)
+
+        # 4c) Optional: dashboard layer (BI export)
         if export_dashboard:
             from ..analytics.insights import build_insights_summary
             from ..dashboard.export import export_dashboard_layer
@@ -481,12 +491,7 @@ def run_pipeline(
             dashboard_dir.mkdir(parents=True, exist_ok=True)
             kpi_df = result["kpi_df"]
             evidence_df_for_analytics = result["evidence_df"]
-
             insights_df = build_insights_summary(evidence_df_for_analytics, kpi_df=kpi_df, indication=indication)
-            if export_insights_summary:
-                ip = output_dir / f"insights_summary_{file_suffix}.csv"
-                insights_df.to_csv(ip, index=False)
-                result["paths"]["insights_summary"] = str(ip)
 
             tool_ready_df = result["tool_ready_df"]
             insightace_epi_df = build_insightace_epidemiology_table(tool_rows, scenario_label="High")
