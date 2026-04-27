@@ -23,22 +23,33 @@ from src.pipeline.runner import run_pipeline
 _ZIP_ALLOWED_EXT = (".csv", ".xlsx", ".db", ".md")
 
 
-def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "") -> bytes:
-    """Zip output files for the given suffix (indication + country) plus dashboard/* files."""
+def _build_outputs_zip_bytes(output_dir: Path, suffix: str = "",
+                             allowed_paths: set = None) -> bytes:
+    """Zip only the files the user selected (allowed_paths), plus any dashboard folder files."""
     output_dir = Path(output_dir)
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
         if output_dir.is_dir():
             for path in sorted(output_dir.iterdir()):
-                if path.is_file() and any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
-                    if not suffix or suffix in path.name:
-                        zf.write(path, path.name)
+                if not path.is_file():
+                    continue
+                if not any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
+                    continue
+                # If allowed_paths is provided, only include files the user selected
+                if allowed_paths is not None:
+                    if str(path.resolve()) not in allowed_paths:
+                        continue
+                elif suffix and suffix not in path.name:
+                    continue
+                zf.write(path, path.name)
+            # Dashboard folder: always include if it exists and was selected
             dashboard_dir = output_dir / "dashboard"
-            if dashboard_dir.is_dir():
+            if dashboard_dir.is_dir() and (
+                allowed_paths is None or str(dashboard_dir.resolve()) in allowed_paths
+            ):
                 for path in sorted(dashboard_dir.iterdir()):
                     if path.is_file() and any(path.name.lower().endswith(ext) for ext in _ZIP_ALLOWED_EXT):
-                        if not suffix or suffix in path.name:
-                            zf.write(path, f"dashboard/{path.name}")
+                        zf.write(path, f"dashboard/{path.name}")
     buf.seek(0)
     return buf.read()
 
@@ -350,11 +361,16 @@ div[data-testid="stSelectbox"] > div > div {
                 st.session_state.last_run = {
                     "indication": indication_for_pipeline,
                     "country": country_for_pipeline,
+                    "country_display": country_display,
                     "record_count": result.get("record_count", 0),
                     "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
                     "success": result.get("success", False),
                 }
                 st.session_state.last_result = result
+                # Store resolved file paths so ZIP and listing only include selected outputs
+                st.session_state.last_paths = {
+                    str(Path(p).resolve()) for p in result.get("paths", {}).values() if p
+                }
                 st.session_state.last_export_dashboard = export_dashboard
 
     # Render from session_state so download-button reruns do not hide this block
@@ -362,11 +378,12 @@ div[data-testid="stSelectbox"] > div > div {
     if result and result.get("success"):
         lr = st.session_state.last_run or {}
         ind_label = lr.get("indication") or ""
-        country_code = lr.get("country") or ""
+        country_code = lr.get("country_display") or lr.get("country") or ""
         ind_safe = str(ind_label).replace(" ", "_")
         c_safe = str(country_code).replace(" ", "_")
         suffix = f"{ind_safe}_{c_safe}"
-        had_dashboard = st.session_state.get("last_export_dashboard", True)
+        allowed_paths = st.session_state.get("last_paths")
+        paths = result.get("paths", {})
 
         st.success("Your data is ready.")
         n = result.get("record_count", 0)
@@ -378,7 +395,8 @@ div[data-testid="stSelectbox"] > div > div {
 
         # --- 3. Your outputs ---
         st.subheader("3. Your outputs")
-        zip_bytes = _build_outputs_zip_bytes(ROOT / "output", suffix=suffix)
+        zip_bytes = _build_outputs_zip_bytes(ROOT / "output", suffix=suffix,
+                                             allowed_paths=allowed_paths)
         zip_name = f"epidemiology_outputs_{suffix}.zip"
         st.download_button(
             label="Download all outputs (ZIP)",
@@ -388,21 +406,42 @@ div[data-testid="stSelectbox"] > div > div {
             type="primary",
             use_container_width=True,
             key="dl_zip_all",
-            help="Contains CSVs (and dashboard folder files) from this run.",
+            help="Contains only the files you selected in Output options.",
         )
         st.caption(
             "In **Chrome**, if **Ask where to save each file before downloading** is on "
             "(Settings → Downloads), you can pick the folder when the ZIP saves."
         )
-        st.markdown("Included file names (also inside the ZIP):")
-        st.markdown(f"- **Evidence** (sources & values) → `evidence_{suffix}.csv`")
-        st.markdown(f"- **Tool-ready table** → `tool_ready_{suffix}.csv`")
-        st.markdown(f"- **KPI** (coverage & gaps) → `kpi_table_{suffix}.csv`")
-        st.markdown(f"- **InsightACE export** → `insightace_epi_{suffix}.csv`")
-        if had_dashboard:
-            st.markdown("- **Dashboard pack** (Tableau / Power BI) → folder `dashboard/`")
 
-        # Validation report (if any)
+        # Dynamic listing — only what was actually generated & selected
+        _OUTPUT_LABELS = {
+            "evidence":            "Evidence by metric — sources & values",
+            "kpi_scorecard":       "KPI scorecard — coverage & gaps",
+            "extract_consolidated":"Consolidated Excel workbook (all selected sheets)",
+            "tool_ready":          "Tool-ready table",
+            "evidence_summary":    "Evidence summary (.md)",
+            "forecast":            "Forecast projections",
+            "source_log":          "Source log",
+            "reference_links":     "Reference links",
+            "insightace_epi":      "InsightACE export",
+            "insights_summary":    "Insights summary",
+            "reconciliation":      "Reconciliation table",
+            "kpi_conflicts":       "KPI conflicts",
+            "white_space_summary": "White-space summary",
+            "validation_report":   "Validation report",
+            "dashboard_dir":       "Dashboard pack (Power BI / Tableau)",
+        }
+        st.markdown("**Files included in the ZIP** (based on your Output options selection):")
+        for key, label in _OUTPUT_LABELS.items():
+            if key not in paths:
+                continue
+            p = paths[key]
+            if key == "dashboard_dir":
+                st.markdown(f"- {label} → `dashboard/`")
+            else:
+                st.markdown(f"- {label} → `{Path(p).name}`")
+
+        # Validation notes
         if result.get("validation_report"):
             with st.expander("Validation notes"):
                 for e in result["validation_report"]:
@@ -413,31 +452,52 @@ div[data-testid="stSelectbox"] > div > div {
                     else:
                         st.warning(msg)
 
-        # Preview and download (DataFrames restored from session_state on each rerun)
-        if result.get("evidence_df") is not None and not result["evidence_df"].empty:
-            with st.expander("Preview: Evidence"):
+        # Individual download buttons for key in-memory outputs
+        if result.get("evidence_df") is not None and not result["evidence_df"].empty and "evidence" in paths:
+            with st.expander("Preview: Evidence by metric"):
                 st.dataframe(result["evidence_df"], use_container_width=True, hide_index=True)
             csv_ev = result["evidence_df"].to_csv(index=False).encode("utf-8")
-            st.download_button("Download evidence (CSV)", data=csv_ev, file_name=f"evidence_{suffix}.csv", mime="text/csv", key="dl_evidence")
-        if result.get("kpi_df") is not None and not result["kpi_df"].empty:
-            with st.expander("Preview: KPI (coverage & gaps)"):
+            st.download_button("Download evidence (CSV)", data=csv_ev,
+                               file_name=f"evidence_{suffix}.csv", mime="text/csv", key="dl_evidence")
+
+        if result.get("kpi_df") is not None and not result["kpi_df"].empty and "kpi_scorecard" in paths:
+            with st.expander("Preview: KPI scorecard"):
                 st.dataframe(result["kpi_df"], use_container_width=True, hide_index=True)
             csv_kpi = result["kpi_df"].to_csv(index=False).encode("utf-8")
-            st.download_button("Download KPI (CSV)", data=csv_kpi, file_name=f"kpi_table_{suffix}.csv", mime="text/csv", key="dl_kpi")
-        if result.get("tool_ready_df") is not None and not result["tool_ready_df"].empty:
+            st.download_button("Download KPI scorecard (CSV)", data=csv_kpi,
+                               file_name=f"kpi_scorecard_{suffix}.csv", mime="text/csv", key="dl_kpi")
+
+        if result.get("tool_ready_df") is not None and not result["tool_ready_df"].empty and "tool_ready" in paths:
             csv_tr = result["tool_ready_df"].to_csv(index=False).encode("utf-8")
-            st.download_button("Download tool-ready table (CSV)", data=csv_tr, file_name=f"tool_ready_{suffix}.csv", mime="text/csv", key="dl_tool_ready")
+            st.download_button("Download tool-ready table (CSV)", data=csv_tr,
+                               file_name=f"tool_ready_{suffix}.csv", mime="text/csv", key="dl_tool_ready")
+
+        if "forecast" in paths:
+            fp = Path(paths["forecast"])
+            if fp.exists():
+                st.download_button("Download forecast projections (CSV)", data=fp.read_bytes(),
+                                   file_name=fp.name, mime="text/csv", key="dl_forecast")
+
+        if "extract_consolidated" in paths:
+            ep = Path(paths["extract_consolidated"])
+            if ep.exists():
+                st.download_button(
+                    "Download consolidated workbook (Excel)",
+                    data=ep.read_bytes(), file_name=ep.name,
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    key="dl_excel",
+                )
 
         # --- 4. What to do next ---
         st.subheader("4. What to do next")
         st.markdown("""
         Use the output files for your work:
-        - **Unzip** - Extract the ZIP, then open CSVs from the folder you chose (or from Downloads).
-        - **Open in Excel** - Open any CSV to review or share.
-        - **Use in Power BI or Tableau** - Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
-        - **Feed another system** - Use the tool-ready or InsightACE CSV as input for your models or platform.
-        - **Share** - Send the ZIP or individual CSVs to a colleague.
-        - **Check quality** - Use the KPI table to see coverage and gaps; add evidence and run again if needed.
+        - **Unzip** — Extract the ZIP, then open the files from the folder you chose (or from Downloads).
+        - **Open in Excel** — Open any CSV, or use the consolidated Excel workbook for all sheets in one file.
+        - **Use in Power BI or Tableau** — Connect to the `dashboard` subfolder inside the ZIP (see **docs/DASHBOARD_AND_ANALYTICS.md**).
+        - **Feed another system** — Use the tool-ready or InsightACE CSV as input for your models or platform.
+        - **Share** — Send the ZIP or individual files to a colleague.
+        - **Check quality** — Use the KPI scorecard to see coverage and gaps; add evidence and run again if needed.
         """)
     elif result and not result.get("success"):
         st.error("Something went wrong.")
