@@ -2,6 +2,86 @@
 
 Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Evidence Finder, `run_tool.py`, curated YAML, SQLite dashboard export).
 
+---
+
+## HANDOFF SUMMARY (as of 2026-04-28)
+
+### What this tool is
+A Streamlit app that collects epidemiology evidence (incidence, mortality, survival, prevalence etc.) for a given cancer indication and country. It pulls from curated YAML files + PubMed + ClinicalTrials, builds evidence tables, KPI scorecards, and a consolidated Excel workbook.
+
+### Live deployment
+- **URL:** https://epi-data-tool.streamlit.app/
+- **GitHub repo:** https://github.com/ramanaprabhusana/epidemiology-data-tool (branch: `main`)
+- **Auto-deploy:** Every push to `main` → Streamlit Community Cloud redeploys automatically (~1 min)
+- **Local:** Run `streamlit run app.py` from `"Data Pipeline tool/"` folder; uses `.venv`
+
+### Key folders / files
+| Path | Purpose |
+|---|---|
+| `app.py` | Streamlit UI — all checkboxes, run_pipeline() call, download buttons |
+| `src/pipeline/runner.py` | Core pipeline — all output generation logic |
+| `config/curated_data/*.yaml` | Gold-tier curated data per indication (CLL, NHL, prostate etc.) |
+| `config/ui_options.yaml` | Dropdown lists for indications and countries |
+| `config/required_metrics*.yaml` | Required metrics per indication |
+| `requirements.txt` | Python dependencies for Community Cloud |
+| `tests/` | 24 pytest tests — run `.venv/bin/pytest tests/ -q` |
+| `LOG_DATA_PIPELINE.md` | This file — always update after changes |
+
+### How output selection works (critical to understand)
+1. User checks boxes in ⚙️ Output options
+2. Each checkbox maps to a flag passed to `run_pipeline()`
+3. Runner only adds a file to `result["paths"]` when its flag is `True`
+4. After run: `st.session_state.last_paths` = set of resolved paths from `result["paths"]`
+5. `_build_outputs_zip_bytes()` receives `allowed_paths` — only zips files in that set
+6. `_OUTPUT_LABELS` dict drives the dynamic file listing — shows only keys present in `result["paths"]`
+7. **`scenario_registry` and `confidence_rubric` are written to disk for internal use but deliberately NOT added to `result["paths"]`** — they must never appear in the ZIP
+
+### Current output options (15 total)
+**Checked by default (left column):**
+- Evidence by Metric (CSV + Excel sheet)
+- KPI Scorecard (CSV + Excel sheet)
+- Consolidated Excel workbook
+- Tool-ready table (CSV)
+- Evidence summary (.md)
+- SEER Trends sheet (Excel)
+- Forecast projections ← restored 2026-04-27 (was wrongly removed)
+
+**Unchecked by default (right column):**
+- InsightACE format
+- Insights summary ← fixed 2026-04-27 (was trapped inside dashboard block)
+- Source log
+- Reference links
+- Reconciliation table
+- KPI conflicts
+- White-space summary
+- Validation report
+
+**Permanently removed from UI (hardcoded False):**
+- Dashboard BI/Tableau export — unreliable on Community Cloud ephemeral filesystem
+
+### What was fixed across 2026-04-26 and 2026-04-27
+1. **Output filter bug** — ZIP always included all files regardless of checkbox selection. Fixed by threading `allowed_paths` (set of resolved paths from `result["paths"]`) into `_build_outputs_zip_bytes()`
+2. **Dynamic file listing** — hardcoded 5-item markdown replaced with loop over `_OUTPUT_LABELS`
+3. **`scenario_registry` + `confidence_rubric` always in ZIP** — removed from `result["paths"]`; now internal-only
+4. **`insights_summary` broken** — was nested inside `if export_dashboard:` block. Moved to its own independent block in runner.py
+5. **`col3` empty column** — leftover after dashboard checkbox removal; fixed to 2-column layout
+6. **Prostate citation stale** — `prostate.yaml` already had correct 2016-2022 SEER data; stale "2013-2016" came from web scraper + old zip-all bug (fixed by #1)
+7. **`requirements.txt`** — removed unused `selenium`, `flask`, `gunicorn`, `python-docx`; added `numpy`, `lxml`
+8. **Deployed to Streamlit Community Cloud** — repo was already connected; pushed and deployed
+9. **Render** — user received Render deploy email because repo was previously connected there too; user to manually delete via https://dashboard.render.com (needs login — cannot be done by Claude)
+
+### Pending / things to watch
+- [ ] **Render cleanup** — user needs to log into https://dashboard.render.com and delete the `epidemiology-data-tool` service to stop redundant deploys and possible billing
+- [ ] **Forecast on Community Cloud** — forecast works locally; not yet verified end-to-end on the cloud (Community Cloud filesystem is ephemeral per session, so the CSV will generate fine but disappears after the session)
+- [ ] **New indications** — no new YAML curated data files were added in these sessions beyond prostate. If a new indication is needed, create `config/curated_data/<slug>.yaml` modelled on `cll.yaml` or `prostate.yaml`
+- [ ] **`DataPipelineTool_Copy/`** — a backup copy in the same OneDrive folder; it has a slightly different version of app.py (dashboard/forecast fully removed, not just hardcoded False). It is NOT deployed anywhere — it's just a local backup. Can be ignored or deleted.
+
+### How to continue in a new session
+Tell Claude:
+> "Continue working on the Data Pipeline tool. Read `LOG_DATA_PIPELINE.md` in `'Data Pipeline tool/'` for full context. GitHub repo is `ramanaprabhusana/epidemiology-data-tool`. Live app at https://epi-data-tool.streamlit.app/. Tests: `.venv/bin/pytest tests/ -q`."
+
+---
+
 ## 2026-04-26
 
 ### Output filter, dynamic listing, forecast/dashboard download buttons
