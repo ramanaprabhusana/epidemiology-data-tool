@@ -12,7 +12,7 @@ Usage:
     python run_all_indications.py
 
     # Explicit control
-    python run_all_indications.py --country US --workbook "../Client presentation/CLL_Consolidated_Forecast_Model_v5.2.xlsx"
+    python run_all_indications.py --country US --workbook "../Client presentation/Integrated_Client_Delivery_Sandbox/Epidemiology_Forecast_Model_Client_Hub_v5.xlsx"
 
     # Skip workbook patch (just refresh pipeline outputs)
     python run_all_indications.py --no-workbook-patch
@@ -76,7 +76,7 @@ DEFAULT_INDICATIONS = [
     "Ovarian",
     "Prostate",
 ]
-DEFAULT_WORKBOOK_REL = "../Client presentation/CLL_Consolidated_Forecast_Model_v5.2.xlsx"
+DEFAULT_WORKBOOK_REL = "../Client presentation/Integrated_Client_Delivery_Sandbox/Epidemiology_Forecast_Model_Client_Hub_v5.xlsx"
 
 
 def _sha256_of_file(path: Path) -> str:

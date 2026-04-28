@@ -276,7 +276,7 @@ def stamp_pipeline_metadata(wb, manifest: Dict[str, Any]) -> None:
 
 def patch_workbook(workbook_path: Path, manifest: Dict[str, Any],
                    results: List[Dict[str, Any]]) -> None:
-    """Top-level: open the v5.2 workbook, apply all patches, save in-place."""
+    """Top-level: open the v5 workbook, apply all patches, save in-place."""
     workbook_path = Path(workbook_path).resolve()
     has_vba = _workbook_zip_has_vba(workbook_path)
     keep_vba = has_vba

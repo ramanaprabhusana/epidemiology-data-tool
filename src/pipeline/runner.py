@@ -282,7 +282,7 @@ def run_pipeline(
     # Resolve evidence path (try indication-specific slug then known slugs)
     if evidence_path is None or not Path(evidence_path).exists():
         slug = ind_safe.lower().replace(" ", "_").replace("(", "").replace(")", "").strip("_")
-        for try_slug in [slug, "cll", "lung_cancer", "example"]:
+        for try_slug in [slug]:
             candidate = templates_dir / f"evidence_{try_slug}.csv"
             if candidate.exists():
                 evidence_path = candidate
