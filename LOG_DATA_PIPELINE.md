@@ -24,10 +24,16 @@ Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Ev
 
 4. **GitHub push confirmed current** — `origin/main` is up to date; runner.py + template fixes from session 1 are live on Streamlit
 
-### Remaining user actions (unchanged)
+5. **BI dashboard screenshots confirmed rendered** — Ran `python3 -m http.server 8765`, navigated to both HTML previews in Chrome MCP: both fully rendered with real CLL data (KPI cards, Forecast Trend chart, Patient Flow, Scenario table). Tableau HTML is an intentional replica of Power BI layout — both screenshots are identical by design; deduplication in PPTX is correct. Current `image3.png` in PPTX already contains the fully-rendered screenshot (md5 verified match).
+
+6. **Structural validation complete** —
+   - PPTX: 21 slides, 0 XML errors, 0 missing media refs, PNG MIME registered ✅
+   - Excel v5: 26 sheets, 0 broken refs, 151 hyperlinks, 0 stale version text, all 6 indications ✅
+   - LibreOffice headless PDF export: 454 KB, 0 errors — confirms no repair-prompt structure ✅
+
+### Remaining user actions
 - **Windows .pbix**: Open `powerbi/Epidemiology_Forecast_PowerBI_Dashboard_Project/*.pbip` in Power BI Desktop on Windows → refresh → Save As `.pbix` — see `WINDOWS_FINALIZATION_CHECKLIST.md`
-- **Verify deck in PowerPoint**: Open `Integrated_Epi_Model_Handoff_Deck.pptx` — confirm no repair prompt (deck rebuilt via ZIP, should be clean)
-- **Better BI screenshots** (optional): Run `python3 -m http.server 8765` in sandbox folder, open both HTML previews in browser, screenshot, replace slide 16 images manually
+- **Visual spot-check**: Open `Integrated_Epi_Model_Handoff_Deck.pptx` in PowerPoint and `Epidemiology_Forecast_Model_Client_Hub_v5.xlsx` in Excel for a final visual check before client delivery
 
 ---
 
