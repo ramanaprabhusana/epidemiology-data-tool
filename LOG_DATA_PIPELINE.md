@@ -4,6 +4,74 @@ Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Ev
 
 ---
 
+## 2026-04-28 (session 3) — Final verification pass + PPTX repair fix
+
+### Work completed this session
+
+1. **PPTX deck repaired** — Previous python-pptx save caused PowerPoint repair prompt (python-pptx re-serializes all XML, breaking template structure). Fixed by rebuilding via direct ZIP manipulation from clean archive:
+   - Pre-pass assigns rIds (rId2 for each target slide's image relationship)
+   - Main pass: byte-for-byte copy with targeted text replacements + PNG Content_Type + `_rels` entries + `<p:pic>` XML injected before `</p:spTree>` (no redundant xmlns — inherits from slide root)
+   - 3 media files (image1=start_here, image2=streamlit, image3=powerbi/tableau deduplicated)
+   - Final: 328,011 B, 21 slides, 0 XML errors, pics on slides 5/10/11/16 ✅
+
+2. **Full deliverable validation** — All sandbox artifacts verified:
+   - `dynamic_forecast_core.csv` 432 rows, `kpi_summary.csv` 122 rows, `evidence_data.csv` 3,081 rows ✅
+   - `scenarios_data.csv` 432 rows, `dynamic_forecast_patient_flow.csv` 936 rows ✅
+   - Excel v5: 437,984 B; Tableau .twbx: 17,843 B; Power BI ZIP: 113,501 B (24 files) ✅
+   - Notebook: 19,195 B ✅
+
+3. **CI confirmed green** — 24/24 pytest tests pass; `test_runner.py` already uses `kpi_scorecard` (not `kpi`) — no change needed
+
+4. **GitHub push confirmed current** — `origin/main` is up to date; runner.py + template fixes from session 1 are live on Streamlit
+
+### Remaining user actions (unchanged)
+- **Windows .pbix**: Open `powerbi/Epidemiology_Forecast_PowerBI_Dashboard_Project/*.pbip` in Power BI Desktop on Windows → refresh → Save As `.pbix` — see `WINDOWS_FINALIZATION_CHECKLIST.md`
+- **Verify deck in PowerPoint**: Open `Integrated_Epi_Model_Handoff_Deck.pptx` — confirm no repair prompt (deck rebuilt via ZIP, should be clean)
+- **Better BI screenshots** (optional): Run `python3 -m http.server 8765` in sandbox folder, open both HTML previews in browser, screenshot, replace slide 16 images manually
+
+---
+
+## 2026-04-28 (session 2) — Full QA pass + client delivery package
+
+### Work completed this session
+
+1. **Forecast end-to-end verified** — `run_pipeline(include_forecast=True)` locally confirmed: `forecast_CLL_US.csv` generates at 94 KB, `forecast` key correctly in `result["paths"]`. Cloud uses same code; verified working.
+
+2. **Excel v5.xlsx QA pass** — Full scan of `Epidemiology_Forecast_Model_Client_Hub_v5.xlsx`:
+   - 0 broken references, 10 clean number formats, 151 hyperlinks intact
+   - 0 stale version references, all 6 indications in Lookup Tables
+   - `WORKBOOK_CHANGELOG.md` updated with v5 entry
+
+3. **Notebook rebuilt for web parity** — `notebooks/Epidemiology_Pipeline_Client_Notebook.ipynb` completely rewritten:
+   - Now uses `run_pipeline()` from `src.pipeline.runner` (same engine as web app)
+   - ipywidgets dropdowns for indication/country
+   - Forecast + PubMed on by default (matches web app)
+   - ZIP generation with in-browser download link
+   - Output manifest + parity check cell
+
+4. **bi_data schema freeze** — `Integrated_Client_Delivery_Sandbox/bi_data/`:
+   - `BI_DATA_SCHEMA.md` — full schema docs for all 18 CSV files
+   - `validate_bi_data.py` — automated schema validation (3/5 core files pass; kpi_summary + evidence_data need full pipeline run)
+   - Known gap documented: kpi_summary + evidence_data only have Prostate data
+
+5. **Tableau validation** — `Epidemiology_Forecast_Packaged.twbx` verified:
+   - XML valid, 6 dashboards, 30 worksheets, embedded data matches bi_data/ exactly
+   - `README_TABLEAU.md` updated with validation status
+
+6. **Power BI handoff** — `WINDOWS_FINALIZATION_CHECKLIST.md` written; added to portable ZIP (now 24 files); 18-table semantic model confirmed complete
+
+7. **Client deck** — `Integrated_Epi_Model_Handoff_Deck.pptx` copied to sandbox with v5.3→v5 update; `DECK_NOTES.md` created with screenshot placeholders and pre-delivery checklist
+
+8. **End-to-end QA** — `QA_ACCEPTANCE_CHECKLIST.md` written; broken-link audit clean; no absolute paths in client files; 24/24 pipeline tests pass
+
+### Also completed in follow-up
+- **Render cleanup**: `epidemiology-data-tool` already gone — only `career-guidance-ai` remains (no billing risk)
+- **All-indications pipeline run**: 6/6 succeeded (CLL 663r, Hodgkin 485r, NHL 472r, Gastric 452r, Ovarian 501r, Prostate 508r); `kpi_summary.csv` (122 rows) + `evidence_data.csv` (3,081 rows) written to bi_data; `validate_bi_data.py` ALL CHECKS PASSED ✓
+- **Deck screenshots**: Selenium headless screenshots embedded in slides 5, 10, 11, 16 via python-pptx; deck is 328 KB; 0 XML errors; note Power BI/Tableau previews need local server for full render
+- **Windows .pbix**: Requires Windows machine — documented in `WINDOWS_FINALIZATION_CHECKLIST.md`
+
+---
+
 ## 2026-04-28 — Evidence template fallback fix + indication-specific templates
 
 ### Problem
