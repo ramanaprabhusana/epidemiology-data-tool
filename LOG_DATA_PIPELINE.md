@@ -4,6 +4,41 @@ Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Ev
 
 ---
 
+## 2026-04-28 — Evidence template fallback fix + indication-specific templates
+
+### Problem
+All 6 indication source logs (`source_log_*.csv`) showed `evidence_cll.csv` as the
+gold/silver manual-upload path — even for Gastric, Hodgkin, NHL, Ovarian, Prostate.
+
+### Root cause
+`src/pipeline/runner.py:285` had a hardcoded fallback slug list:
+`[slug, "cll", "lung_cancer", "example"]`. For non-CLL indications the slug
+didn't match, so the code fell through to "cll" which always resolved.
+
+### Fix
+1. **`src/pipeline/runner.py:285`** — Changed fallback list from
+   `[slug, "cll", "lung_cancer", "example"]` to `[slug]` so non-CLL indications
+   fall through to `evidence_upload_template.csv` instead of using CLL evidence.
+2. **New evidence templates** created in `templates/`:
+   - `evidence_hodgkin_lymphoma.csv` (indication = Hodgkin Lymphoma)
+   - `evidence_non-hodgkin_lymphoma.csv` (indication = Non-Hodgkin Lymphoma)
+   - `evidence_gastric.csv` (indication = Gastric)
+   - `evidence_ovarian.csv` (indication = Ovarian)
+   - `evidence_prostate.csv` (indication = Prostate Cancer)
+3. **`run_all_indications.py`** — `DEFAULT_WORKBOOK_REL` updated to point to
+   `Epidemiology_Forecast_Model_Client_Hub_v5.xlsx` (new v5 workbook).
+4. **`refresh_workbook.py`** — Docstring updated from v5.2 → v5.
+
+### Tests
+24/24 tests passed. Committed as `3d95e11`, pushed to `main`.
+Streamlit auto-deployed. App UI verified: 15 output options, 6 indications, 8 countries all correct.
+
+### Also done this session
+- `Epidemiology_Forecast_Model_Client_Hub_v5.xlsx` created as a copy of v4 in
+  `Integrated_Client_Delivery_Sandbox/` — new target for `refresh_workbook.py`.
+
+---
+
 ## HANDOFF SUMMARY (as of 2026-04-28)
 
 ### What this tool is
