@@ -401,7 +401,7 @@ def run_pipeline(
         # Scenario registry is indication-agnostic - write once as a shared file
         scenario_path = output_dir / "scenario_registry.csv"
         build_scenario_registry(scenario_options, scenario_path)
-        result["paths"]["scenario_registry"] = str(scenario_path)
+        # scenario_registry is an internal support file — not exposed as a user download
         evidence_df = load_evidence_table(evidence_path_out)
         evidence_df = _add_year_column(evidence_df)
         tool_rows = build_tool_ready_table(evidence_df, indication, selected)
@@ -461,7 +461,7 @@ def run_pipeline(
             result["paths"]["evidence_summary"] = str(summary_path)
         rubric_path = output_dir / "confidence_rubric.md"
         export_confidence_rubric(rubric_path)
-        result["paths"]["confidence_rubric"] = str(rubric_path)
+        # confidence_rubric is a static reference file — not exposed as a user download
 
         # 4a) Forecast — runs independently of dashboard
         forecast_df = pd.DataFrame()
