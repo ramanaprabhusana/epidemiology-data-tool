@@ -179,7 +179,7 @@ div[data-testid="stSelectbox"] > div > div {
 
     # --- 1. Choose what you need ---
     st.subheader("1. Choose what you need")
-    col1, col2, col3 = st.columns([2, 2, 1])
+    col1, col2 = st.columns([2, 2])
 
     # Resolve safe fallback labels by id (robust to YAML reordering)
     _cll_label = next(
