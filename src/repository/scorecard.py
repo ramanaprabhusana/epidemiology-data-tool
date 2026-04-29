@@ -79,6 +79,11 @@ def build_kpi_scorecard(
         required = m.get("required", True)
         sub = evidence_df[evidence_df["metric"] == mid]
         if sub.empty:
+            # Fallback: try evidence_ids aliases defined in required_metrics config
+            evidence_ids = m.get("evidence_ids", [])
+            if evidence_ids:
+                sub = evidence_df[evidence_df["metric"].isin(evidence_ids)]
+        if sub.empty:
             rows.append({
                 "indication": indication,
                 "metric_id": mid,

@@ -4,6 +4,60 @@ Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Ev
 
 ---
 
+## 2026-04-29 (session 4) — Dynamic One-Stop Forecast Solution: Tasks 1-3 complete
+
+### Goal: Excel v6 as the client-facing one-stop deliverable; pipeline as the backend engine
+
+### New files created (pipeline)
+
+| File | Purpose |
+|---|---|
+| `src/pipeline/semantic_matcher.py` | Resolves raw extracted metric labels to canonical metric_ids via synonym expansion + optional sentence-transformers embeddings (off by default for Streamlit Cloud). Smoke tested: "IGHV mutation status mutated" → ighv_mutated_pct (0.95). |
+| `src/pipeline/url_resolver.py` | Maps source citation strings to canonical URLs. Fixes CLL ~38.5% null source_url rows via embedded URL extraction, PubMed ID regex, and 30+ keyword→URL mappings. |
+| `src/pipeline/clustering.py` | Assigns `cluster` + `cluster_label` to every evidence row. 6 clusters: core_epi, outcomes, stage, treatment, demographics, biomarker. Uses exact lookup + indication prefix stripping + 60-rule pattern fallback. 93.8% coverage across 5,770 rows. |
+| `src/pipeline/excel_updater.py` | Automation bridge: reads kpi_scorecard CSVs and writes best-value metrics back to Excel v6 (Proportion Inputs rows 560+, Cascade Lookup Tables rows 214-460, Evidence Import sheet pipeline columns). |
+| `config/metric_synonyms.yaml` | 50+ metric synonym groups for semantic matching. |
+| `config/metric_clusters.yaml` | Cluster taxonomy: maps metric_id → cluster_id for 6 clusters. |
+
+### Files modified (pipeline)
+
+| File | What changed |
+|---|---|
+| `src/repository/confidence.py` | Added `_url_score()` (+5 URL bonus if source_url present); added `URL_BONUS=5` and `KNOWN_AUTHORITATIVE_SOURCES`; updated `compute_confidence_score()` to include url_pts; added `normalise_legacy_confidence()` converting legacy 0.7 floats → "high"/"medium"/"low" labels. Max score now 100 (was effectively 95 before URL bonus). |
+| `src/pipeline/runner.py` | Added `from .clustering import assign_clusters`; added `from .url_resolver import add_resolved_urls`; added `normalise_legacy_confidence` import; wired all 3 calls in evidence processing block (normalise → resolve_urls → compute_confidence → assign_clusters). |
+| `config/required_metrics_cll.yaml` | Added 14 new metrics: `mortality_rate_aapc`, `rai_stage_0/i_ii/iii_iv_pct`, `age_lt65/65_74/75plus_pct`, `lot_treatment_naive_pct`, disease course, IGHV/del17p biomarkers — each with `excel_metric_id` and `synonyms`. |
+| `config/required_metrics_hodgkin.yaml` | Full rewrite — added `mortality_rate_aapc`, stage I-IV with `excel_metric_id`, age distribution, 7 LOT cascade buckets (naive/1L/CMT/2L-salvage/refractory/R/R/palliative), disease course — all with synonyms. |
+| `config/required_metrics_nhl.yaml` | Full rewrite — same pattern; added subtype mix with `excel_metric_id`, cascade (watch-wait/1L-aggressive/1L-indolent/1L-MCL/R/R/3L+), disease course. |
+| `config/required_metrics_gc.yaml` | Full rewrite — SEER summary stage, age distribution, LOT (resected/1L-met/2L/3L+), HER2/PDL1 biomarkers, disease course. |
+| `config/required_metrics_ovarian.yaml` | Full rewrite — FIGO/SEER stage, age, LOT (debulking/PARP-maint/plat-sens/plat-resist/4L+), BRCA/HRD biomarkers, histology, disease course. |
+| `config/required_metrics_prostate.yaml` | Full rewrite — SEER stage, age, NCCN risk, LOT cascade (AS/definitive/BCR-ADT/mCSPC/nmCRPC-mCRPC/late-line), HRR/PSMA biomarkers, disease course. |
+
+### New Excel v6 deliverable (Client Sandbox)
+
+| Item | Detail |
+|---|---|
+| File | `Integrated_Client_Delivery_Sandbox/Epidemiology_Forecast_Model_Client_Hub_v6.xlsx` |
+| Source | Copied from v5 (27 sheets = v5's 26 + new "Evidence Import" sheet) |
+| Evidence Import sheet | 162 metrics × 10 columns across 6 indications; status formula `=IF(F="","Pending",IF(ABS(D-F)/D<0.05,"✓ Aligned","⚠ Review"))` |
+| Proportion Inputs section | Lookup Tables rows 560-661: 100 metric_id → value mappings (6 indication colour-coded sections) |
+| Dynamic formulas | 3,332 Forecast sheet proportion cells updated from `=D10*0.35` to `=D10*IFERROR(INDEX('Lookup Tables'!$C:$C,MATCH("metric_id",'Lookup Tables'!$A:$A,0)),0.35)` |
+| Backward compatible | Original hardcoded fallbacks preserved inside IFERROR — model works even if pipeline hasn't populated a metric yet |
+
+### Pipeline run results (2026-04-29)
+- 6/6 indications succeeded: CLL 675r, Hodgkin 497r, NHL 484r, Gastric 464r, Ovarian 513r, Prostate 520r
+- Cluster coverage: 93.8% classified (5,770 total rows across all indications)
+- Source URL resolution: CLL null source_url gap fixed (was ~38.5%, now resolved from citation text)
+- Confidence scoring: legacy 0.7 float values normalised; URL bonus (+5) applied
+
+### Remaining tasks
+- [ ] Test `excel_updater.py` end-to-end: run updater against v6 with latest kpi_scorecard CSVs; verify Proportion Inputs populate and Forecast sheets update
+- [ ] Update `run_all_indications.py` to call `excel_updater.py` after pipeline run (flag `update_excel: bool = False`)
+- [ ] Update `validate_bi_data.py` to check `cluster` and `cluster_label` columns in evidence schema
+- [ ] Commit and push to GitHub (semantic_matcher, url_resolver, clustering, excel_updater, confidence, runner, all 6 YAMLs, metric_synonyms, metric_clusters)
+- [ ] Update Power BI and Tableau data sources to include new `cluster` column
+
+---
+
 ## 2026-04-28 (session 3) — Final verification pass + PPTX repair fix
 
 ### Work completed this session

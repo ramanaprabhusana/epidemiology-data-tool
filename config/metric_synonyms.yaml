@@ -1,0 +1,366 @@
+# Metric Synonyms for Semantic Matching
+# Maps metric_id → list of synonyms that may appear in literature/source documents
+# Used by src/pipeline/semantic_matcher.py to resolve raw extracted metric names
+# to canonical metric IDs without exact string matching.
+#
+# Why needed: Source documents use varied terminology
+#   e.g., "IGHV mutational status: mutated 55%" ≠ exact match for "ighv_mutated_pct"
+# Strategy: Try synonym expansion first (fast), embeddings as fallback (optional).
+#
+# Updated: 2026-04-28
+
+# ─── Core Epidemiology ──────────────────────────────────────────
+incidence:
+  - "new cases"
+  - "newly diagnosed"
+  - "annual new cases"
+  - "incident cases"
+  - "number diagnosed"
+  - "diagnosed patients per year"
+
+incidence_rate:
+  - "incidence rate"
+  - "crude incidence"
+  - "age-adjusted incidence"
+  - "cases per 100,000"
+  - "incidence per 100k"
+  - "annual incidence rate"
+  - "new cases per 100,000"
+
+prevalence:
+  - "prevalent cases"
+  - "total patients living with"
+  - "total prevalence"
+  - "stock prevalence"
+  - "persons living with diagnosis"
+
+mortality:
+  - "deaths"
+  - "cancer deaths"
+  - "annual mortality"
+  - "number of deaths"
+  - "estimated deaths"
+
+mortality_rate:
+  - "mortality rate"
+  - "death rate"
+  - "crude mortality"
+  - "age-adjusted mortality"
+  - "deaths per 100,000"
+
+mortality_rate_aapc:
+  - "mortality APC"
+  - "mortality annual percent change"
+  - "AAPC mortality"
+  - "mortality trend"
+  - "joinpoint mortality"
+  - "declining mortality rate"
+  - "mortality change per year"
+
+five_year_survival:
+  - "5-year survival"
+  - "5-year relative survival"
+  - "5yr survival rate"
+  - "five year survival"
+  - "5-year OS"
+  - "overall survival at 5 years"
+  - "survival rate"
+  - "relative survival 5-year"
+
+median_age_at_diagnosis:
+  - "median age"
+  - "median age at diagnosis"
+  - "average age at diagnosis"
+  - "age at first diagnosis"
+  - "typical age of onset"
+
+male_female_ratio:
+  - "male to female ratio"
+  - "sex ratio"
+  - "gender ratio"
+  - "male:female"
+  - "M:F ratio"
+  - "male predominance"
+  - "sex distribution"
+
+diagnosed_prevalence:
+  - "diagnosed prevalence"
+  - "clinically diagnosed"
+  - "known cases"
+  - "identified patients"
+
+# ─── Stage Distribution ──────────────────────────────────────────
+rai_stage_0_pct:
+  - "Rai stage 0"
+  - "Rai 0"
+  - "early stage"
+  - "Binet A"
+  - "stage 0 CLL"
+  - "low risk CLL"
+
+rai_stage_i_ii_pct:
+  - "Rai stage I"
+  - "Rai stage II"
+  - "Rai 1"
+  - "Rai 2"
+  - "intermediate risk"
+  - "Binet B"
+
+rai_stage_iii_iv_pct:
+  - "Rai stage III"
+  - "Rai stage IV"
+  - "high risk CLL"
+  - "Binet C"
+  - "advanced CLL"
+  - "Rai 3"
+  - "Rai 4"
+
+stage_i_pct:
+  - "stage I"
+  - "stage 1"
+  - "localized disease"
+  - "early stage"
+  - "stage I disease"
+
+stage_ii_pct:
+  - "stage II"
+  - "stage 2"
+  - "stage II disease"
+
+stage_iii_pct:
+  - "stage III"
+  - "stage 3"
+  - "locally advanced"
+  - "stage III disease"
+
+stage_iv_pct:
+  - "stage IV"
+  - "stage 4"
+  - "metastatic"
+  - "advanced stage"
+  - "distant disease"
+  - "stage IV disease"
+
+# ─── Age Distribution ────────────────────────────────────────────
+age_lt65_pct:
+  - "under 65"
+  - "younger than 65"
+  - "<65 years"
+  - "age less than 65"
+  - "patients under 65"
+
+age_65_74_pct:
+  - "65 to 74 years"
+  - "age 65-74"
+  - "elderly 65-74"
+  - "65-74 year olds"
+
+age_75plus_pct:
+  - "75 and older"
+  - "age 75+"
+  - "very elderly"
+  - "75 years and above"
+  - "oldest old"
+
+age_pediatric_pct:
+  - "pediatric"
+  - "children"
+  - "younger than 20"
+  - "<20 years"
+  - "adolescent"
+  - "childhood cancer"
+
+age_adult_pct:
+  - "adult patients"
+  - "working age"
+  - "20 to 64 years"
+  - "20-64"
+
+age_geriatric_pct:
+  - "geriatric"
+  - "elderly"
+  - "older adults"
+  - "65 and older"
+  - "65+"
+
+# ─── Line of Therapy ─────────────────────────────────────────────
+lot_treatment_naive_pct:
+  - "treatment naive"
+  - "untreated patients"
+  - "newly diagnosed untreated"
+  - "watch and wait"
+  - "treatment-naive"
+  - "first line eligible"
+
+first_line:
+  - "first line"
+  - "first-line"
+  - "1L"
+  - "frontline therapy"
+  - "initial treatment"
+  - "induction therapy"
+
+relapsed_refractory:
+  - "relapsed refractory"
+  - "relapsed/refractory"
+  - "R/R"
+  - "second line"
+  - "2L"
+  - "salvage therapy"
+  - "refractory disease"
+  - "resistant disease"
+
+lot_2l_pct:
+  - "second line"
+  - "2L"
+  - "2nd line"
+  - "second-line therapy"
+
+lot_3lplus_pct:
+  - "third line"
+  - "3L"
+  - "3rd line and beyond"
+  - "heavily pretreated"
+  - "late line"
+
+lot_maintenance_pct:
+  - "maintenance therapy"
+  - "maintenance treatment"
+  - "consolidation"
+  - "post-treatment maintenance"
+
+# ─── Disease Course ──────────────────────────────────────────────
+disease_indolent_pct:
+  - "indolent"
+  - "slow growing"
+  - "non-aggressive"
+  - "watchful waiting"
+  - "observation phase"
+
+disease_progressive_pct:
+  - "progressive"
+  - "aggressive"
+  - "rapidly progressive"
+  - "disease progression"
+
+disease_chronic_pct:
+  - "chronic"
+  - "long-term survivors"
+  - "chronic remission"
+  - "long-term disease management"
+
+disease_recurrent_pct:
+  - "recurrent"
+  - "recurrence"
+  - "disease recurrence"
+  - "relapsed disease"
+
+disease_newly_diagnosed_pct:
+  - "newly diagnosed"
+  - "new diagnosis"
+  - "incident cases"
+  - "initial diagnosis"
+
+# ─── Biomarkers ──────────────────────────────────────────────────
+ighv_mutated_pct:
+  - "IGHV mutated"
+  - "IgVH mutated"
+  - "IGHV mutation status mutated"
+  - "mutated immunoglobulin heavy chain"
+  - "IGHV-M"
+  - "mutated IGHV status"
+
+ighv_unmutated_pct:
+  - "IGHV unmutated"
+  - "IgVH unmutated"
+  - "unmutated IGHV"
+  - "IGHV-UM"
+  - "unmutated immunoglobulin"
+
+del17p_tp53_pct:
+  - "del17p"
+  - "17p deletion"
+  - "TP53 mutation"
+  - "TP53 mutated"
+  - "p53 dysfunction"
+  - "chromosome 17p deletion"
+
+her2_positive_pct:
+  - "HER2 positive"
+  - "HER2+"
+  - "HER2 overexpression"
+  - "ERBB2 positive"
+
+pdl1_positive_pct:
+  - "PD-L1 positive"
+  - "PD-L1+"
+  - "PD-L1 expression"
+  - "PDL1 positive"
+
+msi_high_pct:
+  - "MSI-H"
+  - "MSI high"
+  - "microsatellite instability high"
+  - "MMR deficient"
+  - "dMMR"
+
+brca_mutated_pct:
+  - "BRCA mutated"
+  - "BRCA1 mutation"
+  - "BRCA2 mutation"
+  - "BRCA1/2 mutation"
+  - "germline BRCA"
+
+# ─── Cascade Buckets ─────────────────────────────────────────────
+cascade_watch_wait_pct:
+  - "watch and wait"
+  - "watchful waiting"
+  - "active monitoring"
+  - "observation"
+  - "W&W"
+  - "surveillance only"
+
+cascade_drug_ready_pct:
+  - "drug eligible"
+  - "treatment eligible"
+  - "ready for treatment"
+  - "treatment-ready"
+
+cascade_active_surveillance_pct:
+  - "active surveillance"
+  - "surveillance"
+  - "active monitoring"
+  - "watchful waiting"
+
+cascade_localized_pct:
+  - "localized resectable"
+  - "resectable"
+  - "surgical candidate"
+  - "potentially curative surgery"
+
+cascade_palliative_pct:
+  - "palliative care"
+  - "best supportive care"
+  - "BSC"
+  - "end of life care"
+  - "comfort care"
+
+# ─── Tumor Localization ──────────────────────────────────────────
+localized_pct:
+  - "localized"
+  - "organ-confined"
+  - "local disease"
+  - "non-metastatic localized"
+
+regional_pct:
+  - "regional"
+  - "locally advanced"
+  - "regional spread"
+  - "node positive"
+
+distant_pct:
+  - "distant metastases"
+  - "metastatic"
+  - "stage IV"
+  - "distant stage"
+  - "advanced metastatic"

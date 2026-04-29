@@ -1,0 +1,152 @@
+# Metric Cluster Taxonomy
+# Maps metric_id → cluster_id for evidence output filtering and BI slicers.
+# Used by src/pipeline/clustering.py to add a 'cluster' column to evidence_data.csv.
+#
+# 6 clusters:
+#   core_epi        → Core Epidemiology
+#   outcomes        → Patient Outcomes
+#   stage           → Stage Distribution
+#   treatment       → Treatment & LOT
+#   demographics    → Age & Demographics
+#   biomarker       → Biomarkers & Genomics
+#
+# Updated: 2026-04-29
+
+# ─── Core Epidemiology ───────────────────────────────────────────
+core_epi:
+  - incidence
+  - incidence_rate
+  - prevalence
+  - mortality
+  - mortality_rate
+  - mortality_rate_aapc
+  - diagnosed_prevalence
+  - prevalence_rate
+
+# ─── Patient Outcomes ────────────────────────────────────────────
+outcomes:
+  - five_year_survival
+  - median_age_at_diagnosis
+  - male_female_ratio
+  - survival_localized
+  - survival_regional
+  - survival_distant
+
+# ─── Stage Distribution ──────────────────────────────────────────
+stage:
+  # Generic stage (all solid tumors)
+  - stage_i_pct
+  - stage_ii_pct
+  - stage_iii_pct
+  - stage_iv_pct
+  - stage_localized
+  - stage_regional
+  - stage_distant
+  - localized_pct
+  - regional_pct
+  - distant_pct
+  # CLL Rai staging
+  - rai_stage_0_pct
+  - rai_stage_i_ii_pct
+  - rai_stage_iii_iv_pct
+  # NCCN risk (Prostate)
+  - risk_low
+  - risk_intermediate
+  - risk_high
+  # Histology / subtypes
+  - subtype_classical
+  - subtype_nlphl
+  - subtype_dlbcl
+  - subtype_follicular
+  - subtype_mantle_cell
+  - subtype_marginal_zone
+  - subtype_small_lymphocytic
+  - subtype_burkitt
+  - subtype_tcell_peripheral
+  - subtype_tcell_cutaneous
+  - subtype_other
+  - histology_serous
+  - histology_clear_cell
+
+# ─── Treatment & LOT ─────────────────────────────────────────────
+treatment:
+  # CLL cascade
+  - lot_treatment_naive_pct
+  - cascade_watch_wait_pct
+  - cascade_drug_ready_pct
+  - cascade_active_surveillance_pct
+  - cascade_localized_pct
+  - cascade_palliative_pct
+  # Generic LOT
+  - first_line
+  - relapsed_refractory
+  - lot_2l_pct
+  - lot_3lplus_pct
+  - lot_maintenance_pct
+  - indolent_watch
+  - first_line_aggressive
+  - first_line_indolent
+  - first_line_mcl
+  - third_line_plus
+  - second_line_salvage
+  - primary_refractory_pct
+  - early_cmt_pct
+  - palliative_pct
+  # Gastric LOT
+  - resected_curative
+  - metastatic_first_line
+  - second_line
+  # Ovarian LOT
+  - post_debulking_first_line
+  - parp_maintenance
+  - platinum_sensitive_2l
+  - platinum_resistant
+  - fourth_line_plus
+  # Prostate cascade
+  - active_surveillance
+  - definitive_local_tx
+  - bcr_adt
+  - mcspc
+  - nmcrpc_mcrpc_1l_2l
+  - late_line_mcrpc
+  # Disease course
+  - disease_indolent_pct
+  - disease_progressive_pct
+  - disease_chronic_pct
+  - disease_recurrent_pct
+  - disease_newly_diagnosed_pct
+  - disease_localized_pct
+  - disease_metastatic_pct
+  # Generic treatment stubs
+  - early_stage
+  - advanced_stage
+
+# ─── Age & Demographics ──────────────────────────────────────────
+demographics:
+  - age_lt65_pct
+  - age_65_74_pct
+  - age_75plus_pct
+  - age_pediatric_pct
+  - age_adult_pct
+  - age_geriatric_pct
+
+# ─── Biomarkers & Genomics ───────────────────────────────────────
+biomarker:
+  # CLL
+  - ighv_mutated_pct
+  - ighv_unmutated_pct
+  - del17p_tp53_pct
+  # Gastric
+  - her2_positive
+  - pdl1_positive
+  # Ovarian
+  - brca_mutation_rate
+  - hrd_positive
+  # Prostate
+  - hrr_mutation_rate
+  - psma_positive
+  # Generic biomarker IDs (from metric_synonyms)
+  - her2_positive_pct
+  - pdl1_positive_pct
+  - msi_high_pct
+  - brca_mutated_pct

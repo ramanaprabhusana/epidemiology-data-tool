@@ -1,9 +1,12 @@
 # Required epidemiology metrics for CLL (Chronic Lymphocytic Leukemia)
-# Aligns with InsightACE Epidemiology Beta and project scope.
+# Aligns with InsightACE Epidemiology Beta + Excel v6 one-stop model.
+# Updated 2026-04-28: added all proportion/cascade/biomarker metrics
+# that drive the CLL Forecast sheet IFERROR(INDEX/MATCH) formulas.
 
 indication: "CLL"
 
 metrics:
+  # ─── Core epidemiology (required) ───────────────────────────
   - id: incidence
     label: "Incidence"
     required: true
@@ -24,6 +27,15 @@ metrics:
     label: "Mortality Rate (per 100k)"
     required: true
     splits: []
+  - id: mortality_rate_aapc
+    label: "Mortality Rate AAPC"
+    required: true
+    splits: []
+    synonyms:
+      - "mortality annual percent change"
+      - "mortality APC"
+      - "mortality trend"
+      - "joinpoint mortality"
   - id: five_year_survival
     label: "5-Year Survival Rate (%)"
     required: true
@@ -37,17 +49,209 @@ metrics:
     required: true
     splits: []
   - id: diagnosed_prevalence
-    label: "Diagnosed prevalence"
+    label: "Diagnosed Prevalence"
     required: false
     splits: []
+
+  # ─── Stage distribution ──────────────────────────────────────
+  - id: rai_stage_0_pct
+    label: "Rai Stage 0 (%)"
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "cll_rai_stage_0_pct"
+    evidence_ids:
+      - "pct_rai_stage_0"
+      - "rai_stage_0_pct_at_diagnosis"
+    synonyms:
+      - "Rai stage 0"
+      - "Rai 0"
+      - "Binet A"
+      - "early stage CLL"
+      - "stage 0 CLL"
+  - id: rai_stage_i_ii_pct
+    label: "Rai Stage I-II (%)"
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "cll_rai_stage_i_ii_pct"
+    evidence_ids:
+      - "pct_rai_stage_I_II"
+      - "rai_stage_i_pct_at_diagnosis"
+      - "rai_stage_ii_pct_at_diagnosis"
+    synonyms:
+      - "Rai stage I"
+      - "Rai stage II"
+      - "Rai 1"
+      - "Rai 2"
+      - "intermediate stage CLL"
+      - "Binet B"
+  - id: rai_stage_iii_iv_pct
+    label: "Rai Stage III-IV (%)"
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "cll_rai_stage_iii_iv_pct"
+    evidence_ids:
+      - "pct_rai_stage_III_IV"
+    synonyms:
+      - "Rai stage III"
+      - "Rai stage IV"
+      - "Rai 3"
+      - "Rai 4"
+      - "high-risk CLL"
+      - "Binet C"
+      - "advanced stage CLL"
+
+  # ─── Age distribution ────────────────────────────────────────
+  - id: age_lt65_pct
+    label: "Age <65 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "cll_age_lt65_pct"
+    evidence_ids:
+      - "age_distribution_Under_40"
+      - "pct_diagnosed_age_lt65"
+    synonyms:
+      - "younger than 65"
+      - "under 65"
+      - "age less than 65"
+      - "<65 years old"
+  - id: age_65_74_pct
+    label: "Age 65-74 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "cll_age_65_74_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+    synonyms:
+      - "65 to 74 years"
+      - "age 65-74"
+      - "elderly 65-74"
+  - id: age_75plus_pct
+    label: "Age 75+ years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "cll_age_75plus_pct"
+    evidence_ids:
+      - "age_distribution_75to84"
+      - "age_distribution_85plus"
+    synonyms:
+      - "75 and older"
+      - "age 75+"
+      - "elderly 75+"
+      - "very elderly"
+
+  # ─── Line of Therapy (LOT) ───────────────────────────────────
+  - id: lot_treatment_naive_pct
+    label: "Treatment Naive (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "cll_lot_treat_naive_pct"
+    evidence_ids:
+      - "pct_watch_and_wait"
+      - "treatment_watch_wait_pct"
+    synonyms:
+      - "treatment naive"
+      - "untreated"
+      - "treatment-naive patients"
+      - "newly diagnosed untreated"
+      - "watch and wait eligible"
   - id: first_line
-    label: "First line (1L)"
+    label: "First Line (1L) (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "cll_lot_1l_pct"
+    evidence_ids:
+      - "first_line"
+      - "pct_requiring_first_line"
+    synonyms:
+      - "first line"
+      - "first-line treatment"
+      - "1L CLL"
+      - "frontline therapy"
+      - "initial therapy"
   - id: relapsed_refractory
-    label: "Relapsed/refractory"
+    label: "Relapsed / Refractory (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "cll_lot_rr_pct"
+    evidence_ids:
+      - "relapsed_refractory"
+      - "pct_relapsed_refractory"
+    synonyms:
+      - "relapsed refractory"
+      - "relapsed/refractory"
+      - "R/R CLL"
+      - "second line"
+      - "2L+"
+      - "salvage therapy"
+
+  # ─── Disease course ──────────────────────────────────────────
+  - id: disease_indolent_pct
+    label: "Indolent (%)"
+    required: false
+    splits: []
+    excel_metric_id: "cll_disease_indolent_pct"
+    evidence_ids:
+      - "pct_early_stage_requiring_tx_5yr"
+    synonyms:
+      - "indolent CLL"
+      - "slow progression"
+      - "non-progressive"
+      - "stable disease"
+  - id: disease_progressive_pct
+    label: "Progressive (%)"
+    required: false
+    splits: []
+    excel_metric_id: "cll_disease_progress_pct"
+    evidence_ids:
+      - "pct_advanced_stage_requiring_tx_1yr"
+    synonyms:
+      - "progressive CLL"
+      - "aggressive CLL"
+      - "rapidly progressive"
+
+  # ─── Biomarkers ──────────────────────────────────────────────
+  - id: ighv_mutated_pct
+    label: "IGHV Mutated (%)"
+    required: false
+    splits: []
+    excel_metric_id: "cll_ighv_mutated_pct"
+    evidence_ids:
+      - "pct_ighv_mutated"
+    synonyms:
+      - "IGHV mutated"
+      - "IgVH mutated"
+      - "mutated IGHV"
+      - "IGHV mutation status mutated"
+      - "mutated immunoglobulin"
+  - id: ighv_unmutated_pct
+    label: "IGHV Unmutated (%)"
+    required: false
+    splits: []
+    excel_metric_id: "cll_ighv_unmutated_pct"
+    evidence_ids:
+      - "pct_ighv_unmutated"
+    synonyms:
+      - "IGHV unmutated"
+      - "IgVH unmutated"
+      - "unmutated IGHV"
+      - "unmutated immunoglobulin"
+      - "high-risk IGHV"
+  - id: del17p_tp53_pct
+    label: "del(17p) / TP53+ (%)"
+    required: false
+    splits: []
+    excel_metric_id: "cll_del17p_tp53_pct"
+    evidence_ids:
+      - "pct_double_hit_del17p_tp53"
+      - "pct_tp53_mutation"
+      - "ighv_unmutated_del17p_pct"
+    synonyms:
+      - "del17p"
+      - "deletion 17p"
+      - "TP53 mutation"
+      - "17p deletion"
+      - "TP53 mutated"
+      - "p53 mutation"
 
 year_range:
   min: 2015

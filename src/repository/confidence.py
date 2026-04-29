@@ -1,7 +1,11 @@
 """
 Calculated confidence scoring for epidemiology evidence.
-Rule-based score from: source tier, extraction success, completeness (definition, year, geography), recency.
+Rule-based score from: source tier, extraction success, completeness (definition, year, geography),
+recency, and source URL verification.
 Produces 0-100 score and Low/Medium/High label; supports a one-page rubric for methodology doc.
+
+Fix (2026-04-28): Added source_url verification penalty and normalisation of legacy "dummy"
+numeric confidence values (e.g. 0.7 floats from old CLL template rows).
 """
 
 import re
@@ -14,13 +18,20 @@ import pandas as pd
 
 # Tier weight (gold = highest confidence contribution)
 TIER_WEIGHTS = {"gold": 35, "silver": 22, "bronze": 15}
-# Max points per category (tier 35, extraction 30, completeness 25, recency 10)
+# Max points per category (tier 35, extraction 30, completeness 25, recency 10, url 5)
 EXTRACTION_EXTRACTED = 30  # value is not "See link"
 EXTRACTION_STUB = 0
 COMPLETENESS_FACTORS = ["definition", "year_or_range", "geography", "population"]
 COMPLETENESS_POINTS_PER_FIELD = 6  # 4 fields * 6 = 24, cap at 25
 RECENCY_CURRENT_YEAR_BONUS = 5
 RECENCY_WITHIN_5_BONUS = 3
+# Source URL: small bonus if URL present (confirms source is reachable)
+URL_BONUS = 5
+# Known authoritative source names that don't need URL (gold tier sources)
+KNOWN_AUTHORITATIVE_SOURCES = {
+    "seer", "globocan", "acs", "cdc", "nchs", "nci", "who",
+    "nccn", "ash", "asco", "esmo", "eha", "fda", "joinpoint",
+}
 
 
 from ..utils import is_stub_value as _is_stub_value
@@ -37,6 +48,31 @@ def _tier_score(source_tier: Any) -> int:
 def _extraction_score(value: Any) -> int:
     """Points from extraction success: extracted value vs stub."""
     return EXTRACTION_EXTRACTED if not _is_stub_value(value) else EXTRACTION_STUB
+
+
+def _url_score(row: Union[Dict[str, Any], pd.Series]) -> int:
+    """
+    Small URL verification bonus (0 or 5 points).
+    - +5 if source_url is present and non-empty
+    - 0 if source_url is null/empty, but no penalty if source is a known authority
+    This prevents high-confidence scores for rows that have no verifiable URL
+    and are not from a recognised authoritative database.
+    """
+    source_url = row.get("source_url") if hasattr(row, "get") else getattr(row, "source_url", None)
+    has_url = (
+        source_url is not None
+        and not (isinstance(source_url, float) and pd.isna(source_url))
+        and str(source_url).strip() not in ("", "nan")
+    )
+    if has_url:
+        return URL_BONUS
+    # No URL: check if the source citation contains a known authoritative name
+    citation = row.get("source_citation") if hasattr(row, "get") else getattr(row, "source_citation", None)
+    if citation:
+        lower = str(citation).lower()
+        if any(auth in lower for auth in KNOWN_AUTHORITATIVE_SOURCES):
+            return 0  # no bonus, but no penalty (known source)
+    return 0  # no URL, unknown source: no bonus (they already lost extraction points if stub)
 
 
 def _completeness_score(row: Union[Dict[str, Any], pd.Series]) -> int:
@@ -76,15 +112,64 @@ def _recency_score(row: Union[Dict[str, Any], pd.Series], current_year: int = No
 def compute_confidence_score(row: Union[Dict[str, Any], pd.Series]) -> int:
     """
     Compute 0-100 confidence score for one evidence row.
-    Factors: source tier (up to 35), extraction success (0 or 30), completeness (up to 25), recency (up to 10).
+    Factors:
+      - Source tier (up to 35): gold=35, silver=22, bronze=15
+      - Extraction success (0 or 30): 30 if numeric value extracted; 0 if stub
+      - Completeness (up to 25): definition, year, geography, population
+      - Recency (up to 10): current/recent year bonus
+      - URL verification (0 or 5): bonus if source_url present
+
+    Also normalises legacy "dummy" confidence values: if the existing
+    'confidence' column contains a float like 0.7, 0.8 etc. (legacy scale)
+    the computed score overrides it.
     """
     tier_pts = _tier_score(row.get("source_tier") if hasattr(row, "get") else getattr(row, "source_tier", None))
     value = row.get("value") if hasattr(row, "get") else getattr(row, "value", None)
     ext_pts = _extraction_score(value)
     comp_pts = _completeness_score(row)
     rec_pts = _recency_score(row)
-    total = tier_pts + ext_pts + comp_pts + rec_pts
+    url_pts = _url_score(row)
+    total = tier_pts + ext_pts + comp_pts + rec_pts + url_pts
     return min(100, max(0, total))
+
+
+def normalise_legacy_confidence(evidence_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Detect and fix 'dummy' confidence values in the existing 'confidence' column.
+
+    Legacy format: float values 0.0-1.0 (e.g. 0.7) from old CLL templates.
+    Current format: 'low' / 'medium' / 'high' label strings.
+
+    Converts floats to labels: ≥0.7 → 'high', ≥0.4 → 'medium', else → 'low'.
+    Also flags rows where confidence was a dummy numeric value.
+    """
+    if "confidence" not in evidence_df.columns:
+        return evidence_df
+    df = evidence_df.copy()
+
+    def _fix_conf(val):
+        if val is None or (isinstance(val, float) and pd.isna(val)):
+            return None
+        s = str(val).strip().lower()
+        # Already correct label
+        if s in ("high", "medium", "low"):
+            return s
+        # Legacy float (e.g. "0.7" or 0.7)
+        try:
+            fval = float(s)
+            if 0.0 <= fval <= 1.0:
+                if fval >= 0.7:
+                    return "high"
+                elif fval >= 0.4:
+                    return "medium"
+                else:
+                    return "low"
+        except (ValueError, TypeError):
+            pass
+        return s  # leave unknown formats as-is
+
+    df["confidence"] = df["confidence"].apply(_fix_conf)
+    return df
 
 
 def get_confidence_label(score: int) -> str:

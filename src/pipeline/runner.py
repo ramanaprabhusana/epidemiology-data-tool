@@ -22,7 +22,13 @@ from ..data_builder.builder import (
 )
 from ..repository.scorecard import load_required_metrics
 from ..repository.reconciliation import compute_conflicts
-from ..repository.confidence import add_computed_confidence, export_rubric as export_confidence_rubric
+from ..repository.confidence import (
+    add_computed_confidence,
+    normalise_legacy_confidence,
+    export_rubric as export_confidence_rubric,
+)
+from .url_resolver import add_resolved_urls
+from .clustering import assign_clusters
 from ..repository.scorecard import build_kpi_scorecard, export_kpi_scorecard
 from ..repository.white_space import (
     build_coverage_matrix,
@@ -428,7 +434,13 @@ def run_pipeline(
 
         # 3b) Epidemiology Evidence Pack: confidence, scorecard, white-space, reconciliation, one-pager
         evidence_df_epi = result["evidence_df"].copy()
+        # Fix legacy "dummy" confidence values (e.g. 0.7 floats from CLL template)
+        evidence_df_epi = normalise_legacy_confidence(evidence_df_epi)
+        # Resolve missing source_url from citation strings (fixes CLL ~38% null URLs)
+        evidence_df_epi = add_resolved_urls(evidence_df_epi)
         evidence_df_epi = add_computed_confidence(evidence_df_epi)
+        # Assign metric clusters (adds 'cluster' and 'cluster_label' columns)
+        evidence_df_epi = assign_clusters(evidence_df_epi)
         # Write single evidence file (sorted by metric)
         evidence_df_epi_sorted = evidence_df_epi.sort_values("metric").reset_index(drop=True) if "metric" in evidence_df_epi.columns else evidence_df_epi
         evidence_df_epi_sorted.to_csv(evidence_path_out, index=False)

@@ -1,11 +1,12 @@
 # Required epidemiology metrics for Ovarian Cancer (high-grade serous + all histologies)
-# Aligns with InsightACE Epidemiology Beta and project scope.
-# Generated: 2026-04-15 as part of multi-indication Data Pipeline extension.
+# Aligns with InsightACE Epidemiology Beta + Excel v6 one-stop model.
+# Updated 2026-04-29: added all proportion/cascade/age metrics
+# that drive the Ovarian Forecast sheet IFERROR(INDEX/MATCH) formulas.
 
 indication: "Ovarian"
 
 metrics:
-  # ─── Core epidemiology (female only) ───
+  # ─── Core epidemiology (female only, required) ───────────────
   - id: incidence
     label: "Incidence"
     required: true
@@ -26,6 +27,15 @@ metrics:
     label: "Mortality Rate (per 100k, female)"
     required: true
     splits: []
+  - id: mortality_rate_aapc
+    label: "Mortality Rate AAPC"
+    required: true
+    splits: []
+    synonyms:
+      - "mortality annual percent change"
+      - "mortality APC"
+      - "mortality trend"
+      - "joinpoint mortality"
   - id: five_year_survival
     label: "5-Year Survival Rate (%)"
     required: true
@@ -35,71 +45,235 @@ metrics:
     required: true
     splits: []
 
-  # ─── Stage distribution (FIGO / SEER Summary Stage) ───
+  # ─── Stage distribution (FIGO / SEER Summary Stage) ──────────
   - id: stage_localized
     label: "Localized (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "ov_s2_total_pct"
+    evidence_ids:
+      - "stage_localized_pct"
+      - "stage_localized_2017"
+    synonyms:
+      - "localized ovarian"
+      - "FIGO stage I"
+      - "FIGO I"
+      - "organ-confined ovarian"
+      - "SEER local ovarian"
   - id: stage_regional
     label: "Regional (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "ov_stage_iii_pct"
+    evidence_ids:
+      - "stage_regional_pct"
+      - "stage_regional_2017"
+    synonyms:
+      - "regional ovarian"
+      - "FIGO stage II"
+      - "FIGO II"
+      - "regional spread ovarian"
+      - "SEER regional ovarian"
   - id: stage_distant
     label: "Distant / Metastatic (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "ov_stage_iv_pct"
+    evidence_ids:
+      - "stage_distant_pct"
+      - "stage_distant_2017"
+    synonyms:
+      - "distant ovarian"
+      - "FIGO stage III"
+      - "FIGO stage IV"
+      - "FIGO III-IV"
+      - "advanced ovarian cancer"
+      - "metastatic ovarian"
+      - "SEER distant ovarian"
 
-  # ─── Stage-specific survival ───
+  # ─── Age distribution ────────────────────────────────────────
+  - id: age_lt65_pct
+    label: "Age <65 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "ov_age_lt65_pct"
+    evidence_ids:
+      - "age_distribution_20to34"
+      - "age_distribution_35to44"
+    synonyms:
+      - "younger than 65"
+      - "under 65"
+      - "age less than 65"
+      - "<65 years old"
+  - id: age_65_74_pct
+    label: "Age 65-74 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "ov_age_65_74_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+    synonyms:
+      - "65 to 74 years"
+      - "age 65-74"
+      - "elderly 65-74"
+  - id: age_75plus_pct
+    label: "Age 75+ years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "ov_age_75plus_pct"
+    evidence_ids:
+      - "age_distribution_75to84"
+    synonyms:
+      - "75 and older"
+      - "age 75+"
+      - "very elderly"
+      - "elderly 75+"
+
+  # ─── Stage-specific survival ─────────────────────────────────
   - id: survival_localized
     label: "5-year survival - Localized (%)"
     required: false
     splits: []
+    excel_metric_id: "oc_survival_localized_pct"
+    synonyms:
+      - "localized survival ovarian"
+      - "early stage survival ovarian"
+      - "FIGO I survival"
   - id: survival_distant
     label: "5-year survival - Distant (%)"
     required: false
     splits: []
+    excel_metric_id: "oc_survival_distant_pct"
+    synonyms:
+      - "advanced ovarian survival"
+      - "metastatic survival ovarian"
+      - "FIGO III-IV survival"
 
-  # ─── Treatment cascade ───
+  # ─── Patient flow cascade (LOT) ──────────────────────────────
   - id: post_debulking_first_line
-    label: "1L Post-debulking (Carbo/Paclitaxel ± Bev)"
+    label: "1L Post-Debulking (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "oc_lot_1l_pct"
+    synonyms:
+      - "post-debulking first line"
+      - "1L ovarian"
+      - "carboplatin paclitaxel"
+      - "carbo taxol"
+      - "cytoreductive surgery"
+      - "primary debulking"
+      - "bevacizumab first line"
   - id: parp_maintenance
-    label: "1L PARP maintenance (Olaparib / Niraparib)"
+    label: "1L PARP Maintenance (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "oc_lot_parp_maint_pct"
+    synonyms:
+      - "PARP maintenance"
+      - "PARP inhibitor maintenance"
+      - "olaparib maintenance"
+      - "niraparib maintenance"
+      - "rucaparib"
+      - "veliparib"
   - id: platinum_sensitive_2l
-    label: "Platinum-sensitive 2L"
+    label: "Platinum-Sensitive 2L (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "oc_lot_2l_plat_sens_pct"
+    synonyms:
+      - "platinum sensitive"
+      - "platinum-sensitive recurrence"
+      - "2L platinum sensitive ovarian"
+      - "bevacizumab second line"
   - id: platinum_resistant
-    label: "Platinum-resistant"
+    label: "Platinum-Resistant (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "oc_lot_plat_resist_pct"
+    synonyms:
+      - "platinum resistant"
+      - "platinum-resistant ovarian"
+      - "refractory ovarian"
+      - "pegylated liposomal doxorubicin"
   - id: fourth_line_plus
-    label: "4L+ / BSC"
+    label: "4L+ / BSC (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "oc_lot_4lplus_pct"
+    synonyms:
+      - "fourth line ovarian"
+      - "4L+"
+      - "late line ovarian"
+      - "best supportive care ovarian"
+      - "mirvetuximab"
 
-  # ─── Biomarkers / genetics ───
+  # ─── Biomarkers / genetics ───────────────────────────────────
   - id: brca_mutation_rate
-    label: "BRCA1/2 mutation (%)"
+    label: "BRCA1/2 Mutation (%)"
     required: false
     splits: []
+    excel_metric_id: "ov_s2_brca_mut_pct"
+    evidence_ids:
+      - "brca_1_2_mutation_pct"
+    synonyms:
+      - "BRCA mutated"
+      - "BRCA1 mutation"
+      - "BRCA2 mutation"
+      - "BRCA1/2 mutation"
+      - "germline BRCA"
+      - "somatic BRCA"
   - id: hrd_positive
-    label: "HRD positive (%)"
+    label: "HRD Positive (%)"
     required: false
     splits: []
+    excel_metric_id: "oc_hrd_positive_pct"
+    synonyms:
+      - "HRD positive"
+      - "homologous recombination deficiency"
+      - "HRD+"
+      - "genomic instability"
 
-  # ─── Subtypes (histology) ───
+  # ─── Subtypes (histology) ────────────────────────────────────
   - id: histology_serous
-    label: "High-grade serous (%)"
+    label: "High-Grade Serous (%)"
     required: false
     splits: []
+    excel_metric_id: "oc_histology_serous_pct"
+    synonyms:
+      - "high-grade serous"
+      - "serous ovarian"
+      - "HGSOC"
+      - "high grade serous ovarian carcinoma"
   - id: histology_clear_cell
-    label: "Clear cell carcinoma (%)"
+    label: "Clear Cell Carcinoma (%)"
     required: false
     splits: []
+    excel_metric_id: "oc_histology_clear_cell_pct"
+    synonyms:
+      - "clear cell carcinoma"
+      - "clear cell ovarian"
+      - "CCOC"
+
+  # ─── Disease course ──────────────────────────────────────────
+  - id: disease_newly_diagnosed_pct
+    label: "Newly Diagnosed (%)"
+    required: false
+    splits: []
+    excel_metric_id: "oc_disease_new_dx_pct"
+    synonyms:
+      - "newly diagnosed ovarian"
+      - "incident ovarian"
+      - "new ovarian cancer"
+  - id: disease_recurrent_pct
+    label: "Recurrent Disease (%)"
+    required: false
+    splits: []
+    excel_metric_id: "oc_disease_recurrent_pct"
+    synonyms:
+      - "recurrent ovarian"
+      - "ovarian recurrence"
+      - "relapsed ovarian"
+      - "disease recurrence ovarian"
 
 year_range:
   min: 2015

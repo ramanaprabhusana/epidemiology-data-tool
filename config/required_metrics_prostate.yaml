@@ -1,11 +1,12 @@
 # Required epidemiology metrics for Prostate Cancer (adenocarcinoma + advanced CRPC)
-# Aligns with InsightACE Epidemiology Beta and project scope.
-# Generated: 2026-04-15 as part of multi-indication Data Pipeline extension.
+# Aligns with InsightACE Epidemiology Beta + Excel v6 one-stop model.
+# Updated 2026-04-29: added all proportion/cascade/age/biomarker metrics
+# that drive the Prostate Forecast sheet IFERROR(INDEX/MATCH) formulas.
 
 indication: "Prostate"
 
 metrics:
-  # ─── Core epidemiology (male only) ───
+  # ─── Core epidemiology (male only, required) ─────────────────
   - id: incidence
     label: "Incidence"
     required: true
@@ -26,6 +27,15 @@ metrics:
     label: "Mortality Rate (per 100k, male)"
     required: true
     splits: []
+  - id: mortality_rate_aapc
+    label: "Mortality Rate AAPC"
+    required: true
+    splits: []
+    synonyms:
+      - "mortality annual percent change"
+      - "mortality APC"
+      - "mortality trend"
+      - "joinpoint mortality"
   - id: five_year_survival
     label: "5-Year Survival Rate (%)"
     required: true
@@ -35,79 +45,287 @@ metrics:
     required: true
     splits: []
 
-  # ─── Stage distribution (SEER Summary Stage) ───
+  # ─── Stage distribution (SEER Summary Stage) ─────────────────
   - id: stage_localized
     label: "Localized (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "pc_localized_pct"
+    evidence_ids:
+      - "stage_localized_pct"
+      - "stage_localized_2017"
+    synonyms:
+      - "localized prostate"
+      - "organ-confined prostate"
+      - "local stage prostate"
+      - "SEER local prostate"
   - id: stage_regional
     label: "Regional (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "pc_regional_pct"
+    evidence_ids:
+      - "stage_regional_pct"
+      - "stage_regional_2017"
+    synonyms:
+      - "regional prostate"
+      - "node positive prostate"
+      - "regional spread prostate"
+      - "SEER regional prostate"
   - id: stage_distant
     label: "Distant / Metastatic (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "pc_distant_pct"
+    evidence_ids:
+      - "stage_distant_pct"
+      - "stage_distant_2017"
+    synonyms:
+      - "distant prostate"
+      - "metastatic prostate cancer"
+      - "stage IV prostate"
+      - "SEER distant prostate"
+      - "advanced prostate"
 
-  # ─── Stage-specific survival ───
+  # ─── Age distribution ────────────────────────────────────────
+  - id: age_lt65_pct
+    label: "Age <65 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "pc_age_lt65_pct"
+    evidence_ids:
+      - "age_distribution_Under_40"
+      - "age_distribution_40to54"
+    synonyms:
+      - "younger than 65"
+      - "under 65"
+      - "age less than 65"
+      - "<65 years old"
+  - id: age_65_74_pct
+    label: "Age 65-74 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "pc_age_65_74_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+    synonyms:
+      - "65 to 74 years"
+      - "age 65-74"
+      - "elderly 65-74"
+  - id: age_75plus_pct
+    label: "Age 75+ years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "pc_age_75plus_pct"
+    evidence_ids:
+      - "age_distribution_75to84"
+      - "age_distribution_85plus"
+    synonyms:
+      - "75 and older"
+      - "age 75+"
+      - "very elderly"
+      - "elderly 75+"
+
+  # ─── Stage-specific survival ─────────────────────────────────
   - id: survival_localized
     label: "5-year survival - Localized (%)"
     required: false
     splits: []
+    excel_metric_id: "pca_survival_localized_pct"
+    evidence_ids:
+      - "five_year_survival_localized"
+      - "stage_localized_5yr_survival"
+    synonyms:
+      - "localized prostate survival"
+      - "5-year survival localized prostate"
   - id: survival_distant
     label: "5-year survival - Distant (%)"
     required: false
     splits: []
+    excel_metric_id: "pca_survival_distant_pct"
+    evidence_ids:
+      - "five_year_survival_distant"
+      - "stage_distant_5yr_survival"
+    synonyms:
+      - "metastatic prostate survival"
+      - "5-year survival mCRPC"
+      - "distant prostate survival"
 
-  # ─── Risk stratification (NCCN) ───
+  # ─── Risk stratification (NCCN) ──────────────────────────────
   - id: risk_low
-    label: "Low risk (%)"
+    label: "Low Risk (%)"
     required: false
     splits: []
+    excel_metric_id: "pca_risk_low_pct"
+    evidence_ids:
+      - "gleason_grade_group_1_pct"
+    synonyms:
+      - "low risk prostate"
+      - "NCCN low risk"
+      - "very low risk"
+      - "low grade prostate"
+      - "Gleason 6"
   - id: risk_intermediate
-    label: "Intermediate risk (%)"
+    label: "Intermediate Risk (%)"
     required: false
     splits: []
+    excel_metric_id: "pca_risk_intermediate_pct"
+    evidence_ids:
+      - "gleason_grade_group_2_3_pct"
+    synonyms:
+      - "intermediate risk prostate"
+      - "NCCN intermediate risk"
+      - "favorable intermediate"
+      - "unfavorable intermediate"
+      - "Gleason 7"
   - id: risk_high
-    label: "High / very-high risk (%)"
+    label: "High / Very-High Risk (%)"
     required: false
     splits: []
+    excel_metric_id: "pca_risk_high_pct"
+    evidence_ids:
+      - "gleason_grade_group_4_5_pct"
+    synonyms:
+      - "high risk prostate"
+      - "NCCN high risk"
+      - "very high risk prostate"
+      - "Gleason 8-10"
 
-  # ─── Treatment cascade ───
+  # ─── Patient flow cascade (LOT) ──────────────────────────────
   - id: active_surveillance
     label: "Active Surveillance (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "pca_lot_active_surv_pct"
+    evidence_ids:
+      - "treatment_active_surveillance_low_risk_pct"
+    synonyms:
+      - "active surveillance prostate"
+      - "watchful waiting prostate"
+      - "observation prostate"
+      - "PSA monitoring"
+      - "active monitoring prostate"
   - id: definitive_local_tx
-    label: "Definitive Local Tx (Surgery / RT)"
+    label: "Definitive Local Tx (Surgery / RT) (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "pca_lot_definitive_tx_pct"
+    synonyms:
+      - "radical prostatectomy"
+      - "radiation therapy prostate"
+      - "definitive local therapy"
+      - "robotic prostatectomy"
+      - "IMRT prostate"
+      - "brachytherapy"
+      - "definitive treatment"
   - id: bcr_adt
-    label: "BCR → ADT"
+    label: "BCR → ADT (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "pca_lot_bcr_adt_pct"
+    synonyms:
+      - "biochemical recurrence"
+      - "BCR prostate"
+      - "androgen deprivation therapy"
+      - "ADT"
+      - "hormonal therapy prostate"
+      - "LHRH agonist"
   - id: mcspc
-    label: "mCSPC (Metastatic Castration-Sensitive)"
+    label: "mCSPC (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "pca_lot_mcspc_pct"
+    synonyms:
+      - "metastatic castration-sensitive"
+      - "mCSPC"
+      - "hormone-sensitive metastatic"
+      - "mHSPC"
+      - "abiraterone enzalutamide"
+      - "apalutamide darolutamide"
   - id: nmcrpc_mcrpc_1l_2l
-    label: "nmCRPC / mCRPC 1L–2L (AR inhibitors, chemo, Lu-PSMA)"
+    label: "nmCRPC / mCRPC 1L-2L (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "pca_lot_crpc_1l2l_pct"
+    synonyms:
+      - "nmCRPC"
+      - "mCRPC"
+      - "castration-resistant prostate"
+      - "CRPC"
+      - "AR inhibitor"
+      - "enzalutamide"
+      - "abiraterone"
+      - "Lu-PSMA"
+      - "lutetium"
+      - "docetaxel prostate"
   - id: late_line_mcrpc
-    label: "Late-line mCRPC"
+    label: "Late-Line mCRPC (%)"
     required: false
     splits: ["by_line"]
+    excel_metric_id: "pca_lot_late_crpc_pct"
+    synonyms:
+      - "late line mCRPC"
+      - "heavily pretreated prostate"
+      - "3L+ prostate"
+      - "cabazitaxel"
+      - "olaparib prostate"
+      - "pembrolizumab prostate"
 
-  # ─── Biomarkers / genetics ───
+  # ─── Biomarkers / genetics ───────────────────────────────────
   - id: hrr_mutation_rate
-    label: "HRR mutation (% incl. BRCA1/2)"
+    label: "HRR Mutation (% incl. BRCA1/2)"
     required: false
     splits: []
+    excel_metric_id: "pca_hrr_mutated_pct"
+    synonyms:
+      - "HRR mutation prostate"
+      - "homologous recombination repair"
+      - "BRCA prostate"
+      - "BRCA1/2 prostate"
+      - "HRR deficiency"
   - id: psma_positive
-    label: "PSMA PET positive (%)"
+    label: "PSMA PET Positive (%)"
     required: false
     splits: []
+    excel_metric_id: "pca_psma_positive_pct"
+    synonyms:
+      - "PSMA positive"
+      - "PSMA PET"
+      - "PSMA expression"
+      - "prostate-specific membrane antigen"
+      - "PSMA-positive"
+
+  # ─── Disease course ──────────────────────────────────────────
+  - id: disease_indolent_pct
+    label: "Indolent / Low-Risk Disease (%)"
+    required: false
+    splits: []
+    excel_metric_id: "pca_disease_indolent_pct"
+    synonyms:
+      - "indolent prostate"
+      - "low-risk prostate cancer"
+      - "clinically significant low risk"
+      - "screen-detected low-risk"
+  - id: disease_progressive_pct
+    label: "Progressive Disease (%)"
+    required: false
+    splits: []
+    excel_metric_id: "pc_disease_progress_pct"
+    synonyms:
+      - "progressive prostate"
+      - "castration-resistant"
+      - "CRPC"
+      - "metastatic progressive"
+  - id: disease_chronic_pct
+    label: "Chronic / Stable Disease (%)"
+    required: false
+    splits: []
+    excel_metric_id: "pc_disease_chronic_pct"
+    synonyms:
+      - "chronic prostate"
+      - "long-term survivors"
+      - "stable prostate cancer"
+      - "chronic remission prostate"
 
 year_range:
   min: 2015

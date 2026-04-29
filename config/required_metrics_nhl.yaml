@@ -4,12 +4,14 @@
 #   (SEER*Stat, NHL Facts & Figures, registry reports) in evidence rows.
 #
 # DLBCL is not a standalone indication; it appears as subtype_dlbcl below.
-# Aligns with InsightACE Epidemiology Beta and project scope.
+# Aligns with InsightACE Epidemiology Beta + Excel v6 one-stop model.
+# Updated 2026-04-29: added all proportion/cascade/age metrics
+# that drive the NonHodgkin Forecast sheet IFERROR(INDEX/MATCH) formulas.
 
 indication: "Non-Hodgkin Lymphoma"
 
 metrics:
-  # --- Core epidemiology ---
+  # ─── Core epidemiology (required) ───────────────────────────
   - id: incidence
     label: "Incidence"
     required: true
@@ -30,6 +32,15 @@ metrics:
     label: "Mortality Rate (per 100k)"
     required: true
     splits: []
+  - id: mortality_rate_aapc
+    label: "Mortality Rate AAPC"
+    required: true
+    splits: []
+    synonyms:
+      - "mortality annual percent change"
+      - "mortality APC"
+      - "mortality trend"
+      - "joinpoint mortality"
   - id: five_year_survival
     label: "5-Year Survival Rate (%)"
     required: true
@@ -43,87 +54,273 @@ metrics:
     required: true
     splits: []
 
-  # --- Stage distribution (Ann Arbor) ---
-  - id: stage_i
+  # ─── Stage distribution (Ann Arbor) ──────────────────────────
+  - id: stage_i_pct
     label: "Stage I (%)"
-    required: true
-    splits: []
-  - id: stage_ii
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "nhl_stage_i_pct"
+    evidence_ids:
+      - "stage_localized_pct"
+      - "stage_localized_2017"
+    synonyms:
+      - "stage I"
+      - "stage 1"
+      - "Ann Arbor stage I"
+      - "stage I NHL"
+      - "limited stage NHL"
+  - id: stage_ii_pct
     label: "Stage II (%)"
-    required: true
-    splits: []
-  - id: stage_iii
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "nhl_stage_ii_pct"
+    evidence_ids:
+      - "stage_regional_pct"
+      - "stage_regional_2017"
+    synonyms:
+      - "stage II"
+      - "stage 2"
+      - "Ann Arbor stage II"
+      - "stage II NHL"
+  - id: stage_iii_pct
     label: "Stage III (%)"
-    required: true
-    splits: []
-  - id: stage_iv
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "nhl_stage_iii_pct"
+    evidence_ids:
+      - "stage_distant_2017"
+    synonyms:
+      - "stage III"
+      - "stage 3"
+      - "Ann Arbor stage III"
+      - "locally advanced NHL"
+  - id: stage_iv_pct
     label: "Stage IV (%)"
-    required: true
-    splits: []
+    required: false
+    splits: ["by_stage"]
+    excel_metric_id: "nhl_stage_iv_pct"
+    evidence_ids:
+      - "stage_distant_pct"
+      - "stage_distant_2013"
+    synonyms:
+      - "stage IV"
+      - "stage 4"
+      - "Ann Arbor stage IV"
+      - "advanced NHL"
+      - "disseminated NHL"
 
-  # Subtype mix as % of all NHL (sums approximately to 100% with DLBCL included).
+  # ─── Age distribution ────────────────────────────────────────
+  - id: age_lt65_pct
+    label: "Age <65 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "nhl_age_lt65_pct"
+    evidence_ids:
+      - "age_distribution_20to34"
+      - "age_distribution_35to44"
+    synonyms:
+      - "younger than 65"
+      - "under 65"
+      - "age less than 65"
+      - "<65 years old"
+  - id: age_65_74_pct
+    label: "Age 65-74 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "nhl_age_65_74_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+    synonyms:
+      - "65 to 74 years"
+      - "age 65-74"
+      - "elderly 65-74"
+  - id: age_75plus_pct
+    label: "Age 75+ years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "nhl_age_75plus_pct"
+    evidence_ids:
+      - "age_distribution_75to84"
+    synonyms:
+      - "75 and older"
+      - "age 75+"
+      - "very elderly"
+      - "elderly 75+"
+
+  # ─── Subtype mix (% of all NHL) ──────────────────────────────
   - id: subtype_dlbcl
-    label: "Diffuse Large B-Cell Lymphoma (DLBCL) - % of NHL"
+    label: "DLBCL - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_dlbcl_pct"
+    synonyms:
+      - "diffuse large B-cell"
+      - "DLBCL"
+      - "aggressive B-cell lymphoma"
   - id: subtype_follicular
-    label: "Follicular Lymphoma (FL) - % of NHL"
+    label: "Follicular Lymphoma - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_fl_pct"
+    synonyms:
+      - "follicular lymphoma"
+      - "FL"
+      - "indolent B-cell"
   - id: subtype_mantle_cell
-    label: "Mantle Cell Lymphoma (MCL) - % of NHL"
+    label: "Mantle Cell Lymphoma - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_mcl_pct"
+    synonyms:
+      - "mantle cell lymphoma"
+      - "MCL"
   - id: subtype_marginal_zone
-    label: "Marginal Zone Lymphoma (MZL) - % of NHL"
+    label: "Marginal Zone Lymphoma - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_mzl_pct"
+    synonyms:
+      - "marginal zone lymphoma"
+      - "MZL"
+      - "MALT lymphoma"
   - id: subtype_small_lymphocytic
-    label: "Small Lymphocytic Lymphoma (SLL) - % of NHL"
+    label: "Small Lymphocytic Lymphoma - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_sll_pct"
+    synonyms:
+      - "small lymphocytic lymphoma"
+      - "SLL"
   - id: subtype_burkitt
     label: "Burkitt Lymphoma - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_burkitt_pct"
+    synonyms:
+      - "Burkitt lymphoma"
+      - "Burkitt's lymphoma"
   - id: subtype_tcell_peripheral
-    label: "Peripheral T-cell Lymphoma (PTCL) - % of NHL"
+    label: "PTCL - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_ptcl_pct"
+    synonyms:
+      - "peripheral T-cell lymphoma"
+      - "PTCL"
+      - "T-cell lymphoma"
   - id: subtype_tcell_cutaneous
-    label: "Cutaneous T-cell Lymphoma (CTCL / MF-SS) - % of NHL"
+    label: "CTCL / MF-SS - % of NHL"
     required: false
     splits: []
+    excel_metric_id: "nhl_subtype_ctcl_pct"
+    synonyms:
+      - "cutaneous T-cell lymphoma"
+      - "CTCL"
+      - "mycosis fungoides"
+      - "Sezary syndrome"
   - id: subtype_other
     label: "Other NHL subtypes - % of NHL"
     required: false
     splits: []
 
-  # --- Treatment lines (subtype-weighted) ---
+  # ─── Patient flow cascade (LOT) ──────────────────────────────
   - id: indolent_watch
-    label: "Indolent watch-and-wait (FL/MZL low-burden)"
+    label: "Indolent Watch-and-Wait (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_watch_wait_pct"
+    synonyms:
+      - "watch and wait"
+      - "watchful waiting"
+      - "observation"
+      - "active monitoring NHL"
+      - "indolent watch"
+  - id: first_line_aggressive
+    label: "1L Aggressive NHL (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_1l_aggressive_pct"
+    synonyms:
+      - "first line aggressive"
+      - "1L aggressive"
+      - "R-CHOP"
+      - "frontline DLBCL"
+      - "aggressive 1L NHL"
+  - id: first_line_indolent
+    label: "1L Indolent NHL (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_1l_indolent_pct"
+    synonyms:
+      - "first line indolent"
+      - "1L indolent"
+      - "BR regimen"
+      - "bendamustine rituximab"
+      - "obinutuzumab"
+  - id: first_line_mcl
+    label: "1L MCL (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_1l_mcl_pct"
+    synonyms:
+      - "first line MCL"
+      - "1L mantle cell"
+      - "ibrutinib"
+      - "R-CHOP ASCT"
+  - id: relapsed_refractory
+    label: "Relapsed / Refractory (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_rr_pct"
+    synonyms:
+      - "relapsed refractory"
+      - "relapsed/refractory"
+      - "R/R NHL"
+      - "second line"
+      - "2L NHL"
+      - "salvage"
+  - id: third_line_plus
+    label: "3L+ incl. CAR-T (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_3lplus_pct"
+    synonyms:
+      - "third line"
+      - "3L+"
+      - "CAR-T"
+      - "axicabtagene"
+      - "lisocabtagene"
+      - "brexucabtagene"
+      - "bispecific antibody"
+
+  # ─── Disease course ──────────────────────────────────────────
+  - id: disease_indolent_pct
+    label: "Indolent Disease (%)"
     required: false
     splits: []
-  - id: first_line_aggressive
-    label: "1L aggressive - R-CHOP (DLBCL, transformed FL, other aggressive B-cell)"
+    excel_metric_id: "nhl_disease_indolent_pct"
+    synonyms:
+      - "indolent NHL"
+      - "low-grade lymphoma"
+      - "slow-growing NHL"
+  - id: disease_progressive_pct
+    label: "Aggressive / Progressive Disease (%)"
     required: false
-    splits: ["by_line"]
-  - id: first_line_indolent
-    label: "1L indolent - BR / R2 / obinutuzumab-based (FL, MZL)"
+    splits: []
+    excel_metric_id: "nhl_disease_progress_pct"
+    synonyms:
+      - "aggressive NHL"
+      - "high-grade lymphoma"
+      - "rapidly progressive NHL"
+  - id: disease_recurrent_pct
+    label: "Recurrent Disease (%)"
     required: false
-    splits: ["by_line"]
-  - id: first_line_mcl
-    label: "1L MCL - R-CHOP/R-DHAP + ASCT, or ibrutinib-based"
-    required: false
-    splits: ["by_line"]
-  - id: relapsed_refractory
-    label: "Relapsed/refractory (r/r) across subtypes"
-    required: false
-    splits: ["by_line"]
-  - id: third_line_plus
-    label: "3L+ including CAR-T (axi-cel, liso-cel, brexu-cel for MCL) and bispecifics"
-    required: false
-    splits: ["by_line"]
+    splits: []
+    excel_metric_id: "nhl_disease_recurrent_pct"
+    synonyms:
+      - "recurrent NHL"
+      - "disease recurrence"
+      - "relapsed NHL"
 
 year_range:
   min: 2015

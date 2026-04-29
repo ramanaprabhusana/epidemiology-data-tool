@@ -77,6 +77,7 @@ DEFAULT_INDICATIONS = [
     "Prostate",
 ]
 DEFAULT_WORKBOOK_REL = "../Client presentation/Integrated_Client_Delivery_Sandbox/Epidemiology_Forecast_Model_Client_Hub_v5.xlsx"
+DEFAULT_V6_WORKBOOK_REL = "../Client presentation/Integrated_Client_Delivery_Sandbox/Epidemiology_Forecast_Model_Client_Hub_v6.xlsx"
 
 
 def _sha256_of_file(path: Path) -> str:
@@ -230,6 +231,10 @@ def main() -> int:
     )
     parser.add_argument("--consolidated-excel-name", default="consolidated_run.xlsx",
                         help="Filename under output/ for the aggregated Excel")
+    parser.add_argument("--update-excel", action="store_true", default=False,
+                        help="After pipeline run, write best-value metrics back to Excel v6 via excel_updater.py")
+    parser.add_argument("--v6-workbook", type=Path, default=_REPO_ROOT / DEFAULT_V6_WORKBOOK_REL,
+                        help="Path to the v6 one-stop Excel workbook (target of --update-excel)")
     args = parser.parse_args()
 
     results: List[Dict[str, Any]] = []
@@ -275,6 +280,25 @@ def main() -> int:
             print(f"  [warn] workbook patch skipped: {exc}")
     elif not args.no_workbook_patch:
         print(f"  [warn] workbook not found at {args.workbook}; skipping patch")
+
+    # Excel v6 auto-population (optional)
+    if args.update_excel:
+        v6_path = args.v6_workbook.resolve()
+        if v6_path.exists():
+            print(f"\nUpdating Excel v6: {v6_path}")
+            try:
+                from src.pipeline.excel_updater import update_excel_from_pipeline
+                changes = update_excel_from_pipeline(
+                    kpi_csv_dir=args.output_dir,
+                    excel_path=v6_path,
+                    indications=args.indications,
+                    dry_run=False,
+                )
+                print(f"  ✓ Excel v6 updated: {len(changes)} metrics written")
+            except Exception as exc:  # noqa: BLE001
+                print(f"  [warn] Excel v6 update failed: {exc}")
+        else:
+            print(f"  [warn] v6 workbook not found at {v6_path}; skipping Excel update")
 
     # Summary
     succeeded = sum(1 for r in results if r["success"])
