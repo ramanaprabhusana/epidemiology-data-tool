@@ -4,6 +4,36 @@ Use this file when continuing in a chat focused on **`Data Pipeline tool/`** (Ev
 
 ---
 
+## 2026-04-29 (session 5) — QA gaps closed: launch.json + cluster validation
+
+### Changes
+- **`.claude/launch.json`** created — detects 2 Streamlit servers: main app on port 8501, copy on port 8502 (auto-avoids conflict); `runtimeExecutable: "streamlit"`, `runtimeArgs: ["run", "app.py"]`
+- **`src/evidence_finder/validation.py`** updated — `OPTIONAL_COLUMNS` extended with `cluster`, `cluster_label`, `full_name`; new `BI_DATA_REQUIRED_COLUMNS` constant; new `validate_bi_data_df()` function validates cluster fill rate (warns if >20% null)
+- **`validate_bi_data.py`** created at project root — scans all 6 per-indication `output/evidence_by_metric_*_US.csv` files; reports cluster fill rate per file; confirms 100% cluster coverage across all 6 indications; exit code 0 = pass
+
+### Verification result
+```
+✅ ALL CHECKS PASSED (6/6 indications, cluster 100% filled each)
+   CLL 675r | Hodgkin 497r | NHL 484r | Gastric 464r | Ovarian 513r | Prostate 520r
+```
+
+---
+
+## 2026-04-29 (session 4, continued) — Tasks 1-4 complete + BI_Data sheet + git push cf2d05f
+
+### Session 4 completions (second half)
+
+- **excel_updater.py** bug fixed (`wb.get()` → `wb[sheet] if sheet in wb.sheetnames`); NonHodgkin file slug fixed (`Non-Hodgkin_Lymphoma` pattern added)
+- **evidence_ids** field added to all 6 required_metrics_*.yaml — maps internal pipeline metric IDs (e.g. `pct_rai_stage_0`) to required metric IDs (`rai_stage_0_pct`); scorecard.py updated to check this field as fallback
+- **excel_metric_id values corrected** for Prostate (`pc_*`), Gastric (`gc_localized/regional/distant`), Ovarian (`ov_*`) to match actual Excel Lookup Tables column A keys
+- **KPI scorecard coverage**: CLL 20/24, Prostate 18/30, Hodgkin 13/27, NHL 13/34, Gastric 12/26, Ovarian 13/27 metrics with values (up from 6-11)
+- **41 cells written live** to Excel v6 Proportion Inputs section via `excel_updater.py --apply`
+- **BI_Data sheet** added to Excel v6 (sheet 11): 667-row flat formula table pulling from all 6 Forecast sheets + Lookup Tables; designed for direct Tableau/Power BI connection (select single sheet, auto-updates on workbook open); includes columns: indication, indication_full, category, metric_id, metric_label, year, value, unit, source_sheet, last_refreshed
+- **bi_data synced** — dashboard CSVs refreshed with cluster column (evidence_data.csv 520 rows, forecast_data.csv 420 rows, kpi_summary.csv 30 rows)
+- **Git commit cf2d05f pushed** to main (24 files, 4257 insertions)
+
+---
+
 ## 2026-04-29 (session 4) — Dynamic One-Stop Forecast Solution: Tasks 1-3 complete
 
 ### Goal: Excel v6 as the client-facing one-stop deliverable; pipeline as the backend engine

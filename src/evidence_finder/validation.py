@@ -13,6 +13,13 @@ VALID_TIERS = {"gold", "silver", "bronze"}
 OPTIONAL_COLUMNS = {
     "definition", "population", "year_or_range", "geography",
     "split_logic", "source_url", "notes", "confidence",
+    "cluster", "cluster_label", "full_name",  # added by clustering pipeline step
+}
+
+# Required columns for the bi_data export layer (evidence_data.csv + cluster columns)
+BI_DATA_REQUIRED_COLUMNS = {
+    "indication", "metric", "value", "source_citation", "source_tier",
+    "cluster", "cluster_label",
 }
 
 
@@ -78,6 +85,56 @@ def validate_evidence_df(df: pd.DataFrame) -> Tuple[bool, List[Dict[str, Any]]]:
                 "message": f"Duplicate metric/year/geography combinations: {dupes.sum()} rows. Consider consolidating.",
                 "row": None,
             })
+
+    return is_valid, report
+
+
+def validate_bi_data_df(df: pd.DataFrame) -> Tuple[bool, List[Dict[str, Any]]]:
+    """
+    Validate the bi_data export schema (evidence_data.csv after clustering).
+    Checks that cluster / cluster_label columns are present and sufficiently populated.
+    Returns (is_valid, report_entries).
+    """
+    report: List[Dict[str, Any]] = []
+    is_valid = True
+
+    if df is None or df.empty:
+        report.append({"level": "warning", "code": "empty", "message": "BI_Data table is empty.", "row": None})
+        return True, report
+
+    # Required bi_data columns
+    missing = BI_DATA_REQUIRED_COLUMNS - set(df.columns)
+    if missing:
+        report.append({
+            "level": "error",
+            "code": "missing_bi_columns",
+            "message": f"BI_Data missing required columns: {sorted(missing)}",
+            "row": None,
+        })
+        is_valid = False
+
+    # Cluster fill-rate check — warn if >20% null (clustering should cover ~94%+)
+    for col in ("cluster", "cluster_label"):
+        if col in df.columns:
+            null_pct = df[col].isna().mean() * 100
+            if null_pct > 20:
+                report.append({
+                    "level": "warning",
+                    "code": f"low_{col}_coverage",
+                    "message": (
+                        f"'{col}' is {null_pct:.1f}% null — expected <20% after clustering. "
+                        "Re-run pipeline or check metric_clusters.yaml coverage."
+                    ),
+                    "row": None,
+                })
+
+    if not report:
+        report.append({
+            "level": "info",
+            "code": "ok",
+            "message": "BI_Data schema check passed.",
+            "row": None,
+        })
 
     return is_valid, report
 
