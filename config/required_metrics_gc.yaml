@@ -92,6 +92,7 @@ metrics:
       - "advanced gastric cancer"
 
   # ─── Age distribution ────────────────────────────────────────
+  # Standard SEER-style buckets (kept for backwards compatibility)
   - id: age_lt65_pct
     label: "Age <65 years (%)"
     required: false
@@ -128,6 +129,48 @@ metrics:
       - "age 75+"
       - "very elderly"
       - "elderly 75+"
+  # InsightACE age groupings for Gastric Cancer (younger onset pattern)
+  - id: age_lt40_pct
+    label: "Age <40 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "gc_age_lt40_pct"
+    evidence_ids:
+      - "age_distribution_Under_40"
+      - "age_distribution_20to34"
+    synonyms:
+      - "younger than 40"
+      - "under 40"
+      - "age less than 40"
+      - "<40 years old"
+      - "young gastric"
+  - id: age_40_64_pct
+    label: "Age 40-64 years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "gc_age_40_64_pct"
+    evidence_ids:
+      - "age_distribution_40to54"
+      - "age_distribution_55to64"
+    synonyms:
+      - "40 to 64 years"
+      - "age 40-64"
+      - "middle-aged gastric"
+      - "40-64 gastric"
+  - id: age_65plus_pct
+    label: "Age 65+ years (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "gc_age_65plus_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+      - "age_distribution_75to84"
+      - "age_distribution_85plus"
+    synonyms:
+      - "65 and older"
+      - "age 65+"
+      - "elderly gastric"
+      - "65+ years gastric"
 
   # ─── Stage-specific survival ─────────────────────────────────
   - id: survival_localized
@@ -225,6 +268,19 @@ metrics:
       - "PD-L1 expression"
       - "PDL1 CPS ≥1"
       - "CPS positive"
+  - id: msi_high
+    label: "MSI-High (%)"
+    required: false
+    splits: []
+    excel_metric_id: "gc_msi_high_pct"
+    synonyms:
+      - "MSI-H"
+      - "microsatellite instability high"
+      - "MSI high gastric"
+      - "mismatch repair deficient"
+      - "dMMR"
+      - "MSI-high gastric cancer"
+      - "microsatellite instability-high"
 
   # ─── Disease course ──────────────────────────────────────────
   - id: disease_localized_pct

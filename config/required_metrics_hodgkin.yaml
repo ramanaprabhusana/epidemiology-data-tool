@@ -108,6 +108,7 @@ metrics:
       - "metastatic Hodgkin"
 
   # ─── Age distribution ────────────────────────────────────────
+  # Standard SEER-style buckets (kept for backwards compatibility)
   - id: age_lt65_pct
     label: "Age <65 years (%)"
     required: false
@@ -145,6 +146,54 @@ metrics:
       - "age 75+"
       - "very elderly"
       - "elderly 75+"
+  # InsightACE age groupings for Hodgkin (bimodal distribution: young + elderly peak)
+  - id: age_pediatric_pct
+    label: "Pediatric (<20 years) (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "hl_age_pediatric_pct"
+    evidence_ids:
+      - "age_distribution_Under_20"
+      - "age_distribution_0to14"
+      - "age_distribution_15to19"
+    synonyms:
+      - "pediatric Hodgkin"
+      - "children Hodgkin"
+      - "age under 20"
+      - "<20 years Hodgkin"
+      - "Pediatric (<20)"
+      - "pediatric patients"
+  - id: age_adult_pct
+    label: "Adult (20-64 years) (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "hl_age_adult_pct"
+    evidence_ids:
+      - "age_distribution_20to34"
+      - "age_distribution_35to44"
+      - "age_distribution_45to54"
+      - "age_distribution_55to64"
+    synonyms:
+      - "adult Hodgkin"
+      - "age 20-64"
+      - "20 to 64 years"
+      - "young adult Hodgkin"
+      - "Adult (20-64)"
+  - id: age_geriatric_pct
+    label: "Geriatric (65+ years) (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "hl_age_geriatric_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+      - "age_distribution_75to84"
+      - "age_distribution_85plus"
+    synonyms:
+      - "elderly Hodgkin"
+      - "geriatric Hodgkin"
+      - "age 65 and older"
+      - "65+ years Hodgkin"
+      - "Geriatric (65+)"
 
   # ─── Histology subtypes ──────────────────────────────────────
   - id: subtype_classical

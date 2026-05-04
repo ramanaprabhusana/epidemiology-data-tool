@@ -287,14 +287,41 @@ def main() -> int:
         if v6_path.exists():
             print(f"\nUpdating Excel v6: {v6_path}")
             try:
-                from src.pipeline.excel_updater import update_excel_from_pipeline
-                changes = update_excel_from_pipeline(
+                from src.pipeline.excel_updater import (
+                    update_excel_from_pipeline,
+                    update_all_evidence_sheets,
+                )
+
+                # 1. Write best-value KPI metrics to Lookup Tables / cascade sections
+                kpi_result = update_excel_from_pipeline(
                     kpi_csv_dir=args.output_dir,
                     excel_path=v6_path,
                     indications=args.indications,
                     dry_run=False,
                 )
-                print(f"  ✓ Excel v6 updated: {len(changes)} metrics written")
+                print(f"  ✓ KPI metrics: {kpi_result['summary']}")
+                if kpi_result["errors"]:
+                    for e in kpi_result["errors"]:
+                        print(f"  [warn] {e}")
+
+                # 2. Write full evidence rows to per-indication Evidence sheets
+                bi_data_csv = args.output_dir.parent / "bi_data" / "evidence_data.csv"
+                # Also check sandbox-root bi_data as fallback
+                if not bi_data_csv.exists():
+                    bi_data_csv = v6_path.parent.parent / "bi_data" / "evidence_data.csv"
+                if bi_data_csv.exists():
+                    ev_counts = update_all_evidence_sheets(
+                        evidence_csv_path=bi_data_csv,
+                        excel_path=v6_path,
+                        indications=args.indications,
+                        dry_run=False,
+                    )
+                    for ind, n in ev_counts.items():
+                        print(f"  ✓ {ind} Evidence sheet: {n} rows written")
+                else:
+                    print(f"  [warn] evidence_data.csv not found; skipping Evidence sheet update")
+                    print(f"         (expected: {bi_data_csv})")
+
             except Exception as exc:  # noqa: BLE001
                 print(f"  [warn] Excel v6 update failed: {exc}")
         else:

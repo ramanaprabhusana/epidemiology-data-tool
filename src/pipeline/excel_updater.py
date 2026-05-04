@@ -143,6 +143,7 @@ def update_excel_from_pipeline(
     indications: Optional[List[str]] = None,
     dry_run: bool = True,
     evidence_import_sheet: str = "Evidence Import",
+    country: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Main entry point: reads KPI scorecard CSVs from kpi_csv_dir,
@@ -154,6 +155,9 @@ def update_excel_from_pipeline(
         indications: List of indications to process (default: all 6)
         dry_run: If True, log changes but don't save
         evidence_import_sheet: Sheet name for the Evidence Import status update
+        country: Country/geography used for this pipeline run (e.g. "US", "DE").
+                 When provided the function looks for kpi_scorecard_{ind}_{country}.csv
+                 first, preventing a non-US run from accidentally reading a stale US file.
 
     Returns:
         Dict with keys: success, changes, skipped, summary, errors
@@ -208,9 +212,12 @@ def update_excel_from_pipeline(
         "Ovarian": ["Ovarian", "ovarian"],
         "Prostate": ["Prostate", "prostate"],
     }
+    # Build the preferred country suffix for file-lookup.
+    # Fall back to "US" only when no country is given (backward-compatible).
+    _country_safe = country.replace(" ", "_").strip() if country else "US"
     for ind in indications:
         for slug in ind_name_map.get(ind, [ind]):
-            for pattern in [f"kpi_scorecard_{slug}_US.csv", f"kpi_scorecard_{slug}*.csv", f"kpi_{slug}*.csv"]:
+            for pattern in [f"kpi_scorecard_{slug}_{_country_safe}.csv", f"kpi_scorecard_{slug}*.csv", f"kpi_{slug}*.csv"]:
                 matches = list(kpi_csv_dir.glob(pattern))
                 if matches:
                     try:
@@ -407,6 +414,167 @@ def update_excel_from_pipeline(
         f"across {len(kpi_frames)} indications."
     )
     return result
+
+
+# ── Evidence sheet constants ───────────────────────────────────
+EVIDENCE_SHEET_NAMES: Dict[str, str] = {
+    "CLL":        "CLL Evidence",
+    "Hodgkin":    "Hodgkin Evidence",
+    "NonHodgkin": "NHL Evidence",
+    "Gastric":    "Gastric Evidence",
+    "Ovarian":    "Ovarian Evidence",
+    "Prostate":   "Prostate Evidence",
+}
+
+# Columns written to the Evidence sheet (in order)
+EVIDENCE_COLUMNS = [
+    "metric",
+    "value",
+    "year_or_range",
+    "source_citation",
+    "source_tier",
+    "confidence",
+    "computed_confidence_score",
+    "cluster_label",
+    "definition",
+    "population",
+    "geography",
+    "source_url",
+    "notes",
+]
+
+
+def update_evidence_sheet(
+    evidence_csv_path: Path,
+    excel_path: Path,
+    indication: str,
+    dry_run: bool = True,
+) -> int:
+    """
+    Write pipeline evidence rows for one indication into its Excel Evidence sheet.
+
+    Clears all data rows below the header, then writes fresh rows from evidence_csv_path
+    filtered to the specified indication.  Returns the number of rows written (or that
+    would be written in dry-run mode).
+
+    Args:
+        evidence_csv_path: Path to bi_data/evidence_data.csv (all indications).
+        excel_path:         Path to Epidemiology_Forecast_Model_Client_Hub_v6.xlsx.
+        indication:         One of CLL / Hodgkin / NonHodgkin / Gastric / Ovarian / Prostate.
+        dry_run:            If True, log changes but do not save the workbook.
+
+    Returns:
+        Row count written (or previewed if dry_run).
+    """
+    if indication not in EVIDENCE_SHEET_NAMES:
+        raise ValueError(f"Unknown indication '{indication}'. Valid: {list(EVIDENCE_SHEET_NAMES)}")
+
+    if not evidence_csv_path.exists():
+        logger.warning(f"evidence_csv not found: {evidence_csv_path}")
+        return 0
+
+    df = pd.read_csv(evidence_csv_path)
+    # Normalise indication column to handle case differences
+    df["indication"] = df["indication"].astype(str).str.strip()
+    ind_df = df[df["indication"] == indication].copy()
+
+    # Keep only the columns we want to write; fill missing ones with ""
+    cols_present = [c for c in EVIDENCE_COLUMNS if c in ind_df.columns]
+    cols_missing = [c for c in EVIDENCE_COLUMNS if c not in ind_df.columns]
+    for c in cols_missing:
+        ind_df[c] = ""
+    ind_df = ind_df[EVIDENCE_COLUMNS].reset_index(drop=True)
+
+    n_rows = len(ind_df)
+    logger.info(f"update_evidence_sheet: {indication} — {n_rows} rows {'(dry run)' if dry_run else ''}")
+
+    if dry_run:
+        return n_rows
+
+    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+    from openpyxl.utils import get_column_letter
+
+    # Column widths (chars) matching each EVIDENCE_COLUMNS entry
+    COL_WIDTHS = {
+        "metric": 32,
+        "value": 12,
+        "year_or_range": 13,
+        "source_citation": 38,
+        "source_tier": 12,
+        "confidence": 12,
+        "computed_confidence_score": 24,
+        "cluster_label": 24,
+        "definition": 48,
+        "population": 22,
+        "geography": 13,
+        "source_url": 38,
+        "notes": 32,
+    }
+
+    HEADER_FILL = PatternFill("solid", fgColor="1F3864")   # navy
+    HEADER_FONT = Font(bold=True, color="FFFFFF", size=10)
+    ALT_FILL    = PatternFill("solid", fgColor="EEF2F7")   # light blue-gray
+    THIN_BORDER = Border(
+        bottom=Side(style="thin", color="D0D7E3"),
+    )
+
+    sheet_name = EVIDENCE_SHEET_NAMES[indication]
+    wb = openpyxl.load_workbook(str(excel_path))
+
+    # Delete and recreate for a clean slate (removes stale columns/content)
+    if sheet_name in wb.sheetnames:
+        del wb[sheet_name]
+    ws = wb.create_sheet(sheet_name)
+
+    # Header row
+    headers = [c.replace("_", " ").title() for c in EVIDENCE_COLUMNS]
+    for c_idx, (col_name, header) in enumerate(zip(EVIDENCE_COLUMNS, headers), start=1):
+        cell = ws.cell(row=1, column=c_idx, value=header)
+        cell.font = HEADER_FONT
+        cell.fill = HEADER_FILL
+        cell.alignment = Alignment(horizontal="left", vertical="center", wrap_text=False)
+        ws.column_dimensions[get_column_letter(c_idx)].width = COL_WIDTHS.get(col_name, 18)
+
+    # Data rows
+    for r_idx, row_data in enumerate(ind_df.itertuples(index=False), start=2):
+        fill = ALT_FILL if r_idx % 2 == 0 else None
+        for c_idx, val in enumerate(row_data, start=1):
+            clean_val = val if not (isinstance(val, float) and pd.isna(val)) else ""
+            cell = ws.cell(row=r_idx, column=c_idx, value=clean_val)
+            cell.border = THIN_BORDER
+            cell.alignment = Alignment(horizontal="left", vertical="top", wrap_text=False)
+            if fill:
+                cell.fill = fill
+
+    # Freeze header row and enable auto-filter
+    ws.freeze_panes = "A2"
+    ws.auto_filter.ref = f"A1:{get_column_letter(len(EVIDENCE_COLUMNS))}1"
+
+    # Row height for header
+    ws.row_dimensions[1].height = 18
+
+    wb.save(str(excel_path))
+    logger.info(f"  Saved {n_rows} rows → '{sheet_name}' in {excel_path.name}")
+    return n_rows
+
+
+def update_all_evidence_sheets(
+    evidence_csv_path: Path,
+    excel_path: Path,
+    indications: Optional[List[str]] = None,
+    dry_run: bool = True,
+) -> Dict[str, int]:
+    """
+    Write evidence rows for multiple indications. Returns {indication: row_count}.
+    Loads the workbook once per indication via update_evidence_sheet().
+    """
+    if indications is None:
+        indications = list(EVIDENCE_SHEET_NAMES.keys())
+    return {
+        ind: update_evidence_sheet(evidence_csv_path, excel_path, ind, dry_run=dry_run)
+        for ind in indications
+        if ind in EVIDENCE_SHEET_NAMES
+    }
 
 
 def run_updater_cli():

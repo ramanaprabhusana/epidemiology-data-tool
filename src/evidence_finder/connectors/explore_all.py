@@ -67,8 +67,16 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
     for metric_id, info in metrics.items():
         if not isinstance(info, dict):
             continue
-        # Allow all curated data through - global/regional context is valuable
-        # The category and geography columns let users filter downstream
+        # Skip records whose geography doesn't match the selected country.
+        # All curated YAMLs are US-only; returning US values for a Germany/Japan
+        # run is worse than returning nothing (the web/API sources fill the gap).
+        if country:
+            rec_geo = (info.get("geography") or "").strip().lower()
+            if rec_geo:
+                user_aliases = country_aliases(country)
+                geo_aliases = country_aliases(rec_geo)
+                if not (user_aliases & geo_aliases):
+                    continue
         # Strip year suffix from metric ID: "incidence_2024" -> metric="incidence", year=2024
         import re as _re
         _year_suffix = _re.search(r"_(\d{4})$", metric_id)
@@ -86,7 +94,7 @@ def load_curated_records(config_dir: Path, indication: str, country: str) -> Lis
             definition=info.get("definition", ""),
             population=info.get("population"),
             year_or_range=year_val,
-            geography=info.get("geography", country or ""),
+            geography=country or info.get("geography", ""),
             split_logic=None,
             source_url=info.get("source_url", ""),
             notes=f"Curated reference value ({info.get('unit', '')})",

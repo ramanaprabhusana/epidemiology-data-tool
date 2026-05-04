@@ -222,6 +222,20 @@ metrics:
       - "BRCA1/2 mutation"
       - "germline BRCA"
       - "somatic BRCA"
+  - id: brca_wildtype
+    label: "BRCA Wildtype (%)"
+    required: false
+    splits: []
+    excel_metric_id: "ov_s2_brca_wt_pct"
+    evidence_ids:
+      - "brca_wildtype_pct"
+    synonyms:
+      - "BRCA wildtype"
+      - "BRCA-Wildtype"
+      - "BRCA wild-type"
+      - "BRCA negative"
+      - "non-BRCA mutated"
+      - "BRCA1/2 wildtype"
   - id: hrd_positive
     label: "HRD Positive (%)"
     required: false
@@ -264,6 +278,9 @@ metrics:
       - "newly diagnosed ovarian"
       - "incident ovarian"
       - "new ovarian cancer"
+      - "non-recurrent ovarian"
+      - "Non-Recurrent"
+      - "treatment naive ovarian"
   - id: disease_recurrent_pct
     label: "Recurrent Disease (%)"
     required: false

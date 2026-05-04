@@ -110,6 +110,7 @@ metrics:
       - "disseminated NHL"
 
   # ─── Age distribution ────────────────────────────────────────
+  # Standard SEER-style buckets (kept for backwards compatibility)
   - id: age_lt65_pct
     label: "Age <65 years (%)"
     required: false
@@ -146,6 +147,54 @@ metrics:
       - "age 75+"
       - "very elderly"
       - "elderly 75+"
+  # InsightACE age groupings for NHL (includes pediatric/adolescent patients)
+  - id: age_pediatric_pct
+    label: "Pediatric (<20 years) (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "nhl_age_pediatric_pct"
+    evidence_ids:
+      - "age_distribution_Under_20"
+      - "age_distribution_0to14"
+      - "age_distribution_15to19"
+    synonyms:
+      - "pediatric NHL"
+      - "children NHL"
+      - "age under 20"
+      - "<20 years NHL"
+      - "Pediatric (<20)"
+      - "pediatric lymphoma"
+  - id: age_adult_pct
+    label: "Adult (20-64 years) (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "nhl_age_adult_pct"
+    evidence_ids:
+      - "age_distribution_20to34"
+      - "age_distribution_35to44"
+      - "age_distribution_45to54"
+      - "age_distribution_55to64"
+    synonyms:
+      - "adult NHL"
+      - "age 20-64"
+      - "20 to 64 years"
+      - "working-age NHL"
+      - "Adult (20-64)"
+  - id: age_geriatric_pct
+    label: "Geriatric (65+ years) (%)"
+    required: false
+    splits: ["by_age"]
+    excel_metric_id: "nhl_age_geriatric_pct"
+    evidence_ids:
+      - "age_distribution_65to74"
+      - "age_distribution_75to84"
+      - "age_distribution_85plus"
+    synonyms:
+      - "elderly NHL"
+      - "geriatric NHL"
+      - "age 65 and older"
+      - "65+ years NHL"
+      - "Geriatric (65+)"
 
   # ─── Subtype mix (% of all NHL) ──────────────────────────────
   - id: subtype_dlbcl
@@ -267,6 +316,17 @@ metrics:
       - "1L mantle cell"
       - "ibrutinib"
       - "R-CHOP ASCT"
+  - id: second_line
+    label: "Second-Line (2L) (%)"
+    required: false
+    splits: ["by_line"]
+    excel_metric_id: "nhl_lot_2l_pct"
+    synonyms:
+      - "second line NHL"
+      - "2L NHL"
+      - "Second-Line"
+      - "second-line therapy"
+      - "2nd line treatment"
   - id: relapsed_refractory
     label: "Relapsed / Refractory (%)"
     required: false
@@ -276,8 +336,7 @@ metrics:
       - "relapsed refractory"
       - "relapsed/refractory"
       - "R/R NHL"
-      - "second line"
-      - "2L NHL"
+      - "Refractory/Relapsed"
       - "salvage"
   - id: third_line_plus
     label: "3L+ incl. CAR-T (%)"
